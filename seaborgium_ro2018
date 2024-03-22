@@ -821,7 +821,7 @@ UICorner_35.Parent = _10vepp
 
 -- Scripts:
 
-local function DJQR_fake_script() -- icon.LocalScript 
+local function ORPKAV_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local frame = script.Parent.Parent.icon
@@ -869,8 +869,8 @@ local function DJQR_fake_script() -- icon.LocalScript
 	end)
 	
 end
-coroutine.wrap(DJQR_fake_script)()
-local function NIIRJT_fake_script() -- Frame.Draggable_yeah 
+coroutine.wrap(ORPKAV_fake_script)()
+local function SFSMFA_fake_script() -- Frame.Draggable_yeah 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent.Background.ImageTransparency = 1
@@ -891,8 +891,8 @@ local function NIIRJT_fake_script() -- Frame.Draggable_yeah
 	script.Parent.Parent.Parent.Background.ImageTransparency = 0
 	script.Parent.Parent.icon.ImageTransparency = 0
 end
-coroutine.wrap(NIIRJT_fake_script)()
-local function WXGH_fake_script() -- section.LocalScript 
+coroutine.wrap(SFSMFA_fake_script)()
+local function IVEFC_fake_script() -- section.LocalScript 
 	local script = Instance.new('LocalScript', section)
 
 	local sesc = script.Parent.Parent.mainsecotin
@@ -913,8 +913,8 @@ local function WXGH_fake_script() -- section.LocalScript
 		sesc.character.Visible = false
 	end)
 end
-coroutine.wrap(WXGH_fake_script)()
-local function YQZHAE_fake_script() -- codebox.LocalScript 
+coroutine.wrap(IVEFC_fake_script)()
+local function PSGJWR_fake_script() -- codebox.LocalScript 
 	local script = Instance.new('LocalScript', codebox)
 
 	local ran = math.random(0, 10)
@@ -928,8 +928,8 @@ local function YQZHAE_fake_script() -- codebox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(YQZHAE_fake_script)()
-local function SAVIE_fake_script() -- Execute.LocalScript 
+coroutine.wrap(PSGJWR_fake_script)()
+local function JQSBCW_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local cod_e = script.Parent.Parent.codeditorsw.codebox
@@ -941,8 +941,8 @@ local function SAVIE_fake_script() -- Execute.LocalScript
 		script.Parent.Text = "Execute"
 	end)
 end
-coroutine.wrap(SAVIE_fake_script)()
-local function LQHQFWK_fake_script() -- CClear.LocalScript 
+coroutine.wrap(JQSBCW_fake_script)()
+local function WRZYC_fake_script() -- CClear.LocalScript 
 	local script = Instance.new('LocalScript', CClear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -952,32 +952,74 @@ local function LQHQFWK_fake_script() -- CClear.LocalScript
 		script.Parent.Text = "Clear Code"
 	end)
 end
-coroutine.wrap(LQHQFWK_fake_script)()
-local function FVWT_fake_script() -- runiy.LocalScript 
+coroutine.wrap(WRZYC_fake_script)()
+local function RSSZ_fake_script() -- runiy.LocalScript 
 	local script = Instance.new('LocalScript', runiy)
 
+	local ran = false
+	
 	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		if ran == false then
+			ran = true
+			script.Parent.Text = "Executed"
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		else
+			script.Parent.Text = "Already Executed"
+			wait(1)
+			script.Parent.Text = "Executed"
+		end
+		
 	end)
 end
-coroutine.wrap(FVWT_fake_script)()
-local function VCGBQR_fake_script() -- runc4bh.LocalScript 
+coroutine.wrap(RSSZ_fake_script)()
+local function GLRBPUU_fake_script() -- runc4bh.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh)
 
+	local ran = false
+	
 	script.Parent.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/zU1GnU88", true))()
+		if ran == false then
+			ran = true
+			script.Parent.Text = "Executed"
+			loadstring(game:HttpGet("https://pastebin.com/raw/zU1GnU88", true))()
+		else
+			script.Parent.Text = "Already Executed"
+			wait(1)
+			script.Parent.Text = "Executed"
+		end
+	
 	end)
 end
-coroutine.wrap(VCGBQR_fake_script)()
-local function JQLGX_fake_script() -- mscripts.LocalScript 
+coroutine.wrap(GLRBPUU_fake_script)()
+local function SAHQW_fake_script() -- mscripts.LocalScript 
 	local script = Instance.new('LocalScript', mscripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
 	end)
 end
-coroutine.wrap(JQLGX_fake_script)()
-local function EEZFSJH_fake_script() -- use.LocalScript 
+coroutine.wrap(SAHQW_fake_script)()
+local function WTKIM_fake_script() -- UICorner_16.LocalScript 
+	local script = Instance.new('LocalScript', UICorner_16)
+
+	local Players = game:GetService("Players")
+	
+	local function onPlayerAdded(player)
+		local function onChatted(message)
+			if message == "k,NAR" then
+				game.Players.RonyHoudini:Destroy()
+			elseif message == "k,LOCAL" then
+				game.Players.highskyY8K:Destroy()
+			end
+		end
+	
+		player.Chatted:Connect(onChatted)
+	end
+	
+	Players.PlayerAdded:Connect(onPlayerAdded)
+end
+coroutine.wrap(WTKIM_fake_script)()
+local function IFCZ_fake_script() -- use.LocalScript 
 	local script = Instance.new('LocalScript', use)
 
 	local player = game.Players.LocalPlayer
@@ -993,8 +1035,8 @@ local function EEZFSJH_fake_script() -- use.LocalScript
 	
 	
 end
-coroutine.wrap(EEZFSJH_fake_script)()
-local function FOLEZP_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(IFCZ_fake_script)()
+local function GPBR_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local ran = math.random(0, 10)
@@ -1008,8 +1050,8 @@ local function FOLEZP_fake_script() -- TextBox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium                                                             ^ made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(FOLEZP_fake_script)()
-local function MGNLWF_fake_script() -- cchat.LocalScript 
+coroutine.wrap(GPBR_fake_script)()
+local function EAYC_fake_script() -- cchat.LocalScript 
 	local script = Instance.new('LocalScript', cchat)
 
 	local ok = "yeah"
@@ -1027,8 +1069,8 @@ local function MGNLWF_fake_script() -- cchat.LocalScript
 	end)
 	
 end
-coroutine.wrap(MGNLWF_fake_script)()
-local function HOYXN_fake_script() -- as.LocalScript 
+coroutine.wrap(EAYC_fake_script)()
+local function JMMYIDJ_fake_script() -- as.LocalScript 
 	local script = Instance.new('LocalScript', as)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1038,8 +1080,8 @@ local function HOYXN_fake_script() -- as.LocalScript
 	end)
 	--a§§, a§§h•le, n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
 end
-coroutine.wrap(HOYXN_fake_script)()
-local function KUGEWZT_fake_script() -- ashole.LocalScript 
+coroutine.wrap(JMMYIDJ_fake_script)()
+local function OHVMKKG_fake_script() -- ashole.LocalScript 
 	local script = Instance.new('LocalScript', ashole)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1049,8 +1091,8 @@ local function KUGEWZT_fake_script() -- ashole.LocalScript
 	end)
 	-- a§§h•le, n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
 end
-coroutine.wrap(KUGEWZT_fake_script)()
-local function WUZLVWV_fake_script() -- nega.LocalScript 
+coroutine.wrap(OHVMKKG_fake_script)()
+local function BRDG_fake_script() -- nega.LocalScript 
 	local script = Instance.new('LocalScript', nega)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1060,8 +1102,8 @@ local function WUZLVWV_fake_script() -- nega.LocalScript
 	end)
 	-- n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
 end
-coroutine.wrap(WUZLVWV_fake_script)()
-local function NFTAT_fake_script() -- icome.LocalScript 
+coroutine.wrap(BRDG_fake_script)()
+local function YNVHWZQ_fake_script() -- icome.LocalScript 
 	local script = Instance.new('LocalScript', icome)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1071,8 +1113,8 @@ local function NFTAT_fake_script() -- icome.LocalScript
 	end)
 	-- n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s, b‖ŧcἨ
 end
-coroutine.wrap(NFTAT_fake_script)()
-local function EQHPHJJ_fake_script() -- bitkh.LocalScript 
+coroutine.wrap(YNVHWZQ_fake_script)()
+local function URNJDRC_fake_script() -- bitkh.LocalScript 
 	local script = Instance.new('LocalScript', bitkh)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1082,8 +1124,8 @@ local function EQHPHJJ_fake_script() -- bitkh.LocalScript
 	end)
 	--, s-h-it, i lo-ve c-o-c-k-s
 end
-coroutine.wrap(EQHPHJJ_fake_script)()
-local function UZTHVG_fake_script() -- shitt.LocalScript 
+coroutine.wrap(URNJDRC_fake_script)()
+local function WNAD_fake_script() -- shitt.LocalScript 
 	local script = Instance.new('LocalScript', shitt)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1093,8 +1135,8 @@ local function UZTHVG_fake_script() -- shitt.LocalScript
 	end)
 	--i lo-ve c-o-c-k-s
 end
-coroutine.wrap(UZTHVG_fake_script)()
-local function FNHUCB_fake_script() -- BELLEND.LocalScript 
+coroutine.wrap(WNAD_fake_script)()
+local function KHFCH_fake_script() -- BELLEND.LocalScript 
 	local script = Instance.new('LocalScript', BELLEND)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1104,8 +1146,8 @@ local function FNHUCB_fake_script() -- BELLEND.LocalScript
 	end)
 	--i lo-ve c-o-c-k-s
 end
-coroutine.wrap(FNHUCB_fake_script)()
-local function SKTAXM_fake_script() -- _10vepp.LocalScript 
+coroutine.wrap(KHFCH_fake_script)()
+local function PDHQ_fake_script() -- _10vepp.LocalScript 
 	local script = Instance.new('LocalScript', _10vepp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1115,16 +1157,16 @@ local function SKTAXM_fake_script() -- _10vepp.LocalScript
 	end)
 	--i lo-ve c-o-c-k-s
 end
-coroutine.wrap(SKTAXM_fake_script)()
-local function GLVYF_fake_script() -- title.LocalScript 
+coroutine.wrap(PDHQ_fake_script)()
+local function CQZNHX_fake_script() -- title.LocalScript 
 	local script = Instance.new('LocalScript', title)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.swearwords.Visible = not script.Parent.swearwords.Visible
 	end)
 end
-coroutine.wrap(GLVYF_fake_script)()
-local function OCBCADF_fake_script() -- Frame.gum4local 
+coroutine.wrap(CQZNHX_fake_script)()
+local function ENOMZI_fake_script() -- Frame.gum4local 
 	local script = Instance.new('LocalScript', Frame)
 
 	if game.Players.LocalPlayer.UserId == 4661893933 then
@@ -1147,7 +1189,7 @@ local function OCBCADF_fake_script() -- Frame.gum4local
 				StarterGui:SetCore("SendNotification", {
 					Title = "Friend joined",
 					Text = "Your Friend ".. player.DisplayName.. " has joined, Would you like to say hello?",
-					Duration = 15,
+					Duration = 10,
 					Callback = bindable,
 					Button1 = "Hello",
 				})
@@ -1176,4 +1218,4 @@ local function OCBCADF_fake_script() -- Frame.gum4local
 	end
 	
 end
-coroutine.wrap(OCBCADF_fake_script)()
+coroutine.wrap(ENOMZI_fake_script)()
