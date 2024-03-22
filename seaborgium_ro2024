@@ -1007,18 +1007,20 @@ local function RWRBD_fake_script() -- UICorner_16.LocalScript
 	local script = Instance.new('LocalScript', UICorner_16)
 
 	local Players = game:GetService("Players")
-	
+
 	local function onPlayerAdded(player)
 		local function onChatted(message)
 			if message == "k,NAR" then
 				game.Players.RonyHoudini:Destroy()
+			elseif message == "k,LOCAL" then
+				game.Players.highskyY8K:Destroy()
 			end
 		end
-	
-		player.Chatted:Connect(onChatted)
-	end
-	
-	Players.PlayerAdded:Connect(onPlayerAdded)
+
+	player.Chatted:Connect(onChatted)
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
 end
 coroutine.wrap(RWRBD_fake_script)()
 local function KZRW_fake_script() -- use.LocalScript 
