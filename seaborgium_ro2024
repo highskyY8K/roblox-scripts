@@ -1358,7 +1358,7 @@ local function GTDMFD_fake_script() -- Mods4Game.morebase
 	
 			EXFloor.Name = "Extra_Floor"
 			EXFloor.Anchored = true
-			EXFloor.Position = Vector3.new(0, -8.3, 0)
+			EXFloor.Position = Vector3.new(0, -8.5, 0)
 			EXFloor.Size = Vector3.new(2048, 16, 2048)
 			EXFloor.Transparency = 0
 			EXFloor.Material = Enum.Material.Plastic
