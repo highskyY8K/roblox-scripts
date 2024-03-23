@@ -1,4 +1,4 @@
-print("🌊seaborgiumV1.62 has loaded")
+print("🌊seaborgiumV1.7 has loaded")
 local Seaborgium_Icon = Instance.new("Frame")
 local Background = Instance.new("ImageButton")
 local icon = Instance.new("ImageLabel")
@@ -7,84 +7,101 @@ local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local section = Instance.new("TextLabel")
 local UICorner_2 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
 local chat4people = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local ImageLabel = Instance.new("ImageLabel")
-local scripteditor = Instance.new("TextButton")
+local localplaya = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 local ImageLabel_2 = Instance.new("ImageLabel")
-local localplaya = Instance.new("TextButton")
+local scripteditor = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 local ImageLabel_3 = Instance.new("ImageLabel")
-local mainsecotin = Instance.new("Frame")
+local bg4sfPADDING1 = Instance.new("Frame")
+local mapMods = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local ImageLabel_6 = Instance.new("ImageLabel")
+local ImageLabel_7 = Instance.new("ImageLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local mainsecotin = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
 local codeditor = Instance.new("Frame")
 local codeditorsw = Instance.new("ScrollingFrame")
 local codebox = Instance.new("TextBox")
 local Execute = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
-local CClear = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
-local mscripts = Instance.new("ImageButton")
+local CClear = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
+local mscripts = Instance.new("ImageButton")
+local UICorner_10 = Instance.new("UICorner")
 local mscrip = Instance.new("Frame")
 local msbg = Instance.new("Frame")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local sfmsg = Instance.new("ScrollingFrame")
 local IY = Instance.new("ImageLabel")
 local runiy = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
 local UICorner_12 = Instance.new("UICorner")
-local c4bh = Instance.new("ImageLabel")
 local UICorner_13 = Instance.new("UICorner")
-local runc4bh = Instance.new("TextButton")
+local c4bh = Instance.new("ImageLabel")
 local UICorner_14 = Instance.new("UICorner")
+local runc4bh = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
 local character = Instance.new("Frame")
 local speed = Instance.new("TextLabel")
-local UICorner_16 = Instance.new("UICorner")
-local sped = Instance.new("TextBox")
 local UICorner_17 = Instance.new("UICorner")
-local jp = Instance.new("TextLabel")
+local sped = Instance.new("TextBox")
 local UICorner_18 = Instance.new("UICorner")
-local jpower = Instance.new("TextBox")
+local jp = Instance.new("TextLabel")
 local UICorner_19 = Instance.new("UICorner")
-local use = Instance.new("TextButton")
+local jpower = Instance.new("TextBox")
 local UICorner_20 = Instance.new("UICorner")
+local use = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
 local whispa = Instance.new("TextBox")
 local TextBox = Instance.new("TextBox")
-local UICorner_21 = Instance.new("UICorner")
-local TextButton = Instance.new("TextButton")
 local UICorner_22 = Instance.new("UICorner")
-local ImageLabel_4 = Instance.new("ImageLabel")
-local cchat = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
+local ImageLabel_8 = Instance.new("ImageLabel")
+local cchat = Instance.new("TextButton")
 local UICorner_24 = Instance.new("UICorner")
-local title = Instance.new("TextButton")
 local UICorner_25 = Instance.new("UICorner")
-local swearwords = Instance.new("Frame")
+local title = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
-local bg = Instance.new("Frame")
+local swearwords = Instance.new("Frame")
 local UICorner_27 = Instance.new("UICorner")
-local ScrollingFrame = Instance.new("ScrollingFrame")
-local UIListLayout = Instance.new("UIListLayout")
+local bg = Instance.new("Frame")
+local UICorner_28 = Instance.new("UICorner")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
 local bgnotouch = Instance.new("Frame")
 local as = Instance.new("TextButton")
-local UICorner_28 = Instance.new("UICorner")
-local ashole = Instance.new("TextButton")
 local UICorner_29 = Instance.new("UICorner")
-local nega = Instance.new("TextButton")
+local ashole = Instance.new("TextButton")
 local UICorner_30 = Instance.new("UICorner")
-local icome = Instance.new("TextButton")
+local nega = Instance.new("TextButton")
 local UICorner_31 = Instance.new("UICorner")
-local bitkh = Instance.new("TextButton")
+local icome = Instance.new("TextButton")
 local UICorner_32 = Instance.new("UICorner")
-local shitt = Instance.new("TextButton")
+local bitkh = Instance.new("TextButton")
 local UICorner_33 = Instance.new("UICorner")
-local BELLEND = Instance.new("TextButton")
+local shitt = Instance.new("TextButton")
 local UICorner_34 = Instance.new("UICorner")
-local _10vepp = Instance.new("TextButton")
+local BELLEND = Instance.new("TextButton")
 local UICorner_35 = Instance.new("UICorner")
+local _10vepp = Instance.new("TextButton")
+local UICorner_36 = Instance.new("UICorner")
+local Mods4Game = Instance.new("TextButton")
+local UICorner_37 = Instance.new("UICorner")
+local ClearBANS = Instance.new("TextButton")
+local UICorner_38 = Instance.new("UICorner")
+local tgp = Instance.new("TextLabel")
+local UICorner_39 = Instance.new("UICorner")
+local gameversion = Instance.new("TextLabel")
+local UICorner_40 = Instance.new("UICorner")
 
 --Properties:
 
@@ -139,7 +156,6 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(-11.4689999, 0, 1.40600002, 0)
 Frame.Size = UDim2.new(0, 429, 0, 204)
-Frame.Visible = false
 
 UICorner.CornerRadius = UDim.new(0, 5)
 UICorner.Parent = Frame
@@ -160,8 +176,18 @@ section.TextSize = 14.000
 UICorner_2.CornerRadius = UDim.new(0, 15)
 UICorner_2.Parent = section
 
+ScrollingFrame.Parent = section
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Size = UDim2.new(0, 52, 0, 163)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.29999995, 0)
+ScrollingFrame.ScrollBarThickness = 0
+
 chat4people.Name = "chat4people"
-chat4people.Parent = section
+chat4people.Parent = ScrollingFrame
 chat4people.BackgroundColor3 = Color3.fromRGB(36, 60, 61)
 chat4people.BackgroundTransparency = 0.500
 chat4people.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -186,57 +212,130 @@ ImageLabel.Size = UDim2.new(0, 36, 0, 36)
 ImageLabel.Image = "http://www.roblox.com/asset/?id=7164927415"
 ImageLabel.ImageColor3 = Color3.fromRGB(141, 174, 176)
 
-scripteditor.Name = "scripteditor"
-scripteditor.Parent = section
-scripteditor.BackgroundColor3 = Color3.fromRGB(36, 60, 61)
-scripteditor.BackgroundTransparency = 0.500
-scripteditor.BorderColor3 = Color3.fromRGB(0, 0, 0)
-scripteditor.BorderSizePixel = 0
-scripteditor.Position = UDim2.new(0.115000002, 0, 0.36500001, 0)
-scripteditor.Size = UDim2.new(0, 40, 0, 40)
-scripteditor.Font = Enum.Font.SourceSans
-scripteditor.Text = ""
-scripteditor.TextColor3 = Color3.fromRGB(0, 0, 0)
-scripteditor.TextSize = 14.000
-
-UICorner_4.CornerRadius = UDim.new(1, 0)
-UICorner_4.Parent = scripteditor
-
-ImageLabel_2.Parent = scripteditor
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BackgroundTransparency = 1.000
-ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_2.BorderSizePixel = 0
-ImageLabel_2.Position = UDim2.new(0.174999997, 0, 0.174999997, 0)
-ImageLabel_2.Size = UDim2.new(0, 26, 0, 26)
-ImageLabel_2.Image = "rbxassetid://9405930424"
-ImageLabel_2.ImageColor3 = Color3.fromRGB(141, 174, 176)
-
 localplaya.Name = "localplaya"
-localplaya.Parent = section
+localplaya.Parent = ScrollingFrame
 localplaya.BackgroundColor3 = Color3.fromRGB(36, 60, 61)
 localplaya.BackgroundTransparency = 0.500
 localplaya.BorderColor3 = Color3.fromRGB(0, 0, 0)
 localplaya.BorderSizePixel = 0
-localplaya.Position = UDim2.new(0.115000002, 0, 0.654999971, 0)
+localplaya.LayoutOrder = 3
+localplaya.Position = UDim2.new(0.115000002, 0, 0.0610000007, 0)
 localplaya.Size = UDim2.new(0, 40, 0, 40)
 localplaya.Font = Enum.Font.SourceSans
 localplaya.Text = ""
 localplaya.TextColor3 = Color3.fromRGB(0, 0, 0)
 localplaya.TextSize = 14.000
 
-UICorner_5.CornerRadius = UDim.new(1, 0)
-UICorner_5.Parent = localplaya
+UICorner_4.CornerRadius = UDim.new(1, 0)
+UICorner_4.Parent = localplaya
 
-ImageLabel_3.Parent = localplaya
+ImageLabel_2.Parent = localplaya
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.075000003, 0, 0.075000003, 0)
+ImageLabel_2.Size = UDim2.new(0, 33, 0, 33)
+ImageLabel_2.Image = "rbxassetid://11984980776"
+ImageLabel_2.ImageColor3 = Color3.fromRGB(141, 174, 176)
+
+scripteditor.Name = "scripteditor"
+scripteditor.Parent = ScrollingFrame
+scripteditor.BackgroundColor3 = Color3.fromRGB(36, 60, 61)
+scripteditor.BackgroundTransparency = 0.500
+scripteditor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+scripteditor.BorderSizePixel = 0
+scripteditor.LayoutOrder = 2
+scripteditor.Position = UDim2.new(0.115000002, 0, 0.0610000007, 0)
+scripteditor.Size = UDim2.new(0, 40, 0, 40)
+scripteditor.Font = Enum.Font.SourceSans
+scripteditor.Text = ""
+scripteditor.TextColor3 = Color3.fromRGB(0, 0, 0)
+scripteditor.TextSize = 14.000
+
+UICorner_5.CornerRadius = UDim.new(1, 0)
+UICorner_5.Parent = scripteditor
+
+ImageLabel_3.Parent = scripteditor
 ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_3.BackgroundTransparency = 1.000
 ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_3.BorderSizePixel = 0
-ImageLabel_3.Position = UDim2.new(0.075000003, 0, 0.075000003, 0)
-ImageLabel_3.Size = UDim2.new(0, 33, 0, 33)
-ImageLabel_3.Image = "rbxassetid://11984980776"
+ImageLabel_3.Position = UDim2.new(0.174999997, 0, 0.174999997, 0)
+ImageLabel_3.Size = UDim2.new(0, 26, 0, 26)
+ImageLabel_3.Image = "rbxassetid://9405930424"
 ImageLabel_3.ImageColor3 = Color3.fromRGB(141, 174, 176)
+
+bg4sfPADDING1.Name = "bg4sfPADDING1"
+bg4sfPADDING1.Parent = ScrollingFrame
+bg4sfPADDING1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bg4sfPADDING1.BackgroundTransparency = 1.000
+bg4sfPADDING1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bg4sfPADDING1.BorderSizePixel = 0
+bg4sfPADDING1.LayoutOrder = -1
+bg4sfPADDING1.Size = UDim2.new(0, 0, 0.0149999997, 0)
+
+mapMods.Name = "mapMods"
+mapMods.Parent = ScrollingFrame
+mapMods.BackgroundColor3 = Color3.fromRGB(36, 60, 61)
+mapMods.BackgroundTransparency = 0.500
+mapMods.BorderColor3 = Color3.fromRGB(0, 0, 0)
+mapMods.BorderSizePixel = 0
+mapMods.LayoutOrder = 3
+mapMods.Position = UDim2.new(0.115000002, 0, 0.0610000007, 0)
+mapMods.Size = UDim2.new(0, 40, 0, 40)
+mapMods.Font = Enum.Font.SourceSans
+mapMods.Text = ""
+mapMods.TextColor3 = Color3.fromRGB(0, 0, 0)
+mapMods.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(1, 0)
+UICorner_6.Parent = mapMods
+
+ImageLabel_4.Parent = mapMods
+ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_4.BackgroundTransparency = 1.000
+ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_4.BorderSizePixel = 0
+ImageLabel_4.Position = UDim2.new(0.125, 0, 0.125, 0)
+ImageLabel_4.Size = UDim2.new(0, 29, 0, 29)
+ImageLabel_4.Image = "rbxassetid://11698445336"
+ImageLabel_4.ImageColor3 = Color3.fromRGB(141, 174, 176)
+
+ImageLabel_5.Parent = mapMods
+ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_5.BackgroundTransparency = 1.000
+ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_5.BorderSizePixel = 0
+ImageLabel_5.Position = UDim2.new(0.125, 0, 0.125, 0)
+ImageLabel_5.Size = UDim2.new(0, 29, 0, 29)
+ImageLabel_5.Image = "rbxassetid://11698445336"
+ImageLabel_5.ImageColor3 = Color3.fromRGB(141, 174, 176)
+
+ImageLabel_6.Parent = mapMods
+ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_6.BackgroundTransparency = 1.000
+ImageLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_6.BorderSizePixel = 0
+ImageLabel_6.Position = UDim2.new(0.125, 0, 0.125, 0)
+ImageLabel_6.Size = UDim2.new(0, 29, 0, 29)
+ImageLabel_6.Image = "rbxassetid://11698445336"
+ImageLabel_6.ImageColor3 = Color3.fromRGB(141, 174, 176)
+
+ImageLabel_7.Parent = mapMods
+ImageLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_7.BackgroundTransparency = 1.000
+ImageLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_7.BorderSizePixel = 0
+ImageLabel_7.Position = UDim2.new(0.125, 0, 0.125, 0)
+ImageLabel_7.Size = UDim2.new(0, 29, 0, 29)
+ImageLabel_7.Image = "rbxassetid://11698445336"
+ImageLabel_7.ImageColor3 = Color3.fromRGB(141, 174, 176)
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0.0450000018, 0)
 
 mainsecotin.Name = "mainsecotin"
 mainsecotin.Parent = Frame
@@ -247,7 +346,7 @@ mainsecotin.BorderSizePixel = 0
 mainsecotin.Position = UDim2.new(0.169780463, 0, 0.127450988, 0)
 mainsecotin.Size = UDim2.new(0, 344, 0, 147)
 
-UICorner_6.Parent = mainsecotin
+UICorner_7.Parent = mainsecotin
 
 codeditor.Name = "codeditor"
 codeditor.Parent = mainsecotin
@@ -305,7 +404,7 @@ Execute.TextSize = 14.000
 Execute.TextStrokeTransparency = 0.000
 Execute.TextWrapped = true
 
-UICorner_7.Parent = Execute
+UICorner_8.Parent = Execute
 
 CClear.Name = "CClear"
 CClear.Parent = codeditor
@@ -323,7 +422,7 @@ CClear.TextSize = 14.000
 CClear.TextStrokeTransparency = 0.000
 CClear.TextWrapped = true
 
-UICorner_8.Parent = CClear
+UICorner_9.Parent = CClear
 
 mscripts.Name = "mscripts"
 mscripts.Parent = codeditor
@@ -336,7 +435,7 @@ mscripts.Size = UDim2.new(0, 33, 0, 26)
 mscripts.Image = "rbxassetid://4034483344"
 mscripts.ImageColor3 = Color3.fromRGB(141, 174, 176)
 
-UICorner_9.Parent = mscripts
+UICorner_10.Parent = mscripts
 
 mscrip.Name = "mscrip"
 mscrip.Parent = mscripts
@@ -357,7 +456,7 @@ msbg.BorderSizePixel = 0
 msbg.Position = UDim2.new(0.0394088663, 0, 0.0440250859, 0)
 msbg.Size = UDim2.new(0, 186, 0, 154)
 
-UICorner_10.Parent = msbg
+UICorner_11.Parent = msbg
 
 sfmsg.Name = "sfmsg"
 sfmsg.Parent = msbg
@@ -395,10 +494,10 @@ runiy.TextSize = 14.000
 runiy.TextStrokeTransparency = 0.000
 runiy.TextWrapped = true
 
-UICorner_11.Parent = runiy
+UICorner_12.Parent = runiy
 
-UICorner_12.CornerRadius = UDim.new(0.150000006, 0)
-UICorner_12.Parent = IY
+UICorner_13.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_13.Parent = IY
 
 c4bh.Name = "c4bh"
 c4bh.Parent = sfmsg
@@ -409,8 +508,8 @@ c4bh.Position = UDim2.new(0.160999909, 0, 0.510590851, 0)
 c4bh.Size = UDim2.new(0, 126, 0, 100)
 c4bh.Image = "http://www.roblox.com/asset/?id=16699190898"
 
-UICorner_13.CornerRadius = UDim.new(0.150000006, 0)
-UICorner_13.Parent = c4bh
+UICorner_14.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_14.Parent = c4bh
 
 runc4bh.Name = "runc4bh"
 runc4bh.Parent = c4bh
@@ -428,9 +527,9 @@ runc4bh.TextSize = 14.000
 runc4bh.TextStrokeTransparency = 0.000
 runc4bh.TextWrapped = true
 
-UICorner_14.Parent = runc4bh
+UICorner_15.Parent = runc4bh
 
-UICorner_15.Parent = mscrip
+UICorner_16.Parent = mscrip
 
 character.Name = "character"
 character.Parent = mainsecotin
@@ -456,7 +555,7 @@ speed.TextScaled = true
 speed.TextSize = 14.000
 speed.TextWrapped = true
 
-UICorner_16.Parent = speed
+UICorner_17.Parent = speed
 
 sped.Name = "sped"
 sped.Parent = speed
@@ -471,7 +570,7 @@ sped.Text = "16"
 sped.TextColor3 = Color3.fromRGB(0, 0, 0)
 sped.TextSize = 14.000
 
-UICorner_17.Parent = sped
+UICorner_18.Parent = sped
 
 jp.Name = "jp"
 jp.Parent = character
@@ -487,7 +586,7 @@ jp.TextColor3 = Color3.fromRGB(141, 174, 176)
 jp.TextSize = 32.000
 jp.TextWrapped = true
 
-UICorner_18.Parent = jp
+UICorner_19.Parent = jp
 
 jpower.Name = "jpower"
 jpower.Parent = jp
@@ -502,7 +601,7 @@ jpower.Text = "7.2"
 jpower.TextColor3 = Color3.fromRGB(0, 0, 0)
 jpower.TextSize = 14.000
 
-UICorner_19.Parent = jpower
+UICorner_20.Parent = jpower
 
 use.Name = "use"
 use.Parent = character
@@ -521,7 +620,7 @@ use.TextStrokeColor3 = Color3.fromRGB(163, 163, 163)
 use.TextStrokeTransparency = 0.000
 use.TextWrapped = true
 
-UICorner_20.Parent = use
+UICorner_21.Parent = use
 
 whispa.Name = "whispa"
 whispa.Parent = mainsecotin
@@ -559,8 +658,8 @@ TextBox.TextWrapped = true
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
-UICorner_21.CornerRadius = UDim.new(0, 5)
-UICorner_21.Parent = TextBox
+UICorner_22.CornerRadius = UDim.new(0, 5)
+UICorner_22.Parent = TextBox
 
 TextButton.Parent = TextBox
 TextButton.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
@@ -575,19 +674,19 @@ TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
 TextButton.TextWrapped = true
 
-UICorner_22.CornerRadius = UDim.new(0, 5)
-UICorner_22.Parent = TextButton
+UICorner_23.CornerRadius = UDim.new(0, 5)
+UICorner_23.Parent = TextButton
 
-ImageLabel_4.Parent = TextButton
-ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_4.BackgroundTransparency = 1.000
-ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_4.BorderSizePixel = 0
-ImageLabel_4.Position = UDim2.new(0.130434781, 0, 0.0652154014, 0)
-ImageLabel_4.Size = UDim2.new(0, 40, 0, 40)
-ImageLabel_4.Image = "rbxassetid://12099513379"
-ImageLabel_4.ImageColor3 = Color3.fromRGB(208, 202, 213)
-ImageLabel_4.ImageTransparency = 0.300
+ImageLabel_8.Parent = TextButton
+ImageLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_8.BackgroundTransparency = 1.000
+ImageLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_8.BorderSizePixel = 0
+ImageLabel_8.Position = UDim2.new(0.130434781, 0, 0.0652154014, 0)
+ImageLabel_8.Size = UDim2.new(0, 40, 0, 40)
+ImageLabel_8.Image = "rbxassetid://12099513379"
+ImageLabel_8.ImageColor3 = Color3.fromRGB(208, 202, 213)
+ImageLabel_8.ImageTransparency = 0.300
 
 cchat.Name = "cchat"
 cchat.Parent = TextBox
@@ -606,10 +705,10 @@ cchat.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 cchat.TextStrokeTransparency = 0.600
 cchat.TextWrapped = true
 
-UICorner_23.CornerRadius = UDim.new(0, 5)
-UICorner_23.Parent = cchat
+UICorner_24.CornerRadius = UDim.new(0, 5)
+UICorner_24.Parent = cchat
 
-UICorner_24.Parent = whispa
+UICorner_25.Parent = whispa
 
 title.Name = "title"
 title.Parent = whispa
@@ -629,7 +728,7 @@ title.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 title.TextStrokeTransparency = 0.000
 title.TextWrapped = true
 
-UICorner_25.Parent = title
+UICorner_26.Parent = title
 
 swearwords.Name = "swearwords"
 swearwords.Parent = title
@@ -641,7 +740,7 @@ swearwords.Position = UDim2.new(1.33333337, 0, -0.5, 0)
 swearwords.Size = UDim2.new(0, 100, 0, 120)
 swearwords.Visible = false
 
-UICorner_26.Parent = swearwords
+UICorner_27.Parent = swearwords
 
 bg.Name = "bg"
 bg.Parent = swearwords
@@ -653,31 +752,31 @@ bg.ClipsDescendants = true
 bg.Position = UDim2.new(0.0799999982, 0, 0.100060426, 0)
 bg.Size = UDim2.new(0, 84, 0, 102)
 
-UICorner_27.Parent = bg
+UICorner_28.Parent = bg
 
-ScrollingFrame.Parent = bg
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame.BackgroundTransparency = 1.000
-ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Size = UDim2.new(0, 84, 0, 102)
-ScrollingFrame.ScrollBarThickness = 8
+ScrollingFrame_2.Parent = bg
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Size = UDim2.new(0, 84, 0, 102)
+ScrollingFrame_2.ScrollBarThickness = 8
 
-UIListLayout.Parent = ScrollingFrame
-UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0.0350000001, 0)
+UIListLayout_2.Parent = ScrollingFrame_2
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0.0350000001, 0)
 
 bgnotouch.Name = "bgnotouch"
-bgnotouch.Parent = ScrollingFrame
+bgnotouch.Parent = ScrollingFrame_2
 bgnotouch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 bgnotouch.BorderColor3 = Color3.fromRGB(0, 0, 0)
 bgnotouch.BorderSizePixel = 0
 bgnotouch.Position = UDim2.new(0.0714285746, 0, 0, 0)
 
 as.Name = "[as]"
-as.Parent = ScrollingFrame
+as.Parent = ScrollingFrame_2
 as.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 as.BackgroundTransparency = 0.100
 as.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -692,10 +791,10 @@ as.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 as.TextStrokeTransparency = 0.000
 as.TextWrapped = true
 
-UICorner_28.Parent = as
+UICorner_29.Parent = as
 
 ashole.Name = "[as]hole"
-ashole.Parent = ScrollingFrame
+ashole.Parent = ScrollingFrame_2
 ashole.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 ashole.BackgroundTransparency = 0.100
 ashole.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -710,10 +809,10 @@ ashole.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 ashole.TextStrokeTransparency = 0.000
 ashole.TextWrapped = true
 
-UICorner_29.Parent = ashole
+UICorner_30.Parent = ashole
 
 nega.Name = "nega"
-nega.Parent = ScrollingFrame
+nega.Parent = ScrollingFrame_2
 nega.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 nega.BackgroundTransparency = 0.100
 nega.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -728,10 +827,10 @@ nega.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 nega.TextStrokeTransparency = 0.000
 nega.TextWrapped = true
 
-UICorner_30.Parent = nega
+UICorner_31.Parent = nega
 
 icome.Name = "icome"
-icome.Parent = ScrollingFrame
+icome.Parent = ScrollingFrame_2
 icome.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 icome.BackgroundTransparency = 0.100
 icome.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -746,10 +845,10 @@ icome.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 icome.TextStrokeTransparency = 0.000
 icome.TextWrapped = true
 
-UICorner_31.Parent = icome
+UICorner_32.Parent = icome
 
 bitkh.Name = "bitkh"
-bitkh.Parent = ScrollingFrame
+bitkh.Parent = ScrollingFrame_2
 bitkh.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 bitkh.BackgroundTransparency = 0.100
 bitkh.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -764,10 +863,10 @@ bitkh.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 bitkh.TextStrokeTransparency = 0.000
 bitkh.TextWrapped = true
 
-UICorner_32.Parent = bitkh
+UICorner_33.Parent = bitkh
 
 shitt.Name = "shitt"
-shitt.Parent = ScrollingFrame
+shitt.Parent = ScrollingFrame_2
 shitt.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 shitt.BackgroundTransparency = 0.100
 shitt.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -782,10 +881,10 @@ shitt.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 shitt.TextStrokeTransparency = 0.000
 shitt.TextWrapped = true
 
-UICorner_33.Parent = shitt
+UICorner_34.Parent = shitt
 
 BELLEND.Name = "BELLEND"
-BELLEND.Parent = ScrollingFrame
+BELLEND.Parent = ScrollingFrame_2
 BELLEND.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 BELLEND.BackgroundTransparency = 0.100
 BELLEND.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -800,10 +899,10 @@ BELLEND.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 BELLEND.TextStrokeTransparency = 0.000
 BELLEND.TextWrapped = true
 
-UICorner_34.Parent = BELLEND
+UICorner_35.Parent = BELLEND
 
 _10vepp.Name = "10vepp"
-_10vepp.Parent = ScrollingFrame
+_10vepp.Parent = ScrollingFrame_2
 _10vepp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 _10vepp.BackgroundTransparency = 0.100
 _10vepp.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -817,11 +916,80 @@ _10vepp.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 _10vepp.TextStrokeTransparency = 0.000
 _10vepp.TextWrapped = true
 
-UICorner_35.Parent = _10vepp
+UICorner_36.Parent = _10vepp
+
+Mods4Game.Name = "Mods4Game"
+Mods4Game.Parent = mainsecotin
+Mods4Game.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+Mods4Game.BackgroundTransparency = 0.100
+Mods4Game.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Mods4Game.BorderSizePixel = 0
+Mods4Game.Position = UDim2.new(0.0406976752, 0, 0.183673471, 0)
+Mods4Game.Size = UDim2.new(0, 131, 0, 33)
+Mods4Game.Visible = false
+Mods4Game.Font = Enum.Font.SourceSansBold
+Mods4Game.Text = "Extra Map"
+Mods4Game.TextColor3 = Color3.fromRGB(102, 178, 113)
+Mods4Game.TextScaled = true
+Mods4Game.TextSize = 14.000
+Mods4Game.TextWrapped = true
+
+UICorner_37.Parent = Mods4Game
+
+ClearBANS.Name = "ClearBANS"
+ClearBANS.Parent = Mods4Game
+ClearBANS.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+ClearBANS.BackgroundTransparency = 0.100
+ClearBANS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClearBANS.BorderSizePixel = 0
+ClearBANS.Position = UDim2.new(-0.00510365749, 0, 1.77241838, 0)
+ClearBANS.Size = UDim2.new(0, 131, 0, 33)
+ClearBANS.Font = Enum.Font.SourceSansBold
+ClearBANS.Text = "Clear Ban Texts"
+ClearBANS.TextColor3 = Color3.fromRGB(178, 99, 99)
+ClearBANS.TextScaled = true
+ClearBANS.TextSize = 14.000
+ClearBANS.TextWrapped = true
+
+UICorner_38.Parent = ClearBANS
+
+tgp.Name = "tgp"
+tgp.Parent = Mods4Game
+tgp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+tgp.BackgroundTransparency = 0.100
+tgp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tgp.BorderSizePixel = 0
+tgp.Position = UDim2.new(1.2061069, 0, -0.272727281, 0)
+tgp.Size = UDim2.new(0, 154, 0, 35)
+tgp.Font = Enum.Font.SourceSansBold
+tgp.Text = "Total Game Parts :"
+tgp.TextColor3 = Color3.fromRGB(154, 170, 101)
+tgp.TextScaled = true
+tgp.TextSize = 14.000
+tgp.TextWrapped = true
+
+UICorner_39.Parent = tgp
+
+gameversion.Name = "gameversion"
+gameversion.Parent = Mods4Game
+gameversion.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+gameversion.BackgroundTransparency = 0.100
+gameversion.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gameversion.BorderSizePixel = 0
+gameversion.Position = UDim2.new(1.2061069, 0, 1.21212304, 0)
+gameversion.Size = UDim2.new(0, 154, 0, 51)
+gameversion.Font = Enum.Font.SourceSansBold
+gameversion.Text = ""
+gameversion.TextColor3 = Color3.fromRGB(154, 170, 101)
+gameversion.TextScaled = true
+gameversion.TextSize = 14.000
+gameversion.TextWrapped = true
+
+UICorner_40.Parent = gameversion
 
 -- Scripts:
 
-local function ORPKAV_fake_script() -- icon.LocalScript 
+local function GBUZQ_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local frame = script.Parent.Parent.icon
@@ -869,8 +1037,8 @@ local function ORPKAV_fake_script() -- icon.LocalScript
 	end)
 	
 end
-coroutine.wrap(ORPKAV_fake_script)()
-local function SFSMFA_fake_script() -- Frame.Draggable_yeah 
+coroutine.wrap(GBUZQ_fake_script)()
+local function UDOB_fake_script() -- Frame.Draggable_yeah 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent.Background.ImageTransparency = 1
@@ -883,38 +1051,47 @@ local function SFSMFA_fake_script() -- Frame.Draggable_yeah
 	end
 	
 	wait(2)
-	for i = 1, 15 do
-		script.Parent.Parent.Parent.Background.ImageTransparency = script.Parent.Parent.Parent.Background.ImageTransparency - 0.05
-		script.Parent.Parent.icon.ImageTransparency = script.Parent.Parent.icon.ImageTransparency - 0.05
+	for i = 1, 10 do
+		script.Parent.Parent.Parent.Background.ImageTransparency = script.Parent.Parent.Parent.Background.ImageTransparency - 0.1
+		script.Parent.Parent.icon.ImageTransparency = script.Parent.Parent.icon.ImageTransparency - 0.1
 		wait()
 	end
 	script.Parent.Parent.Parent.Background.ImageTransparency = 0
 	script.Parent.Parent.icon.ImageTransparency = 0
 end
-coroutine.wrap(SFSMFA_fake_script)()
-local function IVEFC_fake_script() -- section.LocalScript 
+coroutine.wrap(UDOB_fake_script)()
+local function BESIRL_fake_script() -- section.LocalScript 
 	local script = Instance.new('LocalScript', section)
 
 	local sesc = script.Parent.Parent.mainsecotin
 	
-	script.Parent.chat4people.MouseButton1Click:Connect(function()
+	script.Parent.ScrollingFrame.chat4people.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = true
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = false
+		sesc.Mods4Game.Visible = false
 	end)
-	script.Parent.localplaya.MouseButton1Click:Connect(function()
+	script.Parent.ScrollingFrame.localplaya.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = true
+		sesc.Mods4Game.Visible = false
 	end)
-	script.Parent.scripteditor.MouseButton1Click:Connect(function()
+	script.Parent.ScrollingFrame.scripteditor.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = true
 		sesc.character.Visible = false
+		sesc.Mods4Game.Visible = false
+	end)
+	script.Parent.ScrollingFrame.mapMods.MouseButton1Click:Connect(function()
+		sesc.whispa.Visible = false
+		sesc.codeditor.Visible = false
+		sesc.character.Visible = false
+		sesc.Mods4Game.Visible = true
 	end)
 end
-coroutine.wrap(IVEFC_fake_script)()
-local function PSGJWR_fake_script() -- codebox.LocalScript 
+coroutine.wrap(BESIRL_fake_script)()
+local function QXEFO_fake_script() -- codebox.LocalScript 
 	local script = Instance.new('LocalScript', codebox)
 
 	local ran = math.random(0, 10)
@@ -928,8 +1105,8 @@ local function PSGJWR_fake_script() -- codebox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(PSGJWR_fake_script)()
-local function JQSBCW_fake_script() -- Execute.LocalScript 
+coroutine.wrap(QXEFO_fake_script)()
+local function WAOM_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local cod_e = script.Parent.Parent.codeditorsw.codebox
@@ -941,8 +1118,8 @@ local function JQSBCW_fake_script() -- Execute.LocalScript
 		script.Parent.Text = "Execute"
 	end)
 end
-coroutine.wrap(JQSBCW_fake_script)()
-local function WRZYC_fake_script() -- CClear.LocalScript 
+coroutine.wrap(WAOM_fake_script)()
+local function HCUS_fake_script() -- CClear.LocalScript 
 	local script = Instance.new('LocalScript', CClear)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -952,8 +1129,8 @@ local function WRZYC_fake_script() -- CClear.LocalScript
 		script.Parent.Text = "Clear Code"
 	end)
 end
-coroutine.wrap(WRZYC_fake_script)()
-local function RSSZ_fake_script() -- runiy.LocalScript 
+coroutine.wrap(HCUS_fake_script)()
+local function TRPB_fake_script() -- runiy.LocalScript 
 	local script = Instance.new('LocalScript', runiy)
 
 	local ran = false
@@ -971,8 +1148,8 @@ local function RSSZ_fake_script() -- runiy.LocalScript
 		
 	end)
 end
-coroutine.wrap(RSSZ_fake_script)()
-local function GLRBPUU_fake_script() -- runc4bh.LocalScript 
+coroutine.wrap(TRPB_fake_script)()
+local function KJCGG_fake_script() -- runc4bh.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh)
 
 	local ran = false
@@ -990,17 +1167,17 @@ local function GLRBPUU_fake_script() -- runc4bh.LocalScript
 	
 	end)
 end
-coroutine.wrap(GLRBPUU_fake_script)()
-local function SAHQW_fake_script() -- mscripts.LocalScript 
+coroutine.wrap(KJCGG_fake_script)()
+local function MURMFWK_fake_script() -- mscripts.LocalScript 
 	local script = Instance.new('LocalScript', mscripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
 	end)
 end
-coroutine.wrap(SAHQW_fake_script)()
-local function WTKIM_fake_script() -- UICorner_16.LocalScript 
-	local script = Instance.new('LocalScript', UICorner_16)
+coroutine.wrap(MURMFWK_fake_script)()
+local function BIOE_fake_script() -- UICorner_17.LocalScript 
+	local script = Instance.new('LocalScript', UICorner_17)
 
 	local Players = game:GetService("Players")
 	
@@ -1018,8 +1195,8 @@ local function WTKIM_fake_script() -- UICorner_16.LocalScript
 	
 	Players.PlayerAdded:Connect(onPlayerAdded)
 end
-coroutine.wrap(WTKIM_fake_script)()
-local function IFCZ_fake_script() -- use.LocalScript 
+coroutine.wrap(BIOE_fake_script)()
+local function OFBVSI_fake_script() -- use.LocalScript 
 	local script = Instance.new('LocalScript', use)
 
 	local player = game.Players.LocalPlayer
@@ -1035,8 +1212,8 @@ local function IFCZ_fake_script() -- use.LocalScript
 	
 	
 end
-coroutine.wrap(IFCZ_fake_script)()
-local function GPBR_fake_script() -- TextBox.LocalScript 
+coroutine.wrap(OFBVSI_fake_script)()
+local function KVZXIGD_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local ran = math.random(0, 10)
@@ -1050,8 +1227,8 @@ local function GPBR_fake_script() -- TextBox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium                                                             ^ made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(GPBR_fake_script)()
-local function EAYC_fake_script() -- cchat.LocalScript 
+coroutine.wrap(KVZXIGD_fake_script)()
+local function IVCPXG_fake_script() -- cchat.LocalScript 
 	local script = Instance.new('LocalScript', cchat)
 
 	local ok = "yeah"
@@ -1069,8 +1246,8 @@ local function EAYC_fake_script() -- cchat.LocalScript
 	end)
 	
 end
-coroutine.wrap(EAYC_fake_script)()
-local function JMMYIDJ_fake_script() -- as.LocalScript 
+coroutine.wrap(IVCPXG_fake_script)()
+local function OGAUTKC_fake_script() -- as.LocalScript 
 	local script = Instance.new('LocalScript', as)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1080,8 +1257,8 @@ local function JMMYIDJ_fake_script() -- as.LocalScript
 	end)
 	--a§§, a§§h•le, n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
 end
-coroutine.wrap(JMMYIDJ_fake_script)()
-local function OHVMKKG_fake_script() -- ashole.LocalScript 
+coroutine.wrap(OGAUTKC_fake_script)()
+local function RLVVU_fake_script() -- ashole.LocalScript 
 	local script = Instance.new('LocalScript', ashole)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1091,8 +1268,8 @@ local function OHVMKKG_fake_script() -- ashole.LocalScript
 	end)
 	-- a§§h•le, n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
 end
-coroutine.wrap(OHVMKKG_fake_script)()
-local function BRDG_fake_script() -- nega.LocalScript 
+coroutine.wrap(RLVVU_fake_script)()
+local function EFHAXG_fake_script() -- nega.LocalScript 
 	local script = Instance.new('LocalScript', nega)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1102,8 +1279,8 @@ local function BRDG_fake_script() -- nega.LocalScript
 	end)
 	-- n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
 end
-coroutine.wrap(BRDG_fake_script)()
-local function YNVHWZQ_fake_script() -- icome.LocalScript 
+coroutine.wrap(EFHAXG_fake_script)()
+local function VTYLODA_fake_script() -- icome.LocalScript 
 	local script = Instance.new('LocalScript', icome)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1113,8 +1290,8 @@ local function YNVHWZQ_fake_script() -- icome.LocalScript
 	end)
 	-- n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s, b‖ŧcἨ
 end
-coroutine.wrap(YNVHWZQ_fake_script)()
-local function URNJDRC_fake_script() -- bitkh.LocalScript 
+coroutine.wrap(VTYLODA_fake_script)()
+local function YADWY_fake_script() -- bitkh.LocalScript 
 	local script = Instance.new('LocalScript', bitkh)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1124,8 +1301,8 @@ local function URNJDRC_fake_script() -- bitkh.LocalScript
 	end)
 	--, s-h-it, i lo-ve c-o-c-k-s
 end
-coroutine.wrap(URNJDRC_fake_script)()
-local function WNAD_fake_script() -- shitt.LocalScript 
+coroutine.wrap(YADWY_fake_script)()
+local function YWRXKBX_fake_script() -- shitt.LocalScript 
 	local script = Instance.new('LocalScript', shitt)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1135,8 +1312,8 @@ local function WNAD_fake_script() -- shitt.LocalScript
 	end)
 	--i lo-ve c-o-c-k-s
 end
-coroutine.wrap(WNAD_fake_script)()
-local function KHFCH_fake_script() -- BELLEND.LocalScript 
+coroutine.wrap(YWRXKBX_fake_script)()
+local function DHENBTC_fake_script() -- BELLEND.LocalScript 
 	local script = Instance.new('LocalScript', BELLEND)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1146,8 +1323,8 @@ local function KHFCH_fake_script() -- BELLEND.LocalScript
 	end)
 	--i lo-ve c-o-c-k-s
 end
-coroutine.wrap(KHFCH_fake_script)()
-local function PDHQ_fake_script() -- _10vepp.LocalScript 
+coroutine.wrap(DHENBTC_fake_script)()
+local function WUQBUTO_fake_script() -- _10vepp.LocalScript 
 	local script = Instance.new('LocalScript', _10vepp)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1157,16 +1334,75 @@ local function PDHQ_fake_script() -- _10vepp.LocalScript
 	end)
 	--i lo-ve c-o-c-k-s
 end
-coroutine.wrap(PDHQ_fake_script)()
-local function CQZNHX_fake_script() -- title.LocalScript 
+coroutine.wrap(WUQBUTO_fake_script)()
+local function QUVWWGT_fake_script() -- title.LocalScript 
 	local script = Instance.new('LocalScript', title)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.swearwords.Visible = not script.Parent.swearwords.Visible
 	end)
 end
-coroutine.wrap(CQZNHX_fake_script)()
-local function ENOMZI_fake_script() -- Frame.gum4local 
+coroutine.wrap(QUVWWGT_fake_script)()
+local function QMFJVL_fake_script() -- Mods4Game.morebase 
+	local script = Instance.new('LocalScript', Mods4Game)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Text == "Extra Map" then
+			local EXFloor = Instance.new("Part", workspace)
+			local texture = Instance.new("Texture", EXFloor)
+	
+			EXFloor.Name = "Extra_Floor"
+			EXFloor.Anchored = true
+			EXFloor.Position = Vector3.new(0, -8.3, 0)
+			EXFloor.Size = Vector3.new(2048, 16, 2048)
+			EXFloor.Transparency = 0
+			EXFloor.Material = Enum.Material.Plastic
+			EXFloor.Color = Color3.fromRGB(91, 91, 91)
+			EXFloor.TopSurface = Enum.SurfaceType.Smooth
+			EXFloor.BottomSurface = Enum.SurfaceType.Smooth
+			
+			texture.Color3 = Color3.fromRGB(0, 0, 0)
+			texture.Texture = "rbxassetid://6372755229"
+			texture.Face = Enum.NormalId.Top
+			texture.Transparency = 0.8
+			texture.StudsPerTileU = 8
+			texture.StudsPerTileV = 8
+			
+			
+			script.Parent.Text = "Normal Map"
+		else
+			script.Parent.Text = "Extra Map"
+			game.Workspace.Extra_Floor:Destroy()
+		end
+	end)
+end
+coroutine.wrap(QMFJVL_fake_script)()
+local function OZNM_fake_script() -- ClearBANS.LocalScript 
+	local script = Instance.new('LocalScript', ClearBANS)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i = 1, 100 do
+			game.Workspace.BanPart:Destroy()
+		end
+	end)
+end
+coroutine.wrap(OZNM_fake_script)()
+local function HQHWZ_fake_script() -- tgp.LocalScript 
+	local script = Instance.new('LocalScript', tgp)
+
+	for i = 1, 10000000 do
+		script.Parent.Text = "Total game parts: ".. #game.Workspace:GetDescendants()
+		wait(3)
+	end
+end
+coroutine.wrap(HQHWZ_fake_script)()
+local function UUPBWRP_fake_script() -- gameversion.LocalScript 
+	local script = Instance.new('LocalScript', gameversion)
+
+	script.Parent.Text = "Game Version: V".. game.PlaceVersion
+end
+coroutine.wrap(UUPBWRP_fake_script)()
+local function NJLMQ_fake_script() -- Frame.gum4local 
 	local script = Instance.new('LocalScript', Frame)
 
 	if game.Players.LocalPlayer.UserId == 4661893933 then
@@ -1218,4 +1454,4 @@ local function ENOMZI_fake_script() -- Frame.gum4local
 	end
 	
 end
-coroutine.wrap(ENOMZI_fake_script)()
+coroutine.wrap(NJLMQ_fake_script)()
