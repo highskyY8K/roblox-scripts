@@ -1362,7 +1362,7 @@ local function GTDMFD_fake_script() -- Mods4Game.morebase
 			EXFloor.Size = Vector3.new(2048, 16, 2048)
 			EXFloor.Transparency = 0
 			EXFloor.Material = Enum.Material.Plastic
-			EXFloor.Color = Color3.fromRGB(91, 91, 91)
+			EXFloor.Color = Color3.fromRGB(87, 87, 87)
 			EXFloor.TopSurface = Enum.SurfaceType.Smooth
 			EXFloor.BottomSurface = Enum.SurfaceType.Smooth
 			
