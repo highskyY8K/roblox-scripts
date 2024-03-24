@@ -1,4 +1,4 @@
-print("🌊seaborgiumV1.8 has loaded")
+print("🌊seaborgiumV1.9 has loaded")
 local Seaborgium_Icon = Instance.new("Frame")
 local Background = Instance.new("ImageButton")
 local icon = Instance.new("ImageLabel")
