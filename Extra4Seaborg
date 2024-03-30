@@ -1,0 +1,905 @@
+local Settings = Instance.new("ScrollingFrame")
+local resetplayer = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Nulltp = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Theme_On = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local yeahchoose = Instance.new("ImageButton")
+local UICorner_4 = Instance.new("UICorner")
+local chooseTHeme = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local themename = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local bgframe4sf = Instance.new("Frame")
+local none = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local discard = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local dirtt = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Dark_Oak = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Milkyway = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local nTexture = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local stripess = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local _02ace = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local redpandathing = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local Sunsetatnight = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local OperaGXbg = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local RedDarkTech = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local diamondsintheskyy = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local ocean = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local spots = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local chooseScaleType = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local stname = Instance.new("TextLabel")
+local UICorner_24 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local nost = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local bgframe4sf_2 = Instance.new("Frame")
+local cropp = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local SheFit = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local sliced = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local tiled = Instance.new("TextButton")
+local UICorner_29 = Instance.new("UICorner")
+local UICorner_30 = Instance.new("UICorner")
+
+--Properties:
+
+Settings.Name = "Settings"
+Settings.Parent = SLoc 
+Settings.Active = true
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings.BorderSizePixel = 0
+Settings.Size = UDim2.new(0, 344, 0, 147)
+Settings.Visible = false
+
+resetplayer.Name = "resetplayer"
+resetplayer.Parent = Settings
+resetplayer.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+resetplayer.BackgroundTransparency = 0.200
+resetplayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+resetplayer.BorderSizePixel = 0
+resetplayer.Position = UDim2.new(0.0406976752, 0, 0.0544217676, 0)
+resetplayer.Size = UDim2.new(0, 143, 0, 50)
+resetplayer.Font = Enum.Font.SourceSansBold
+resetplayer.Text = "Reset Player"
+resetplayer.TextColor3 = Color3.fromRGB(147, 101, 101)
+resetplayer.TextSize = 27.000
+resetplayer.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+resetplayer.TextWrapped = true
+
+UICorner.Parent = resetplayer
+
+Nulltp.Name = "Nulltp"
+Nulltp.Parent = Settings
+Nulltp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+Nulltp.BackgroundTransparency = 0.200
+Nulltp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Nulltp.BorderSizePixel = 0
+Nulltp.Position = UDim2.new(0.508720934, 0, 0.0544217676, 0)
+Nulltp.Size = UDim2.new(0, 143, 0, 50)
+Nulltp.Font = Enum.Font.SourceSansBold
+Nulltp.Text = "Null Zone tp"
+Nulltp.TextColor3 = Color3.fromRGB(147, 101, 101)
+Nulltp.TextSize = 27.000
+Nulltp.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Nulltp.TextWrapped = true
+
+UICorner_2.Parent = Nulltp
+
+Theme_On.Name = "Theme_On"
+Theme_On.Parent = Settings
+Theme_On.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+Theme_On.BackgroundTransparency = 0.200
+Theme_On.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Theme_On.BorderSizePixel = 0
+Theme_On.Position = UDim2.new(0.0406976752, 0, 0.285714298, 0)
+Theme_On.Size = UDim2.new(0, 230, 0, 50)
+Theme_On.Font = Enum.Font.SourceSansBold
+Theme_On.Text = "  Background theme  "
+Theme_On.TextColor3 = Color3.fromRGB(57, 75, 72)
+Theme_On.TextScaled = true
+Theme_On.TextSize = 14.000
+Theme_On.TextStrokeColor3 = Color3.fromRGB(38, 38, 38)
+Theme_On.TextStrokeTransparency = 0.000
+Theme_On.TextWrapped = true
+
+UICorner_3.Parent = Theme_On
+
+yeahchoose.Name = "yeahchoose"
+yeahchoose.Parent = Theme_On
+yeahchoose.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+yeahchoose.BackgroundTransparency = 0.200
+yeahchoose.BorderColor3 = Color3.fromRGB(0, 0, 0)
+yeahchoose.BorderSizePixel = 0
+yeahchoose.Position = UDim2.new(1.06573915, 0, 0, 0)
+yeahchoose.Size = UDim2.new(0, 50, 0, 50)
+yeahchoose.Image = "rbxassetid://12099513379"
+yeahchoose.ImageColor3 = Color3.fromRGB(141, 174, 176)
+
+UICorner_4.Parent = yeahchoose
+
+chooseTHeme.Name = "chooseTHeme"
+chooseTHeme.Parent = Settings
+chooseTHeme.BackgroundColor3 = Color3.fromRGB(45, 72, 70)
+chooseTHeme.BackgroundTransparency = 0.200
+chooseTHeme.BorderColor3 = Color3.fromRGB(0, 0, 0)
+chooseTHeme.BorderSizePixel = 0
+chooseTHeme.Position = UDim2.new(0.590116262, 0, 0.571428597, 0)
+chooseTHeme.Size = UDim2.new(0, 115, 0, 50)
+chooseTHeme.Font = Enum.Font.SourceSansBold
+chooseTHeme.Text = "Choose Theme"
+chooseTHeme.TextColor3 = Color3.fromRGB(82, 141, 124)
+chooseTHeme.TextScaled = true
+chooseTHeme.TextSize = 14.000
+chooseTHeme.TextStrokeTransparency = 0.700
+chooseTHeme.TextWrapped = true
+
+UICorner_5.Parent = chooseTHeme
+
+themename.Name = "themename"
+themename.Parent = chooseTHeme
+themename.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+themename.BackgroundTransparency = 0.200
+themename.BorderColor3 = Color3.fromRGB(0, 0, 0)
+themename.BorderSizePixel = 0
+themename.Position = UDim2.new(-1.64900005, 0, 0.0799999982, 0)
+themename.Size = UDim2.new(0, 154, 0, 50)
+themename.Font = Enum.Font.SourceSansBold
+themename.Text = "Current Theme: None"
+themename.TextColor3 = Color3.fromRGB(84, 136, 120)
+themename.TextScaled = true
+themename.TextSize = 14.000
+themename.TextWrapped = true
+
+UICorner_6.Parent = themename
+
+Frame.Parent = chooseTHeme
+Frame.BackgroundColor3 = Color3.fromRGB(46, 77, 79)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-0.104347825, 0, 0, 0)
+Frame.Size = UDim2.new(0, 127, 0, 115)
+Frame.Visible = false
+Frame.ZIndex = 3
+
+UICorner_7.Parent = Frame
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Size = UDim2.new(0, 127, 0, 115)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 6, 0)
+ScrollingFrame.ScrollBarThickness = 8
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0.00999999978, 0)
+
+bgframe4sf.Name = "bgframe4sf"
+bgframe4sf.Parent = ScrollingFrame
+bgframe4sf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bgframe4sf.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bgframe4sf.BorderSizePixel = 0
+
+none.Name = "none"
+none.Parent = ScrollingFrame
+none.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+none.BorderColor3 = Color3.fromRGB(0, 0, 0)
+none.BorderSizePixel = 0
+none.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+none.Size = UDim2.new(0, 100, 0, 39)
+none.Font = Enum.Font.SourceSansBold
+none.Text = "None"
+none.TextColor3 = Color3.fromRGB(84, 136, 120)
+none.TextSize = 35.000
+none.TextWrapped = true
+
+UICorner_8.Parent = none
+
+discard.Name = "discard"
+discard.Parent = ScrollingFrame
+discard.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+discard.BorderColor3 = Color3.fromRGB(0, 0, 0)
+discard.BorderSizePixel = 0
+discard.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+discard.Size = UDim2.new(0, 100, 0, 39)
+discard.Font = Enum.Font.SourceSansBold
+discard.Text = "Discord"
+discard.TextColor3 = Color3.fromRGB(84, 136, 120)
+discard.TextSize = 35.000
+discard.TextWrapped = true
+
+UICorner_9.Parent = discard
+
+dirtt.Name = "dirtt"
+dirtt.Parent = ScrollingFrame
+dirtt.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+dirtt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+dirtt.BorderSizePixel = 0
+dirtt.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+dirtt.Size = UDim2.new(0, 100, 0, 39)
+dirtt.Font = Enum.Font.SourceSansBold
+dirtt.Text = "Dirt"
+dirtt.TextColor3 = Color3.fromRGB(84, 136, 120)
+dirtt.TextSize = 35.000
+dirtt.TextWrapped = true
+
+UICorner_10.Parent = dirtt
+
+Dark_Oak.Name = "Dark_Oak"
+Dark_Oak.Parent = ScrollingFrame
+Dark_Oak.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+Dark_Oak.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Dark_Oak.BorderSizePixel = 0
+Dark_Oak.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+Dark_Oak.Size = UDim2.new(0, 100, 0, 39)
+Dark_Oak.Font = Enum.Font.SourceSansBold
+Dark_Oak.Text = "Dark Oak"
+Dark_Oak.TextColor3 = Color3.fromRGB(84, 136, 120)
+Dark_Oak.TextScaled = true
+Dark_Oak.TextSize = 35.000
+Dark_Oak.TextWrapped = true
+
+UICorner_11.Parent = Dark_Oak
+
+Milkyway.Name = "Milky way😏"
+Milkyway.Parent = ScrollingFrame
+Milkyway.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+Milkyway.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Milkyway.BorderSizePixel = 0
+Milkyway.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+Milkyway.Size = UDim2.new(0, 100, 0, 39)
+Milkyway.Font = Enum.Font.SourceSansBold
+Milkyway.Text = "Galaxy"
+Milkyway.TextColor3 = Color3.fromRGB(84, 136, 120)
+Milkyway.TextSize = 35.000
+Milkyway.TextWrapped = true
+
+UICorner_12.Parent = Milkyway
+
+nTexture.Name = "nTexture"
+nTexture.Parent = ScrollingFrame
+nTexture.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+nTexture.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nTexture.BorderSizePixel = 0
+nTexture.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+nTexture.Size = UDim2.new(0, 100, 0, 39)
+nTexture.Font = Enum.Font.SourceSansBold
+nTexture.Text = "Missing Texture"
+nTexture.TextColor3 = Color3.fromRGB(84, 136, 120)
+nTexture.TextScaled = true
+nTexture.TextSize = 20.000
+nTexture.TextWrapped = true
+
+UICorner_13.Parent = nTexture
+
+stripess.Name = "stripess"
+stripess.Parent = ScrollingFrame
+stripess.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+stripess.BorderColor3 = Color3.fromRGB(0, 0, 0)
+stripess.BorderSizePixel = 0
+stripess.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+stripess.Size = UDim2.new(0, 100, 0, 39)
+stripess.Font = Enum.Font.SourceSansBold
+stripess.Text = "Stripes"
+stripess.TextColor3 = Color3.fromRGB(84, 136, 120)
+stripess.TextSize = 35.000
+stripess.TextWrapped = true
+
+UICorner_14.Parent = stripess
+
+_02ace.Name = "02ace"
+_02ace.Parent = ScrollingFrame
+_02ace.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+_02ace.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_02ace.BorderSizePixel = 0
+_02ace.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+_02ace.Size = UDim2.new(0, 100, 0, 39)
+_02ace.Font = Enum.Font.SourceSansBold
+_02ace.Text = "02ace pilot"
+_02ace.TextColor3 = Color3.fromRGB(84, 136, 120)
+_02ace.TextScaled = true
+_02ace.TextSize = 35.000
+_02ace.TextWrapped = true
+
+UICorner_15.Parent = _02ace
+
+redpandathing.Name = "redpandathing"
+redpandathing.Parent = ScrollingFrame
+redpandathing.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+redpandathing.BorderColor3 = Color3.fromRGB(0, 0, 0)
+redpandathing.BorderSizePixel = 0
+redpandathing.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+redpandathing.Size = UDim2.new(0, 100, 0, 39)
+redpandathing.Font = Enum.Font.SourceSansBold
+redpandathing.Text = "Red Panda"
+redpandathing.TextColor3 = Color3.fromRGB(84, 136, 120)
+redpandathing.TextSize = 25.000
+redpandathing.TextWrapped = true
+
+UICorner_16.Parent = redpandathing
+
+Sunsetatnight.Name = "Sunsetatnight"
+Sunsetatnight.Parent = ScrollingFrame
+Sunsetatnight.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+Sunsetatnight.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sunsetatnight.BorderSizePixel = 0
+Sunsetatnight.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+Sunsetatnight.Size = UDim2.new(0, 100, 0, 39)
+Sunsetatnight.Font = Enum.Font.SourceSansBold
+Sunsetatnight.Text = "Sunset"
+Sunsetatnight.TextColor3 = Color3.fromRGB(84, 136, 120)
+Sunsetatnight.TextSize = 35.000
+Sunsetatnight.TextWrapped = true
+
+UICorner_17.Parent = Sunsetatnight
+
+OperaGXbg.Name = "OperaGXbg"
+OperaGXbg.Parent = ScrollingFrame
+OperaGXbg.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+OperaGXbg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OperaGXbg.BorderSizePixel = 0
+OperaGXbg.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+OperaGXbg.Size = UDim2.new(0, 100, 0, 39)
+OperaGXbg.Font = Enum.Font.SourceSansBold
+OperaGXbg.Text = "Opera GX"
+OperaGXbg.TextColor3 = Color3.fromRGB(84, 136, 120)
+OperaGXbg.TextScaled = true
+OperaGXbg.TextSize = 35.000
+OperaGXbg.TextWrapped = true
+
+UICorner_18.Parent = OperaGXbg
+
+RedDarkTech.Name = "RedDarkTech"
+RedDarkTech.Parent = ScrollingFrame
+RedDarkTech.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+RedDarkTech.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RedDarkTech.BorderSizePixel = 0
+RedDarkTech.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+RedDarkTech.Size = UDim2.new(0, 100, 0, 39)
+RedDarkTech.Font = Enum.Font.SourceSansBold
+RedDarkTech.Text = "Red Tech"
+RedDarkTech.TextColor3 = Color3.fromRGB(84, 136, 120)
+RedDarkTech.TextScaled = true
+RedDarkTech.TextSize = 35.000
+RedDarkTech.TextWrapped = true
+
+UICorner_19.Parent = RedDarkTech
+
+diamondsintheskyy.Name = "diamondsintheskyy"
+diamondsintheskyy.Parent = ScrollingFrame
+diamondsintheskyy.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+diamondsintheskyy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+diamondsintheskyy.BorderSizePixel = 0
+diamondsintheskyy.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+diamondsintheskyy.Size = UDim2.new(0, 100, 0, 39)
+diamondsintheskyy.Font = Enum.Font.SourceSansBold
+diamondsintheskyy.Text = "Diamonds"
+diamondsintheskyy.TextColor3 = Color3.fromRGB(84, 136, 120)
+diamondsintheskyy.TextScaled = true
+diamondsintheskyy.TextSize = 35.000
+diamondsintheskyy.TextWrapped = true
+
+UICorner_20.Parent = diamondsintheskyy
+
+ocean.Name = "ocean"
+ocean.Parent = ScrollingFrame
+ocean.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+ocean.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ocean.BorderSizePixel = 0
+ocean.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+ocean.Size = UDim2.new(0, 100, 0, 39)
+ocean.Font = Enum.Font.SourceSansBold
+ocean.Text = "Ocean"
+ocean.TextColor3 = Color3.fromRGB(84, 136, 120)
+ocean.TextSize = 35.000
+ocean.TextWrapped = true
+
+UICorner_21.Parent = ocean
+
+spots.Name = "spots"
+spots.Parent = ScrollingFrame
+spots.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+spots.BorderColor3 = Color3.fromRGB(0, 0, 0)
+spots.BorderSizePixel = 0
+spots.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+spots.Size = UDim2.new(0, 100, 0, 39)
+spots.Font = Enum.Font.SourceSansBold
+spots.Text = "Spots"
+spots.TextColor3 = Color3.fromRGB(84, 136, 120)
+spots.TextSize = 35.000
+spots.TextWrapped = true
+
+UICorner_22.Parent = spots
+
+chooseScaleType.Name = "chooseScaleType"
+chooseScaleType.Parent = Settings
+chooseScaleType.BackgroundColor3 = Color3.fromRGB(45, 72, 70)
+chooseScaleType.BackgroundTransparency = 0.200
+chooseScaleType.BorderColor3 = Color3.fromRGB(0, 0, 0)
+chooseScaleType.BorderSizePixel = 0
+chooseScaleType.Position = UDim2.new(0.590116262, 0, 0.795918345, 0)
+chooseScaleType.Size = UDim2.new(0, 115, 0, 50)
+chooseScaleType.Font = Enum.Font.SourceSansBold
+chooseScaleType.Text = "Choose Scale-Type"
+chooseScaleType.TextColor3 = Color3.fromRGB(82, 141, 124)
+chooseScaleType.TextScaled = true
+chooseScaleType.TextSize = 14.000
+chooseScaleType.TextStrokeTransparency = 0.700
+chooseScaleType.TextWrapped = true
+
+UICorner_23.Parent = chooseScaleType
+
+stname.Name = "stname"
+stname.Parent = chooseScaleType
+stname.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+stname.BackgroundTransparency = 0.200
+stname.BorderColor3 = Color3.fromRGB(0, 0, 0)
+stname.BorderSizePixel = 0
+stname.Position = UDim2.new(-1.6491046, 0, 0.0799999982, 0)
+stname.Size = UDim2.new(0, 154, 0, 45)
+stname.Font = Enum.Font.SourceSansBold
+stname.Text = "Current Theme Scale-Type: None"
+stname.TextColor3 = Color3.fromRGB(84, 136, 120)
+stname.TextScaled = true
+stname.TextSize = 14.000
+stname.TextWrapped = true
+
+UICorner_24.Parent = stname
+
+Frame_2.Parent = chooseScaleType
+Frame_2.BackgroundColor3 = Color3.fromRGB(46, 77, 79)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(-0.104347825, 0, -1.29999995, 0)
+Frame_2.Size = UDim2.new(0, 127, 0, 115)
+Frame_2.Visible = false
+Frame_2.ZIndex = 3
+
+ScrollingFrame_2.Parent = Frame_2
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Size = UDim2.new(0, 127, 0, 115)
+ScrollingFrame_2.ScrollBarThickness = 8
+
+UIListLayout_2.Parent = ScrollingFrame_2
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0.0299999993, 0)
+
+nost.Name = "nost"
+nost.Parent = ScrollingFrame_2
+nost.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+nost.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nost.BorderSizePixel = 0
+nost.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+nost.Size = UDim2.new(0, 100, 0, 39)
+nost.Font = Enum.Font.SourceSansBold
+nost.Text = "None"
+nost.TextColor3 = Color3.fromRGB(84, 136, 120)
+nost.TextScaled = true
+nost.TextSize = 25.000
+nost.TextWrapped = true
+
+UICorner_25.Parent = nost
+
+bgframe4sf_2.Name = "bgframe4sf"
+bgframe4sf_2.Parent = ScrollingFrame_2
+bgframe4sf_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bgframe4sf_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bgframe4sf_2.BorderSizePixel = 0
+bgframe4sf_2.LayoutOrder = -1
+
+cropp.Name = "cropp"
+cropp.Parent = ScrollingFrame_2
+cropp.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+cropp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cropp.BorderSizePixel = 0
+cropp.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+cropp.Size = UDim2.new(0, 100, 0, 39)
+cropp.Font = Enum.Font.SourceSansBold
+cropp.Text = "Crop"
+cropp.TextColor3 = Color3.fromRGB(84, 136, 120)
+cropp.TextScaled = true
+cropp.TextSize = 25.000
+cropp.TextWrapped = true
+
+UICorner_26.Parent = cropp
+
+SheFit.Name = "SheFit"
+SheFit.Parent = ScrollingFrame_2
+SheFit.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+SheFit.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SheFit.BorderSizePixel = 0
+SheFit.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+SheFit.Size = UDim2.new(0, 100, 0, 39)
+SheFit.Font = Enum.Font.SourceSansBold
+SheFit.Text = "Fit"
+SheFit.TextColor3 = Color3.fromRGB(84, 136, 120)
+SheFit.TextScaled = true
+SheFit.TextSize = 25.000
+SheFit.TextWrapped = true
+
+UICorner_27.Parent = SheFit
+
+sliced.Name = "sliced"
+sliced.Parent = ScrollingFrame_2
+sliced.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+sliced.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sliced.BorderSizePixel = 0
+sliced.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+sliced.Size = UDim2.new(0, 100, 0, 39)
+sliced.Font = Enum.Font.SourceSansBold
+sliced.Text = "Slice"
+sliced.TextColor3 = Color3.fromRGB(84, 136, 120)
+sliced.TextScaled = true
+sliced.TextSize = 25.000
+sliced.TextWrapped = true
+
+UICorner_28.Parent = sliced
+
+tiled.Name = "tiled"
+tiled.Parent = ScrollingFrame_2
+tiled.BackgroundColor3 = Color3.fromRGB(35, 56, 54)
+tiled.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tiled.BorderSizePixel = 0
+tiled.Position = UDim2.new(0.106299214, 0, 0.0899997875, 0)
+tiled.Size = UDim2.new(0, 100, 0, 39)
+tiled.Font = Enum.Font.SourceSansBold
+tiled.Text = "Tile"
+tiled.TextColor3 = Color3.fromRGB(84, 136, 120)
+tiled.TextScaled = true
+tiled.TextSize = 25.000
+tiled.TextWrapped = true
+
+UICorner_29.Parent = tiled
+
+UICorner_30.Parent = Frame_2
+
+-- Scripts:
+
+local function SAOHBQB_fake_script() -- yeahchoose.LocalScript 
+	local script = Instance.new('LocalScript', yeahchoose)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.Parent.BGTheme.Visible = not script.Parent.Parent.Parent.Parent.Parent.BGTheme.Visible
+	end)
+end
+coroutine.wrap(SAOHBQB_fake_script)()
+local function DUZA_fake_script() -- none.LocalScript 
+	local script = Instance.new('LocalScript', none)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: None"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://0"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(DUZA_fake_script)()
+local function MCHSPWE_fake_script() -- discard.LocalScript 
+	local script = Instance.new('LocalScript', discard)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Discord"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://16093447178"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(MCHSPWE_fake_script)()
+local function TZUTL_fake_script() -- dirtt.LocalScript 
+	local script = Instance.new('LocalScript', dirtt)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Dirt"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://9267089500"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(TZUTL_fake_script)()
+local function BNNTBOO_fake_script() -- Dark_Oak.LocalScript 
+	local script = Instance.new('LocalScript', Dark_Oak)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Dark Oak"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://9359133311"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(BNNTBOO_fake_script)()
+local function ACJFGAN_fake_script() -- Milkyway.LocalScript 
+	local script = Instance.new('LocalScript', Milkyway)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Galaxy"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://16433000090"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(ACJFGAN_fake_script)()
+local function PQNT_fake_script() -- nTexture.LocalScript 
+	local script = Instance.new('LocalScript', nTexture)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Missing Texture"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://1541381200"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(PQNT_fake_script)()
+local function DFID_fake_script() -- stripess.LocalScript 
+	local script = Instance.new('LocalScript', stripess)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Stripes"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://501697041"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(DFID_fake_script)()
+local function JMWX_fake_script() -- _02ace.LocalScript 
+	local script = Instance.new('LocalScript', _02ace)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: 02 Ace Pilot"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://4657669695"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(JMWX_fake_script)()
+local function EPBZU_fake_script() -- redpandathing.LocalScript 
+	local script = Instance.new('LocalScript', redpandathing)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Red Panda Girl"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://4657670846"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(EPBZU_fake_script)()
+local function INYEB_fake_script() -- Sunsetatnight.LocalScript 
+	local script = Instance.new('LocalScript', Sunsetatnight)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Sunset"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://9794399222"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(INYEB_fake_script)()
+local function ROCZWU_fake_script() -- OperaGXbg.LocalScript 
+	local script = Instance.new('LocalScript', OperaGXbg)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: OperaGX"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://7014437177"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(ROCZWU_fake_script)()
+local function TMJYQZR_fake_script() -- RedDarkTech.LocalScript 
+	local script = Instance.new('LocalScript', RedDarkTech)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Dark Red Tech"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://6457639061"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(TMJYQZR_fake_script)()
+local function LHDEU_fake_script() -- diamondsintheskyy.LocalScript 
+	local script = Instance.new('LocalScript', diamondsintheskyy)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Diamonds"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://1291494234"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(LHDEU_fake_script)()
+local function TMYTYOC_fake_script() -- ocean.LocalScript 
+	local script = Instance.new('LocalScript', ocean)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Ocean"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://130978366"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(TMYTYOC_fake_script)()
+local function QUGW_fake_script() -- spots.LocalScript 
+	local script = Instance.new('LocalScript', spots)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.themename.Text = "Current Theme: Spots"
+		bgframe.Visible = true
+		bgframe.Image = "rbxassetid://102388094"
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(QUGW_fake_script)()
+local function QDQYEUJ_fake_script() -- chooseTHeme.LocalScript 
+	local script = Instance.new('LocalScript', chooseTHeme)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.ZIndex = 2
+		script.Parent.Parent.Parent.Settings.chooseScaleType.ZIndex = 1
+		script.Parent.Frame.Visible = true
+	end)
+	
+end
+coroutine.wrap(QDQYEUJ_fake_script)()
+local function NDIMI_fake_script() -- nost.LocalScript 
+	local script = Instance.new('LocalScript', nost)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.stname.Text = "Current Theme Scale-Type: None"
+		bgframe.ScaleType = Enum.ScaleType.Stretch
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(NDIMI_fake_script)()
+local function DAJFOT_fake_script() -- cropp.LocalScript 
+	local script = Instance.new('LocalScript', cropp)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.stname.Text = "Current Theme Scale-Type: Crop"
+		bgframe.ScaleType = Enum.ScaleType.Crop
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(DAJFOT_fake_script)()
+local function LUEACRN_fake_script() -- SheFit.LocalScript 
+	local script = Instance.new('LocalScript', SheFit)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.stname.Text = "Current Theme Scale-Type: Fit"
+		bgframe.ScaleType = Enum.ScaleType.Fit
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(LUEACRN_fake_script)()
+local function BNTPBNH_fake_script() -- sliced.LocalScript 
+	local script = Instance.new('LocalScript', sliced)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.stname.Text = "Current Theme Scale-Type: Slice"
+		bgframe.ScaleType = Enum.ScaleType.Slice
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(BNTPBNH_fake_script)()
+local function GSAVDFR_fake_script() -- tiled.LocalScript 
+	local script = Instance.new('LocalScript', tiled)
+
+	local bgframe = script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.BGTheme
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.stname.Text = "Current Theme Scale-Type: Tile"
+		bgframe.ScaleType = Enum.ScaleType.Tile
+		bgframe.TileSize = UDim2.new(0.25, 0, 0.25, 0)
+		script.Parent.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(GSAVDFR_fake_script)()
+local function MWBBRJ_fake_script() -- chooseScaleType.LocalScript 
+	local script = Instance.new('LocalScript', chooseScaleType)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.ZIndex = 1
+		script.Parent.Parent.chooseTHeme.ZIndex = 0
+		script.Parent.Frame.Visible = true
+	end)
+end
+coroutine.wrap(MWBBRJ_fake_script)()
+local function EHJWIWG_fake_script() -- Settings.LocalScript 
+	local script = Instance.new('LocalScript', Settings)
+
+	script.Parent.Nulltp.MouseButton1Click:Connect(function()
+		if script.Parent.Nulltp.Text == "Are you sure?" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-134.76619, -495.740601, 73.6707611, -0.351022035, -2.55364119e-10, 0.936367214, -1.80437904e-11, 1, 2.65953731e-10, -0.936367214, 7.6460005e-11, -0.351022035)
+			script.Parent.Nulltp.Text = "Null zone tp"
+		else
+			script.Parent.Nulltp.Text = "Are you sure?"
+		end
+	end)
+	
+	script.Parent.resetplayer.MouseButton1Click:Connect(function()
+		game.Workspace.Camera.CameraSubject = game.Workspace
+		script.Parent.resetplayer.Text = "Reseting"
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-134.76619, -495.740601, 73.6707611, -0.351022035, -2.55364119e-10, 0.936367214, -1.80437904e-11, 1, 2.65953731e-10, -0.936367214, 7.6460005e-11, -0.351022035)
+		wait(0.75)
+		script.Parent.resetplayer.Text = "Reseting."
+		wait(0.75)
+		script.Parent.resetplayer.Text = "Reseting.."
+		wait(0.75)
+		script.Parent.resetplayer.Text = "Reseting"
+		wait(0.75)
+		script.Parent.resetplayer.Text = "Reset Player"
+	end)
+end
+coroutine.wrap(EHJWIWG_fake_script)()
