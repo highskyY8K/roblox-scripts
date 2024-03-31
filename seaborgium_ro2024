@@ -1,4 +1,4 @@
-print("🌊seaborgiumV1.7 has loaded")
+print("🌊seaborgiumV1.854 has loaded")
 local SLOC24 = True
 
 local Seaborgium_Icon = Instance.new("Frame")
