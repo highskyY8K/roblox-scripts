@@ -1,5 +1,4 @@
 print("🌊seaborgiumV1.7 has loaded")
-local SLoc = game.CoreGui.TopBarApp.MenuIconHolder:FindFirstChild("Seaborgium_Icon"):WaitForChild("Background"):WaitForChild("Frame"):WaitForChild("mainsecotin")
 
 local Seaborgium_Icon = Instance.new("Frame")
 local Background = Instance.new("ImageButton")
@@ -105,6 +104,10 @@ local UICorner_39 = Instance.new("UICorner")
 local gameversion = Instance.new("TextLabel")
 local UICorner_40 = Instance.new("UICorner")
 local UICorner_41 = Instance.new("UICorner")
+
+--
+local SLoc = game.CoreGui.TopBarApp.MenuIconHolder["Seaborgium_Icon"].Background.Frame.mainsecotin
+--
 
 --Properties:
 
