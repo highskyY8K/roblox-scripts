@@ -6,27 +6,29 @@ local Background = Instance.new("ImageButton")
 local icon = Instance.new("ImageLabel")
 local IconOpening = Instance.new("ImageLabel")
 local Frame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
 local section = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
+local UICorner = Instance.new("UICorner")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local chat4people = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local ImageLabel = Instance.new("ImageLabel")
 local localplaya = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local scripteditor = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local ImageLabel_3 = Instance.new("ImageLabel")
 local bg4sfPADDING1 = Instance.new("Frame")
 local mapMods = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local ImageLabel_4 = Instance.new("ImageLabel")
 local ImageLabel_5 = Instance.new("ImageLabel")
 local ImageLabel_6 = Instance.new("ImageLabel")
 local ImageLabel_7 = Instance.new("ImageLabel")
 local UIListLayout = Instance.new("UIListLayout")
+local Settings4you = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local ImageLabel_8 = Instance.new("ImageLabel")
 local mainsecotin = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
 local codeditor = Instance.new("Frame")
@@ -67,7 +69,7 @@ local TextBox = Instance.new("TextBox")
 local UICorner_22 = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
 local UICorner_23 = Instance.new("UICorner")
-local ImageLabel_8 = Instance.new("ImageLabel")
+local ImageLabel_9 = Instance.new("ImageLabel")
 local cchat = Instance.new("TextButton")
 local UICorner_24 = Instance.new("UICorner")
 local UICorner_25 = Instance.new("UICorner")
@@ -105,6 +107,9 @@ local UICorner_39 = Instance.new("UICorner")
 local gameversion = Instance.new("TextLabel")
 local UICorner_40 = Instance.new("UICorner")
 local UICorner_41 = Instance.new("UICorner")
+local BGTheme = Instance.new("ImageLabel")
+local UICorner_42 = Instance.new("UICorner")
+local UICorner_43 = Instance.new("UICorner")
 
 --Properties:
 
@@ -161,9 +166,6 @@ Frame.Position = UDim2.new(-8.68999958, 0, 1.40600002, 0)
 Frame.Size = UDim2.new(0, 429, 0, 204)
 Frame.Visible = false
 
-UICorner.CornerRadius = UDim.new(0, 5)
-UICorner.Parent = Frame
-
 section.Name = "section"
 section.Parent = Frame
 section.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
@@ -172,13 +174,14 @@ section.BorderColor3 = Color3.fromRGB(0, 0, 0)
 section.BorderSizePixel = 0
 section.Position = UDim2.new(0.0149253728, 0, 0.0833333358, 0)
 section.Size = UDim2.new(0, 52, 0, 163)
+section.ZIndex = 2
 section.Font = Enum.Font.SourceSans
 section.Text = ""
 section.TextColor3 = Color3.fromRGB(0, 0, 0)
 section.TextSize = 14.000
 
-UICorner_2.CornerRadius = UDim.new(0, 15)
-UICorner_2.Parent = section
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = section
 
 ScrollingFrame.Parent = section
 ScrollingFrame.Active = true
@@ -187,7 +190,7 @@ ScrollingFrame.BackgroundTransparency = 1.000
 ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ScrollingFrame.BorderSizePixel = 0
 ScrollingFrame.Size = UDim2.new(0, 52, 0, 163)
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.29999995, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 1.60000002, 0)
 ScrollingFrame.ScrollBarThickness = 0
 
 chat4people.Name = "chat4people"
@@ -203,8 +206,8 @@ chat4people.Text = ""
 chat4people.TextColor3 = Color3.fromRGB(0, 0, 0)
 chat4people.TextSize = 14.000
 
-UICorner_3.CornerRadius = UDim.new(1, 0)
-UICorner_3.Parent = chat4people
+UICorner_2.CornerRadius = UDim.new(1, 0)
+UICorner_2.Parent = chat4people
 
 ImageLabel.Parent = chat4people
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -230,8 +233,8 @@ localplaya.Text = ""
 localplaya.TextColor3 = Color3.fromRGB(0, 0, 0)
 localplaya.TextSize = 14.000
 
-UICorner_4.CornerRadius = UDim.new(1, 0)
-UICorner_4.Parent = localplaya
+UICorner_3.CornerRadius = UDim.new(1, 0)
+UICorner_3.Parent = localplaya
 
 ImageLabel_2.Parent = localplaya
 ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -257,8 +260,8 @@ scripteditor.Text = ""
 scripteditor.TextColor3 = Color3.fromRGB(0, 0, 0)
 scripteditor.TextSize = 14.000
 
-UICorner_5.CornerRadius = UDim.new(1, 0)
-UICorner_5.Parent = scripteditor
+UICorner_4.CornerRadius = UDim.new(1, 0)
+UICorner_4.Parent = scripteditor
 
 ImageLabel_3.Parent = scripteditor
 ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -277,7 +280,7 @@ bg4sfPADDING1.BackgroundTransparency = 1.000
 bg4sfPADDING1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 bg4sfPADDING1.BorderSizePixel = 0
 bg4sfPADDING1.LayoutOrder = -1
-bg4sfPADDING1.Size = UDim2.new(0, 0, 0.0149999997, 0)
+bg4sfPADDING1.Size = UDim2.new(0, 0, 0.00999999978, 0)
 
 mapMods.Name = "mapMods"
 mapMods.Parent = ScrollingFrame
@@ -293,8 +296,8 @@ mapMods.Text = ""
 mapMods.TextColor3 = Color3.fromRGB(0, 0, 0)
 mapMods.TextSize = 14.000
 
-UICorner_6.CornerRadius = UDim.new(1, 0)
-UICorner_6.Parent = mapMods
+UICorner_5.CornerRadius = UDim.new(1, 0)
+UICorner_5.Parent = mapMods
 
 ImageLabel_4.Parent = mapMods
 ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -339,7 +342,35 @@ ImageLabel_7.ImageColor3 = Color3.fromRGB(141, 174, 176)
 UIListLayout.Parent = ScrollingFrame
 UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0.0450000018, 0)
+UIListLayout.Padding = UDim.new(0.0350000001, 0)
+
+Settings4you.Name = "Settings4you"
+Settings4you.Parent = ScrollingFrame
+Settings4you.BackgroundColor3 = Color3.fromRGB(36, 60, 61)
+Settings4you.BackgroundTransparency = 0.500
+Settings4you.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Settings4you.BorderSizePixel = 0
+Settings4you.LayoutOrder = 4
+Settings4you.Position = UDim2.new(0.115000002, 0, 0.0610000007, 0)
+Settings4you.Size = UDim2.new(0, 40, 0, 40)
+Settings4you.Font = Enum.Font.SourceSans
+Settings4you.Text = ""
+Settings4you.TextColor3 = Color3.fromRGB(0, 0, 0)
+Settings4you.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(1, 0)
+UICorner_6.Parent = Settings4you
+
+ImageLabel_8.Parent = Settings4you
+ImageLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_8.BackgroundTransparency = 1.000
+ImageLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_8.BorderSizePixel = 0
+ImageLabel_8.Position = UDim2.new(0.125, 0, 0.125, 0)
+ImageLabel_8.Rotation = 30.000
+ImageLabel_8.Size = UDim2.new(0, 29, 0, 29)
+ImageLabel_8.Image = "rbxassetid://9405931578"
+ImageLabel_8.ImageColor3 = Color3.fromRGB(141, 174, 176)
 
 mainsecotin.Name = "mainsecotin"
 mainsecotin.Parent = Frame
@@ -681,16 +712,16 @@ TextButton.TextWrapped = true
 UICorner_23.CornerRadius = UDim.new(0, 5)
 UICorner_23.Parent = TextButton
 
-ImageLabel_8.Parent = TextButton
-ImageLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_8.BackgroundTransparency = 1.000
-ImageLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_8.BorderSizePixel = 0
-ImageLabel_8.Position = UDim2.new(0.130434781, 0, 0.0652154014, 0)
-ImageLabel_8.Size = UDim2.new(0, 40, 0, 40)
-ImageLabel_8.Image = "rbxassetid://12099513379"
-ImageLabel_8.ImageColor3 = Color3.fromRGB(208, 202, 213)
-ImageLabel_8.ImageTransparency = 0.300
+ImageLabel_9.Parent = TextButton
+ImageLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_9.BackgroundTransparency = 1.000
+ImageLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_9.BorderSizePixel = 0
+ImageLabel_9.Position = UDim2.new(0.130434781, 0, 0.0652154014, 0)
+ImageLabel_9.Size = UDim2.new(0, 40, 0, 40)
+ImageLabel_9.Image = "rbxassetid://12099513379"
+ImageLabel_9.ImageColor3 = Color3.fromRGB(208, 202, 213)
+ImageLabel_9.ImageTransparency = 0.300
 
 cchat.Name = "cchat"
 cchat.Parent = TextBox
@@ -991,12 +1022,31 @@ gameversion.TextWrapped = true
 
 UICorner_40.Parent = gameversion
 
-UICorner_41.CornerRadius = UDim.new(1, 0)
-UICorner_41.Parent = Background
+UICorner_41.CornerRadius = UDim.new(0, 5)
+UICorner_41.Parent = Frame
+
+BGTheme.Name = "BGTheme"
+BGTheme.Parent = Frame
+BGTheme.BackgroundColor3 = Color3.fromRGB(15, 38, 37)
+BGTheme.BackgroundTransparency = 1.000
+BGTheme.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BGTheme.BorderSizePixel = 0
+BGTheme.Size = UDim2.new(0, 429, 0, 204)
+BGTheme.Visible = false
+BGTheme.ZIndex = 0
+BGTheme.Image = "rbxassetid://16093447178"
+BGTheme.ImageColor3 = Color3.fromRGB(55, 135, 135)
+BGTheme.ImageTransparency = 0.300
+
+UICorner_42.CornerRadius = UDim.new(0, 5)
+UICorner_42.Parent = BGTheme
+
+UICorner_43.CornerRadius = UDim.new(1, 0)
+UICorner_43.Parent = Background
 
 -- Scripts:
 
-local function BDFGA_fake_script() -- icon.LocalScript 
+local function OPDA_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local frame = script.Parent.Parent.icon
@@ -1043,31 +1093,17 @@ local function BDFGA_fake_script() -- icon.LocalScript
 	
 	end)
 	
-end
-coroutine.wrap(BDFGA_fake_script)()
-local function UPYF_fake_script() -- Frame.Draggable_yeah 
-	local script = Instance.new('LocalScript', Frame)
-
-	script.Parent.Parent.Parent.Background.Transparency = 1
-	script.Parent.Parent.icon.ImageTransparency = 1
-	script.Parent.Active = true
-	script.Parent.Draggable = true
 	
-	if game.GameId == 4774335835 then
-		game.SoundService.buzzer.Volume = 1
-	end
+	local asksettin = true
 	
-	wait(2)
-	for i = 1, 10 do
-		script.Parent.Parent.Parent.Background.Transparency = script.Parent.Parent.Parent.Background.Transparency - 0.05
-		script.Parent.Parent.icon.ImageTransparency = script.Parent.Parent.icon.ImageTransparency - 0.1
-		wait()
-	end
-	script.Parent.Parent.Parent.Background.Transparency = 0.3
-	script.Parent.Parent.icon.ImageTransparency = 0
+	
+	script.Parent.Parent.Parent.Background.MouseButton1Click:Connect(function()
+		asksettin = false
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Extra4Seaborg"))()
+	end)
 end
-coroutine.wrap(UPYF_fake_script)()
-local function BENCKZE_fake_script() -- section.LocalScript 
+coroutine.wrap(OPDA_fake_script)()
+local function MMRMWC_fake_script() -- section.LocalScript 
 	local script = Instance.new('LocalScript', section)
 
 	local sesc = script.Parent.Parent.mainsecotin
@@ -1077,28 +1113,49 @@ local function BENCKZE_fake_script() -- section.LocalScript
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = false
 		sesc.Mods4Game.Visible = false
+		sesc.Settings.Visible = false
 	end)
 	script.Parent.ScrollingFrame.localplaya.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = true
 		sesc.Mods4Game.Visible = false
+		sesc.Settings.Visible = false
 	end)
 	script.Parent.ScrollingFrame.scripteditor.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = true
 		sesc.character.Visible = false
 		sesc.Mods4Game.Visible = false
+		sesc.Settings.Visible = false
 	end)
 	script.Parent.ScrollingFrame.mapMods.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = false
 		sesc.Mods4Game.Visible = true
+		sesc.Settings.Visible = false
 	end)
+	script.Parent.ScrollingFrame.Settings4you.MouseButton1Click:Connect(function()
+		sesc.whispa.Visible = false
+		sesc.codeditor.Visible = false
+		sesc.character.Visible = false
+		sesc.Mods4Game.Visible = false
+		sesc.Settings.Visible = true
+	end)
+	
+	
+	script.Parent.ScrollingFrame.Settings4you.MouseButton1Click:Connect(function()
+		for i = 1, 15 do
+			script.Parent.ScrollingFrame.Settings4you.ImageLabel.Rotation = script.Parent.ScrollingFrame.Settings4you.ImageLabel.Rotation + 4
+			wait()
+		end
+		script.Parent.ImageLabel.Rotation = 30
+	end)
+	
 end
-coroutine.wrap(BENCKZE_fake_script)()
-local function NZAXCQ_fake_script() -- codebox.LocalScript 
+coroutine.wrap(MMRMWC_fake_script)()
+local function QXRQ_fake_script() -- codebox.LocalScript 
 	local script = Instance.new('LocalScript', codebox)
 
 	local ran = math.random(0, 10)
@@ -1112,8 +1169,8 @@ local function NZAXCQ_fake_script() -- codebox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(NZAXCQ_fake_script)()
-local function VRMVI_fake_script() -- Execute.LocalScript 
+coroutine.wrap(QXRQ_fake_script)()
+local function NDGDJ_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local cod_e = script.Parent.Parent.codeditorsw.codebox
@@ -1124,20 +1181,16 @@ local function VRMVI_fake_script() -- Execute.LocalScript
 		wait(1)
 		script.Parent.Text = "Execute"
 	end)
-end
-coroutine.wrap(VRMVI_fake_script)()
-local function OBBUD_fake_script() -- CClear.LocalScript 
-	local script = Instance.new('LocalScript', CClear)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Text = "Cleared!"
-		script.Parent.Parent.codeditorsw.codebox.Text = ""
+	
+	script.Parent.Parent.CClear.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CClear.Text = "Cleared!"
+		cod_e.Text = ""
 		wait(1)
-		script.Parent.Text = "Clear Code"
+		script.Parent.Parent.CClear.Text = "Clear Code"
 	end)
 end
-coroutine.wrap(OBBUD_fake_script)()
-local function WBVCEUU_fake_script() -- runiy.LocalScript 
+coroutine.wrap(NDGDJ_fake_script)()
+local function EQFSVLV_fake_script() -- runiy.LocalScript 
 	local script = Instance.new('LocalScript', runiy)
 
 	local ran = false
@@ -1155,8 +1208,8 @@ local function WBVCEUU_fake_script() -- runiy.LocalScript
 		
 	end)
 end
-coroutine.wrap(WBVCEUU_fake_script)()
-local function TCVCEH_fake_script() -- runc4bh.LocalScript 
+coroutine.wrap(EQFSVLV_fake_script)()
+local function LOBRMH_fake_script() -- runc4bh.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh)
 
 	local ran = false
@@ -1174,16 +1227,16 @@ local function TCVCEH_fake_script() -- runc4bh.LocalScript
 	
 	end)
 end
-coroutine.wrap(TCVCEH_fake_script)()
-local function RJWVAK_fake_script() -- mscripts.LocalScript 
+coroutine.wrap(LOBRMH_fake_script)()
+local function YYEVQC_fake_script() -- mscripts.LocalScript 
 	local script = Instance.new('LocalScript', mscripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
 	end)
 end
-coroutine.wrap(RJWVAK_fake_script)()
-local function WFCES_fake_script() -- UICorner_17.LocalScript 
+coroutine.wrap(YYEVQC_fake_script)()
+local function MBGBDH_fake_script() -- UICorner_17.LocalScript 
 	local script = Instance.new('LocalScript', UICorner_17)
 
 	local Players = game:GetService("Players")
@@ -1202,8 +1255,8 @@ local function WFCES_fake_script() -- UICorner_17.LocalScript
 	
 	Players.PlayerAdded:Connect(onPlayerAdded)
 end
-coroutine.wrap(WFCES_fake_script)()
-local function RTQEWS_fake_script() -- use.LocalScript 
+coroutine.wrap(MBGBDH_fake_script)()
+local function NNLFEY_fake_script() -- use.LocalScript 
 	local script = Instance.new('LocalScript', use)
 
 	local player = game.Players.LocalPlayer
@@ -1219,12 +1272,68 @@ local function RTQEWS_fake_script() -- use.LocalScript
 	
 	
 end
-coroutine.wrap(RTQEWS_fake_script)()
-local function BVXU_fake_script() -- TextBox.LocalScript 
-	local script = Instance.new('LocalScript', TextBox)
+coroutine.wrap(NNLFEY_fake_script)()
+local function AFGXWGP_fake_script() -- title.LocalScript 
+	local script = Instance.new('LocalScript', title)
 
+	local sf = script.Parent.swearwords.bg.ScrollingFrame
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.swearwords.Visible = not script.Parent.swearwords.Visible
+	end)
+	
+	sf["10vepp"].MouseButton1Click:Connect(function()
+		local tbox = script.Parent.Parent.TextBox
+	
+		tbox.Text = "i lo-ve c-o-c-k-s"
+	end)
+	--
+	sf["BELLEND"].MouseButton1Click:Connect(function()
+		local tbox = script.Parent.Parent.TextBox
+	
+		tbox.Text = "beIIend"
+	end)
+	--
+	sf["[as]"].MouseButton1Click:Connect(function()
+		local tbox = script.Parent.Parent.TextBox
+	
+		tbox.Text = "a§§"
+	end)
+	--
+	sf["[as]hole"].MouseButton1Click:Connect(function()
+		local tbox = script.Parent.Parent.TextBox
+	
+		tbox.Text = "a§§h•le"
+	end)
+	--
+	sf["bitkh"].MouseButton1Click:Connect(function()
+		local tbox = script.Parent.Parent.TextBox
+	
+		tbox.Text = "b‖ŧcἨ"
+	end)
+	--
+	sf["icome"].MouseButton1Click:Connect(function()
+		local tbox = script.Parent.Parent.TextBox
+	
+		tbox.Text = "i CUMMED"
+	end)
+	--
+	sf["nega"].MouseButton1Click:Connect(function()
+		local tbox = script.Parent.Parent.TextBox
+	
+		tbox.Text = "n‖gga"
+	end)
+	--
+	sf["shitt"].MouseButton1Click:Connect(function()
+		local tbox = script.Parent.Parent.TextBox
+	
+		tbox.Text = "s-h-it"
+	end)
+	
+	--random placechat
+	
 	local ran = math.random(0, 10)
-	local ptext = script.Parent
+	local ptext = script.Parent.Parent.TextBox
 	
 	if ran == 6 then
 		ptext.PlaceholderText = "Mags <3 Local | Lexie"
@@ -1233,124 +1342,27 @@ local function BVXU_fake_script() -- TextBox.LocalScript
 	else
 		ptext.PlaceholderText = "   Seaborgium                                                             ^ made by Alex54. & HighskyY8K"
 	end
-end
-coroutine.wrap(BVXU_fake_script)()
-local function NIUUWGP_fake_script() -- cchat.LocalScript 
-	local script = Instance.new('LocalScript', cchat)
-
-	local ok = "yeah"
 	
-	script.Parent.MouseButton1Click:Connect(function()
+	--clearin
+	
+	local ok = "yeah"
+	local loczatsh = script.Parent.Parent.TextBox.cchat
+		
+	loczatsh.MouseButton1Click:Connect(function()
 		if ok == "yeah" then
 			ok = "nah"
-			script.Parent.Parent.Text = ""
-			script.Parent.Text = "Cleared"
+			loczatsh.Parent.Text = ""
+			loczatsh.Text = "Cleared"
 			wait(1)
-			script.Parent.Text = "Clear Box"	
+			loczatsh.Text = "Clear Box"	
 			ok = "yeah"
 		end
 	
 	end)
 	
 end
-coroutine.wrap(NIUUWGP_fake_script)()
-local function YOXZNJ_fake_script() -- as.LocalScript 
-	local script = Instance.new('LocalScript', as)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local tbox = script.Parent.Parent.Parent.Parent.Parent.Parent.TextBox
-		
-		tbox.Text = "a§§"
-	end)
-	--a§§, a§§h•le, n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
-end
-coroutine.wrap(YOXZNJ_fake_script)()
-local function SXCNM_fake_script() -- ashole.LocalScript 
-	local script = Instance.new('LocalScript', ashole)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local tbox = script.Parent.Parent.Parent.Parent.Parent.Parent.TextBox
-		
-		tbox.Text = "a§§h•le"
-	end)
-	-- a§§h•le, n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
-end
-coroutine.wrap(SXCNM_fake_script)()
-local function IXHV_fake_script() -- nega.LocalScript 
-	local script = Instance.new('LocalScript', nega)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local tbox = script.Parent.Parent.Parent.Parent.Parent.Parent.TextBox
-		
-		tbox.Text = "n‖gga"
-	end)
-	-- n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s
-end
-coroutine.wrap(IXHV_fake_script)()
-local function HESJPU_fake_script() -- icome.LocalScript 
-	local script = Instance.new('LocalScript', icome)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local tbox = script.Parent.Parent.Parent.Parent.Parent.Parent.TextBox
-		
-		tbox.Text = "i CUMMED"
-	end)
-	-- n‖gga, i CUMMED, s-h-it, i lo-ve c-o-c-k-s, b‖ŧcἨ
-end
-coroutine.wrap(HESJPU_fake_script)()
-local function VYDLW_fake_script() -- bitkh.LocalScript 
-	local script = Instance.new('LocalScript', bitkh)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local tbox = script.Parent.Parent.Parent.Parent.Parent.Parent.TextBox
-		
-		tbox.Text = "b‖ŧcἨ"
-	end)
-	--, s-h-it, i lo-ve c-o-c-k-s
-end
-coroutine.wrap(VYDLW_fake_script)()
-local function PJQBZ_fake_script() -- shitt.LocalScript 
-	local script = Instance.new('LocalScript', shitt)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local tbox = script.Parent.Parent.Parent.Parent.Parent.Parent.TextBox
-		
-		tbox.Text = "s-h-it"
-	end)
-	--i lo-ve c-o-c-k-s
-end
-coroutine.wrap(PJQBZ_fake_script)()
-local function TEBNU_fake_script() -- BELLEND.LocalScript 
-	local script = Instance.new('LocalScript', BELLEND)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local tbox = script.Parent.Parent.Parent.Parent.Parent.Parent.TextBox
-		
-		tbox.Text = "beIIend"
-	end)
-	--i lo-ve c-o-c-k-s
-end
-coroutine.wrap(TEBNU_fake_script)()
-local function TTXZU_fake_script() -- _10vepp.LocalScript 
-	local script = Instance.new('LocalScript', _10vepp)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		local tbox = script.Parent.Parent.Parent.Parent.Parent.Parent.TextBox
-		
-		tbox.Text = "i lo-ve c-o-c-k-s"
-	end)
-	--i lo-ve c-o-c-k-s
-end
-coroutine.wrap(TTXZU_fake_script)()
-local function HXSEDFT_fake_script() -- title.LocalScript 
-	local script = Instance.new('LocalScript', title)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.swearwords.Visible = not script.Parent.swearwords.Visible
-	end)
-end
-coroutine.wrap(HXSEDFT_fake_script)()
-local function GTDMFD_fake_script() -- Mods4Game.morebase 
+coroutine.wrap(AFGXWGP_fake_script)()
+local function SPDSUYR_fake_script() -- Mods4Game.morebase 
 	local script = Instance.new('LocalScript', Mods4Game)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1382,36 +1394,48 @@ local function GTDMFD_fake_script() -- Mods4Game.morebase
 			game.Workspace.Extra_Floor:Destroy()
 		end
 	end)
-end
-coroutine.wrap(GTDMFD_fake_script)()
-local function FBEB_fake_script() -- ClearBANS.LocalScript 
-	local script = Instance.new('LocalScript', ClearBANS)
-
-	script.Parent.MouseButton1Click:Connect(function()
+	
+	--
+	
+	script.Parent.ClearBANS.MouseButton1Click:Connect(function()
 		for i = 1, 100 do
 			game.Workspace.BanPart:Destroy()
 		end
 	end)
-end
-coroutine.wrap(FBEB_fake_script)()
-local function OIRBLK_fake_script() -- tgp.LocalScript 
-	local script = Instance.new('LocalScript', tgp)
-
+	
+	--
+	
+	script.Parent.gameversion.Text = "Game Version: V".. game.PlaceVersion
+	
+	--
+	
 	for i = 1, 10000000 do
 		script.Parent.Text = "Total game parts: ".. #game.Workspace:GetDescendants()
 		wait(3)
 	end
 end
-coroutine.wrap(OIRBLK_fake_script)()
-local function VVOSNQ_fake_script() -- gameversion.LocalScript 
-	local script = Instance.new('LocalScript', gameversion)
-
-	script.Parent.Text = "Game Version: V".. game.PlaceVersion
-end
-coroutine.wrap(VVOSNQ_fake_script)()
-local function SVQMO_fake_script() -- Frame.gum4local 
+coroutine.wrap(SPDSUYR_fake_script)()
+local function UHKG_fake_script() -- Frame.Draggable_yeah 
 	local script = Instance.new('LocalScript', Frame)
 
+	script.Parent.Parent.Parent.Background.Transparency = 1
+	script.Parent.Parent.icon.ImageTransparency = 1
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+	
+	if game.GameId == 4774335835 then
+		game.SoundService.buzzer.Volume = 1
+	end
+	
+	wait(2)
+	for i = 1, 10 do
+		script.Parent.Parent.Parent.Background.Transparency = script.Parent.Parent.Parent.Background.Transparency - 0.05
+		script.Parent.Parent.icon.ImageTransparency = script.Parent.Parent.icon.ImageTransparency - 0.1
+		wait()
+	end
+	script.Parent.Parent.Parent.Background.Transparency = 0.3
+	script.Parent.Parent.icon.ImageTransparency = 0
+	
 	if game.Players.LocalPlayer.UserId == 4661893933 then
 		game.Players.PlayerAdded:Connect(function(player)
 			if player:IsFriendsWith(4661893933) then
@@ -1436,8 +1460,8 @@ local function SVQMO_fake_script() -- Frame.gum4local
 					Callback = bindable,
 					Button1 = "Hello",
 				})
-				
-				
+	
+	
 				local frendjoin = Instance.new("Sound", workspace)
 				frendjoin.Volume = 3
 				frendjoin.PlaybackSpeed = 1
@@ -1445,7 +1469,7 @@ local function SVQMO_fake_script() -- Frame.gum4local
 				frendjoin:Play()
 				wait(4)
 				frendjoin:Destroy()
-				
+	
 			elseif player.UserId == 1723886004 then
 				local frendjoin = Instance.new("Sound", workspace)
 				frendjoin.Volume = 5
@@ -1456,9 +1480,7 @@ local function SVQMO_fake_script() -- Frame.gum4local
 				frendjoin:Destroy()
 			end
 		end)
-	else
-		script:Destroy()
 	end
 	
 end
-coroutine.wrap(SVQMO_fake_script)()
+coroutine.wrap(UHKG_fake_script)()
