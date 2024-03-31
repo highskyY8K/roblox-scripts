@@ -68,7 +68,7 @@ local UICorner_30 = Instance.new("UICorner")
 
 --Properties:
 
-if SLOC24 == true then
+if SLOC24 == True then
 	Settings.Parent = game.CoreGui.TopBarApp.MenuIconHolder["Seaborgium_Icon"].Background.Frame.mainsecotin
 else
 	Settings.Parent = game.CoreGui.TopBarApp.TopBarFrame.RightFrame["Seaborgium_Icon"].Background.Frame.mainsecotin
