@@ -68,8 +68,13 @@ local UICorner_30 = Instance.new("UICorner")
 
 --Properties:
 
-Settings.Name = "Settings"
-Settings.Parent = SLoc 
+if SLOC24 == true then
+	Settings.Parent = game.CoreGui.TopBarApp.MenuIconHolder["Seaborgium_Icon"].Background.Frame.mainsecotin
+else
+	Settings.Parent = game.CoreGui.TopBarApp.TopBarFrame.RightFrame["Seaborgium_Icon"].Background.Frame.mainsecotin
+end
+
+Settings.Name = "Settings" 
 Settings.Active = true
 Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Settings.BackgroundTransparency = 1.000
