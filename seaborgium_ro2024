@@ -1,5 +1,5 @@
 print("🌊seaborgiumV1.7 has loaded")
-local SLoc = game.CoreGui.TopBarApp.MenuIconHolder:FindFirstChild("Seaborgium_Icon").Background.Frame.mainsecotin
+local SLoc = game.CoreGui.TopBarApp.MenuIconHolder:FindFirstChild("Seaborgium_Icon"):FindFirstChild("Background"):FindFirstChild("Frame"):FindFirstChild("mainsecotin")
 
 local Seaborgium_Icon = Instance.new("Frame")
 local Background = Instance.new("ImageButton")
