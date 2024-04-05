@@ -98,6 +98,7 @@ local BELLEND = Instance.new("TextButton")
 local UICorner_35 = Instance.new("UICorner")
 local _10vepp = Instance.new("TextButton")
 local UICorner_36 = Instance.new("UICorner")
+local m4gbans = Instance.new("ScrollingFrame")
 local Mods4Game = Instance.new("TextButton")
 local UICorner_37 = Instance.new("UICorner")
 local ClearBANS = Instance.new("TextButton")
@@ -106,10 +107,20 @@ local tgp = Instance.new("TextLabel")
 local UICorner_39 = Instance.new("UICorner")
 local gameversion = Instance.new("TextLabel")
 local UICorner_40 = Instance.new("UICorner")
+local ban = Instance.new("TextButton")
 local UICorner_41 = Instance.new("UICorner")
-local BGTheme = Instance.new("ImageLabel")
+local Victim = Instance.new("TextBox")
 local UICorner_42 = Instance.new("UICorner")
+local reason = Instance.new("TextBox")
 local UICorner_43 = Instance.new("UICorner")
+local BanUser = Instance.new("TextButton")
+local runban = Instance.new("ImageLabel")
+local UICorner_44 = Instance.new("UICorner")
+local runbanbg = Instance.new("ImageLabel")
+local UICorner_45 = Instance.new("UICorner")
+local BGTheme = Instance.new("ImageLabel")
+local UICorner_46 = Instance.new("UICorner")
+local UICorner_47 = Instance.new("UICorner")
 
 --Properties:
 
@@ -953,15 +964,25 @@ _10vepp.TextWrapped = true
 
 UICorner_36.Parent = _10vepp
 
+m4gbans.Name = "m4g / bans..."
+m4gbans.Parent = mainsecotin
+m4gbans.Active = true
+m4gbans.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+m4gbans.BackgroundTransparency = 1.000
+m4gbans.BorderColor3 = Color3.fromRGB(0, 0, 0)
+m4gbans.BorderSizePixel = 0
+m4gbans.Size = UDim2.new(0, 344, 0, 147)
+m4gbans.Visible = false
+m4gbans.CanvasPosition = Vector2.new(0, 147)
+
 Mods4Game.Name = "Mods4Game"
-Mods4Game.Parent = mainsecotin
+Mods4Game.Parent = m4gbans
 Mods4Game.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
 Mods4Game.BackgroundTransparency = 0.100
 Mods4Game.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Mods4Game.BorderSizePixel = 0
-Mods4Game.Position = UDim2.new(0.0406976752, 0, 0.183673471, 0)
+Mods4Game.Position = UDim2.new(0.0410000011, 0, 0.0850000009, 0)
 Mods4Game.Size = UDim2.new(0, 131, 0, 33)
-Mods4Game.Visible = false
 Mods4Game.Font = Enum.Font.SourceSansBold
 Mods4Game.Text = "Extra Map"
 Mods4Game.TextColor3 = Color3.fromRGB(102, 178, 113)
@@ -1022,8 +1043,103 @@ gameversion.TextWrapped = true
 
 UICorner_40.Parent = gameversion
 
-UICorner_41.CornerRadius = UDim.new(0, 5)
-UICorner_41.Parent = Frame
+ban.Name = "ban."
+ban.Parent = m4gbans
+ban.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
+ban.BackgroundTransparency = 0.100
+ban.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ban.BorderSizePixel = 0
+ban.Position = UDim2.new(0.550000012, 0, 0.550000012, 0)
+ban.Size = UDim2.new(0, 125, 0, 50)
+ban.Font = Enum.Font.SourceSansBold
+ban.Text = "Current ban Method: Teleport"
+ban.TextColor3 = Color3.fromRGB(165, 124, 108)
+ban.TextScaled = true
+ban.TextSize = 20.000
+ban.TextWrapped = true
+
+UICorner_41.Parent = ban
+
+Victim.Name = "Victim."
+Victim.Parent = ban
+Victim.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
+Victim.BackgroundTransparency = 0.100
+Victim.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Victim.BorderSizePixel = 0
+Victim.Position = UDim2.new(-1.40799999, 0, 0, 0)
+Victim.Size = UDim2.new(0, 158, 0, 50)
+Victim.ClearTextOnFocus = false
+Victim.Font = Enum.Font.SourceSansBold
+Victim.PlaceholderColor3 = Color3.fromRGB(145, 89, 89)
+Victim.PlaceholderText = "Vicitm"
+Victim.Text = ""
+Victim.TextColor3 = Color3.fromRGB(0, 0, 0)
+Victim.TextScaled = true
+Victim.TextSize = 14.000
+Victim.TextWrapped = true
+
+UICorner_42.Parent = Victim
+
+reason.Name = "reason."
+reason.Parent = ban
+reason.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
+reason.BackgroundTransparency = 0.100
+reason.BorderColor3 = Color3.fromRGB(0, 0, 0)
+reason.BorderSizePixel = 0
+reason.Position = UDim2.new(-1.31200004, 0, 1.27999997, 0)
+reason.Size = UDim2.new(0, 229, 0, 56)
+reason.Font = Enum.Font.SourceSansBold
+reason.PlaceholderColor3 = Color3.fromRGB(132, 69, 69)
+reason.PlaceholderText = "Reason for ban"
+reason.Text = ""
+reason.TextColor3 = Color3.fromRGB(0, 0, 0)
+reason.TextScaled = true
+reason.TextSize = 14.000
+reason.TextStrokeTransparency = 0.500
+reason.TextWrapped = true
+
+UICorner_43.Parent = reason
+
+BanUser.Name = "BanUser"
+BanUser.Parent = ban
+BanUser.BackgroundColor3 = Color3.fromRGB(63, 105, 107)
+BanUser.BackgroundTransparency = 0.100
+BanUser.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BanUser.BorderSizePixel = 0
+BanUser.Position = UDim2.new(0.600000024, 0, 1.34000003, 0)
+BanUser.Size = UDim2.new(0, 50, 0, 50)
+BanUser.Font = Enum.Font.SourceSans
+BanUser.Text = ""
+BanUser.TextColor3 = Color3.fromRGB(0, 0, 0)
+BanUser.TextSize = 14.000
+
+runban.Name = "runban."
+runban.Parent = BanUser
+runban.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+runban.BackgroundTransparency = 1.000
+runban.BorderColor3 = Color3.fromRGB(0, 0, 0)
+runban.BorderSizePixel = 0
+runban.Position = UDim2.new(0.0799999982, 0, 0.0599999987, 0)
+runban.Size = UDim2.new(0, 44, 0, 44)
+runban.Image = "rbxassetid://12099513379"
+runban.ImageColor3 = Color3.fromRGB(208, 202, 213)
+
+UICorner_44.Parent = BanUser
+
+runbanbg.Name = "runbanbg."
+runbanbg.Parent = BanUser
+runbanbg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+runbanbg.BackgroundTransparency = 1.000
+runbanbg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+runbanbg.BorderSizePixel = 0
+runbanbg.Position = UDim2.new(0.119999997, 0, 0.119999997, 0)
+runbanbg.Size = UDim2.new(0, 38, 0, 38)
+runbanbg.Image = "rbxassetid://12099513379"
+runbanbg.ImageColor3 = Color3.fromRGB(163, 45, 45)
+runbanbg.ImageTransparency = 1.000
+
+UICorner_45.CornerRadius = UDim.new(0, 5)
+UICorner_45.Parent = Frame
 
 BGTheme.Name = "BGTheme"
 BGTheme.Parent = Frame
@@ -1038,15 +1154,15 @@ BGTheme.Image = "rbxassetid://16093447178"
 BGTheme.ImageColor3 = Color3.fromRGB(55, 135, 135)
 BGTheme.ImageTransparency = 0.300
 
-UICorner_42.CornerRadius = UDim.new(0, 5)
-UICorner_42.Parent = BGTheme
+UICorner_46.CornerRadius = UDim.new(0, 5)
+UICorner_46.Parent = BGTheme
 
-UICorner_43.CornerRadius = UDim.new(1, 0)
-UICorner_43.Parent = Background
+UICorner_47.CornerRadius = UDim.new(1, 0)
+UICorner_47.Parent = Background
 
 -- Scripts:
 
-local function OPDA_fake_script() -- icon.LocalScript 
+local function OTXNL_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local frame = script.Parent.Parent.icon
@@ -1102,8 +1218,8 @@ local function OPDA_fake_script() -- icon.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Extra4Seaborg"))()
 	end)
 end
-coroutine.wrap(OPDA_fake_script)()
-local function MMRMWC_fake_script() -- section.LocalScript 
+coroutine.wrap(OTXNL_fake_script)()
+local function IZJYVTI_fake_script() -- section.LocalScript 
 	local script = Instance.new('LocalScript', section)
 
 	local sesc = script.Parent.Parent.mainsecotin
@@ -1112,35 +1228,35 @@ local function MMRMWC_fake_script() -- section.LocalScript
 		sesc.whispa.Visible = true
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = false
-		sesc.Mods4Game.Visible = false
+		sesc["m4g / bans..."].Visible = false
 		sesc.Settings.Visible = false
 	end)
 	script.Parent.ScrollingFrame.localplaya.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = true
-		sesc.Mods4Game.Visible = false
+		sesc["m4g / bans..."].Visible = false
 		sesc.Settings.Visible = false
 	end)
 	script.Parent.ScrollingFrame.scripteditor.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = true
 		sesc.character.Visible = false
-		sesc.Mods4Game.Visible = false
+		sesc["m4g / bans..."].Visible = false
 		sesc.Settings.Visible = false
 	end)
 	script.Parent.ScrollingFrame.mapMods.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = false
-		sesc.Mods4Game.Visible = true
+		sesc["m4g / bans..."].Visible = true
 		sesc.Settings.Visible = false
 	end)
 	script.Parent.ScrollingFrame.Settings4you.MouseButton1Click:Connect(function()
 		sesc.whispa.Visible = false
 		sesc.codeditor.Visible = false
 		sesc.character.Visible = false
-		sesc.Mods4Game.Visible = false
+		sesc["m4g / bans..."].Visible = false
 		sesc.Settings.Visible = true
 	end)
 	
@@ -1154,8 +1270,8 @@ local function MMRMWC_fake_script() -- section.LocalScript
 	end)
 	
 end
-coroutine.wrap(MMRMWC_fake_script)()
-local function QXRQ_fake_script() -- codebox.LocalScript 
+coroutine.wrap(IZJYVTI_fake_script)()
+local function QODBTFK_fake_script() -- codebox.LocalScript 
 	local script = Instance.new('LocalScript', codebox)
 
 	local ran = math.random(0, 10)
@@ -1169,8 +1285,8 @@ local function QXRQ_fake_script() -- codebox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(QXRQ_fake_script)()
-local function NDGDJ_fake_script() -- Execute.LocalScript 
+coroutine.wrap(QODBTFK_fake_script)()
+local function QMXDFHQ_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local cod_e = script.Parent.Parent.codeditorsw.codebox
@@ -1189,8 +1305,8 @@ local function NDGDJ_fake_script() -- Execute.LocalScript
 		script.Parent.Parent.CClear.Text = "Clear Code"
 	end)
 end
-coroutine.wrap(NDGDJ_fake_script)()
-local function EQFSVLV_fake_script() -- runiy.LocalScript 
+coroutine.wrap(QMXDFHQ_fake_script)()
+local function JXNYA_fake_script() -- runiy.LocalScript 
 	local script = Instance.new('LocalScript', runiy)
 
 	local ran = false
@@ -1208,8 +1324,8 @@ local function EQFSVLV_fake_script() -- runiy.LocalScript
 		
 	end)
 end
-coroutine.wrap(EQFSVLV_fake_script)()
-local function LOBRMH_fake_script() -- runc4bh.LocalScript 
+coroutine.wrap(JXNYA_fake_script)()
+local function NRBGS_fake_script() -- runc4bh.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh)
 
 	local ran = false
@@ -1227,16 +1343,16 @@ local function LOBRMH_fake_script() -- runc4bh.LocalScript
 	
 	end)
 end
-coroutine.wrap(LOBRMH_fake_script)()
-local function YYEVQC_fake_script() -- mscripts.LocalScript 
+coroutine.wrap(NRBGS_fake_script)()
+local function ELLSHSZ_fake_script() -- mscripts.LocalScript 
 	local script = Instance.new('LocalScript', mscripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
 	end)
 end
-coroutine.wrap(YYEVQC_fake_script)()
-local function MBGBDH_fake_script() -- UICorner_17.LocalScript 
+coroutine.wrap(ELLSHSZ_fake_script)()
+local function EMGI_fake_script() -- UICorner_17.LocalScript 
 	local script = Instance.new('LocalScript', UICorner_17)
 
 	local Players = game:GetService("Players")
@@ -1255,8 +1371,8 @@ local function MBGBDH_fake_script() -- UICorner_17.LocalScript
 	
 	Players.PlayerAdded:Connect(onPlayerAdded)
 end
-coroutine.wrap(MBGBDH_fake_script)()
-local function NNLFEY_fake_script() -- use.LocalScript 
+coroutine.wrap(EMGI_fake_script)()
+local function PTJTH_fake_script() -- use.LocalScript 
 	local script = Instance.new('LocalScript', use)
 
 	local player = game.Players.LocalPlayer
@@ -1272,8 +1388,8 @@ local function NNLFEY_fake_script() -- use.LocalScript
 	
 	
 end
-coroutine.wrap(NNLFEY_fake_script)()
-local function AFGXWGP_fake_script() -- title.LocalScript 
+coroutine.wrap(PTJTH_fake_script)()
+local function XPVDB_fake_script() -- title.LocalScript 
 	local script = Instance.new('LocalScript', title)
 
 	local sf = script.Parent.swearwords.bg.ScrollingFrame
@@ -1361,8 +1477,8 @@ local function AFGXWGP_fake_script() -- title.LocalScript
 	end)
 	
 end
-coroutine.wrap(AFGXWGP_fake_script)()
-local function SPDSUYR_fake_script() -- Mods4Game.morebase 
+coroutine.wrap(XPVDB_fake_script)()
+local function ZHDNES_fake_script() -- Mods4Game.morebase 
 	local script = Instance.new('LocalScript', Mods4Game)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1410,12 +1526,171 @@ local function SPDSUYR_fake_script() -- Mods4Game.morebase
 	--
 	
 	for i = 1, 10000000 do
-		script.Parent.Text = "Total game parts: ".. #game.Workspace:GetDescendants()
+		script.Parent.tgp.Text = "Total game parts: ".. #game.Workspace:GetDescendants()
 		wait(3)
 	end
 end
-coroutine.wrap(SPDSUYR_fake_script)()
-local function UHKG_fake_script() -- Frame.Draggable_yeah 
+coroutine.wrap(ZHDNES_fake_script)()
+local function FQDPAJY_fake_script() -- BanUser.BAN PLAYER 
+	local script = Instance.new('LocalScript', BanUser)
+
+	local banning = false
+	local vic = script.Parent.Parent["Victim."]
+	local player = game.Players.LocalPlayer
+	local hl = player.Character:WaitForChild("HumanoidRootPart")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local humanioddlocaltion = hl
+		
+		if script.Parent.Parent.Text == "Current Ban Method: Remote" then
+			local bn = player.Backpack:FindFirstChild("BanHammer")
+			local hrp = game.Players[vic.Text].Character:WaitForChild("HumanoidRootPart")
+			hrp.Size = Vector3.new(2048, 2048, 2048)
+			hrp.CanCollide = false
+			
+			if bn then				
+				player.Character.Humanoid:EquipTool(bn)
+				for niaw = 1, 100 do
+					local AK = math.random(0, 2)
+					if AK == 1 then
+						player.Character.Humanoid:UnequipTools(bn)
+					end
+					
+					hrp.CanCollide = false
+					player.Character.Humanoid:EquipTool(bn)
+					local speaker = game.Players.LocalPlayer
+					local Backpack = speaker:FindFirstChildOfClass("Backpack")
+					for _, v in ipairs(Backpack:GetChildren()) do
+						v.Parent = speaker.Character
+						v:Activate()
+						v.Parent = Backpack
+					end
+					wait()
+					
+				end
+				print("Ban Done | Instant")
+				player.Character.Humanoid:UnequipTools(bn)
+	
+			end
+		else
+			banning = true
+			local bn = player.Backpack:FindFirstChild("BanHammer")
+			local savelocBY_HUMAN = Instance.new("Part", game.Workspace)
+			
+			savelocBY_HUMAN.Anchored = true
+			savelocBY_HUMAN.CFrame = hl.CFrame
+			savelocBY_HUMAN.Transparency = 1
+			savelocBY_HUMAN.CanCollide = false
+			savelocBY_HUMAN.Name = "saveloc_HumanoidRootPart"
+			savelocBY_HUMAN.Size = Vector3.new(4, 1, 2)
+			
+			if vic.Text == "" then
+				print("Error 452: invalid player.")
+			else
+				local BPlayer = game.Players[vic.Text]			
+				local currentX = BPlayer.Character.HumanoidRootPart.CFrame.X
+				local currentY = BPlayer.Character.HumanoidRootPart.CFrame.Y
+				local currentZ = BPlayer.Character.HumanoidRootPart.CFrame.Z
+				
+				print("Victim CLocation = "..currentX, currentY, currentZ)
+				
+				hl.CFrame = CFrame.new(currentX, currentY, currentZ)
+				
+			end
+			
+			
+			
+			if bn then	
+				local timetook = math.random(700000000, 999999999)
+				local BPlayer = game.Players[vic.Text]			
+				player.Character.Humanoid:EquipTool(bn)
+				for niaw = 1, 50 do	
+					local currentX = BPlayer.Character.HumanoidRootPart.CFrame.X
+					local currentY = BPlayer.Character.HumanoidRootPart.CFrame.Y
+					local currentZ = BPlayer.Character.HumanoidRootPart.CFrame.Z
+					hl.CFrame = CFrame.new(currentX - 1, currentY, currentZ + 3)
+					
+					local speaker = game.Players.LocalPlayer
+					local Backpack = speaker:FindFirstChildOfClass("Backpack")
+					for _, v in ipairs(Backpack:GetChildren()) do
+						v.Parent = speaker.Character
+						v:Activate()
+						v.Parent = Backpack
+					end
+					wait()
+				end
+				hl.CFrame = savelocBY_HUMAN.CFrame
+				print("Ban Done | Took 0.".. timetook.. " seconds")
+				player.Character.Humanoid:UnequipTools(bn)
+	
+			end
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent["reason."].Text = ""
+		
+		
+		local player = game.Players.LocalPlayer
+		local bn = player.Backpack:FindFirstChild("BanHammer")
+	
+		
+		if bn then
+			wait(.25)
+			player.Character.Humanoid:UnequipTools(bn)
+			wait(.25)
+			player.Character.Humanoid:EquipTool(bn)
+			
+		end
+	end)
+	
+	
+	
+	
+end
+coroutine.wrap(FQDPAJY_fake_script)()
+local function XTNJRK_fake_script() -- m4gbans.ban4you. 
+	local script = Instance.new('LocalScript', m4gbans)
+
+	local btext = "Current Ban Method: Remote"
+	local banu = script.Parent["ban."]
+	local wba = banu["Victim."]
+		
+	
+	script.Parent["ban."].MouseButton1Click:Connect(function()
+		if script.Parent["ban."].Text == btext then
+			script.Parent["ban."].Text = "Current Ban Method: Teleport"
+		else
+			script.Parent["ban."].Text = btext
+		end
+		
+	end)
+	
+	banu.BanUser.MouseButton1Click:Connect(function()
+		print("Banning ".. wba.Text)
+	end)
+	
+	banu.BanUser["runban."].MouseEnter:Connect(function()
+		for o = 1, 10 do
+			banu.BanUser["runban."].ImageTransparency = banu.BanUser["runban."].ImageTransparency + 0.1
+			banu.BanUser["runbanbg."].ImageTransparency = banu.BanUser["runbanbg."].ImageTransparency - 0.1
+			wait()
+		end
+		
+	end)
+	
+	banu.BanUser["runban."].MouseLeave:Connect(function()
+		for o = 1, 10 do
+			banu.BanUser["runban."].ImageTransparency = banu.BanUser["runban."].ImageTransparency - 0.1
+			banu.BanUser["runbanbg."].ImageTransparency = banu.BanUser["runbanbg."].ImageTransparency + 0.1
+			wait()
+		end
+	
+	end)
+	
+end
+coroutine.wrap(XTNJRK_fake_script)()
+local function JTGX_fake_script() -- Frame.Draggable_yeah 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent.Background.Transparency = 1
@@ -1483,4 +1758,5 @@ local function UHKG_fake_script() -- Frame.Draggable_yeah
 	end
 	
 end
-coroutine.wrap(UHKG_fake_script)()
+coroutine.wrap(JTGX_fake_script)()
+
