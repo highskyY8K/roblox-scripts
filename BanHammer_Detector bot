@@ -23,7 +23,6 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			for _, id in ipairs(Excluded) do
 				if player.UserId == id then
 					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-					return  -- Exit the loop early if player is excluded
 				end
 			end
 
