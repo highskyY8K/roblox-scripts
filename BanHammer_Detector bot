@@ -2,7 +2,7 @@
 
 _G.HIDE = true
 local TPSpeed = ""
-local Excluded = {loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/random/excluded_ids"))()}
+local Excluded = loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/random/excluded_ids"))()
 
 local TJoin = 0
 local Tbanners = 0
