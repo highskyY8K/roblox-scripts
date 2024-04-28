@@ -15,7 +15,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		
 		wait(3) 
 		local ko = player.Backpack
-		local ok = ko:FindFirstChild("BanHammer")
+		local ok = ko:FindFirstChild("ClassicSword")
 
 		if ok then
 			Tbanners = Tbanners + 1
