@@ -3,8 +3,6 @@
 _G.HIDE = true
 local TPSpeed = ""
 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/random/excluded_ids'))()
-
 local TJoin = 0
 local Tbanners = 0
 local TChats = 0
@@ -13,9 +11,11 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 	game.Players.PlayerAdded:Connect(function(player)
 		local timewaited = math.random(5, 1000)
 		local TRandomNumber = math.random(0, 250)
+		local Excluded = {loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/random/excluded_ids'))()}
+		
 		wait(3) 
 		local ko = player.Backpack
-		local ok = ko:FindFirstChild("ClassicSword")
+		local ok = ko:FindFirstChild("BanHammer")
 
 		if ok then
 			Tbanners = Tbanners + 1
