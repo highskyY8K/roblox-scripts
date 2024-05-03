@@ -3,6 +3,9 @@ local ImageButton = Instance.new("ImageButton")
 local icon = Instance.new("ImageLabel")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
+local Divider = Instance.new("TextLabel")
+local Sections = Instance.new("Folder")
+local _1 = Instance.new("Folder")
 local setcframe = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local gotocframe = Instance.new("TextButton")
@@ -12,7 +15,29 @@ local ImageLabel = Instance.new("ImageLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local ImageLabel_3 = Instance.new("ImageLabel")
 local ImageLabel_4 = Instance.new("ImageLabel")
-local Divider = Instance.new("TextLabel")
+local PickSecBG = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local up = Instance.new("ImageButton")
+local down = Instance.new("ImageButton")
+local _2 = Instance.new("Folder")
+local starglitcher = Instance.new("TextButton")
+local Goner = Instance.new("TextButton")
+local notification = Instance.new("Frame")
+local yes = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local ddec = Instance.new("TextLabel")
+local dec = Instance.new("TextLabel")
+local hellnaw = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
+local notificValue = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local _3 = Instance.new("Folder")
+local BanHammer = Instance.new("TextButton")
+local Sniper = Instance.new("TextButton")
+local _4 = Instance.new("Folder")
+local reset = Instance.new("TextButton")
+local tas = Instance.new("TextButton")
 
 --Properties:
 
@@ -52,19 +77,38 @@ Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BackgroundTransparency = 0.400
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(-4.84399986, 0, 0.100000001, 0)
+Frame.Position = UDim2.new(-4.84399986, 0, 0.200000003, 0)
 Frame.Size = UDim2.new(0, 183, 0, 100)
 Frame.Visible = false
 
 UICorner.Parent = Frame
 
+Divider.Name = "Divider"
+Divider.Parent = Frame
+Divider.BackgroundColor3 = Color3.fromRGB(206, 206, 206)
+Divider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Divider.BorderSizePixel = 0
+Divider.Position = UDim2.new(0, 0, 0.5, 0)
+Divider.Size = UDim2.new(1, 0, 0, 1)
+Divider.Font = Enum.Font.SourceSans
+Divider.Text = ""
+Divider.TextColor3 = Color3.fromRGB(0, 0, 0)
+Divider.TextSize = 14.000
+
+Sections.Name = "Sections"
+Sections.Parent = Frame
+
+_1.Name = "1"
+_1.Parent = Sections
+
 setcframe.Name = "setcframe"
-setcframe.Parent = Frame
+setcframe.Parent = _1
 setcframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 setcframe.BackgroundTransparency = 1.000
 setcframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
 setcframe.BorderSizePixel = 0
 setcframe.Size = UDim2.new(0, 183, 0, 53)
+setcframe.Visible = false
 setcframe.Font = Enum.Font.SourceSansBold
 setcframe.Text = "Set Current CFrame"
 setcframe.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -74,13 +118,14 @@ setcframe.TextTransparency = 0.150
 UICorner_2.Parent = setcframe
 
 gotocframe.Name = "gotocframe"
-gotocframe.Parent = Frame
+gotocframe.Parent = _1
 gotocframe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 gotocframe.BackgroundTransparency = 1.000
 gotocframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
 gotocframe.BorderSizePixel = 0
 gotocframe.Position = UDim2.new(0, 0, 0.529999971, 0)
 gotocframe.Size = UDim2.new(0, 183, 0, 46)
+gotocframe.Visible = false
 gotocframe.Font = Enum.Font.SourceSansBold
 gotocframe.Text = ""
 gotocframe.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -143,21 +188,235 @@ ImageLabel_4.Position = UDim2.new(-0.333000004, 0, 0.100000001, 0)
 ImageLabel_4.Size = UDim2.new(0, 33, 0, 33)
 ImageLabel_4.Image = "rbxassetid://6723742952"
 
-Divider.Name = "Divider"
-Divider.Parent = Frame
-Divider.BackgroundColor3 = Color3.fromRGB(206, 206, 206)
-Divider.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Divider.BorderSizePixel = 0
-Divider.Position = UDim2.new(0, 0, 0.5, 0)
-Divider.Size = UDim2.new(1, 0, 0, 1)
-Divider.Font = Enum.Font.SourceSans
-Divider.Text = ""
-Divider.TextColor3 = Color3.fromRGB(0, 0, 0)
-Divider.TextSize = 14.000
+PickSecBG.Name = "PickSecBG"
+PickSecBG.Parent = Sections
+PickSecBG.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PickSecBG.BackgroundTransparency = 0.400
+PickSecBG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PickSecBG.BorderSizePixel = 0
+PickSecBG.Position = UDim2.new(-0.152999997, 0, 0.230000004, 0)
+PickSecBG.Size = UDim2.new(0, 21, 0, 51)
+
+UICorner_4.Parent = PickSecBG
+
+up.Name = "up"
+up.Parent = PickSecBG
+up.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+up.BackgroundTransparency = 1.000
+up.BorderColor3 = Color3.fromRGB(0, 0, 0)
+up.BorderSizePixel = 0
+up.Position = UDim2.new(0.189999998, 0, 0.157000005, 0)
+up.Rotation = 270.000
+up.Size = UDim2.new(0, 12, 0, 12)
+up.Image = "rbxassetid://3173271667"
+
+down.Name = "down"
+down.Parent = PickSecBG
+down.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+down.BackgroundTransparency = 1.000
+down.BorderColor3 = Color3.fromRGB(0, 0, 0)
+down.BorderSizePixel = 0
+down.Position = UDim2.new(0.200000003, 0, 0.70599997, 0)
+down.Rotation = 90.000
+down.Size = UDim2.new(0, 12, 0, 12)
+down.Image = "rbxassetid://3173271667"
+
+_2.Name = "2"
+_2.Parent = Sections
+
+starglitcher.Name = "star glitcher"
+starglitcher.Parent = _2
+starglitcher.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+starglitcher.BackgroundTransparency = 1.000
+starglitcher.BorderColor3 = Color3.fromRGB(0, 0, 0)
+starglitcher.BorderSizePixel = 0
+starglitcher.Size = UDim2.new(0, 183, 0, 50)
+starglitcher.Visible = false
+starglitcher.Font = Enum.Font.SourceSansBold
+starglitcher.Text = "Star Glitcher           (need hats)"
+starglitcher.TextColor3 = Color3.fromRGB(255, 255, 255)
+starglitcher.TextSize = 23.000
+starglitcher.TextTransparency = 0.150
+starglitcher.TextWrapped = true
+
+Goner.Name = "Goner"
+Goner.Parent = _2
+Goner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Goner.BackgroundTransparency = 1.000
+Goner.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Goner.BorderSizePixel = 0
+Goner.Position = UDim2.new(0, 0, 0.50999999, 0)
+Goner.Size = UDim2.new(0, 183, 0, 50)
+Goner.Visible = false
+Goner.Font = Enum.Font.SourceSansBold
+Goner.Text = "Goner                     (need hats)"
+Goner.TextColor3 = Color3.fromRGB(255, 255, 255)
+Goner.TextSize = 23.000
+Goner.TextTransparency = 0.150
+Goner.TextWrapped = true
+
+notification.Name = "notification"
+notification.Parent = Sections
+notification.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
+notification.BorderSizePixel = 0
+notification.ClipsDescendants = true
+notification.Size = UDim2.new(0, 183, 0, 102)
+notification.Visible = false
+
+yes.Name = "yes"
+yes.Parent = notification
+yes.BackgroundColor3 = Color3.fromRGB(4, 134, 4)
+yes.BackgroundTransparency = 0.250
+yes.BorderColor3 = Color3.fromRGB(0, 0, 0)
+yes.BorderSizePixel = 0
+yes.Position = UDim2.new(0.163934425, 0, 0.570844471, 0)
+yes.Size = UDim2.new(0, 36, 0, 33)
+yes.Font = Enum.Font.SourceSans
+yes.Text = "✅"
+yes.TextColor3 = Color3.fromRGB(0, 0, 0)
+yes.TextSize = 14.000
+
+UICorner_5.Parent = yes
+
+ddec.Name = "ddec"
+ddec.Parent = yes
+ddec.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ddec.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ddec.BorderSizePixel = 0
+ddec.Position = UDim2.new(1.75000083, 0, -0.218973801, 0)
+ddec.Size = UDim2.new(0, 1, 0, 57)
+ddec.Font = Enum.Font.SourceSans
+ddec.Text = ""
+ddec.TextColor3 = Color3.fromRGB(0, 0, 0)
+ddec.TextSize = 14.000
+
+dec.Name = "dec"
+dec.Parent = ddec
+dec.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+dec.BorderColor3 = Color3.fromRGB(0, 0, 0)
+dec.BorderSizePixel = 0
+dec.Position = UDim2.new(-94, 0, 0, 0)
+dec.Size = UDim2.new(0, 200, 0, 1)
+dec.Font = Enum.Font.SourceSans
+dec.Text = ""
+dec.TextColor3 = Color3.fromRGB(0, 0, 0)
+dec.TextSize = 14.000
+
+hellnaw.Name = "hell naw 🗣️"
+hellnaw.Parent = notification
+hellnaw.BackgroundColor3 = Color3.fromRGB(134, 4, 4)
+hellnaw.BackgroundTransparency = 0.250
+hellnaw.BorderColor3 = Color3.fromRGB(0, 0, 0)
+hellnaw.BorderSizePixel = 0
+hellnaw.Position = UDim2.new(0.650273204, 0, 0.570844471, 0)
+hellnaw.Size = UDim2.new(0, 36, 0, 33)
+hellnaw.Font = Enum.Font.SourceSans
+hellnaw.Text = "❌"
+hellnaw.TextColor3 = Color3.fromRGB(0, 0, 0)
+hellnaw.TextSize = 14.000
+
+UICorner_6.Parent = hellnaw
+
+UICorner_7.Parent = notification
+
+notificValue.Name = "notificValue"
+notificValue.Parent = notification
+notificValue.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+notificValue.BorderColor3 = Color3.fromRGB(0, 0, 0)
+notificValue.BorderSizePixel = 0
+notificValue.Visible = false
+notificValue.Font = Enum.Font.SourceSans
+notificValue.Text = ""
+notificValue.TextColor3 = Color3.fromRGB(0, 0, 0)
+notificValue.TextSize = 14.000
+
+Title.Name = "Title"
+Title.Parent = notification
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 183, 0, 50)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Notification"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextTransparency = 0.150
+Title.TextWrapped = true
+
+_3.Name = "3"
+_3.Parent = Sections
+
+BanHammer.Name = "Ban Hammer"
+BanHammer.Parent = _3
+BanHammer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BanHammer.BackgroundTransparency = 1.000
+BanHammer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BanHammer.BorderSizePixel = 0
+BanHammer.Size = UDim2.new(0, 183, 0, 50)
+BanHammer.Visible = false
+BanHammer.Font = Enum.Font.SourceSansBold
+BanHammer.Text = "Ban Hammer                     (need hats)"
+BanHammer.TextColor3 = Color3.fromRGB(255, 255, 255)
+BanHammer.TextSize = 23.000
+BanHammer.TextTransparency = 0.150
+BanHammer.TextWrapped = true
+
+Sniper.Name = "Sniper"
+Sniper.Parent = _3
+Sniper.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Sniper.BackgroundTransparency = 1.000
+Sniper.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Sniper.BorderSizePixel = 0
+Sniper.Position = UDim2.new(0, 0, 0.50999999, 0)
+Sniper.Size = UDim2.new(0, 183, 0, 50)
+Sniper.Visible = false
+Sniper.Font = Enum.Font.SourceSansBold
+Sniper.Text = "Sniper                     (need hats)"
+Sniper.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sniper.TextSize = 23.000
+Sniper.TextTransparency = 0.150
+Sniper.TextWrapped = true
+
+_4.Name = "4"
+_4.Parent = Sections
+
+reset.Name = "reset"
+reset.Parent = _4
+reset.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+reset.BackgroundTransparency = 1.000
+reset.BorderColor3 = Color3.fromRGB(0, 0, 0)
+reset.BorderSizePixel = 0
+reset.Size = UDim2.new(0, 183, 0, 50)
+reset.Font = Enum.Font.SourceSansBold
+reset.Text = "Reset LocalPlayer"
+reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+reset.TextSize = 25.000
+reset.TextTransparency = 0.150
+reset.TextWrapped = true
+
+tas.Name = "tas"
+tas.Parent = _4
+tas.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tas.BackgroundTransparency = 1.000
+tas.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tas.BorderSizePixel = 0
+tas.Position = UDim2.new(0, 0, 0.50999999, 0)
+tas.Size = UDim2.new(0, 183, 0, 50)
+tas.Selected = true
+tas.Font = Enum.Font.SourceSansBold
+tas.Text = "Anti-report | Chat bypass"
+tas.TextColor3 = Color3.fromRGB(255, 255, 255)
+tas.TextScaled = true
+tas.TextSize = 19.000
+tas.TextTransparency = 0.150
+tas.TextWrapped = true
 
 -- Scripts:
 
-local function TWVTNNT_fake_script() -- icon.LocalScript 
+local function LUDOXV_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local w = math.random(1, 255)
@@ -173,15 +432,14 @@ local function TWVTNNT_fake_script() -- icon.LocalScript
 	end)
 	
 	script.Parent.ImageColor3 = Color3.fromRGB(w, a, b)
-	for i = 1, w..a..b do
+	
+	while true do
 		script.Parent.Rotation = script.Parent.Rotation + 2
 		wait()
 	end
-	
-	
 end
-coroutine.wrap(TWVTNNT_fake_script)()
-local function BAXAGZA_fake_script() -- loadin.SetLocation 
+coroutine.wrap(LUDOXV_fake_script)()
+local function EZWICRW_fake_script() -- loadin.SetLocation 
 	local script = Instance.new('LocalScript', loadin)
 
 	script.Parent.Parent.loadin.Parent = game.CoreGui.TopBarApp.TopBarFrame.RightFrame
@@ -189,9 +447,9 @@ local function BAXAGZA_fake_script() -- loadin.SetLocation
 	script.Parent.Frame.Position = UDim2.new(-4.844, 0, 1.25, 0)
 	
 end
-coroutine.wrap(BAXAGZA_fake_script)()
-local function SVFW_fake_script() -- Frame.click n tp 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(EZWICRW_fake_script)()
+local function TWTBHU_fake_script() -- _1.click n tp 
+	local script = Instance.new('LocalScript', _1)
 
 	local savedCFrame = "0, 0.5, 0, -1, 0, 0, 0, 1, 0, 0, 0, -1"
 	local player = game.Players.LocalPlayer.Name
@@ -228,4 +486,212 @@ local function SVFW_fake_script() -- Frame.click n tp
 	end)
 	
 end
-coroutine.wrap(SVFW_fake_script)()
+coroutine.wrap(TWTBHU_fake_script)()
+local function TEIH_fake_script() -- PickSecBG.PSec 
+	local script = Instance.new('LocalScript', PickSecBG)
+
+	local loc = script.Parent.Parent.Parent.Sections
+	local CurrentSection = 1
+	
+	
+	
+	loc["1"].setcframe.Visible = true
+	loc["1"].gotocframe.Visible = true
+	loc["2"].Goner.Visible = false
+	loc["2"]["star glitcher"].Visible = false
+	loc["3"].Sniper.Visible = false
+	loc["3"]["Ban Hammer"].Visible = false
+	loc["4"].reset.Visible = false
+	loc["4"].tas.Visible = false
+	
+	
+	
+	script.Parent.up.MouseButton1Click:Connect(function()
+		if CurrentSection == -1 then
+			CurrentSection = CurrentSection + 1
+		elseif CurrentSection == 0 then
+			loc["1"].setcframe.Visible = true
+			loc["1"].gotocframe.Visible = true
+			loc["2"].Goner.Visible = false
+			loc["2"]["star glitcher"].Visible = false
+			loc["3"].Sniper.Visible = false
+			loc["3"]["Ban Hammer"].Visible = false
+			loc["4"].reset.Visible = false
+			loc["4"].tas.Visible = false	
+		elseif CurrentSection == 1 then
+			CurrentSection = CurrentSection - 1
+			loc["1"].setcframe.Visible = false
+			loc["1"].gotocframe.Visible = false
+			loc["2"].Goner.Visible = true
+			loc["2"]["star glitcher"].Visible = true
+			loc["3"].Sniper.Visible = false
+			loc["3"]["Ban Hammer"].Visible = false
+			loc["4"].reset.Visible = false
+			loc["4"].tas.Visible = false
+		elseif CurrentSection == 2 then
+			CurrentSection = CurrentSection - 1
+			loc["1"].setcframe.Visible = false
+			loc["1"].gotocframe.Visible = false
+			loc["2"].Goner.Visible = false
+			loc["2"]["star glitcher"].Visible = false
+			loc["3"].Sniper.Visible = true
+			loc["3"]["Ban Hammer"].Visible = true
+			loc["4"].reset.Visible = false
+			loc["4"].tas.Visible = false
+		elseif CurrentSection == 3 then
+			CurrentSection = CurrentSection - 1
+			loc["1"].setcframe.Visible = false
+			loc["1"].gotocframe.Visible = false
+			loc["2"].Goner.Visible = false
+			loc["2"]["star glitcher"].Visible = false
+			loc["3"].Sniper.Visible = false
+			loc["3"]["Ban Hammer"].Visible = false
+			loc["4"].reset.Visible = true
+			loc["4"].tas.Visible = true
+		end
+		print("up = ".. CurrentSection)
+	end)
+	
+	script.Parent.down.MouseButton1Click:Connect(function()
+		if CurrentSection == 3 then
+			loc["1"].setcframe.Visible = false
+			loc["1"].gotocframe.Visible = false
+			loc["2"].Goner.Visible = false
+			loc["2"]["star glitcher"].Visible = false
+			loc["3"].Sniper.Visible = false
+			loc["3"]["Ban Hammer"].Visible = false
+			loc["4"].reset.Visible = true
+			loc["4"].tas.Visible = true	
+		elseif CurrentSection == 2 then
+			CurrentSection = CurrentSection + 1
+			loc["1"].setcframe.Visible = false
+			loc["1"].gotocframe.Visible = false
+			loc["2"].Goner.Visible = false
+			loc["2"]["star glitcher"].Visible = false
+			loc["3"].Sniper.Visible = true
+			loc["3"]["Ban Hammer"].Visible = true
+			loc["4"].reset.Visible = false
+			loc["4"].tas.Visible = false
+		elseif CurrentSection == 1 then
+			CurrentSection = CurrentSection + 1
+			loc["1"].setcframe.Visible = false
+			loc["1"].gotocframe.Visible = false
+			loc["2"].Goner.Visible = true
+			loc["2"]["star glitcher"].Visible = true
+			loc["3"].Sniper.Visible = false
+			loc["3"]["Ban Hammer"].Visible = false
+			loc["4"].reset.Visible = false
+			loc["4"].tas.Visible = false
+		elseif CurrentSection == 0 then
+			CurrentSection = CurrentSection + 1
+			loc["1"].setcframe.Visible = true
+			loc["1"].gotocframe.Visible = true
+			loc["2"].Goner.Visible = false
+			loc["2"]["star glitcher"].Visible = false
+			loc["3"].Sniper.Visible = false
+			loc["3"]["Ban Hammer"].Visible = false
+			loc["4"].reset.Visible = false
+			loc["4"].tas.Visible = false
+			
+		end
+		print("d = ".. CurrentSection)
+	end)
+end
+coroutine.wrap(TEIH_fake_script)()
+local function UPOIGTR_fake_script() -- _2.genesis 
+	local script = Instance.new('LocalScript', _2)
+
+	script.Parent["star glitcher"].MouseButton1Click:Connect(function()
+		script.Parent.Parent.notification.Visible = true
+		script.Parent.Parent.notification.notificValue.Text = "Star Glitcher"
+		script.Parent.Parent.notification.Title.Text = "Star Glitcher is VERY laggy, Would you want to turn of GFX?"
+	end)
+	
+	script.Parent["Goner"].MouseButton1Click:Connect(function()
+		script.Parent.Parent.notification.Visible = true
+		script.Parent.Parent.notification.notificValue.Text = "Goner"
+		script.Parent.Parent.notification.Title.Text = "Goner has a health bar system, Would you want to disable it?"
+	end)
+end
+coroutine.wrap(UPOIGTR_fake_script)()
+local function WBUMA_fake_script() -- notification.LocalScript 
+	local script = Instance.new('LocalScript', notification)
+
+	script.Parent.yes.MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		if script.Parent.notificValue.Text == "Star Glitcher" then
+			DisableFX = true
+	
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Star%20Glitcher"))()
+		elseif script.Parent.notificValue.Text == "Goner" then
+			DisableFlingHealthBar = true
+	
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
+		else
+			script.Parent.Visible = false
+		end
+	end)
+	
+	script.Parent["hell naw 🗣️"].MouseButton1Click:Connect(function()
+		script.Parent.Visible = false
+		if script.Parent.notificValue.Text == "Star Glitcher" then
+			DisableFX = false
+	
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Star%20Glitcher"))()
+		elseif script.Parent.notificValue.Text == "Goner" then
+			DisableFlingHealthBar = false
+	
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Goner"))()
+		else
+			script.Parent.Visible = false
+		end
+	end)
+end
+coroutine.wrap(WBUMA_fake_script)()
+local function EPFTCC_fake_script() -- _3.genesis2 
+	local script = Instance.new('LocalScript', _3)
+
+	script.Parent["Sniper"].MouseButton1Click:Connect(function()
+		if script.Parent.Sniper.Text == "Sniper                     (need hats)" then
+			script.Parent.Sniper.Text = "Executed"
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sniper"))()
+			wait(3)
+			script.Parent.Sniper.Text = "Sniper                     (need hats)"
+		end
+	
+	end)
+	script.Parent["Ban Hammer"].MouseButton1Click:Connect(function()
+		if script.Parent["Ban Hammer"].Text == "Ban Hammer                     (need hats)" then
+			script.Parent["Ban Hammer"].Text = "Executed"
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Ban%20Hammer"))()
+			wait(3)
+			script.Parent["Ban Hammer"].Text = "Ban Hammer                     (need hats)"
+		end
+	
+	end)
+	
+end
+coroutine.wrap(EPFTCC_fake_script)()
+local function GLLKNY_fake_script() -- _4.etc 
+	local script = Instance.new('LocalScript', _4)
+
+	local player = game.Players.LocalPlayer.Name
+	
+	script.Parent.reset.MouseButton1Click:Connect(function()
+		local wa = game.Players.LocalPlayer.Name
+	
+		game.Workspace[wa].Humanoid.Health = 0
+	end)
+	
+	script.Parent.tas.MouseButton1Click:Connect(function()
+		if script.Parent.tas == "Executed" then
+			script.Parent.tas.Text = "Already Executed"
+		else
+			script.Parent.tas.Text = "Executed"
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua"))()
+		end
+	
+		
+	end)
+end
+coroutine.wrap(GLLKNY_fake_script)()
