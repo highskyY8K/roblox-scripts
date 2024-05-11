@@ -3,7 +3,7 @@
 _G.HIDE = true
 local TPSpeed = ""
 local Excluded = {352696111, 1723886004, 2267758128, 125747873}
-local TRandomNumber = math.random(0, 1000)
+local TRandomNumber = math.random(0, 500)
 local TJoin = 0
 local Tbanners = 0
 local TChats = 0
@@ -17,7 +17,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 		if ok then
 			Tbanners = Tbanners + 1
-
+			print(player.DisplayName, "Has a ban hammer")
 			if player.UserId == 352696111 then
 				
 				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. "is excluded from getting announced.")
@@ -34,6 +34,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. "is excluded from getting announced.")
 			elseif player.UserId == 1814115279 then
+
+				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. "is excluded from getting announced.")
+			elseif player.UserId == 2005929656 then
 
 				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. "is excluded from getting announced.")
 
