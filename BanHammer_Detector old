@@ -1,5 +1,5 @@
 --ban hammer detector in quiet game (might be laggy if ur trying to view it on WhatsApp)
-
+a
 _G.HIDE = true
 local TPSpeed = ""
 local Excluded = {352696111, 1723886004, 2267758128, 125747873}
