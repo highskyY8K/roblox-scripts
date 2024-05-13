@@ -98,11 +98,13 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		end)
 		TJoin = TJoin + 1
 	end)
-
+	local namer = game.Players.Localplayer.Name
 	function tp()
 		while _G.HIDE == true do
+			game.Workspace[namer].Humanoid.Health = game.Workspace[namer].Humanoid.Health - 1
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(math.random(-100000, 10000000), math.random(5000000, 10000000000), math.random(-100000, 10000000))
 			wait(TPSpeed)
+			
 		end
 	end
 	tp()
