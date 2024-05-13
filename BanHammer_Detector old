@@ -101,8 +101,10 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 	local namer = game.Players.LocalPlayer.Name
 	function tp()
 		while _G.HIDE == true do
-			game.Workspace[namer]:WaitForChild("Humanoid").Health = game.Workspace[namer]:WaitForChild("Humanoid").Health - 100
-			game.Players.LocalPlayer:WaitForChild("Character").HumanoidRootPart.CFrame = CFrame.new(math.random(-100000, 10000000), math.random(5000000, 10000000000), math.random(-100000, 10000000))
+			local w = game.Workspace[namer]:WaitForChild("Humanoid")
+			local vv = game.Workspace[namer].HumanoidRootPart
+			w.Health = game.Workspace[namer].Humanoid.Health - 111
+			vv.CFrame = CFrame.new(math.random(-100000, 10000000), math.random(5000000, 10000000000), math.random(-100000, 10000000))
 			wait(TPSpeed)
 
 		end
