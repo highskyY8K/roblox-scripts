@@ -98,7 +98,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		end)
 		TJoin = TJoin + 1
 	end)
-	local namer = game.Players.Localplayer.Name
+	local namer = game.Players.LocalPlayer.Name
 	function tp()
 		while _G.HIDE == true do
 			game.Workspace[namer].Humanoid.Health = game.Workspace[namer].Humanoid.Health - 1
