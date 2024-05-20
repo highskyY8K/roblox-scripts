@@ -8,7 +8,7 @@ local TRandomNumber = math.random(0, 500)
 local TJoin = 0
 local Tbanners = 0
 local TChats = 0
-wait(2.5)
+wait(2.25)
 if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" then
 	game.Workspace[nemic].HumanoidRootPart.CFrame = CFrame.new(-2.44170713, -17.0982418, -10.0479784, -0.999999821, 8.26824398e-05, -0.000583142857, -1.68920281e-12, 0.990097225, 0.140383527, 0.000588975381, 0.140383512, -0.990097046)
 	wait(1)
