@@ -26,7 +26,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 		if ok then
 			Tbanners = Tbanners + 1
-			print(player.DisplayName, "Has a ban hammer")
+			warn(player.DisplayName, "Has a ban hammer")
 			if player.UserId == 352696111 then
 
 				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
