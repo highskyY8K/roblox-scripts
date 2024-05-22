@@ -8,7 +8,7 @@ local TRandomNumber = math.random(0, 500)
 local TJoin = 0
 local Tbanners = 0
 local TChats = 0
-wait(2.25)
+wait(1)
 if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" then
 	game.Workspace.Gravity = 0
 	local Part = Instance.new("Part", game.Workspace)
