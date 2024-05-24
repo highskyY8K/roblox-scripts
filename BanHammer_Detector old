@@ -58,7 +58,170 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 				
 			else
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/random/ecluded_users'))()
+				if player.UserId == 193611165 then
+	local args = {
+		[1] = "🟥 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 3868670748 then
+	local args = {
+		[1] = "🟥 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 2452010494 then
+	local args = {
+		[1] = "🟨 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 173014815 then
+	local args = {
+		[1] = "🟨 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 4151390601 then
+	local args = {
+		[1] = "🟨 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 1962691258 then
+	local args = {
+		[1] = "🟨 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+elseif player.UserId == 3648565857 then
+	local args = {
+		[1] = "🟨 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 1245630 then
+	local args = {
+		[1] = "🟨 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 2267758128 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 1656928615 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 1008711810 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 3063033819 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 1401031522 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 530722979 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 1723886004 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 5218178856 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 5249594024 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+elseif player.UserId == 1814115279 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+elseif player.UserId == 3045603698 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+elseif player.UserId == 1401031522 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+elseif player.UserId == 1163297242 then
+	local args = {
+		[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+else
+	local args = {
+		[1] = "⬜ ".. player.DisplayName.. " has a ban hammer",
+		[2] = "All"
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+	print(timewaited)
+	wait(timewaited)
+	local userfound = game.Players:FindFirstChild(player.Name)
+	if userfound then
+		local args = {
+			[1] = "/w ".. player.DisplayName.. " if you want to be removed from getting announced look this account's About. (This is an automated message)",
+			[2] = "All"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+	end
+end
 			end
 
 		end
