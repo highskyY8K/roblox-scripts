@@ -55,26 +55,10 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
 				--DS
+
 				
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/random/ecluded_users'))()
 			else
-				local args = {
-					[1] = "⬜ ".. player.DisplayName.. " has a ban hammer",
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-				print(timewaited)
-				wait(timewaited)
-				local userfound = game.Players:FindFirstChild(player.Name)
-				if userfound then
-					local args = {
-						[1] = "/w ".. player.DisplayName.. " if you want to be removed from getting announced look this account's About. (This is an automated message)",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-				end
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/random/ecluded_users'))()
 			end
 
 		end
