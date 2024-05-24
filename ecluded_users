@@ -1,5 +1,4 @@
-			print("Loaded")
-			elseif player.UserId == 193611165 then
+			if player.UserId == 193611165 then
 				local args = {
 					[1] = "🟥 ".. player.DisplayName.. " has a ban hammer",
 					[2] = "All"
