@@ -129,3 +129,10 @@
 				}
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+			elseif player.UserId == 1401031522 then
+				local args = {
+					[1] = "🟩 ".. player.DisplayName.. " has a ban hammer",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
