@@ -54,10 +54,12 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 			elseif player.UserId == 4689130381 then
 
 				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-
+				--DS
+				
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/random/ecluded_users'))()
 			else
 				local args = {
-					[1] = player.DisplayName.. " has a ban hammer",
+					[1] = "⬜ ".. player.DisplayName.. " has a ban hammer",
 					[2] = "All"
 				}
 
