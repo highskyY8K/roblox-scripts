@@ -1,0 +1,111 @@
+local Crash = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local close = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local U = Instance.new("UIStroke")
+local Uie = Instance.new("UIStroke")
+
+--Properties:
+
+Crash.Name = "Crash:)"
+Crash.Parent = game.CoreGui
+Crash.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Crash
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.200
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.764, 0, 0.738, 0)
+Frame.Size = UDim2.new(0, 209, 0, 104)
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.BackgroundTransparency = 0.500
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0492112748, 0, 0.422413766, 0)
+TextButton.Size = UDim2.new(0, 188, 0, 50)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Crash Server"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 25.000
+TextButton.TextWrapped = true
+
+UICorner.Parent = TextButton
+
+UICorner_2.Parent = Frame
+
+close.Name = "close"
+close.Parent = Frame
+close.BackgroundColor3 = Color3.fromRGB(7, 109, 0)
+close.BorderColor3 = Color3.fromRGB(90, 0, 0)
+close.BorderSizePixel = 2
+close.Position = UDim2.new(0.844378471, 0, 0.0865384638, 0)
+close.Size = UDim2.new(0, 21, 0, 21)
+close.Font = Enum.Font.SourceSansBold
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0492112748, 0, 0.057692308, 0)
+TextLabel.Size = UDim2.new(0, 86, 0, 26)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Crash Ui, Made by Alex54."
+TextLabel.TextColor3 = Color3.fromRGB(197, 197, 197)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 16.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+
+U.Parent = Frame
+U.Color = Color3.fromRGB(0, 0, 0)
+U.Thickness = 3
+U.Transparency = 0.8
+
+Uie.Parent = TextButton
+Uie.Color = Color3.fromRGB(109, 25, 0)
+Uie.Thickness = 3
+Uie.Transparency = 0.6
+Uie.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+-- Scripts:
+
+local function SGHAQWH_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Players = game:GetService("Players")
+
+		local LocalPlayer = Players.LocalPlayer
+		local Character = LocalPlayer.Character
+		local Humanoid = Character:WaitForChild("Humanoid")
+
+		local Animation = Instance.new("Animation", Character)
+		Animation.AnimationId = "rbxassetid://84315373"
+
+		local Track = Humanoid:LoadAnimation(Animation)
+		Track:Play()
+	end)
+end
+coroutine.wrap(SGHAQWH_fake_script)()
+local function GVGEWO_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.Draggable = true
+	script.Parent.Active = true
+	script.Parent.close.MouseButton1Click:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+	
+end
+coroutine.wrap(GVGEWO_fake_script)()
