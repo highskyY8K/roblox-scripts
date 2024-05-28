@@ -52,74 +52,79 @@ local c4bh = Instance.new("ImageLabel")
 local UICorner_14 = Instance.new("UICorner")
 local runc4bh = Instance.new("TextButton")
 local UICorner_15 = Instance.new("UICorner")
+local Crasher = Instance.new("ImageLabel")
 local UICorner_16 = Instance.new("UICorner")
+local runc4bh_2 = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_18 = Instance.new("UICorner")
 local character = Instance.new("Frame")
 local speed = Instance.new("TextLabel")
-local UICorner_17 = Instance.new("UICorner")
-local sped = Instance.new("TextBox")
-local UICorner_18 = Instance.new("UICorner")
-local jp = Instance.new("TextLabel")
 local UICorner_19 = Instance.new("UICorner")
-local jpower = Instance.new("TextBox")
+local sped = Instance.new("TextBox")
 local UICorner_20 = Instance.new("UICorner")
-local use = Instance.new("TextButton")
+local jp = Instance.new("TextLabel")
 local UICorner_21 = Instance.new("UICorner")
+local jpower = Instance.new("TextBox")
+local UICorner_22 = Instance.new("UICorner")
+local use = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
 local whispa = Instance.new("TextBox")
 local TextBox = Instance.new("TextBox")
-local UICorner_22 = Instance.new("UICorner")
+local UICorner_24 = Instance.new("UICorner")
 local TextButton = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
+local UICorner_25 = Instance.new("UICorner")
 local ImageLabel_9 = Instance.new("ImageLabel")
 local cchat = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
-local UICorner_25 = Instance.new("UICorner")
-local title = Instance.new("TextButton")
 local UICorner_26 = Instance.new("UICorner")
-local swearwords = Instance.new("Frame")
 local UICorner_27 = Instance.new("UICorner")
-local bg = Instance.new("Frame")
+local title = Instance.new("TextButton")
 local UICorner_28 = Instance.new("UICorner")
+local swearwords = Instance.new("Frame")
+local UICorner_29 = Instance.new("UICorner")
+local bg = Instance.new("Frame")
+local UICorner_30 = Instance.new("UICorner")
 local ScrollingFrame_2 = Instance.new("ScrollingFrame")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local bgnotouch = Instance.new("Frame")
 local as = Instance.new("TextButton")
-local UICorner_29 = Instance.new("UICorner")
-local ashole = Instance.new("TextButton")
-local UICorner_30 = Instance.new("UICorner")
-local nega = Instance.new("TextButton")
 local UICorner_31 = Instance.new("UICorner")
-local icome = Instance.new("TextButton")
+local ashole = Instance.new("TextButton")
 local UICorner_32 = Instance.new("UICorner")
-local bitkh = Instance.new("TextButton")
+local nega = Instance.new("TextButton")
 local UICorner_33 = Instance.new("UICorner")
-local shitt = Instance.new("TextButton")
+local icome = Instance.new("TextButton")
 local UICorner_34 = Instance.new("UICorner")
-local BELLEND = Instance.new("TextButton")
+local bitkh = Instance.new("TextButton")
 local UICorner_35 = Instance.new("UICorner")
-local _10vepp = Instance.new("TextButton")
+local shitt = Instance.new("TextButton")
 local UICorner_36 = Instance.new("UICorner")
+local BELLEND = Instance.new("TextButton")
+local UICorner_37 = Instance.new("UICorner")
+local _10vepp = Instance.new("TextButton")
+local UICorner_38 = Instance.new("UICorner")
 local m4gbans = Instance.new("ScrollingFrame")
 local Mods4Game = Instance.new("TextButton")
-local UICorner_37 = Instance.new("UICorner")
-local ClearBANS = Instance.new("TextButton")
-local UICorner_38 = Instance.new("UICorner")
-local tgp = Instance.new("TextLabel")
 local UICorner_39 = Instance.new("UICorner")
-local gameversion = Instance.new("TextLabel")
+local ClearBANS = Instance.new("TextButton")
 local UICorner_40 = Instance.new("UICorner")
-local ban = Instance.new("TextButton")
+local tgp = Instance.new("TextLabel")
 local UICorner_41 = Instance.new("UICorner")
-local Victim = Instance.new("TextBox")
+local gameversion = Instance.new("TextLabel")
 local UICorner_42 = Instance.new("UICorner")
-local reason = Instance.new("TextBox")
+local ban = Instance.new("TextButton")
 local UICorner_43 = Instance.new("UICorner")
+local Victim = Instance.new("TextBox")
+local UICorner_44 = Instance.new("UICorner")
+local reason = Instance.new("TextBox")
+local UICorner_45 = Instance.new("UICorner")
 local BanUser = Instance.new("TextButton")
 local runban = Instance.new("ImageLabel")
-local UICorner_44 = Instance.new("UICorner")
-local runbanbg = Instance.new("ImageLabel")
-local UICorner_45 = Instance.new("UICorner")
-local BGTheme = Instance.new("ImageLabel")
 local UICorner_46 = Instance.new("UICorner")
+local runbanbg = Instance.new("ImageLabel")
+local UICorner_47 = Instance.new("UICorner")
+local BGTheme = Instance.new("ImageLabel")
+local UICorner_48 = Instance.new("UICorner")
 
 --Properties:
 
@@ -511,6 +516,7 @@ sfmsg.BackgroundTransparency = 1.000
 sfmsg.BorderColor3 = Color3.fromRGB(0, 0, 0)
 sfmsg.BorderSizePixel = 0
 sfmsg.Size = UDim2.new(0, 186, 0, 145)
+sfmsg.CanvasSize = UDim2.new(0, 0, 3, 0)
 sfmsg.ScrollBarThickness = 8
 
 IY.Name = "IY"
@@ -519,7 +525,7 @@ IY.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 IY.BackgroundTransparency = 1.000
 IY.BorderColor3 = Color3.fromRGB(0, 0, 0)
 IY.BorderSizePixel = 0
-IY.Position = UDim2.new(0.160999998, 0, 0.0299999993, 0)
+IY.Position = UDim2.new(0.160999998, 0, 0.0199999996, 0)
 IY.Size = UDim2.new(0, 126, 0, 100)
 IY.Image = "http://www.roblox.com/asset/?id=16698176625"
 
@@ -549,7 +555,7 @@ c4bh.Parent = sfmsg
 c4bh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 c4bh.BorderColor3 = Color3.fromRGB(0, 0, 0)
 c4bh.BorderSizePixel = 0
-c4bh.Position = UDim2.new(0.160999909, 0, 0.510590851, 0)
+c4bh.Position = UDim2.new(0.160999998, 0, 0.340000004, 0)
 c4bh.Size = UDim2.new(0, 126, 0, 100)
 c4bh.Image = "http://www.roblox.com/asset/?id=16699190898"
 
@@ -574,7 +580,55 @@ runc4bh.TextWrapped = true
 
 UICorner_15.Parent = runc4bh
 
-UICorner_16.Parent = mscrip
+Crasher.Name = "Crasher"
+Crasher.Parent = sfmsg
+Crasher.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Crasher.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Crasher.BorderSizePixel = 0
+Crasher.Position = UDim2.new(0.160999998, 0, 0.660000026, 0)
+Crasher.Size = UDim2.new(0, 126, 0, 100)
+Crasher.Image = "http://www.roblox.com/asset/?id=17639586322"
+Crasher.ImageTransparency = 0.030
+
+UICorner_16.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_16.Parent = Crasher
+
+runc4bh_2.Name = "runc4bh"
+runc4bh_2.Parent = Crasher
+runc4bh_2.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
+runc4bh_2.BackgroundTransparency = 0.200
+runc4bh_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+runc4bh_2.BorderSizePixel = 0
+runc4bh_2.Position = UDim2.new(-0.0476190485, 0, 1.09999967, 0)
+runc4bh_2.Size = UDim2.new(0, 141, 0, 25)
+runc4bh_2.Font = Enum.Font.SourceSansBold
+runc4bh_2.Text = "Execute "
+runc4bh_2.TextColor3 = Color3.fromRGB(141, 174, 176)
+runc4bh_2.TextScaled = true
+runc4bh_2.TextSize = 14.000
+runc4bh_2.TextStrokeTransparency = 0.000
+runc4bh_2.TextWrapped = true
+
+UICorner_17.Parent = runc4bh_2
+
+TextLabel.Parent = Crasher
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.428571433, 0, 0.44770661, 0)
+TextLabel.Rotation = -13.000
+TextLabel.Size = UDim2.new(0, 72, 0, 28)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Server Crasher"
+TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(38, 0, 0)
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+
+UICorner_18.Parent = mscrip
 
 character.Name = "character"
 character.Parent = mainsecotin
@@ -600,7 +654,7 @@ speed.TextScaled = true
 speed.TextSize = 14.000
 speed.TextWrapped = true
 
-UICorner_17.Parent = speed
+UICorner_19.Parent = speed
 
 sped.Name = "sped"
 sped.Parent = speed
@@ -615,7 +669,7 @@ sped.Text = "16"
 sped.TextColor3 = Color3.fromRGB(0, 0, 0)
 sped.TextSize = 14.000
 
-UICorner_18.Parent = sped
+UICorner_20.Parent = sped
 
 jp.Name = "jp"
 jp.Parent = character
@@ -631,7 +685,7 @@ jp.TextColor3 = Color3.fromRGB(141, 174, 176)
 jp.TextSize = 32.000
 jp.TextWrapped = true
 
-UICorner_19.Parent = jp
+UICorner_21.Parent = jp
 
 jpower.Name = "jpower"
 jpower.Parent = jp
@@ -646,7 +700,7 @@ jpower.Text = "7.2"
 jpower.TextColor3 = Color3.fromRGB(0, 0, 0)
 jpower.TextSize = 14.000
 
-UICorner_20.Parent = jpower
+UICorner_22.Parent = jpower
 
 use.Name = "use"
 use.Parent = character
@@ -665,7 +719,7 @@ use.TextStrokeColor3 = Color3.fromRGB(163, 163, 163)
 use.TextStrokeTransparency = 0.000
 use.TextWrapped = true
 
-UICorner_21.Parent = use
+UICorner_23.Parent = use
 
 whispa.Name = "whispa"
 whispa.Parent = mainsecotin
@@ -703,8 +757,8 @@ TextBox.TextWrapped = true
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
-UICorner_22.CornerRadius = UDim.new(0, 5)
-UICorner_22.Parent = TextBox
+UICorner_24.CornerRadius = UDim.new(0, 5)
+UICorner_24.Parent = TextBox
 
 TextButton.Parent = TextBox
 TextButton.BackgroundColor3 = Color3.fromRGB(47, 79, 81)
@@ -719,8 +773,8 @@ TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
 TextButton.TextWrapped = true
 
-UICorner_23.CornerRadius = UDim.new(0, 5)
-UICorner_23.Parent = TextButton
+UICorner_25.CornerRadius = UDim.new(0, 5)
+UICorner_25.Parent = TextButton
 
 ImageLabel_9.Parent = TextButton
 ImageLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -750,10 +804,10 @@ cchat.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 cchat.TextStrokeTransparency = 0.600
 cchat.TextWrapped = true
 
-UICorner_24.CornerRadius = UDim.new(0, 5)
-UICorner_24.Parent = cchat
+UICorner_26.CornerRadius = UDim.new(0, 5)
+UICorner_26.Parent = cchat
 
-UICorner_25.Parent = whispa
+UICorner_27.Parent = whispa
 
 title.Name = "title"
 title.Parent = whispa
@@ -773,7 +827,7 @@ title.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 title.TextStrokeTransparency = 0.000
 title.TextWrapped = true
 
-UICorner_26.Parent = title
+UICorner_28.Parent = title
 
 swearwords.Name = "swearwords"
 swearwords.Parent = title
@@ -785,7 +839,7 @@ swearwords.Position = UDim2.new(1.33333337, 0, -0.5, 0)
 swearwords.Size = UDim2.new(0, 100, 0, 120)
 swearwords.Visible = false
 
-UICorner_27.Parent = swearwords
+UICorner_29.Parent = swearwords
 
 bg.Name = "bg"
 bg.Parent = swearwords
@@ -797,7 +851,7 @@ bg.ClipsDescendants = true
 bg.Position = UDim2.new(0.0799999982, 0, 0.100060426, 0)
 bg.Size = UDim2.new(0, 84, 0, 102)
 
-UICorner_28.Parent = bg
+UICorner_30.Parent = bg
 
 ScrollingFrame_2.Parent = bg
 ScrollingFrame_2.Active = true
@@ -836,7 +890,7 @@ as.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 as.TextStrokeTransparency = 0.000
 as.TextWrapped = true
 
-UICorner_29.Parent = as
+UICorner_31.Parent = as
 
 ashole.Name = "[as]hole"
 ashole.Parent = ScrollingFrame_2
@@ -854,7 +908,7 @@ ashole.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 ashole.TextStrokeTransparency = 0.000
 ashole.TextWrapped = true
 
-UICorner_30.Parent = ashole
+UICorner_32.Parent = ashole
 
 nega.Name = "nega"
 nega.Parent = ScrollingFrame_2
@@ -872,7 +926,7 @@ nega.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 nega.TextStrokeTransparency = 0.000
 nega.TextWrapped = true
 
-UICorner_31.Parent = nega
+UICorner_33.Parent = nega
 
 icome.Name = "icome"
 icome.Parent = ScrollingFrame_2
@@ -890,7 +944,7 @@ icome.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 icome.TextStrokeTransparency = 0.000
 icome.TextWrapped = true
 
-UICorner_32.Parent = icome
+UICorner_34.Parent = icome
 
 bitkh.Name = "bitkh"
 bitkh.Parent = ScrollingFrame_2
@@ -908,7 +962,7 @@ bitkh.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 bitkh.TextStrokeTransparency = 0.000
 bitkh.TextWrapped = true
 
-UICorner_33.Parent = bitkh
+UICorner_35.Parent = bitkh
 
 shitt.Name = "shitt"
 shitt.Parent = ScrollingFrame_2
@@ -926,7 +980,7 @@ shitt.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 shitt.TextStrokeTransparency = 0.000
 shitt.TextWrapped = true
 
-UICorner_34.Parent = shitt
+UICorner_36.Parent = shitt
 
 BELLEND.Name = "BELLEND"
 BELLEND.Parent = ScrollingFrame_2
@@ -944,7 +998,7 @@ BELLEND.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 BELLEND.TextStrokeTransparency = 0.000
 BELLEND.TextWrapped = true
 
-UICorner_35.Parent = BELLEND
+UICorner_37.Parent = BELLEND
 
 _10vepp.Name = "10vepp"
 _10vepp.Parent = ScrollingFrame_2
@@ -961,7 +1015,7 @@ _10vepp.TextStrokeColor3 = Color3.fromRGB(80, 113, 138)
 _10vepp.TextStrokeTransparency = 0.000
 _10vepp.TextWrapped = true
 
-UICorner_36.Parent = _10vepp
+UICorner_38.Parent = _10vepp
 
 m4gbans.Name = "m4g / bans..."
 m4gbans.Parent = mainsecotin
@@ -988,7 +1042,7 @@ Mods4Game.TextScaled = true
 Mods4Game.TextSize = 14.000
 Mods4Game.TextWrapped = true
 
-UICorner_37.Parent = Mods4Game
+UICorner_39.Parent = Mods4Game
 
 ClearBANS.Name = "ClearBANS"
 ClearBANS.Parent = Mods4Game
@@ -1005,7 +1059,7 @@ ClearBANS.TextScaled = true
 ClearBANS.TextSize = 14.000
 ClearBANS.TextWrapped = true
 
-UICorner_38.Parent = ClearBANS
+UICorner_40.Parent = ClearBANS
 
 tgp.Name = "tgp"
 tgp.Parent = Mods4Game
@@ -1022,7 +1076,7 @@ tgp.TextScaled = true
 tgp.TextSize = 14.000
 tgp.TextWrapped = true
 
-UICorner_39.Parent = tgp
+UICorner_41.Parent = tgp
 
 gameversion.Name = "gameversion"
 gameversion.Parent = Mods4Game
@@ -1039,7 +1093,7 @@ gameversion.TextScaled = true
 gameversion.TextSize = 14.000
 gameversion.TextWrapped = true
 
-UICorner_40.Parent = gameversion
+UICorner_42.Parent = gameversion
 
 ban.Name = "ban."
 ban.Parent = m4gbans
@@ -1056,7 +1110,7 @@ ban.TextScaled = true
 ban.TextSize = 20.000
 ban.TextWrapped = true
 
-UICorner_41.Parent = ban
+UICorner_43.Parent = ban
 
 Victim.Name = "Victim."
 Victim.Parent = ban
@@ -1076,7 +1130,7 @@ Victim.TextScaled = true
 Victim.TextSize = 14.000
 Victim.TextWrapped = true
 
-UICorner_42.Parent = Victim
+UICorner_44.Parent = Victim
 
 reason.Name = "reason."
 reason.Parent = ban
@@ -1096,7 +1150,7 @@ reason.TextSize = 14.000
 reason.TextStrokeTransparency = 0.500
 reason.TextWrapped = true
 
-UICorner_43.Parent = reason
+UICorner_45.Parent = reason
 
 BanUser.Name = "BanUser"
 BanUser.Parent = ban
@@ -1122,7 +1176,7 @@ runban.Size = UDim2.new(0, 44, 0, 44)
 runban.Image = "rbxassetid://12099513379"
 runban.ImageColor3 = Color3.fromRGB(208, 202, 213)
 
-UICorner_44.Parent = BanUser
+UICorner_46.Parent = BanUser
 
 runbanbg.Name = "runbanbg."
 runbanbg.Parent = BanUser
@@ -1136,8 +1190,8 @@ runbanbg.Image = "rbxassetid://12099513379"
 runbanbg.ImageColor3 = Color3.fromRGB(163, 45, 45)
 runbanbg.ImageTransparency = 1.000
 
-UICorner_45.CornerRadius = UDim.new(0, 5)
-UICorner_45.Parent = Frame
+UICorner_47.CornerRadius = UDim.new(0, 5)
+UICorner_47.Parent = Frame
 
 BGTheme.Name = "BGTheme"
 BGTheme.Parent = Frame
@@ -1152,12 +1206,12 @@ BGTheme.Image = "rbxassetid://16093447178"
 BGTheme.ImageColor3 = Color3.fromRGB(55, 135, 135)
 BGTheme.ImageTransparency = 0.300
 
-UICorner_46.CornerRadius = UDim.new(0, 5)
-UICorner_46.Parent = BGTheme
+UICorner_48.CornerRadius = UDim.new(0, 5)
+UICorner_48.Parent = BGTheme
 
 -- Scripts:
 
-local function JWRF_fake_script() -- icon.LocalScript 
+local function ZIMU_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local frame = script.Parent.Parent.icon
@@ -1213,8 +1267,8 @@ local function JWRF_fake_script() -- icon.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Extra4Seaborg"))()
 	end)
 end
-coroutine.wrap(JWRF_fake_script)()
-local function KYBFF_fake_script() -- section.LocalScript 
+coroutine.wrap(ZIMU_fake_script)()
+local function ANDPAC_fake_script() -- section.LocalScript 
 	local script = Instance.new('LocalScript', section)
 
 	local sesc = script.Parent.Parent.mainsecotin
@@ -1265,8 +1319,8 @@ local function KYBFF_fake_script() -- section.LocalScript
 	end)
 	
 end
-coroutine.wrap(KYBFF_fake_script)()
-local function HYQH_fake_script() -- codebox.LocalScript 
+coroutine.wrap(ANDPAC_fake_script)()
+local function FKRU_fake_script() -- codebox.LocalScript 
 	local script = Instance.new('LocalScript', codebox)
 
 	local ran = math.random(0, 10)
@@ -1280,8 +1334,8 @@ local function HYQH_fake_script() -- codebox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(HYQH_fake_script)()
-local function IHMXJ_fake_script() -- Execute.LocalScript 
+coroutine.wrap(FKRU_fake_script)()
+local function EVWF_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local cod_e = script.Parent.Parent.codeditorsw.codebox
@@ -1300,8 +1354,8 @@ local function IHMXJ_fake_script() -- Execute.LocalScript
 		script.Parent.Parent.CClear.Text = "Clear Code"
 	end)
 end
-coroutine.wrap(IHMXJ_fake_script)()
-local function RNINR_fake_script() -- runiy.LocalScript 
+coroutine.wrap(EVWF_fake_script)()
+local function DNIPCP_fake_script() -- runiy.LocalScript 
 	local script = Instance.new('LocalScript', runiy)
 
 	local ran = false
@@ -1319,8 +1373,8 @@ local function RNINR_fake_script() -- runiy.LocalScript
 		
 	end)
 end
-coroutine.wrap(RNINR_fake_script)()
-local function JGJVE_fake_script() -- runc4bh.LocalScript 
+coroutine.wrap(DNIPCP_fake_script)()
+local function ZKCPW_fake_script() -- runc4bh.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh)
 
 	local ran = false
@@ -1338,17 +1392,36 @@ local function JGJVE_fake_script() -- runc4bh.LocalScript
 	
 	end)
 end
-coroutine.wrap(JGJVE_fake_script)()
-local function GZWJO_fake_script() -- mscripts.LocalScript 
+coroutine.wrap(ZKCPW_fake_script)()
+local function YTDNG_fake_script() -- runc4bh_2.LocalScript 
+	local script = Instance.new('LocalScript', runc4bh_2)
+
+	local ran = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if ran == false then
+			ran = true
+			script.Parent.Text = "Executed"
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Crash%20SS%20Gui'))()
+		else
+			script.Parent.Text = "Already Executed"
+			wait(1)
+			script.Parent.Text = "Executed"
+		end
+	
+	end)
+end
+coroutine.wrap(YTDNG_fake_script)()
+local function PVLSTVC_fake_script() -- mscripts.LocalScript 
 	local script = Instance.new('LocalScript', mscripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
 	end)
 end
-coroutine.wrap(GZWJO_fake_script)()
-local function LKCHUC_fake_script() -- UICorner_17.LocalScript 
-	local script = Instance.new('LocalScript', UICorner_17)
+coroutine.wrap(PVLSTVC_fake_script)()
+local function VHEU_fake_script() -- UICorner_19.LocalScript 
+	local script = Instance.new('LocalScript', UICorner_19)
 
 	local Players = game:GetService("Players")
 	
@@ -1366,8 +1439,8 @@ local function LKCHUC_fake_script() -- UICorner_17.LocalScript
 	
 	Players.PlayerAdded:Connect(onPlayerAdded)
 end
-coroutine.wrap(LKCHUC_fake_script)()
-local function PIPZ_fake_script() -- use.LocalScript 
+coroutine.wrap(VHEU_fake_script)()
+local function PQNSEOV_fake_script() -- use.LocalScript 
 	local script = Instance.new('LocalScript', use)
 
 	local player = game.Players.LocalPlayer
@@ -1383,8 +1456,8 @@ local function PIPZ_fake_script() -- use.LocalScript
 	
 	
 end
-coroutine.wrap(PIPZ_fake_script)()
-local function ZBYGU_fake_script() -- title.LocalScript 
+coroutine.wrap(PQNSEOV_fake_script)()
+local function SCCPJN_fake_script() -- title.LocalScript 
 	local script = Instance.new('LocalScript', title)
 
 	local sf = script.Parent.swearwords.bg.ScrollingFrame
@@ -1472,8 +1545,8 @@ local function ZBYGU_fake_script() -- title.LocalScript
 	end)
 	
 end
-coroutine.wrap(ZBYGU_fake_script)()
-local function BFCC_fake_script() -- Mods4Game.morebase 
+coroutine.wrap(SCCPJN_fake_script)()
+local function UKUE_fake_script() -- Mods4Game.morebase 
 	local script = Instance.new('LocalScript', Mods4Game)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1525,8 +1598,8 @@ local function BFCC_fake_script() -- Mods4Game.morebase
 		wait(3)
 	end
 end
-coroutine.wrap(BFCC_fake_script)()
-local function WSWXA_fake_script() -- BanUser.BAN PLAYER 
+coroutine.wrap(UKUE_fake_script)()
+local function WLEUUSQ_fake_script() -- BanUser.BAN PLAYER 
 	local script = Instance.new('LocalScript', BanUser)
 
 	local banning = false
@@ -1643,8 +1716,8 @@ local function WSWXA_fake_script() -- BanUser.BAN PLAYER
 	
 	
 end
-coroutine.wrap(WSWXA_fake_script)()
-local function OFQMS_fake_script() -- m4gbans.ban4you. 
+coroutine.wrap(WLEUUSQ_fake_script)()
+local function KKIXHAY_fake_script() -- m4gbans.ban4you. 
 	local script = Instance.new('LocalScript', m4gbans)
 
 	local btext = "Current Ban Method: Remote"
@@ -1684,8 +1757,8 @@ local function OFQMS_fake_script() -- m4gbans.ban4you.
 	end)
 	
 end
-coroutine.wrap(OFQMS_fake_script)()
-local function EHBDR_fake_script() -- Frame.Draggable_yeah 
+coroutine.wrap(KKIXHAY_fake_script)()
+local function RTFWN_fake_script() -- Frame.Draggable_yeah 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent.Background.ImageTransparency = 1
@@ -1753,4 +1826,4 @@ local function EHBDR_fake_script() -- Frame.Draggable_yeah
 	end
 	
 end
-coroutine.wrap(EHBDR_fake_script)()
+coroutine.wrap(RTFWN_fake_script)()
