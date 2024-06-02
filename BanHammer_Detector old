@@ -83,26 +83,32 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		---
 
 		if TRandomNumber == 69 then
+			if TJoin > math.random(10, 100) then
 			local args = {
 				[1] = "Total Players Joined: ".. TJoin,
 				[2] = "All"
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			end
 		elseif TRandomNumber == 420 then
-			local args = {
-				[1] = "Total Chats: ".. TChats,
-				[2] = "All"
-			}
+			if TChats > math.random(0, 1000) then
+				local args = {
+					[1] = "Total Chats: ".. TChats,
+					[2] = "All"
+				}
 
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-		elseif TRandomNumber == 244 then
-			local args = {
-				[1] = "Total Banners in this Server ever: ".. Tbanners,
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			end	
+			elseif TRandomNumber == 244 then
+			if Tbanners > 10 then
+				local args = {
+					[1] = "Total Banners in this Server ever: ".. Tbanners,
+					[2] = "All"
+				}
+				
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			end
 		end
 
 		player.Chatted:Connect(function()
