@@ -3,7 +3,10 @@
 _G.HIDE = true
 local nemic = game.Players.LocalPlayer.Name
 local TPSpeed = ""
+--
 local Excluded = {352696111, 1723886004, 2267758128, 125747873}
+local disabled = false
+--
 local TJoin = 0
 local Tbanners = 0
 local TChats = 0
@@ -22,74 +25,93 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		local timewaited = math.random(5, 1000)
 		wait(2) 
 		local ko = player.Backpack
-		local ok = ko:FindFirstChild("BanHammer")
+		local ok = ko:FindFirstChild("ClassicSword")
 
 		if ok then
 			Tbanners = Tbanners + 1
 			warn(player.Name, "Has a ban hammer")
-			if player.UserId == 352696111 then
+			
+			if disabled == false then
+				if player.UserId == 352696111 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-			elseif player.UserId == 1723886004 then
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 1723886004 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-			elseif player.UserId == 2267758128 then
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 2267758128 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-			elseif player.UserId == 125747873 then
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 125747873 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-			elseif player.UserId == 3144537944 then
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 3144537944 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-			elseif player.UserId == 1814115279 then
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 1814115279 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-			elseif player.UserId == 2005929656 then
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 2005929656 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-			elseif player.UserId == 530722979 then
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 530722979 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
-			elseif player.UserId == 4689130381 then
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 4689130381 then
 
-				warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+					
 				--DS
-
-
-			else
-				local args = {
-					[1] = player.DisplayName.. " has a ban hammer",
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-
-				print(timewaited)
-				wait(timewaited)
-				local userfound = game.Players:FindFirstChild(player.Name)
-				if userfound then
+				elseif player.UserId == 193611165 then
+					disabled = true
 					local args = {
-						[1] = "/w ".. player.DisplayName.. " if you want to be removed from getting announced look this account's About. (This is an automated message)",
+						[1] = "Ban Hammer Detector has been disabled because ".. player.DisplayName.. " has joined, will resume once he leaves",
 						[2] = "All"
 					}
 
 					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+				elseif player.UserId == 3868670748 then
+					disabled = true
+					local args = {
+						[1] = "Ban Hammer Detector has been disabled because ".. player.DisplayName.. " has joined, will resume once he leaves",
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+					
+					
+				else
+					local args = {
+						[1] = player.DisplayName.. " has a ban hammer",
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+
+					print(timewaited)
+					wait(timewaited)
+					local userfound = game.Players:FindFirstChild(player.Name)
+					if userfound then
+						local args = {
+							[1] = "/w ".. player.DisplayName.. " if you want to be removed from getting announced look this account's About. (This is an automated message)",
+							[2] = "All"
+						}
+
+						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+					end
 				end
 			end
-
 		end
 
 		---
 
 		if TRandomNumber == 69 then
 			if TJoin > math.random(10, 100) then
-			local args = {
-				[1] = "Total Players Joined: ".. TJoin,
-				[2] = "All"
-			}
+				local args = {
+					[1] = "Total Players Joined: ".. TJoin,
+					[2] = "All"
+				}
 
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 			end
 		elseif TRandomNumber == 420 then
 			if TChats > math.random(0, 1000) then
@@ -100,13 +122,13 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 			end	
-			elseif TRandomNumber == 244 then
+		elseif TRandomNumber == 244 then
 			if Tbanners > 10 then
 				local args = {
 					[1] = "Total Banners in this Server ever: ".. Tbanners,
 					[2] = "All"
 				}
-				
+
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 			end
 		end
@@ -115,6 +137,30 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 			TChats = TChats + 1
 		end)
 		TJoin = TJoin + 1
+	end)
+	
+	game.Players.PlayerRemoving:Connect(function(player)
+		if disabled == true then
+			if player.UserId == 193611165 then
+				disabled = false
+				local args = {
+					[1] = "Ban Hammer Detector has re-enabled now because ".. player.DisplayName.. " has left.",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+			elseif player.UserId == 3868670748 then
+			
+				disabled = false
+				local args = {
+					[1] = "Ban Hammer Detector has re-enabled now because ".. player.DisplayName.. " has left.",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+			end
+		end
 	end)
 	local namer = game.Players.LocalPlayer.Name
 	function tp()
