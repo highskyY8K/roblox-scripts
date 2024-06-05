@@ -7,6 +7,7 @@ local TPSpeed = ""
 local Excluded = {352696111, 1723886004, 2267758128, 125747873}
 local disabled = false
 --
+local TBanned = 0
 local TJoin = 0
 local Tbanners = 0
 local TChats = 0
@@ -19,6 +20,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 	Part.Transparency = 1
 	Part.Position = Vector3.new(0, 0, 0)
 	Part.Size = Vector3.new(2048, 2048, 2048)
+	--
+	game.Workspace.Baseplate.Size = Vector3.new(2048, 16, 2048)
+	--
 	wait(1)
 	game.Players.PlayerAdded:Connect(function(player)
 		local TRandomNumber = math.random(0, 500)
@@ -131,6 +135,19 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 			end
+		elseif TRandomNumber == 150 then
+			for i, v in ipairs(game.Workspace:GetChildren()) do
+				if v.Name == "BanPart" then
+					TBanned = TBanned + 1
+				end
+			end
+			--works!!!
+			local args = {
+				[1] = "Total People Banned in this Server: ".. TBanned,
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 		end
 
 		player.Chatted:Connect(function()
@@ -177,3 +194,4 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 	game.Workspace.Gravity = 15
 
 end
+
