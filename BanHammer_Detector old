@@ -20,6 +20,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 	Part.Transparency = 1
 	Part.Position = Vector3.new(0, 0, 0)
 	Part.Size = Vector3.new(2048, 2048, 2048)
+
 	wait(1)
 	game.Players.PlayerAdded:Connect(function(player)
 		local TRandomNumber = math.random(0, 500)
@@ -78,7 +79,16 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 					}
 
 					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-					
+				elseif player.UserId == 5227824572 then
+					disabled = true
+					local args = {
+						[1] = "Ban Hammer Detector has been disabled because ".. player.DisplayName.. " has joined, will resume once he leaves",
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+
+
 					
 				else
 					local args = {
@@ -166,6 +176,15 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 			elseif player.UserId == 3868670748 then
 			
+				disabled = false
+				local args = {
+					[1] = "Ban Hammer Detector has re-enabled now because ".. player.DisplayName.. " has left.",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+			elseif player.UserId == 5227824572 then
+
 				disabled = false
 				local args = {
 					[1] = "Ban Hammer Detector has re-enabled now because ".. player.DisplayName.. " has left.",
