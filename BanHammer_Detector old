@@ -19,7 +19,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 	Part.Anchored = true
 	Part.Transparency = 1
 	Part.Position = Vector3.new(0, 0, 0)
-	Part.Size = Vector3.new(2048, 2048, 2048)
+	Part.Size = Vector3.new(2000, 2048, 2000)
 	--
 	game.Workspace.Baseplate.Size = Vector3.new(2048, 16, 2048)
 	--
