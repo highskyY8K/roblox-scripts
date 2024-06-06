@@ -11,6 +11,7 @@ local TBanned = 0
 local TJoin = 0
 local Tbanners = 0
 local TChats = 0
+local TBChecks = 0
 
 if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" then
 	game.Workspace.Gravity = 0
@@ -158,6 +159,15 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+		elseif TRandomNumber == 25 then
+
+			local args = {
+				[1] = "Total Players Searched in this Server: ".. TBChecks,
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
 		end
 		
 		
@@ -168,12 +178,12 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 				if v.Name == "BanPart" then
 					if v.SurfaceGui.TextLabel.Text == message.. " was banned here." then
 						local args = {
-							[1] = message.. " was banned here.",
+							[1] = message.. " is banned here.",
 							[2] = "All"
 						}
 						
 						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
+						TBChecks = TBChecks + 1
 					end
 				end
 			end
@@ -188,6 +198,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		for i, v in ipairs(game.Workspace:GetChildren()) do
 			if v.Name == "BanPart" then
 				if v.SurfaceGui.TextLabel.Text == player.Name.. " was banned here." then
+					
 					v.SurfaceGui.TextLabel.Text = player.DisplayName.. " was banned here."
 				end
 			end
