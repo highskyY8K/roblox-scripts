@@ -159,14 +159,40 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 		end
+		
+		
 
-		player.Chatted:Connect(function()
+		player.Chatted:Connect(function(message)
+			
+			for i, v in ipairs(game.Workspace:GetChildren()) do
+				if v.Name == "BanPart" then
+					if v.SurfaceGui.TextLabel.Text == message.. " was banned here." then
+						local args = {
+							[1] = message.. " was banned here.",
+							[2] = "All"
+						}
+						
+						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+					end
+				end
+			end
+			
+			
 			TChats = TChats + 1
 		end)
 		TJoin = TJoin + 1
 	end)
 	
 	game.Players.PlayerRemoving:Connect(function(player)
+		for i, v in ipairs(game.Workspace:GetChildren()) do
+			if v.Name == "BanPart" then
+				if v.SurfaceGui.TextLabel.Text == player.Name.. " was banned here." then
+					v.SurfaceGui.TextLabel.Text = player.DisplayName.. " was banned here."
+				end
+			end
+		end
+		--
 		if disabled == true then
 			if player.UserId == 193611165 then
 				disabled = false
@@ -198,6 +224,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 			end
 		end
 	end)
+	
+	
+	
 	local namer = game.Players.LocalPlayer.Name
 	function tp()
 		while _G.HIDE == true do
@@ -213,4 +242,3 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 	game.Workspace.Gravity = 15
 
 end
-
