@@ -69,31 +69,10 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 				--DS
 				elseif player.UserId == 193611165 then
 					disabled = true
-					local args = {
-						[1] = "Ban Hammer Detector has been disabled because ".. player.DisplayName.. " has joined, will resume once he leaves",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
 				elseif player.UserId == 3868670748 then
 					disabled = true
-					local args = {
-						[1] = "Ban Hammer Detector has been disabled because ".. player.DisplayName.. " has joined, will resume once he leaves",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
 				elseif player.UserId == 5227824572 then
 					disabled = true
-					local args = {
-						[1] = "Ban Hammer Detector has been disabled because ".. player.DisplayName.. " has joined, will resume once he leaves",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-
-
-					
 				else
 					local args = {
 						[1] = player.DisplayName.. " has a ban hammer",
@@ -162,7 +141,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		elseif TRandomNumber == 25 then
 
 			local args = {
-				[1] = "Total Players Searched in this Server: ".. TBChecks,
+				[1] = "Total Players BSearched in this Server: ".. TBChecks.. " (type their name in chat[sometimes works with display names])",
 				[2] = "All"
 			}
 
@@ -198,7 +177,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		for i, v in ipairs(game.Workspace:GetChildren()) do
 			if v.Name == "BanPart" then
 				if v.SurfaceGui.TextLabel.Text == player.Name.. " was banned here." then
-					
+					local BanPartAsWellXd = v:Clone()
 					v.SurfaceGui.TextLabel.Text = player.DisplayName.. " was banned here."
 				end
 			end
@@ -207,31 +186,10 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		if disabled == true then
 			if player.UserId == 193611165 then
 				disabled = false
-				local args = {
-					[1] = "Ban Hammer Detector has re-enabled now because ".. player.DisplayName.. " has left.",
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
-			elseif player.UserId == 3868670748 then
-			
+			elseif player.UserId == 3868670748 then			
 				disabled = false
-				local args = {
-					[1] = "Ban Hammer Detector has re-enabled now because ".. player.DisplayName.. " has left.",
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
 			elseif player.UserId == 5227824572 then
-
 				disabled = false
-				local args = {
-					[1] = "Ban Hammer Detector has re-enabled now because ".. player.DisplayName.. " has left.",
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
 			end
 		end
 	end)
