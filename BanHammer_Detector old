@@ -178,6 +178,8 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 			if v.Name == "BanPart" then
 				if v.SurfaceGui.TextLabel.Text == player.Name.. " was banned here." then
 					local BanPartAsWellXd = v:Clone()
+					BanPartAsWellXd.Parent = game.Workspace
+					BanPartAsWellXd.SurfaceGui.TextLabel.Text = player.Name.. " was banned here."
 					v.SurfaceGui.TextLabel.Text = player.DisplayName.. " was banned here."
 				end
 			end
