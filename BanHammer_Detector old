@@ -32,8 +32,8 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		wait(2) 
 		local ko = player.Backpack
 		local ok = ko:FindFirstChild("BanHammer")
-		TQTime = TQTime + game.Players:FindFirstChild(player.Name).leaderstats["Quiet Time"].Value
-		TPwins = TPwins + game.Players:FindFirstChild(player.Name).leaderstats["Wins"].Value
+		TQTime = TQTime + game.Players:FindFirstChild(player.Name):FindFirstChild(leaderstats)["Quiet Time"].Value
+		TPwins = TPwins + game.Players:FindFirstChild(player.Name):FindFirstChild(leaderstats)["Wins"].Value
 
 		--
 		if ok then
@@ -214,7 +214,15 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		
 
 		player.Chatted:Connect(function(message)
-			if message == "!ServerStats" then
+			local under = message.lower(message)
+			TBanned = 0
+			for i, v in ipairs(game.Workspace:GetChildren()) do
+				if v.Name == "BanPart" then	
+					TBanned = TBanned + 1
+				end
+			end
+			--
+			if under == "!stats" then
 				local data = {
 					["content"] = "",
 					["embeds"] = {
