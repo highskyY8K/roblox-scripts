@@ -32,8 +32,8 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or "Hammer_Detector" th
 		wait(2) 
 		local ko = player.Backpack
 		local ok = ko:FindFirstChild("BanHammer")
-		TQTime = TQTime + game.Players:FindFirstChild(player.Name):FindFirstChild(leaderstats)["Quiet Time"].Value
-		TPwins = TPwins + game.Players:FindFirstChild(player.Name):FindFirstChild(leaderstats)["Wins"].Value
+		TQTime = TQTime + game.Players:FindFirstChild(player.Name):FindFirstChild("leaderstats")["Quiet Time"].Value
+		TPwins = TPwins + game.Players:FindFirstChild(player.Name):FindFirstChild("leaderstats")["Wins"].Value
 
 		--
 		if ok then
