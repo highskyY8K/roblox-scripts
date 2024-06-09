@@ -97,7 +97,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
 
-				--DS
+					--DS
 				elseif player.UserId == 193611165 then
 					disabled = true
 				elseif player.UserId == 3868670748 then
@@ -219,8 +219,8 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 
 		end
-		
-		
+
+
 
 		player.Chatted:Connect(function(message)
 			local under = message.lower(message)
@@ -258,9 +258,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				request = http_request or request or HttpPost or syn.request
 				local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 				request(abcdef)
-				
+
 				--
-								
+
 				local args = {
 					[1] = "/w ".. player.Name.. " Total Chats: ".. TChats,
 					[2] = "All"
@@ -303,9 +303,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 			end
-			
+
 			--
-			
+
 			for i, v in ipairs(game.Workspace:GetChildren()) do
 				if v.Name == "BanPart" then
 					if v.SurfaceGui.TextLabel.Text == message.. " was banned here." then
@@ -313,42 +313,37 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 							[1] = message.. " is banned here.",
 							[2] = "All"
 						}
-						
+
 						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 						TBChecks = TBChecks + 1
 					end
 				end
 			end
-			
-			
+
+
 			--
 			TChats = TChats + 1
 			--
-			
-			
-						
+
+
+
 		end)
 		TJoin = TJoin + 1
 	end)
-	
+
 	game.Players.PlayerRemoving:Connect(function(player)
 		for i, v in ipairs(game.Workspace:GetChildren()) do
 			if v.Name == "BanPart" then
-				local banText
+				local banText = v.SurfaceGui.TextLabel.Text
 				if player.Name == player.DisplayName then
 					banText = player.Name .. " was banned here."
 				else
 					banText = player.DisplayName .. " was banned here."
 				end
-				--
-				if v.SurfaceGui.TextLabel.Text == player.Name .. " was banned here." then
-					local BanPartAsWellXd = v:Clone()
-					BanPartAsWellXd.Parent = game.Workspace
-					BanPartAsWellXd.SurfaceGui.TextLabel.Text = banText
-				end
+
 			end
 		end
-		
+
 		--
 		if disabled == true then
 			if player.UserId == 193611165 then
@@ -360,9 +355,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			end
 		end
 	end)
-	
-	
-	
+
+
+
 	local namer = game.Players.LocalPlayer.Name
 	function tp()
 		while _G.HIDE == true do
