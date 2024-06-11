@@ -1,7 +1,7 @@
 --ban hammer detector in quiet game (might be laggy if ur trying to view it on WhatsApp)
 
 _G.HIDE = true
-local BHDVersion = "V3.04"
+local BHDVersion = "V3.05"
 local nemic = game.Players.LocalPlayer.Name
 local TPSpeed = ""
 --
@@ -48,7 +48,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 						["description"] = [[
 							[Here](https://www.roblox.com/users/]].. player.UserId.. [[/profile)           <@&1249279738459979838>
 							Server Jobid: ]].. game.JobId.. [[  
-							]].. player.DisplayName.. [[ joined <t:]].. os.time().. [[:R> or at ]].. os.date().. [[ \n
+							]].. player.DisplayName.. [[ / ]].. player.Name.. [[ joined <t:]].. os.time().. [[:R> or at ]].. os.date().. [[ \n
 							*]].. BHDVersion.. [[*]],
 
 						["color"] = tonumber(0x7269da),
