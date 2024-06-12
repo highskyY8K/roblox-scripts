@@ -1,7 +1,7 @@
 --ban hammer detector in quiet game (might be laggy if ur trying to view it on WhatsApp)
 
 _G.HIDE = true
-local BHDVersion = "V3.08"
+local BHDVersion = "V3.15"
 local nemic = game.Players.LocalPlayer.Name
 local TPSpeed = ""
 --
@@ -28,14 +28,18 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 	wait(1)
 	local url = "https://webhook.lewisakura.moe/api/webhooks/1249082370842169464/CQqzR3PcZ0eyyCc58gOkybVDxYpXrtbtF5--8J_D16EamVyOxZYhJZVIM6NxOgv94wE4"
 	game.Players.PlayerAdded:Connect(function(player)
+		local playre = game.Players:FindFirstChild(player.Name)
 		local TRandomNumber = math.random(0, 550)
 		local timewaited = math.random(5, 1000)
 		wait(2) 
+		local LeaderStats = playre:WaitForChild("leaderstats")
 		local ko = player.Backpack
 		local ok = ko:FindFirstChild("BanHammer")
-		TQTime = TQTime + game.Players:FindFirstChild(player.Name).leaderstats["Quiet Time"].Value
-		TPwins = TPwins + game.Players:FindFirstChild(player.Name).leaderstats["Wins"].Value
-
+	
+		if LeaderStats then
+			TQTime = TQTime + playre.leaderstats["Quiet Time"].Value
+			TPwins = TPwins + playre.leaderstats["Wins"].Value
+		end
 		--
 		if ok then
 			Tbanners = Tbanners + 1
