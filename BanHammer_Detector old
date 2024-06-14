@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.19"
+local BHDVersion = "V3.2"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -118,6 +118,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 					}
 
 					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+					wait(1)
 					disabled = true
 				elseif player.UserId == 2270603755 then
 					local args = {
@@ -126,6 +127,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 					}
 
 					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+					wait(1)
 					disabled = true
 				elseif player.UserId == 3868670748 then
 					local args = {
@@ -134,6 +136,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 					}
 
 					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+					wait(1)
 					disabled = true
 				elseif player.UserId == 5227824572 then
 					local args = {
@@ -142,6 +145,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 					}
 
 					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+					wait(1)
 					disabled = true
 				else
 					local args = {
