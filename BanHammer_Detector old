@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.29"
+local BHDVersion = "V3.3"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -127,6 +127,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
 				elseif player.UserId == 2452010494 then
+
+					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
+				elseif player.UserId == 4857538535 then
 
 					warn(player.DisplayName.. " Has a ban hammer but it wasn't announced because ".. player.DisplayName.. " is excluded from getting announced.")
 
@@ -378,6 +381,14 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				}
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			elseif under == "!version" then
+				local args = {
+					[1] = "/w ".. player.Name.. " Ban Hammer Dectector Version: ".. BHDVersion,
+					[2] = "All"
+				}
+				
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
 			end
 
 			--
@@ -504,5 +515,6 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 	end
 	tp()
 	game.Workspace.Gravity = 15
+	
 
 end
