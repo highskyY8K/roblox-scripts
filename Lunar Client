@@ -1,6 +1,11 @@
 --Lunar Client made by Gumicuci | this GUI is made for the ripoff minecraft games on roblox
 --18/06/2024
 
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local lunar = Instance.new("ScreenGui")
 local BaseFrame = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
@@ -216,7 +221,7 @@ excavator.TextTransparency = 0.200
 
 -- Scripts:
 
-local function GXDQO_fake_script() -- lunar.Loader, UIStuff 
+local function CAXRD_fake_script() -- lunar.Loader, UIStuff 
 	local script = Instance.new('LocalScript', lunar)
 
 	local uis = game:GetService("UserInputService")
@@ -436,8 +441,8 @@ local function GXDQO_fake_script() -- lunar.Loader, UIStuff
 	game.Players.LocalPlayer.DevEnableMouseLock = false
 	script.Parent.Parent = game.CoreGui
 end
-coroutine.wrap(GXDQO_fake_script)()
-local function QCLJ_fake_script() -- KillAura.KA 
+coroutine.wrap(CAXRD_fake_script)()
+local function KHTCSXA_fake_script() -- KillAura.KA 
 	local script = Instance.new('LocalScript', KillAura)
 
 	
@@ -488,8 +493,8 @@ local function QCLJ_fake_script() -- KillAura.KA
 		end
 	end)
 end
-coroutine.wrap(QCLJ_fake_script)()
-local function XGOB_fake_script() -- Frame.on/off 
+coroutine.wrap(KHTCSXA_fake_script)()
+local function NQKUQBM_fake_script() -- Frame.on/off 
 	local script = Instance.new('LocalScript', Frame)
 
 	local loc = script.Parent
@@ -528,8 +533,8 @@ local function XGOB_fake_script() -- Frame.on/off
 	
 	
 end
-coroutine.wrap(XGOB_fake_script)()
-local function ENPTVD_fake_script() -- speedHax.SH 
+coroutine.wrap(NQKUQBM_fake_script)()
+local function WEBI_fake_script() -- speedHax.SH 
 	local script = Instance.new('LocalScript', speedHax)
 
 	local loc = script.Parent.Parent
@@ -573,8 +578,8 @@ local function ENPTVD_fake_script() -- speedHax.SH
 	end)
 	
 end
-coroutine.wrap(ENPTVD_fake_script)()
-local function YTXHVWG_fake_script() -- ESP.esp 
+coroutine.wrap(WEBI_fake_script)()
+local function YNEBK_fake_script() -- ESP.esp 
 	local script = Instance.new('LocalScript', ESP)
 
 	local loc = script.Parent.Parent
@@ -611,8 +616,8 @@ local function YTXHVWG_fake_script() -- ESP.esp
 	end
 	
 end
-coroutine.wrap(YTXHVWG_fake_script)()
-local function PGSCL_fake_script() -- instabreak.IB 
+coroutine.wrap(YNEBK_fake_script)()
+local function ADNQE_fake_script() -- instabreak.IB 
 	local script = Instance.new('LocalScript', instabreak)
 
 	local loc = script.Parent.Parent
@@ -642,8 +647,8 @@ local function PGSCL_fake_script() -- instabreak.IB
 	
 	end)
 end
-coroutine.wrap(PGSCL_fake_script)()
-local function YAHICRL_fake_script() -- Frame_2.on/off 
+coroutine.wrap(ADNQE_fake_script)()
+local function AMQTF_fake_script() -- Frame_2.on/off 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local loc = script.Parent
@@ -668,14 +673,14 @@ local function YAHICRL_fake_script() -- Frame_2.on/off
 	
 	
 end
-coroutine.wrap(YAHICRL_fake_script)()
-local function WZMZ_fake_script() -- nuker.bomb bomb 
+coroutine.wrap(AMQTF_fake_script)()
+local function XZQZ_fake_script() -- nuker.bomb bomb 
 	local script = Instance.new('LocalScript', nuker)
 
 	local loc = script.Parent.Parent
 	local abled = true
 	
-	loc.ESP.MouseButton1Click:Connect(function()
+	loc.nuker.MouseButton1Click:Connect(function()
 		abled = not abled
 	end)
 	
@@ -714,14 +719,14 @@ local function WZMZ_fake_script() -- nuker.bomb bomb
 	
 	
 end
-coroutine.wrap(WZMZ_fake_script)()
-local function ULUB_fake_script() -- excavator.mine 
+coroutine.wrap(XZQZ_fake_script)()
+local function KDRSWK_fake_script() -- excavator.mine 
 	local script = Instance.new('LocalScript', excavator)
 
 	local loc = script.Parent.Parent
 	local abled = true
 	
-	loc.ESP.MouseButton1Click:Connect(function()
+	loc.excavator.MouseButton1Click:Connect(function()
 		abled = not abled
 	end)
 	
@@ -760,4 +765,4 @@ local function ULUB_fake_script() -- excavator.mine
 	
 	
 end
-coroutine.wrap(ULUB_fake_script)()
+coroutine.wrap(KDRSWK_fake_script)()
