@@ -1,6 +1,3 @@
---Lunar Client made by Gumicuci | this GUI is made for the ripoff minecraft games on roblox
---18/06/2024
-
 local lunar = Instance.new("ScreenGui")
 local BaseFrame = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
@@ -216,7 +213,7 @@ excavator.TextTransparency = 0.200
 
 -- Scripts:
 
-local function CAXRD_fake_script() -- lunar.Loader, UIStuff 
+local function QLWASJO_fake_script() -- lunar.Loader, UIStuff 
 	local script = Instance.new('LocalScript', lunar)
 
 	local uis = game:GetService("UserInputService")
@@ -436,8 +433,8 @@ local function CAXRD_fake_script() -- lunar.Loader, UIStuff
 	game.Players.LocalPlayer.DevEnableMouseLock = false
 	script.Parent.Parent = game.CoreGui
 end
-coroutine.wrap(CAXRD_fake_script)()
-local function KHTCSXA_fake_script() -- KillAura.KA 
+coroutine.wrap(QLWASJO_fake_script)()
+local function QYGUCM_fake_script() -- KillAura.KA 
 	local script = Instance.new('LocalScript', KillAura)
 
 	
@@ -488,8 +485,8 @@ local function KHTCSXA_fake_script() -- KillAura.KA
 		end
 	end)
 end
-coroutine.wrap(KHTCSXA_fake_script)()
-local function NQKUQBM_fake_script() -- Frame.on/off 
+coroutine.wrap(QYGUCM_fake_script)()
+local function PXBDYV_fake_script() -- Frame.on/off 
 	local script = Instance.new('LocalScript', Frame)
 
 	local loc = script.Parent
@@ -528,8 +525,8 @@ local function NQKUQBM_fake_script() -- Frame.on/off
 	
 	
 end
-coroutine.wrap(NQKUQBM_fake_script)()
-local function WEBI_fake_script() -- speedHax.SH 
+coroutine.wrap(PXBDYV_fake_script)()
+local function SLKWYIS_fake_script() -- speedHax.SH 
 	local script = Instance.new('LocalScript', speedHax)
 
 	local loc = script.Parent.Parent
@@ -573,8 +570,8 @@ local function WEBI_fake_script() -- speedHax.SH
 	end)
 	
 end
-coroutine.wrap(WEBI_fake_script)()
-local function YNEBK_fake_script() -- ESP.esp 
+coroutine.wrap(SLKWYIS_fake_script)()
+local function IAGLCT_fake_script() -- ESP.esp 
 	local script = Instance.new('LocalScript', ESP)
 
 	local loc = script.Parent.Parent
@@ -611,8 +608,8 @@ local function YNEBK_fake_script() -- ESP.esp
 	end
 	
 end
-coroutine.wrap(YNEBK_fake_script)()
-local function ADNQE_fake_script() -- instabreak.IB 
+coroutine.wrap(IAGLCT_fake_script)()
+local function BPOR_fake_script() -- instabreak.IB 
 	local script = Instance.new('LocalScript', instabreak)
 
 	local loc = script.Parent.Parent
@@ -642,8 +639,8 @@ local function ADNQE_fake_script() -- instabreak.IB
 	
 	end)
 end
-coroutine.wrap(ADNQE_fake_script)()
-local function AMQTF_fake_script() -- Frame_2.on/off 
+coroutine.wrap(BPOR_fake_script)()
+local function CKCXHQ_fake_script() -- Frame_2.on/off 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local loc = script.Parent
@@ -668,12 +665,12 @@ local function AMQTF_fake_script() -- Frame_2.on/off
 	
 	
 end
-coroutine.wrap(AMQTF_fake_script)()
-local function XZQZ_fake_script() -- nuker.bomb bomb 
+coroutine.wrap(CKCXHQ_fake_script)()
+local function VHYNR_fake_script() -- nuker.bomb bomb 
 	local script = Instance.new('LocalScript', nuker)
 
 	local loc = script.Parent.Parent
-	local abled = true
+	local abled = false
 	
 	loc.nuker.MouseButton1Click:Connect(function()
 		abled = not abled
@@ -703,7 +700,7 @@ local function XZQZ_fake_script() -- nuker.bomb bomb
 						}
 	
 						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("BreakBlock"):FireServer(unpack(args))
-						task.wait(0.02)
+						task.wait(0.05)
 						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
 					end
 				end
@@ -714,12 +711,12 @@ local function XZQZ_fake_script() -- nuker.bomb bomb
 	
 	
 end
-coroutine.wrap(XZQZ_fake_script)()
-local function KDRSWK_fake_script() -- excavator.mine 
+coroutine.wrap(VHYNR_fake_script)()
+local function GZQDOHX_fake_script() -- excavator.mine 
 	local script = Instance.new('LocalScript', excavator)
 
 	local loc = script.Parent.Parent
-	local abled = true
+	local abled = false
 	
 	loc.excavator.MouseButton1Click:Connect(function()
 		abled = not abled
@@ -749,7 +746,7 @@ local function KDRSWK_fake_script() -- excavator.mine
 						}
 	
 						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("BreakBlock"):FireServer(unpack(args))
-						task.wait(0.02)
+						task.wait(0.05)
 						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
 					end
 				end
@@ -760,4 +757,4 @@ local function KDRSWK_fake_script() -- excavator.mine
 	
 	
 end
-coroutine.wrap(KDRSWK_fake_script)()
+coroutine.wrap(GZQDOHX_fake_script)()
