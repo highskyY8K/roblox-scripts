@@ -1,0 +1,763 @@
+--Lunar Client made by Gumicuci | this GUI is made for the ripoff minecraft games on roblox
+--18/06/2024
+
+local lunar = Instance.new("ScreenGui")
+local BaseFrame = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local Combat = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local KillAura = Instance.new("TextButton")
+local bg = Instance.new("Frame")
+local speedHax = Instance.new("TextButton")
+local ESP = Instance.new("TextButton")
+local instabreak = Instance.new("TextButton")
+local UIListLayout = Instance.new("UIListLayout")
+local miscellaneous = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local bg_2 = Instance.new("Frame")
+local nuker = Instance.new("TextButton")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local excavator = Instance.new("TextButton")
+
+--Properties:
+
+lunar.Name = "lunar"
+lunar.Parent = game.Workspace
+lunar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BaseFrame.Name = "BaseFrame"
+BaseFrame.Parent = lunar
+BaseFrame.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+BaseFrame.BackgroundTransparency = 0.400
+BaseFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BaseFrame.BorderSizePixel = 0
+BaseFrame.Position = UDim2.new(0.0140000004, 0, 0.0390000008, 0)
+BaseFrame.Size = UDim2.new(0, 132, 0, 29)
+BaseFrame.Font = Enum.Font.TitilliumWeb
+BaseFrame.Text = "  Lunar Client"
+BaseFrame.TextColor3 = Color3.fromRGB(39, 0, 93)
+BaseFrame.TextSize = 25.000
+BaseFrame.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton.Parent = BaseFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.803030312, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 26, 0, 29)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "X"
+TextButton.TextColor3 = Color3.fromRGB(162, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextTransparency = 0.400
+TextButton.TextWrapped = true
+
+Combat.Name = "Combat"
+Combat.Parent = BaseFrame
+Combat.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+Combat.BackgroundTransparency = 0.300
+Combat.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Combat.BorderSizePixel = 0
+Combat.Position = UDim2.new(0, 0, 1.31034482, 0)
+Combat.Size = UDim2.new(0, 151, 0, 31)
+Combat.Font = Enum.Font.TitilliumWeb
+Combat.Text = "Combat"
+Combat.TextColor3 = Color3.fromRGB(39, 0, 93)
+Combat.TextSize = 35.000
+Combat.TextWrapped = true
+
+Frame.Parent = Combat
+Frame.BackgroundColor3 = Color3.fromRGB(0, 32, 43)
+Frame.BackgroundTransparency = 0.400
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.ClipsDescendants = true
+Frame.Position = UDim2.new(0.0463576168, 0, 1.19354868, 0)
+Frame.Size = UDim2.new(0, 137, 0, 329)
+
+KillAura.Name = "Kill Aura"
+KillAura.Parent = Frame
+KillAura.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+KillAura.BackgroundTransparency = 0.500
+KillAura.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillAura.BorderSizePixel = 0
+KillAura.LayoutOrder = 3
+KillAura.Position = UDim2.new(0.0109489048, 0, 0, 0)
+KillAura.Size = UDim2.new(0, 131, 0, 36)
+KillAura.Font = Enum.Font.SourceSans
+KillAura.Text = "Kill Aura"
+KillAura.TextColor3 = Color3.fromRGB(39, 0, 93)
+KillAura.TextSize = 27.000
+KillAura.TextTransparency = 0.200
+
+bg.Name = "bg"
+bg.Parent = Frame
+bg.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bg.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bg.BorderSizePixel = 0
+bg.LayoutOrder = 1
+
+speedHax.Name = "speedHax"
+speedHax.Parent = Frame
+speedHax.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+speedHax.BackgroundTransparency = 0.500
+speedHax.BorderColor3 = Color3.fromRGB(0, 0, 0)
+speedHax.BorderSizePixel = 0
+speedHax.LayoutOrder = 3
+speedHax.Position = UDim2.new(0.0109489048, 0, 0, 0)
+speedHax.Size = UDim2.new(0, 131, 0, 36)
+speedHax.Font = Enum.Font.SourceSans
+speedHax.Text = "Speed Hack"
+speedHax.TextColor3 = Color3.fromRGB(39, 0, 93)
+speedHax.TextSize = 27.000
+speedHax.TextTransparency = 0.200
+
+ESP.Name = "ESP"
+ESP.Parent = Frame
+ESP.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+ESP.BackgroundTransparency = 0.500
+ESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESP.BorderSizePixel = 0
+ESP.LayoutOrder = 3
+ESP.Position = UDim2.new(0.0109489048, 0, 0, 0)
+ESP.Size = UDim2.new(0, 131, 0, 36)
+ESP.Font = Enum.Font.SourceSans
+ESP.Text = "Player ESP"
+ESP.TextColor3 = Color3.fromRGB(39, 0, 93)
+ESP.TextSize = 27.000
+ESP.TextTransparency = 0.200
+
+instabreak.Name = "instabreak"
+instabreak.Parent = Frame
+instabreak.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+instabreak.BackgroundTransparency = 0.500
+instabreak.BorderColor3 = Color3.fromRGB(0, 0, 0)
+instabreak.BorderSizePixel = 0
+instabreak.LayoutOrder = 3
+instabreak.Position = UDim2.new(0.0109489048, 0, 0, 0)
+instabreak.Size = UDim2.new(0, 131, 0, 36)
+instabreak.Font = Enum.Font.SourceSans
+instabreak.Text = "InstaBreak"
+instabreak.TextColor3 = Color3.fromRGB(39, 0, 93)
+instabreak.TextSize = 27.000
+instabreak.TextTransparency = 0.200
+
+UIListLayout.Parent = Frame
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 8)
+
+miscellaneous.Name = "miscellaneous"
+miscellaneous.Parent = BaseFrame
+miscellaneous.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+miscellaneous.BackgroundTransparency = 0.300
+miscellaneous.BorderColor3 = Color3.fromRGB(0, 0, 0)
+miscellaneous.BorderSizePixel = 0
+miscellaneous.Position = UDim2.new(1.25757575, 0, 1.31034482, 0)
+miscellaneous.Size = UDim2.new(0, 151, 0, 31)
+miscellaneous.Font = Enum.Font.TitilliumWeb
+miscellaneous.Text = "Miscellaneous"
+miscellaneous.TextColor3 = Color3.fromRGB(39, 0, 93)
+miscellaneous.TextSize = 33.000
+miscellaneous.TextWrapped = true
+
+Frame_2.Parent = miscellaneous
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 32, 43)
+Frame_2.BackgroundTransparency = 0.400
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.ClipsDescendants = true
+Frame_2.Position = UDim2.new(0.0463576168, 0, 1.19354868, 0)
+Frame_2.Size = UDim2.new(0, 137, 0, 96)
+
+bg_2.Name = "bg"
+bg_2.Parent = Frame_2
+bg_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bg_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+bg_2.BorderSizePixel = 0
+bg_2.LayoutOrder = 1
+
+nuker.Name = "nuker"
+nuker.Parent = Frame_2
+nuker.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+nuker.BackgroundTransparency = 0.500
+nuker.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nuker.BorderSizePixel = 0
+nuker.LayoutOrder = 3
+nuker.Position = UDim2.new(0.0109489048, 0, 0, 0)
+nuker.Size = UDim2.new(0, 131, 0, 36)
+nuker.Font = Enum.Font.SourceSans
+nuker.Text = "Nuker"
+nuker.TextColor3 = Color3.fromRGB(39, 0, 93)
+nuker.TextSize = 27.000
+nuker.TextTransparency = 0.200
+
+UIListLayout_2.Parent = Frame_2
+UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 8)
+
+excavator.Name = "excavator"
+excavator.Parent = Frame_2
+excavator.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+excavator.BackgroundTransparency = 0.500
+excavator.BorderColor3 = Color3.fromRGB(0, 0, 0)
+excavator.BorderSizePixel = 0
+excavator.LayoutOrder = 3
+excavator.Position = UDim2.new(0.0109489048, 0, 0, 0)
+excavator.Size = UDim2.new(0, 131, 0, 36)
+excavator.Font = Enum.Font.SourceSans
+excavator.Text = "Excavator"
+excavator.TextColor3 = Color3.fromRGB(39, 0, 93)
+excavator.TextSize = 27.000
+excavator.TextTransparency = 0.200
+
+-- Scripts:
+
+local function GXDQO_fake_script() -- lunar.Loader, UIStuff 
+	local script = Instance.new('LocalScript', lunar)
+
+	local uis = game:GetService("UserInputService")
+	local player = game:GetService("Players").LocalPlayer
+	local mouse = player:GetMouse()
+	local main = script.Parent.BaseFrame
+	----
+	main.Combat.Active = true
+	main.Combat.Draggable = true
+	main.miscellaneous.Active = true
+	main.miscellaneous.Draggable = true
+	----
+	uis.InputBegan:Connect(function(input)
+		if uis:IsKeyDown(Enum.KeyCode.LeftShift) and uis:IsKeyDown(Enum.KeyCode.R) then
+			main.Visible = not main.Visible
+		end
+	end)
+	
+	main.TextButton.MouseButton1Click:Connect(function()
+		if main.Text == "  Lunar Client" then
+			main.Text = " Are u sure?"
+			wait(5)
+			if main.Text == " Are u sure?" then
+				main.Text = "  Lunar Client"
+			end
+		elseif  main.Text == " Are u sure?" then
+			script.Parent:Destroy()
+		else
+			main.Text = "  Lunar Client"
+		end
+	end)
+	
+	----
+	
+	local baseframc = Instance.new("UICorner", main)
+	local baseframs = Instance.new("UIStroke", main)
+	local baseframst = Instance.new("UIStroke", main)
+	
+	baseframc.CornerRadius = UDim.new(0.2, 0)
+	
+	--
+	baseframs.Color = Color3.fromRGB(0, 0, 0)
+	baseframs.Transparency = "0.3"
+	baseframs.Thickness = 2
+	baseframs.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	baseframst.Color = Color3.fromRGB(85, 85, 85)
+	baseframst.Transparency = "0.5"
+	baseframst.Thickness = 2
+	baseframst.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	local uiconar = Instance.new("UICorner", main.Combat)
+	local uistroke = Instance.new("UIStroke", main.Combat)
+	local uistroker = Instance.new("UIStroke", main.Combat)
+	
+	uiconar.CornerRadius = UDim.new(0, 4)
+	--
+	uistroke.Color = Color3.fromRGB(0, 0, 0)
+	uistroke.Transparency = "0.3"
+	uistroke.Thickness = 2
+	uistroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	uistroker.Color = Color3.fromRGB(85, 85, 85)
+	uistroker.Transparency = "0.5"
+	uistroker.Thickness = 2
+	uistroker.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	local uiconar2 = Instance.new("UICorner", main.Combat.Frame)
+	local uistroke2 = Instance.new("UIStroke", main.Combat.Frame)
+	local uilistin = Instance.new("UIListLayout", main.Combat.Frame)
+	uiconar2.CornerRadius = UDim.new(0, 6)
+	--
+	uistroke2.Color = Color3.fromRGB(0, 0, 0)
+	uistroke2.Transparency = "0.3"
+	uistroke2.Thickness = 2
+	uistroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	uilistin.Padding = UDim.new(0, 8)
+	uilistin.FillDirection = Enum.FillDirection.Vertical
+	uilistin.SortOrder = Enum.SortOrder.LayoutOrder
+	uilistin.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	uilistin.VerticalAlignment = Enum.VerticalAlignment.Top
+	--
+	local espstokr = Instance.new("UIStroke", main.Combat.Frame.ESP)
+	local espstokre = Instance.new("UICorner", main.Combat.Frame.ESP)
+	local espstokree = Instance.new("UIStroke", main.Combat.Frame.ESP)
+	
+	espstokr.Color = Color3.fromRGB(85, 85, 85)
+	espstokr.Transparency = "0.5"
+	espstokr.Thickness = 1.5
+	espstokr.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	espstokre.CornerRadius = UDim.new(0, 8)
+	--
+	espstokree.Color = Color3.fromRGB(0, 0, 0)
+	espstokree.Transparency = "0.2"
+	espstokree.Thickness = 2
+	espstokree.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	local kastokr = Instance.new("UIStroke", main.Combat.Frame["Kill Aura"])
+	local kastokre = Instance.new("UICorner", main.Combat.Frame["Kill Aura"])
+	local kastokree = Instance.new("UIStroke", main.Combat.Frame["Kill Aura"])
+	
+	kastokr.Color = Color3.fromRGB(85, 85, 85)
+	kastokr.Transparency = "0.5"
+	kastokr.Thickness = 1.5
+	kastokr.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	kastokre.CornerRadius = UDim.new(0, 8)
+	--
+	kastokree.Color = Color3.fromRGB(0, 0, 0)
+	kastokree.Transparency = "0.2"
+	kastokree.Thickness = 2
+	kastokree.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	local wkastokr = Instance.new("UIStroke", main.Combat.Frame.speedHax)
+	local wkastokre = Instance.new("UICorner", main.Combat.Frame.speedHax)
+	local wkastokree = Instance.new("UIStroke", main.Combat.Frame.speedHax)
+	
+	wkastokr.Color = Color3.fromRGB(85, 85, 85)
+	wkastokr.Transparency = "0.5"
+	wkastokr.Thickness = 1.5
+	wkastokr.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	wkastokre.CornerRadius = UDim.new(0, 8)
+	--
+	wkastokree.Color = Color3.fromRGB(0, 0, 0)
+	wkastokree.Transparency = "0.2"
+	wkastokree.Thickness = 2
+	wkastokree.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	local ewkastokr = Instance.new("UIStroke", main.Combat.Frame.instabreak)
+	local ewkastokre = Instance.new("UICorner", main.Combat.Frame.instabreak)
+	local ewkastokree = Instance.new("UIStroke", main.Combat.Frame.instabreak)
+	
+	ewkastokr.Color = Color3.fromRGB(85, 85, 85)
+	ewkastokr.Transparency = "0.5"
+	ewkastokr.Thickness = 1.5
+	ewkastokr.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	ewkastokre.CornerRadius = UDim.new(0, 8)
+	--
+	ewkastokree.Color = Color3.fromRGB(0, 0, 0)
+	ewkastokree.Transparency = "0.2"
+	ewkastokree.Thickness = 2
+	ewkastokree.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	
+	
+	
+	
+	
+	
+	
+	
+	--
+	local mamamemae = Instance.new("UIStroke", main.miscellaneous)
+	local mamamemaee = Instance.new("UICorner", main.miscellaneous)
+	local mamamemaeee = Instance.new("UIStroke", main.miscellaneous)
+	
+	mamamemaee.CornerRadius = UDim.new(0, 4)
+	--
+	mamamemae.Color = Color3.fromRGB(0, 0, 0)
+	mamamemae.Transparency = "0.3"
+	mamamemae.Thickness = 2
+	mamamemae.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	mamamemaeee.Color = Color3.fromRGB(85, 85, 85)
+	mamamemaeee.Transparency = "0.5"
+	mamamemaeee.Thickness = 2
+	mamamemaeee.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	local uiconar2w = Instance.new("UICorner", main.miscellaneous.Frame)
+	local uistroke2w = Instance.new("UIStroke", main.miscellaneous.Frame)
+	local uilistinw = Instance.new("UIListLayout", main.miscellaneous.Frame)
+	uiconar2w.CornerRadius = UDim.new(0, 6)
+	--
+	uistroke2w.Color = Color3.fromRGB(0, 0, 0)
+	uistroke2w.Transparency = "0.3"
+	uistroke2w.Thickness = 2
+	uistroke2w.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	
+	local micstokr = Instance.new("UIStroke", main.miscellaneous.Frame.excavator)
+	local micstokrr = Instance.new("UICorner", main.miscellaneous.Frame.excavator)
+	local micstokre = Instance.new("UIStroke", main.miscellaneous.Frame.excavator)
+	
+	micstokr.Color = Color3.fromRGB(85, 85, 85)
+	micstokr.Transparency = "0.5"
+	micstokr.Thickness = 1.5
+	micstokr.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	micstokrr.CornerRadius = UDim.new(0, 8)
+	--
+	micstokre.Color = Color3.fromRGB(0, 0, 0)
+	micstokre.Transparency = "0.2"
+	micstokre.Thickness = 2
+	micstokre.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	local icstokr = Instance.new("UIStroke", main.miscellaneous.Frame.nuker)
+	local icstokrr = Instance.new("UICorner", main.miscellaneous.Frame.nuker)
+	local icstokre = Instance.new("UIStroke", main.miscellaneous.Frame.nuker)
+	
+	icstokr.Color = Color3.fromRGB(85, 85, 85)
+	icstokr.Transparency = "0.5"
+	icstokr.Thickness = 1.5
+	icstokr.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	icstokrr.CornerRadius = UDim.new(0, 8)
+	--
+	icstokre.Color = Color3.fromRGB(0, 0, 0)
+	icstokre.Transparency = "0.2"
+	icstokre.Thickness = 2
+	icstokre.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	
+	
+	
+	game.Players.LocalPlayer.DevEnableMouseLock = false
+	script.Parent.Parent = game.CoreGui
+end
+coroutine.wrap(GXDQO_fake_script)()
+local function QCLJ_fake_script() -- KillAura.KA 
+	local script = Instance.new('LocalScript', KillAura)
+
+	
+	
+	_G.KillAura = false
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.BackgroundColor3 == Color3.fromRGB(4, 58, 0) then
+			_G.KillAura = true
+			if _G.KillAura == true then
+				local OPname = ""
+				local distanceThreshold = 15
+	
+				local function isPlayerNearby()
+					local player = game.Players.LocalPlayer
+					if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+						local playerPosition = player.Character.HumanoidRootPart.Position
+	
+						for _, otherPlayer in pairs(game.Players:GetPlayers()) do
+							if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+								local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
+								local distance = (playerPosition - otherPosition).Magnitude
+								if distance <= distanceThreshold then
+									OPname = otherPlayer.Name
+									wait(0.1)
+									return true
+								end
+							end
+						end
+					end
+					return false
+				end
+	
+				local function fa()
+					while _G.KillAura == true do
+						isPlayerNearby()
+						wait(0.1) 
+						local args = {
+							[1] = workspace:WaitForChild(OPname)
+						}
+	
+						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("Attack"):InvokeServer(unpack(args))
+					end
+				end
+				fa()
+			end
+		else
+			_G.KillAura = false
+		end
+	end)
+end
+coroutine.wrap(QCLJ_fake_script)()
+local function XGOB_fake_script() -- Frame.on/off 
+	local script = Instance.new('LocalScript', Frame)
+
+	local loc = script.Parent
+	
+	loc["Kill Aura"].MouseButton1Click:Connect(function()
+		if loc["Kill Aura"].BackgroundColor3 == Color3.fromRGB(0, 24, 33) then
+			loc["Kill Aura"].BackgroundColor3 = Color3.fromRGB(4, 58, 0)
+		else
+			loc["Kill Aura"].BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+		end
+	end)
+	loc["speedHax"].MouseButton1Click:Connect(function()
+		if loc["speedHax"].BackgroundColor3 == Color3.fromRGB(0, 24, 33) then
+			loc["speedHax"].BackgroundColor3 = Color3.fromRGB(4, 58, 0)
+		else
+			loc["speedHax"].BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+		end
+	end)
+	loc["ESP"].MouseButton1Click:Connect(function()
+		if loc["ESP"].BackgroundColor3 == Color3.fromRGB(0, 24, 33) then
+			loc["ESP"].BackgroundColor3 = Color3.fromRGB(4, 58, 0)
+		else
+			loc["ESP"].BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+		end
+	end)
+	loc["instabreak"].MouseButton1Click:Connect(function()
+		if loc["instabreak"].BackgroundColor3 == Color3.fromRGB(0, 24, 33) then
+			loc["instabreak"].BackgroundColor3 = Color3.fromRGB(4, 58, 0)
+		else
+			loc["instabreak"].BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+		end
+	end)
+	
+	
+	
+	
+	
+end
+coroutine.wrap(XGOB_fake_script)()
+local function ENPTVD_fake_script() -- speedHax.SH 
+	local script = Instance.new('LocalScript', speedHax)
+
+	local loc = script.Parent.Parent
+	local uis = game:GetService("UserInputService")
+	local abled = false
+	
+	loc.speedHax.MouseButton1Click:Connect(function()
+		abled = not abled
+	end)
+	
+	uis.InputBegan:Connect(function(input)
+		if abled == true then
+			if uis:IsKeyDown(Enum.KeyCode.LeftShift) then
+				local player = game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name)
+	
+				if player then
+					player.Humanoid.WalkSpeed = 35
+				end
+			end
+		else
+			local player = game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name)
+	
+			if player then
+				player.Humanoid.WalkSpeed = 16
+			end
+		end
+	
+	end)
+	
+	uis.InputEnded:Connect(function(input)
+		if abled == true then
+			if input.KeyCode == Enum.KeyCode.LeftShift then
+				local player = game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name)
+	
+				if player then
+					player.Humanoid.WalkSpeed = 16
+				end
+			end
+	
+		end
+	end)
+	
+end
+coroutine.wrap(ENPTVD_fake_script)()
+local function YTXHVWG_fake_script() -- ESP.esp 
+	local script = Instance.new('LocalScript', ESP)
+
+	local loc = script.Parent.Parent
+	local abled = false
+	
+	loc.ESP.MouseButton1Click:Connect(function()
+		abled = not abled
+	end)
+	
+	for idk = 1, math.huge do
+		wait(10)
+			if abled == true then
+			for _, player in ipairs(game.Players:GetPlayers()) do
+				local character = player.Character
+				if character then
+					local highlight = character:FindFirstChild("Highlight")
+	
+					if not highlight then
+						if player.Name ~= game.Players.LocalPlayer.Name then
+							local newHighlight = Instance.new("Highlight")
+							newHighlight.Parent = character
+							newHighlight.Enabled = true
+							newHighlight.Adornee = character
+							newHighlight.FillColor = Color3.fromRGB(0, 40, 75)
+							newHighlight.FillTransparency = 0.3
+							newHighlight.OutlineTransparency = 0.2
+							newHighlight.OutlineColor = Color3.fromRGB(0, 98, 255)
+						end
+	
+					end
+				end
+			end
+		end
+	end
+	
+end
+coroutine.wrap(YTXHVWG_fake_script)()
+local function PGSCL_fake_script() -- instabreak.IB 
+	local script = Instance.new('LocalScript', instabreak)
+
+	local loc = script.Parent.Parent
+	
+	_G.be = false
+	loc.instabreak.MouseButton1Click:Connect(function()
+		if _G.be == false then
+			_G.be = true
+			local function df()
+				while _G.be == true do
+					game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
+					task.wait()
+				end
+			end
+			df()
+		else
+			_G.be = false
+			local function df()
+				while _G.be == true do
+					game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
+					task.wait()
+				end
+			end
+			df()
+		end
+	
+	
+	end)
+end
+coroutine.wrap(PGSCL_fake_script)()
+local function YAHICRL_fake_script() -- Frame_2.on/off 
+	local script = Instance.new('LocalScript', Frame_2)
+
+	local loc = script.Parent
+	
+	loc["nuker"].MouseButton1Click:Connect(function()
+		if loc["nuker"].BackgroundColor3 == Color3.fromRGB(0, 24, 33) then
+			loc["nuker"].BackgroundColor3 = Color3.fromRGB(4, 58, 0)
+		else
+			loc["nuker"].BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+		end
+	end)
+	loc["excavator"].MouseButton1Click:Connect(function()
+		if loc["excavator"].BackgroundColor3 == Color3.fromRGB(0, 24, 33) then
+			loc["excavator"].BackgroundColor3 = Color3.fromRGB(4, 58, 0)
+		else
+			loc["excavator"].BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+		end
+	end)
+	
+	
+	
+	
+	
+end
+coroutine.wrap(YAHICRL_fake_script)()
+local function WZMZ_fake_script() -- nuker.bomb bomb 
+	local script = Instance.new('LocalScript', nuker)
+
+	local loc = script.Parent.Parent
+	local abled = true
+	
+	loc.ESP.MouseButton1Click:Connect(function()
+		abled = not abled
+	end)
+	
+	
+	local function boom()
+		while abled do
+			local word = game:GetService("Players").LocalPlayer.PlayerGui.HUDGui.DataFrame.Coord.Text
+			wait()
+	
+			local function extract_numbers(str)
+				local x, y, z = str:match("(-?%d+),%s*(-?%d+),%s*(-?%d+)")
+				return tonumber(x), tonumber(y), tonumber(z)
+			end
+	
+			-- Extract numbers and assign to variables
+			local x, y, z = extract_numbers(word)
+	
+			for zz = 0, 4 do
+				for xx = 0, 4 do
+					for yy = 0, 4 do
+						local args = {
+							[1] = x - math.random(0, 4),
+							[2] = y - math.random(0, 4),
+							[3] = z - math.random(0, 4)
+						}
+	
+						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("BreakBlock"):FireServer(unpack(args))
+						task.wait(0.02)
+						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
+					end
+				end
+			end
+		end
+	end
+	boom()
+	
+	
+end
+coroutine.wrap(WZMZ_fake_script)()
+local function ULUB_fake_script() -- excavator.mine 
+	local script = Instance.new('LocalScript', excavator)
+
+	local loc = script.Parent.Parent
+	local abled = true
+	
+	loc.ESP.MouseButton1Click:Connect(function()
+		abled = not abled
+	end)
+	
+	
+	local function boom()
+		while abled do
+			local word = game:GetService("Players").LocalPlayer.PlayerGui.HUDGui.DataFrame.Coord.Text
+			wait()
+	
+			local function extract_numbers(str)
+				local x, y, z = str:match("(-?%d+),%s*(-?%d+),%s*(-?%d+)")
+				return tonumber(x), tonumber(y), tonumber(z)
+			end
+	
+			-- Extract numbers and assign to variables
+			local x, y, z = extract_numbers(word)
+	
+			for zz = 0, 4 do
+				for xx = 0, 4 do
+					for yy = 0, 4 do
+						local args = {
+							[1] = x - xx,
+							[2] = y - yy,
+							[3] = z - zz
+						}
+	
+						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("BreakBlock"):FireServer(unpack(args))
+						task.wait(0.02)
+						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
+					end
+				end
+			end
+		end
+	end
+	boom()
+	
+	
+end
+coroutine.wrap(ULUB_fake_script)()
