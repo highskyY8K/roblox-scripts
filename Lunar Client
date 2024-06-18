@@ -1,11 +1,6 @@
 --Lunar Client made by Gumicuci | this GUI is made for the ripoff minecraft games on roblox
 --18/06/2024
 
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local lunar = Instance.new("ScreenGui")
 local BaseFrame = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
