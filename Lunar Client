@@ -235,7 +235,7 @@ NoBorders3.TextWrapped = true
 
 -- Scripts:
 
-local function IZOH_fake_script() -- lunar.Loader, UIStuff 
+local function HEJG_fake_script() -- lunar.Loader, UIStuff 
 	local script = Instance.new('LocalScript', lunar)
 
 	local uis = game:GetService("UserInputService")
@@ -475,8 +475,8 @@ local function IZOH_fake_script() -- lunar.Loader, UIStuff
 	end
 	script.Parent.Parent = game.CoreGui
 end
-coroutine.wrap(IZOH_fake_script)()
-local function AADLD_fake_script() -- KillAura.KA 
+coroutine.wrap(HEJG_fake_script)()
+local function ZDBUX_fake_script() -- KillAura.KA 
 	local script = Instance.new('LocalScript', KillAura)
 
 	
@@ -527,8 +527,8 @@ local function AADLD_fake_script() -- KillAura.KA
 		end
 	end)
 end
-coroutine.wrap(AADLD_fake_script)()
-local function IFLHLK_fake_script() -- Frame.on/off 
+coroutine.wrap(ZDBUX_fake_script)()
+local function YDTNTVW_fake_script() -- Frame.on/off 
 	local script = Instance.new('LocalScript', Frame)
 
 	local loc = script.Parent
@@ -567,8 +567,8 @@ local function IFLHLK_fake_script() -- Frame.on/off
 	
 	
 end
-coroutine.wrap(IFLHLK_fake_script)()
-local function VVWRF_fake_script() -- speedHax.SH 
+coroutine.wrap(YDTNTVW_fake_script)()
+local function OHYU_fake_script() -- speedHax.SH 
 	local script = Instance.new('LocalScript', speedHax)
 
 	local loc = script.Parent.Parent
@@ -612,8 +612,8 @@ local function VVWRF_fake_script() -- speedHax.SH
 	end)
 	
 end
-coroutine.wrap(VVWRF_fake_script)()
-local function FYAK_fake_script() -- ESP.esp 
+coroutine.wrap(OHYU_fake_script)()
+local function PPKUUQ_fake_script() -- ESP.esp 
 	local script = Instance.new('LocalScript', ESP)
 
 	local loc = script.Parent.Parent
@@ -650,8 +650,8 @@ local function FYAK_fake_script() -- ESP.esp
 	end
 	
 end
-coroutine.wrap(FYAK_fake_script)()
-local function ULMV_fake_script() -- instabreak.IB 
+coroutine.wrap(PPKUUQ_fake_script)()
+local function RBET_fake_script() -- instabreak.IB 
 	local script = Instance.new('LocalScript', instabreak)
 
 	local loc = script.Parent.Parent
@@ -681,8 +681,8 @@ local function ULMV_fake_script() -- instabreak.IB
 	
 	end)
 end
-coroutine.wrap(ULMV_fake_script)()
-local function NADA_fake_script() -- Frame_2.on/off 
+coroutine.wrap(RBET_fake_script)()
+local function ZREI_fake_script() -- Frame_2.on/off 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local loc = script.Parent
@@ -716,8 +716,8 @@ local function NADA_fake_script() -- Frame_2.on/off
 	
 	
 end
-coroutine.wrap(NADA_fake_script)()
-local function CXZQ_fake_script() -- nuker.bomb bomb 
+coroutine.wrap(ZREI_fake_script)()
+local function NYBBRBK_fake_script() -- nuker.bomb bomb 
 	local script = Instance.new('LocalScript', nuker)
 
 	local loc = script.Parent.Parent
@@ -768,8 +768,8 @@ local function CXZQ_fake_script() -- nuker.bomb bomb
 	end)
 	
 end
-coroutine.wrap(CXZQ_fake_script)()
-local function NTVI_fake_script() -- excavator.mine 
+coroutine.wrap(NYBBRBK_fake_script)()
+local function HJPMBOZ_fake_script() -- excavator.mine 
 	local script = Instance.new('LocalScript', excavator)
 
 	local loc = script.Parent.Parent
@@ -799,7 +799,13 @@ local function NTVI_fake_script() -- excavator.mine
 							}
 	
 							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("BreakBlock"):FireServer(unpack(args))
-							task.wait(0.05)
+							task.wait(0.0125)
+							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
+							task.wait(0.0125)
+							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
+							task.wait(0.0125)
+							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
+							task.wait(0.0125)
 							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
 						end
 	
@@ -807,12 +813,13 @@ local function NTVI_fake_script() -- excavator.mine
 				end
 			end
 			script.Parent.Parent.excavator.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+			_G.ber = false
 		end
 	end)
 	
 end
-coroutine.wrap(NTVI_fake_script)()
-local function SSHDEZZ_fake_script() -- NoBorders3.fallin 
+coroutine.wrap(HJPMBOZ_fake_script)()
+local function WJCKA_fake_script() -- NoBorders3.fallin 
 	local script = Instance.new('LocalScript', NoBorders3)
 
 	local run = game:GetService("RunService")
@@ -842,4 +849,4 @@ local function SSHDEZZ_fake_script() -- NoBorders3.fallin
 	
 	connection = run.Heartbeat:Connect(onHeartbeat)
 end
-coroutine.wrap(SSHDEZZ_fake_script)()
+coroutine.wrap(WJCKA_fake_script)()
