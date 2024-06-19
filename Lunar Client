@@ -15,6 +15,7 @@ local bg_2 = Instance.new("Frame")
 local nuker = Instance.new("TextButton")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local excavator = Instance.new("TextButton")
+local NoBorders3 = Instance.new("TextButton")
 
 --Properties:
 
@@ -72,7 +73,7 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.ClipsDescendants = true
 Frame.Position = UDim2.new(0.0463576168, 0, 1.19354868, 0)
-Frame.Size = UDim2.new(0, 137, 0, 329)
+Frame.Size = UDim2.new(0, 137, 0, 189)
 
 KillAura.Name = "Kill Aura"
 KillAura.Parent = Frame
@@ -167,7 +168,7 @@ Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame_2.BorderSizePixel = 0
 Frame_2.ClipsDescendants = true
 Frame_2.Position = UDim2.new(0.0463576168, 0, 1.19354868, 0)
-Frame_2.Size = UDim2.new(0, 137, 0, 96)
+Frame_2.Size = UDim2.new(0, 137, 0, 144)
 
 bg_2.Name = "bg"
 bg_2.Parent = Frame_2
@@ -211,9 +212,25 @@ excavator.TextColor3 = Color3.fromRGB(39, 0, 93)
 excavator.TextSize = 27.000
 excavator.TextTransparency = 0.200
 
+NoBorders3.Name = "No Borders :3"
+NoBorders3.Parent = Frame_2
+NoBorders3.BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+NoBorders3.BackgroundTransparency = 0.500
+NoBorders3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NoBorders3.BorderSizePixel = 0
+NoBorders3.LayoutOrder = 3
+NoBorders3.Position = UDim2.new(0.0109489048, 0, 0, 0)
+NoBorders3.Size = UDim2.new(0, 131, 0, 36)
+NoBorders3.Font = Enum.Font.SourceSans
+NoBorders3.Text = "No Borders"
+NoBorders3.TextColor3 = Color3.fromRGB(39, 0, 93)
+NoBorders3.TextSize = 27.000
+NoBorders3.TextTransparency = 0.200
+NoBorders3.TextWrapped = true
+
 -- Scripts:
 
-local function QLWASJO_fake_script() -- lunar.Loader, UIStuff 
+local function SNERI_fake_script() -- lunar.Loader, UIStuff 
 	local script = Instance.new('LocalScript', lunar)
 
 	local uis = game:GetService("UserInputService")
@@ -427,14 +444,34 @@ local function QLWASJO_fake_script() -- lunar.Loader, UIStuff
 	icstokre.Transparency = "0.2"
 	icstokre.Thickness = 2
 	icstokre.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+	--
+	local eicstokr = Instance.new("UIStroke", main.miscellaneous.Frame["No Borders :3"])
+	local eicstokrr = Instance.new("UICorner", main.miscellaneous.Frame["No Borders :3"])
+	local eicstokre = Instance.new("UIStroke", main.miscellaneous.Frame["No Borders :3"])
+	
+	eicstokr.Color = Color3.fromRGB(85, 85, 85)
+	eicstokr.Transparency = "0.5"
+	eicstokr.Thickness = 1.5
+	eicstokr.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	--
+	eicstokrr.CornerRadius = UDim.new(0, 8)
+	--
+	eicstokre.Color = Color3.fromRGB(0, 0, 0)
+	eicstokre.Transparency = "0.2"
+	eicstokre.Thickness = 2
+	eicstokre.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 	
 	
 	
-	game.Players.LocalPlayer.DevEnableMouseLock = false
+	
+	
+	if game.Players.LocalPlayer.DevEnableMouseLock == true then
+		game.Players.LocalPlayer.DevEnableMouseLock = false
+	end
 	script.Parent.Parent = game.CoreGui
 end
-coroutine.wrap(QLWASJO_fake_script)()
-local function QYGUCM_fake_script() -- KillAura.KA 
+coroutine.wrap(SNERI_fake_script)()
+local function URYFD_fake_script() -- KillAura.KA 
 	local script = Instance.new('LocalScript', KillAura)
 
 	
@@ -485,8 +522,8 @@ local function QYGUCM_fake_script() -- KillAura.KA
 		end
 	end)
 end
-coroutine.wrap(QYGUCM_fake_script)()
-local function PXBDYV_fake_script() -- Frame.on/off 
+coroutine.wrap(URYFD_fake_script)()
+local function YKOM_fake_script() -- Frame.on/off 
 	local script = Instance.new('LocalScript', Frame)
 
 	local loc = script.Parent
@@ -525,8 +562,8 @@ local function PXBDYV_fake_script() -- Frame.on/off
 	
 	
 end
-coroutine.wrap(PXBDYV_fake_script)()
-local function SLKWYIS_fake_script() -- speedHax.SH 
+coroutine.wrap(YKOM_fake_script)()
+local function YMEHUJA_fake_script() -- speedHax.SH 
 	local script = Instance.new('LocalScript', speedHax)
 
 	local loc = script.Parent.Parent
@@ -570,8 +607,8 @@ local function SLKWYIS_fake_script() -- speedHax.SH
 	end)
 	
 end
-coroutine.wrap(SLKWYIS_fake_script)()
-local function IAGLCT_fake_script() -- ESP.esp 
+coroutine.wrap(YMEHUJA_fake_script)()
+local function ZVSMEWG_fake_script() -- ESP.esp 
 	local script = Instance.new('LocalScript', ESP)
 
 	local loc = script.Parent.Parent
@@ -608,8 +645,8 @@ local function IAGLCT_fake_script() -- ESP.esp
 	end
 	
 end
-coroutine.wrap(IAGLCT_fake_script)()
-local function BPOR_fake_script() -- instabreak.IB 
+coroutine.wrap(ZVSMEWG_fake_script)()
+local function GSHTCKD_fake_script() -- instabreak.IB 
 	local script = Instance.new('LocalScript', instabreak)
 
 	local loc = script.Parent.Parent
@@ -639,8 +676,8 @@ local function BPOR_fake_script() -- instabreak.IB
 	
 	end)
 end
-coroutine.wrap(BPOR_fake_script)()
-local function CKCXHQ_fake_script() -- Frame_2.on/off 
+coroutine.wrap(GSHTCKD_fake_script)()
+local function WONOVH_fake_script() -- Frame_2.on/off 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local loc = script.Parent
@@ -665,20 +702,20 @@ local function CKCXHQ_fake_script() -- Frame_2.on/off
 	
 	
 end
-coroutine.wrap(CKCXHQ_fake_script)()
-local function VHYNR_fake_script() -- nuker.bomb bomb 
+coroutine.wrap(WONOVH_fake_script)()
+local function FCOYR_fake_script() -- nuker.bomb bomb 
 	local script = Instance.new('LocalScript', nuker)
 
 	local loc = script.Parent.Parent
-	local abled = false
+	_G.be = false
 	
 	loc.nuker.MouseButton1Click:Connect(function()
-		abled = not abled
+		_G.be = not _G.be
 	end)
 	
 	
 	local function boom()
-		while abled do
+		while _G.be == true do
 			local word = game:GetService("Players").LocalPlayer.PlayerGui.HUDGui.DataFrame.Coord.Text
 			wait()
 	
@@ -693,10 +730,14 @@ local function VHYNR_fake_script() -- nuker.bomb bomb
 			for zz = 0, 4 do
 				for xx = 0, 4 do
 					for yy = 0, 4 do
+						local ranx = math.random(0, 4)
+						local rany = math.random(0, 4)
+						local ranz = math.random(0, 4)
+						
 						local args = {
-							[1] = x - math.random(0, 4),
-							[2] = y - math.random(0, 4),
-							[3] = z - math.random(0, 4)
+							[1] = x - ranx,
+							[2] = y - rany,
+							[3] = z - ranz
 						}
 	
 						game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("BreakBlock"):FireServer(unpack(args))
@@ -711,30 +752,30 @@ local function VHYNR_fake_script() -- nuker.bomb bomb
 	
 	
 end
-coroutine.wrap(VHYNR_fake_script)()
-local function GZQDOHX_fake_script() -- excavator.mine 
+coroutine.wrap(FCOYR_fake_script)()
+local function DZRXW_fake_script() -- excavator.mine 
 	local script = Instance.new('LocalScript', excavator)
 
 	local loc = script.Parent.Parent
-	local abled = false
+	_G.ber = false
 	
 	loc.excavator.MouseButton1Click:Connect(function()
-		abled = not abled
+		_G.ber = not _G.ber
 	end)
 	
 	
-	local function boom()
-		while abled do
+	local function boome()
+		while _G.ber == true do
 			local word = game:GetService("Players").LocalPlayer.PlayerGui.HUDGui.DataFrame.Coord.Text
 			wait()
 	
-			local function extract_numbers(str)
+			local function extract_numbersz(str)
 				local x, y, z = str:match("(-?%d+),%s*(-?%d+),%s*(-?%d+)")
 				return tonumber(x), tonumber(y), tonumber(z)
 			end
 	
 			-- Extract numbers and assign to variables
-			local x, y, z = extract_numbers(word)
+			local x, y, z = extract_numbersz(word)
 	
 			for zz = 0, 4 do
 				for xx = 0, 4 do
@@ -753,8 +794,35 @@ local function GZQDOHX_fake_script() -- excavator.mine
 			end
 		end
 	end
-	boom()
+	boome()
 	
 	
 end
-coroutine.wrap(GZQDOHX_fake_script)()
+coroutine.wrap(DZRXW_fake_script)()
+local function NCZIBJ_fake_script() -- NoBorders3.fallin 
+	local script = Instance.new('LocalScript', NoBorders3)
+
+	local run = game:GetService("RunService")
+	local connection
+	local loc = script.Parent.Parent
+	local abled = false
+	
+	loc["No Borders :3"].MouseButton1Click:Connect(function()
+		abled = not abled
+	end)
+	
+	
+	
+	function onHeartbeat()
+		if abled == true then
+			for i, v in ipairs(game.workspace.Misc) do
+				if v.Name == "LoadingBorders" then
+					v:Destroy()
+				end
+			end
+		end
+	end
+	
+	connection = run.Heartbeat:Connect(onHeartbeat)
+end
+coroutine.wrap(NCZIBJ_fake_script)()
