@@ -235,7 +235,7 @@ NoBorders3.TextWrapped = true
 
 -- Scripts:
 
-local function HEJG_fake_script() -- lunar.Loader, UIStuff 
+local function XESYIAM_fake_script() -- lunar.Loader, UIStuff 
 	local script = Instance.new('LocalScript', lunar)
 
 	local uis = game:GetService("UserInputService")
@@ -475,8 +475,8 @@ local function HEJG_fake_script() -- lunar.Loader, UIStuff
 	end
 	script.Parent.Parent = game.CoreGui
 end
-coroutine.wrap(HEJG_fake_script)()
-local function ZDBUX_fake_script() -- KillAura.KA 
+coroutine.wrap(XESYIAM_fake_script)()
+local function VZTKY_fake_script() -- KillAura.KA 
 	local script = Instance.new('LocalScript', KillAura)
 
 	
@@ -527,8 +527,8 @@ local function ZDBUX_fake_script() -- KillAura.KA
 		end
 	end)
 end
-coroutine.wrap(ZDBUX_fake_script)()
-local function YDTNTVW_fake_script() -- Frame.on/off 
+coroutine.wrap(VZTKY_fake_script)()
+local function PZUZAZ_fake_script() -- Frame.on/off 
 	local script = Instance.new('LocalScript', Frame)
 
 	local loc = script.Parent
@@ -567,8 +567,8 @@ local function YDTNTVW_fake_script() -- Frame.on/off
 	
 	
 end
-coroutine.wrap(YDTNTVW_fake_script)()
-local function OHYU_fake_script() -- speedHax.SH 
+coroutine.wrap(PZUZAZ_fake_script)()
+local function KJVBRZG_fake_script() -- speedHax.SH 
 	local script = Instance.new('LocalScript', speedHax)
 
 	local loc = script.Parent.Parent
@@ -612,8 +612,8 @@ local function OHYU_fake_script() -- speedHax.SH
 	end)
 	
 end
-coroutine.wrap(OHYU_fake_script)()
-local function PPKUUQ_fake_script() -- ESP.esp 
+coroutine.wrap(KJVBRZG_fake_script)()
+local function RSBJ_fake_script() -- ESP.esp 
 	local script = Instance.new('LocalScript', ESP)
 
 	local loc = script.Parent.Parent
@@ -650,8 +650,8 @@ local function PPKUUQ_fake_script() -- ESP.esp
 	end
 	
 end
-coroutine.wrap(PPKUUQ_fake_script)()
-local function RBET_fake_script() -- instabreak.IB 
+coroutine.wrap(RSBJ_fake_script)()
+local function WMERZ_fake_script() -- instabreak.IB 
 	local script = Instance.new('LocalScript', instabreak)
 
 	local loc = script.Parent.Parent
@@ -681,8 +681,8 @@ local function RBET_fake_script() -- instabreak.IB
 	
 	end)
 end
-coroutine.wrap(RBET_fake_script)()
-local function ZREI_fake_script() -- Frame_2.on/off 
+coroutine.wrap(WMERZ_fake_script)()
+local function MXXXOAT_fake_script() -- Frame_2.on/off 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local loc = script.Parent
@@ -716,8 +716,8 @@ local function ZREI_fake_script() -- Frame_2.on/off
 	
 	
 end
-coroutine.wrap(ZREI_fake_script)()
-local function NYBBRBK_fake_script() -- nuker.bomb bomb 
+coroutine.wrap(MXXXOAT_fake_script)()
+local function EIKCS_fake_script() -- nuker.bomb bomb 
 	local script = Instance.new('LocalScript', nuker)
 
 	local loc = script.Parent.Parent
@@ -730,7 +730,7 @@ local function NYBBRBK_fake_script() -- nuker.bomb bomb
 			while _G.be == true do
 				for zz = 0, 4 do
 					for xx = 0, 4 do
-						for yy = 0, 8 do
+						for yy = 0, 16 do
 							local word = game:GetService("Players").LocalPlayer.PlayerGui.HUDGui.DataFrame.Coord.Text
 							local function extract_numbers(str)
 								local x, y, z = str:match("(-?%d+),%s*(-?%d+),%s*(-?%d+)")
@@ -750,13 +750,13 @@ local function NYBBRBK_fake_script() -- nuker.bomb bomb
 							}
 	
 							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("BreakBlock"):FireServer(unpack(args))
-							task.wait(0.0125)
+							task.wait()
 							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
-							task.wait(0.0125)
+							task.wait()
 							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
-							task.wait(0.0125)
+							task.wait()
 							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
-							task.wait(0.0125)
+							task.wait()
 							game:GetService("ReplicatedStorage"):WaitForChild("GameRemotes"):WaitForChild("AcceptBreakBlock"):InvokeServer()
 						end
 					end
@@ -768,8 +768,8 @@ local function NYBBRBK_fake_script() -- nuker.bomb bomb
 	end)
 	
 end
-coroutine.wrap(NYBBRBK_fake_script)()
-local function HJPMBOZ_fake_script() -- excavator.mine 
+coroutine.wrap(EIKCS_fake_script)()
+local function XMDUCZF_fake_script() -- excavator.mine 
 	local script = Instance.new('LocalScript', excavator)
 
 	local loc = script.Parent.Parent
@@ -818,8 +818,8 @@ local function HJPMBOZ_fake_script() -- excavator.mine
 	end)
 	
 end
-coroutine.wrap(HJPMBOZ_fake_script)()
-local function WJCKA_fake_script() -- NoBorders3.fallin 
+coroutine.wrap(XMDUCZF_fake_script)()
+local function HDZR_fake_script() -- NoBorders3.fallin 
 	local script = Instance.new('LocalScript', NoBorders3)
 
 	local run = game:GetService("RunService")
@@ -849,4 +849,4 @@ local function WJCKA_fake_script() -- NoBorders3.fallin
 	
 	connection = run.Heartbeat:Connect(onHeartbeat)
 end
-coroutine.wrap(WJCKA_fake_script)()
+coroutine.wrap(HDZR_fake_script)()
