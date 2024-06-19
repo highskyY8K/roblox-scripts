@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local lunar = Instance.new("ScreenGui")
 local BaseFrame = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
@@ -207,7 +212,7 @@ excavator.LayoutOrder = 3
 excavator.Position = UDim2.new(0.0109489048, 0, 0, 0)
 excavator.Size = UDim2.new(0, 131, 0, 36)
 excavator.Font = Enum.Font.SourceSans
-excavator.Text = "Excavator"
+excavator.Text = "Excavate"
 excavator.TextColor3 = Color3.fromRGB(39, 0, 93)
 excavator.TextSize = 27.000
 excavator.TextTransparency = 0.200
@@ -230,7 +235,7 @@ NoBorders3.TextWrapped = true
 
 -- Scripts:
 
-local function SNERI_fake_script() -- lunar.Loader, UIStuff 
+local function VDNVVIV_fake_script() -- lunar.Loader, UIStuff 
 	local script = Instance.new('LocalScript', lunar)
 
 	local uis = game:GetService("UserInputService")
@@ -470,8 +475,8 @@ local function SNERI_fake_script() -- lunar.Loader, UIStuff
 	end
 	script.Parent.Parent = game.CoreGui
 end
-coroutine.wrap(SNERI_fake_script)()
-local function URYFD_fake_script() -- KillAura.KA 
+coroutine.wrap(VDNVVIV_fake_script)()
+local function HYDVMY_fake_script() -- KillAura.KA 
 	local script = Instance.new('LocalScript', KillAura)
 
 	
@@ -522,8 +527,8 @@ local function URYFD_fake_script() -- KillAura.KA
 		end
 	end)
 end
-coroutine.wrap(URYFD_fake_script)()
-local function YKOM_fake_script() -- Frame.on/off 
+coroutine.wrap(HYDVMY_fake_script)()
+local function MLTNERF_fake_script() -- Frame.on/off 
 	local script = Instance.new('LocalScript', Frame)
 
 	local loc = script.Parent
@@ -562,8 +567,8 @@ local function YKOM_fake_script() -- Frame.on/off
 	
 	
 end
-coroutine.wrap(YKOM_fake_script)()
-local function YMEHUJA_fake_script() -- speedHax.SH 
+coroutine.wrap(MLTNERF_fake_script)()
+local function EJZCWY_fake_script() -- speedHax.SH 
 	local script = Instance.new('LocalScript', speedHax)
 
 	local loc = script.Parent.Parent
@@ -607,8 +612,8 @@ local function YMEHUJA_fake_script() -- speedHax.SH
 	end)
 	
 end
-coroutine.wrap(YMEHUJA_fake_script)()
-local function ZVSMEWG_fake_script() -- ESP.esp 
+coroutine.wrap(EJZCWY_fake_script)()
+local function TQTHI_fake_script() -- ESP.esp 
 	local script = Instance.new('LocalScript', ESP)
 
 	local loc = script.Parent.Parent
@@ -620,7 +625,7 @@ local function ZVSMEWG_fake_script() -- ESP.esp
 	
 	for idk = 1, math.huge do
 		wait(10)
-			if abled == true then
+		if abled == true then
 			for _, player in ipairs(game.Players:GetPlayers()) do
 				local character = player.Character
 				if character then
@@ -636,8 +641,8 @@ local function ZVSMEWG_fake_script() -- ESP.esp
 							newHighlight.FillTransparency = 0.3
 							newHighlight.OutlineTransparency = 0.2
 							newHighlight.OutlineColor = Color3.fromRGB(0, 98, 255)
-						end
 	
+						end
 					end
 				end
 			end
@@ -645,8 +650,8 @@ local function ZVSMEWG_fake_script() -- ESP.esp
 	end
 	
 end
-coroutine.wrap(ZVSMEWG_fake_script)()
-local function GSHTCKD_fake_script() -- instabreak.IB 
+coroutine.wrap(TQTHI_fake_script)()
+local function ZHDDBJG_fake_script() -- instabreak.IB 
 	local script = Instance.new('LocalScript', instabreak)
 
 	local loc = script.Parent.Parent
@@ -676,8 +681,8 @@ local function GSHTCKD_fake_script() -- instabreak.IB
 	
 	end)
 end
-coroutine.wrap(GSHTCKD_fake_script)()
-local function WONOVH_fake_script() -- Frame_2.on/off 
+coroutine.wrap(ZHDDBJG_fake_script)()
+local function XRPSL_fake_script() -- Frame_2.on/off 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local loc = script.Parent
@@ -697,13 +702,22 @@ local function WONOVH_fake_script() -- Frame_2.on/off
 		end
 	end)
 	
+	loc["No Borders :3"].MouseButton1Click:Connect(function()
+		if loc["No Borders :3"].BackgroundColor3 == Color3.fromRGB(0, 24, 33) then
+			loc["No Borders :3"].BackgroundColor3 = Color3.fromRGB(4, 58, 0)
+		else
+			loc["No Borders :3"].BackgroundColor3 = Color3.fromRGB(0, 24, 33)
+		end
+	end)
+	
+	
 	
 	
 	
 	
 end
-coroutine.wrap(WONOVH_fake_script)()
-local function FCOYR_fake_script() -- nuker.bomb bomb 
+coroutine.wrap(XRPSL_fake_script)()
+local function YLMB_fake_script() -- nuker.bomb bomb 
 	local script = Instance.new('LocalScript', nuker)
 
 	local loc = script.Parent.Parent
@@ -749,11 +763,11 @@ local function FCOYR_fake_script() -- nuker.bomb bomb
 		end
 	end
 	boom()
-	
+	coroutine.wrap(boom)()
 	
 end
-coroutine.wrap(FCOYR_fake_script)()
-local function DZRXW_fake_script() -- excavator.mine 
+coroutine.wrap(YLMB_fake_script)()
+local function XLAGMP_fake_script() -- excavator.mine 
 	local script = Instance.new('LocalScript', excavator)
 
 	local loc = script.Parent.Parent
@@ -795,11 +809,11 @@ local function DZRXW_fake_script() -- excavator.mine
 		end
 	end
 	boome()
-	
+	coroutine.wrap(boome)()
 	
 end
-coroutine.wrap(DZRXW_fake_script)()
-local function NCZIBJ_fake_script() -- NoBorders3.fallin 
+coroutine.wrap(XLAGMP_fake_script)()
+local function SWOB_fake_script() -- NoBorders3.fallin 
 	local script = Instance.new('LocalScript', NoBorders3)
 
 	local run = game:GetService("RunService")
@@ -808,7 +822,11 @@ local function NCZIBJ_fake_script() -- NoBorders3.fallin
 	local abled = false
 	
 	loc["No Borders :3"].MouseButton1Click:Connect(function()
-		abled = not abled
+		if abled == false then
+			abled = true
+		else
+			abled = false
+		end
 	end)
 	
 	
@@ -825,4 +843,4 @@ local function NCZIBJ_fake_script() -- NoBorders3.fallin
 	
 	connection = run.Heartbeat:Connect(onHeartbeat)
 end
-coroutine.wrap(NCZIBJ_fake_script)()
+coroutine.wrap(SWOB_fake_script)()
