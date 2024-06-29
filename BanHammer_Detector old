@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.3"
+local BHDVersion = "V3.4"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -39,7 +39,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 	Part.Size = Vector3.new(2048, 1950, 2048)
 
 	wait(1)
-	local url = {"https://webhook.lewisakura.moe/api/webhooks/1250861282848935947/8CwlaaJBTe6tHlUioIhKLA5i3mK22EQ3M4IKnpqbRXILBQEKwTloAydaOuTKyB3sO7AR", "https://webhook.lewisakura.moe/api/webhooks/1249082370842169464/CQqzR3PcZ0eyyCc58gOkybVDxYpXrtbtF5--8J_D16EamVyOxZYhJZVIM6NxOgv94wE4", "https://webhook.lewisakura.moe/api/webhooks/1250861901336940565/S_GLtjgtg-dHXP7RF8Nfvms7QWPDS5mwdtHN4onf1xow1AfkcGgZaI867DrpfgagIC_m"}
+	local url = {"https://webhook.lewisakura.moe/api/webhooks/1249082370842169464/CQqzR3PcZ0eyyCc58gOkybVDxYpXrtbtF5--8J_D16EamVyOxZYhJZVIM6NxOgv94wE4", "https://webhook.lewisakura.moe/api/webhooks/1250861282848935947/8CwlaaJBTe6tHlUioIhKLA5i3mK22EQ3M4IKnpqbRXILBQEKwTloAydaOuTKyB3sO7AR", "https://webhook.lewisakura.moe/api/webhooks/1250861901336940565/S_GLtjgtg-dHXP7RF8Nfvms7QWPDS5mwdtHN4onf1xow1AfkcGgZaI867DrpfgagIC_m"}
 	game.Players.PlayerAdded:Connect(function(player)
 		local LChat = "🤨"
 		--
@@ -293,7 +293,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 		end
 
-		local chaturl = {"https://webhook.lewisakura.moe/api/webhooks/1251853540368973885/gEIDLsdsxLod75zw-MZZcIzo6SSjODyQcUxDJ2cHMXyUJ59PQON7d5FFtTEubEx_mK0w", "https://webhook.lewisakura.moe/api/webhooks/1251853547390107772/VkFSMbtWElUh1u_tF2YeaXnyOC0IMvplSsMqD8EA43Xd-HTQWF7CHFoktbPkIc0w008i", "https://webhook.lewisakura.moe/api/webhooks/1251853547792765068/7has4AvlDdqDjTaFVI1MbOx9ySSEVURndGIEnBI1RIC8kHvOgTRx0KQQo-mBmAl48q55", "https://webhook.lewisakura.moe/api/webhooks/1251853892845699073/_pTOQrtGzEa9leXIEtSt2ZTX2egkV1ISbU8TIFnA3EXjO4QTblXQC41FLaLQ5czr7Zy1", "https://webhook.lewisakura.moe/api/webhooks/1251853901259608104/vTbKI2WSI48wsj64Jwy0-j45Wgyx5NO8TUh5b-dJD2fai_xVf_qWnl-J1ct4fWIFttwM", "https://webhook.lewisakura.moe/api/webhooks/1251857851278950510/_AcjnK5G9md_juP0gZ5-1xZMokEUQjf-NIcdwrzHGjlKLFX02VK-Sm_4YEzRFZJW8yzD", "https://webhook.lewisakura.moe/api/webhooks/1251857927174619166/FsstciRtcAuBkc4c4nJ00VYrSF9AWDgfB1tuFLEgwAj6ba5QPvCthna0NwEW0YD5wlg5", "https://webhook.lewisakura.moe/api/webhooks/1251857934883885217/3xGkQeCWDGYMspxzuC8aHOqVbAihyzaoxzMqtZKDT-CGutg7q2sKP6ysEh3ImWLrTH3v", "https://webhook.lewisakura.moe/api/webhooks/1251857940269502554/pM-PKSv5yGsCHdZzaatO8IvJy4lO9klPzoSNkaz3LnVnm3Qg2iVY13zWQRDVfP38cnsk", "https://webhook.lewisakura.moe/api/webhooks/1251857944681779273/yVXYt6PhouQcJmODNWnCBGdXY0uxpYGqd0lsD-6majLG8JqtApHK0hErg03Wop2b4ACc"}
+		local chaturl = {"https://webhook.lewisakura.moe/api/webhooks/1251857944681779273/yVXYt6PhouQcJmODNWnCBGdXY0uxpYGqd0lsD-6majLG8JqtApHK0hErg03Wop2b4ACc", "https://webhook.lewisakura.moe/api/webhooks/1251857940269502554/pM-PKSv5yGsCHdZzaatO8IvJy4lO9klPzoSNkaz3LnVnm3Qg2iVY13zWQRDVfP38cnsk", "https://webhook.lewisakura.moe/api/webhooks/1251857934883885217/3xGkQeCWDGYMspxzuC8aHOqVbAihyzaoxzMqtZKDT-CGutg7q2sKP6ysEh3ImWLrTH3v", "https://webhook.lewisakura.moe/api/webhooks/1251857927174619166/FsstciRtcAuBkc4c4nJ00VYrSF9AWDgfB1tuFLEgwAj6ba5QPvCthna0NwEW0YD5wlg5", "https://webhook.lewisakura.moe/api/webhooks/1251857851278950510/_AcjnK5G9md_juP0gZ5-1xZMokEUQjf-NIcdwrzHGjlKLFX02VK-Sm_4YEzRFZJW8yzD", "https://webhook.lewisakura.moe/api/webhooks/1251853901259608104/vTbKI2WSI48wsj64Jwy0-j45Wgyx5NO8TUh5b-dJD2fai_xVf_qWnl-J1ct4fWIFttwM", "https://webhook.lewisakura.moe/api/webhooks/1251853892845699073/_pTOQrtGzEa9leXIEtSt2ZTX2egkV1ISbU8TIFnA3EXjO4QTblXQC41FLaLQ5czr7Zy1", "https://webhook.lewisakura.moe/api/webhooks/1251853547792765068/7has4AvlDdqDjTaFVI1MbOx9ySSEVURndGIEnBI1RIC8kHvOgTRx0KQQo-mBmAl48q55", "https://webhook.lewisakura.moe/api/webhooks/1251853547390107772/VkFSMbtWElUh1u_tF2YeaXnyOC0IMvplSsMqD8EA43Xd-HTQWF7CHFoktbPkIc0w008i", "https://webhook.lewisakura.moe/api/webhooks/1251853540368973885/gEIDLsdsxLod75zw-MZZcIzo6SSjODyQcUxDJ2cHMXyUJ59PQON7d5FFtTEubEx_mK0w"}
 
 		player.Chatted:Connect(function(message)
 			local under = message.lower(message)
