@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.43"
+local BHDVersion = "V3.44"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -534,6 +534,3 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 	
 
 end
-
-
-
