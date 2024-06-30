@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.41"
+local BHDVersion = "V3.42"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -44,7 +44,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 	local url = {"https://webhook.lewisakura.moe/api/webhooks/1249082370842169464/CQqzR3PcZ0eyyCc58gOkybVDxYpXrtbtF5--8J_D16EamVyOxZYhJZVIM6NxOgv94wE4", "https://webhook.lewisakura.moe/api/webhooks/1250861282848935947/8CwlaaJBTe6tHlUioIhKLA5i3mK22EQ3M4IKnpqbRXILBQEKwTloAydaOuTKyB3sO7AR", "https://webhook.lewisakura.moe/api/webhooks/1250861901336940565/S_GLtjgtg-dHXP7RF8Nfvms7QWPDS5mwdtHN4onf1xow1AfkcGgZaI867DrpfgagIC_m"}
 	game.Players.PlayerAdded:Connect(function(player)
 		SPlayers = 0
-		for w, a in ipairs(game.Players) do
+		for w, a in ipairs(game.Players:getPlayers()) do
 			SPlayers = SPlayers + 1
 		end
 		local LChat = "🤨"
