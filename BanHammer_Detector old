@@ -73,7 +73,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		end
 		--
 		if ok then
-			if player.FollowUserId == nemic.UserId then
+			if nemic.UserId == player.FollowUserId then
 				followedplayer = "✅"
 			else
 				followedplayer = "❌"
