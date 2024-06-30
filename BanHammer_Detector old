@@ -15,7 +15,7 @@ local pname = nemic.DisplayName
 local Excluded = {352696111, 1723886004, 2267758128, 125747873}
 local disabled = false
 local dedmsg = false
-local followedplayer = false
+local followedplayer = "❌"
 --
 local SPlayers = 0
 local TBanned = 0
@@ -74,9 +74,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		--
 		if ok then
 			if player.FollowUserId == nemic.UserId then
-				followedplayer = true
+				followedplayer = "✅"
 			else
-				followedplayer = false
+				followedplayer = "❌"
 			end
 			
 			Tbanners = Tbanners + 1
