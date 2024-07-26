@@ -1402,7 +1402,7 @@ local function YTDNG_fake_script() -- runc4bh_2.LocalScript
 		if ran == false then
 			ran = true
 			script.Parent.Text = "Executed"
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Crash%20SS%20Gui'))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/given%20script%204%20sea'))()
 		else
 			script.Parent.Text = "Already Executed"
 			wait(1)
