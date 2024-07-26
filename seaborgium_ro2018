@@ -1405,6 +1405,7 @@ local function YTDNG_fake_script() -- runc4bh_2.LocalScript
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/given%20script%204%20sea'))()
 		else
 			_G.ANtiban = false
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/given%20script%204%20sea'))()
 			script.Parent.Text = "Already Executed"
 			wait(1)
 			script.Parent.Text = "Executed"
