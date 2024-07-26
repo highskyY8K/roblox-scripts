@@ -1,191 +1,158 @@
-local Crash = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local UICorner_2 = Instance.new("UICorner")
-local close = Instance.new("TextButton")
-local Title = Instance.new("TextLabel")
-local icon = Instance.new("ImageLabel")
-local hammer = Instance.new("ImageLabel")
-local U = Instance.new("UIStroke")
-local Ue = Instance.new("UIStroke")
+local part = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
+local parts = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
 
---Properties:
+part.Name = "BANAURAL"
+parts.Name = "BANAURAS"
 
-Crash.Name = "Crash:)"
-Crash.Parent = game.CoreGui
-Crash.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local weld = Instance.new("Weld", game.Workspace[game.Players.LocalPlayer.Name].BANAURAL)
+local welds = Instance.new("Weld", game.Workspace[game.Players.LocalPlayer.Name].BANAURAS)
 
-Frame.Parent = Crash
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BackgroundTransparency = 0.200
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.764129639, 0, 0.738095224, 0)
-Frame.Size = UDim2.new(0, 235, 0, 104)
+part.CFrame =  game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
+part.Anchored = false
+part.CanCollide = false
+part.Transparency = 0.95
+part.Shape = "Ball"
+part.Size = Vector3.new(83, 83, 83)
+part.BrickColor = BrickColor.new("Really red")
+part.Material = Enum.Material.ForceField
+part.Massless = true
+part.CastShadow = false
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.BackgroundTransparency = 0.500
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.049211476, 0, 0.422413766, 0)
-TextButton.Size = UDim2.new(0, 214, 0, 50)
-TextButton.Font = Enum.Font.SourceSansBold
-TextButton.Text = "Crash Server"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 25.000
-TextButton.TextWrapped = true
+parts.CFrame =  game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
+parts.Anchored = false
+parts.CanCollide = false
+parts.Transparency = 0.95
+parts.Shape = "Ball"
+parts.Size = Vector3.new(37, 37, 37)
+parts.BrickColor = BrickColor.new("Really red")
+parts.Material = Enum.Material.ForceField
+parts.Massless = true
+parts.CastShadow = false
 
-UICorner.Parent = TextButton
+weld.Part0 =  game.Workspace[game.Players.LocalPlayer.Name].Head
+weld.Part1 = part
 
-UICorner_2.Parent = Frame
+welds.Part0 =  game.Workspace[game.Players.LocalPlayer.Name].Head
+welds.Part1 = parts
+----
 
-close.Name = "close"
-close.Parent = Frame
-close.BackgroundColor3 = Color3.fromRGB(0, 83, 53)
-close.BorderColor3 = Color3.fromRGB(90, 0, 0)
-close.BorderSizePixel = 2
-close.Position = UDim2.new(0.869910419, 0, 0.105769232, 0)
-close.Size = UDim2.new(0, 21, 0, 21)
-close.Font = Enum.Font.SourceSansBold
-close.Text = "X"
-close.TextColor3 = Color3.fromRGB(255, 255, 255)
-close.TextSize = 14.000
 
-Title.Name = "Title"
-Title.Parent = Frame
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Title.BackgroundTransparency = 1.000
-Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.180000007, 0, 0.0700000003, 0)
-Title.Size = UDim2.new(0, 86, 0, 26)
-Title.Font = Enum.Font.SourceSansBold
-Title.Text = "Crash Ui, Made by Alex54."
-Title.TextColor3 = Color3.fromRGB(197, 197, 197)
-Title.TextScaled = true
-Title.TextSize = 16.000
-Title.TextWrapped = true
-Title.TextXAlignment = Enum.TextXAlignment.Left
-Title.TextYAlignment = Enum.TextYAlignment.Bottom
-
-icon.Name = "icon"
-icon.Parent = Frame
-icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-icon.BackgroundTransparency = 1.000
-icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-icon.BorderSizePixel = 0
-icon.Position = UDim2.new(0.0250000004, 0, 0.130999997, 0)
-icon.Rotation = -25.000
-icon.Size = UDim2.new(0, 18, 0, 18)
-icon.Image = "rbxassetid://12490660393"
-icon.ImageColor3 = Color3.fromRGB(197, 197, 197)
-
-hammer.Name = "hammer"
-hammer.Parent = icon
-hammer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-hammer.BackgroundTransparency = 1.000
-hammer.BorderColor3 = Color3.fromRGB(0, 0, 0)
-hammer.BorderSizePixel = 0
-hammer.Position = UDim2.new(0.867422163, 0, -0.0793796331, 0)
-hammer.Rotation = 25.000
-hammer.Size = UDim2.new(0, 18, 0, 18)
-hammer.Image = "rbxassetid://3429559843"
-hammer.ImageColor3 = Color3.fromRGB(129, 129, 129)
-
-U.Parent = Frame
-U.Color = Color3.fromRGB(0, 0, 0)
-U.Thickness = 3
-U.Transparency = 0.8
-
-Ue.Parent = TextButton
-Ue.Color = Color3.fromRGB(109, 25, 0)
-Ue.Thickness = 3
-Ue.Transparency = 0.6
-Ue.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
--- Scripts:
-
-local function GODSWA_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
-
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Text = "Crashed Server"
-		
-		local Players = game:GetService("Players")
-	
-		local LocalPlayer = Players.LocalPlayer
-		local Character = LocalPlayer.Character
-		local Humanoid = Character:WaitForChild("Humanoid")
-	
-		local Animation = Instance.new("Animation", Character)
-		Animation.AnimationId = "rbxassetid://84315373"
-	
-		local Track = Humanoid:LoadAnimation(Animation)
-		Track:Play()
-	end)
+if _G.ANtiban == nil then
+	_G.ANtiban = false
 end
-coroutine.wrap(GODSWA_fake_script)()
-local function IYEPSXE_fake_script() -- Frame.draggle 
-	local script = Instance.new('LocalScript', Frame)
 
-	script.Parent.Draggable = true
-	script.Parent.Active = true
-	
-	script.Parent.close.MouseButton1Click:Connect(function()
-		script.Parent.Parent:Destroy()
-	end)
-	
-end
-coroutine.wrap(IYEPSXE_fake_script)()
-local function ITJNABO_fake_script() -- Title.LocalScript 
-	local script = Instance.new('LocalScript', Title)
 
-	local t = script.Parent
-	wait(1)
-	--Crash Ui, Made by Alex54.
-	t.Text = "C"
-	wait(0.05)
-	t.Text = "Cr"
-	wait(0.05)
-	t.Text = "Cra"
-	wait(0.05)
-	t.Text = "Cras"
-	wait(0.05)
-	t.Text = "Crash"
-	wait(0.1)
-	t.Text = "Crash U"
-	wait(0.05)
-	t.Text = "Crash Ui"
-	wait(0.05)
-	t.Text = "Crash Ui,"
-	wait(0.05)
-	t.Text = "Crash Ui, M"
-	wait(0.05)
-	t.Text = "Crash Ui, Ma"
-	wait(0.05)
-	t.Text = "Crash Ui, Mad"
-	wait(0.05)
-	t.Text = "Crash Ui, Made"
-	wait(0.1)
-	t.Text = "Crash Ui, Made b"
-	wait(0.05)
-	t.Text = "Crash Ui, Made by"
-	wait(0.05)
-	t.Text = "Crash Ui, Made by A"
-	wait(0.05)
-	t.Text = "Crash Ui, Made by Al"
-	wait(0.05)
-	t.Text = "Crash Ui, Made by Ale"
-	wait(0.1)
-	t.Text = "Crash Ui, Made by Alex"
-	wait(0.05)
-	t.Text = "Crash Ui, Made by Alex5"
-	wait(0.1)
-	t.Text = "Crash Ui, Made by Alex54"
-	wait(0.15)
-	t.Text = "Crash Ui, Made by Alex54."
-	
+if _G.ANtiban == true then
+	_G.ANtiban = false
+else
+	_G.ANtiban = true
+	local player = game.Players.LocalPlayer
+	--
+	local NThold = 20
+	local NMBD = 15
+
+	local distanceThreshold = 45
+	local moveBackDistance = 8
+
+
+	local function VNBHammer()
+		local verynearbyPlayersWithBanhammer = {}
+
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			local playerPosition = player.Character.HumanoidRootPart.Position
+			for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
+				if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+					local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
+					local distance = (playerPosition - otherPosition).Magnitude
+					if distance <= NThold then
+						local backpack = otherPlayer:FindFirstChild("Backpack")
+						if backpack and backpack:FindFirstChild("BanHammer") then
+							table.insert(verynearbyPlayersWithBanhammer, otherPlayer.Name)
+							wait()
+							local moveDirection = (playerPosition - otherPosition).unit
+							player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD
+						end
+					end
+				end
+			end
+		end
+
+		if #verynearbyPlayersWithBanhammer > 0 then
+			print("Nearby players with BanHammer equipped: " .. table.concat(verynearbyPlayersWithBanhammer, ", "))
+			return true, verynearbyPlayersWithBanhammer
+		else
+			return false, verynearbyPlayersWithBanhammer
+		end
+	end
+
+	local function KNBHammer()
+		local kindaNearbyPlayersWithBanhammer = {}
+
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			local playerPosition = player.Character.HumanoidRootPart.Position
+			for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
+				if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+					local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
+					local distance = (playerPosition - otherPosition).Magnitude
+					if distance <= distanceThreshold then
+						local character = otherPlayer.Character
+						if character:FindFirstChild("BanHammer") then
+							table.insert(kindaNearbyPlayersWithBanhammer, otherPlayer.Name)
+							wait()
+							local moveDirection = (playerPosition - otherPosition).unit
+							player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD * 1.5
+						end
+					end
+				end
+			end
+		end
+
+		if #kindaNearbyPlayersWithBanhammer > 0 then
+			print("Nearby players with BanHammer equipped: " .. table.concat(kindaNearbyPlayersWithBanhammer, ", "))
+			return true, kindaNearbyPlayersWithBanhammer
+		else
+			return false, kindaNearbyPlayersWithBanhammer
+		end
+	end
+
+	local function NBHammer()
+		local nearbyPlayersWithBanhammer = {}
+
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			local playerPosition = player.Character.HumanoidRootPart.Position
+			for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
+				if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+					local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
+					local distance = (playerPosition - otherPosition).Magnitude
+					if distance <= distanceThreshold then
+						local character = otherPlayer.Character
+						if character:FindFirstChild("BanHammer") then
+							table.insert(nearbyPlayersWithBanhammer, otherPlayer.Name)
+							wait()
+							local moveDirection = (playerPosition - otherPosition).unit
+							player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * moveBackDistance
+						end
+					end
+				end
+			end
+		end
+
+		if #nearbyPlayersWithBanhammer > 0 then
+			print("Nearby players with BanHammer equipped: " .. table.concat(nearbyPlayersWithBanhammer, ", "))
+			return true, nearbyPlayersWithBanhammer
+		else
+			return false, nearbyPlayersWithBanhammer
+		end
+	end
+
+
+	function df()
+		while _G.ANtiban == true do
+			VNBHammer()
+			NBHammer()
+			KNBHammer()
+			wait()
+		end
+	end
+	df()
 end
-coroutine.wrap(ITJNABO_fake_script)()
