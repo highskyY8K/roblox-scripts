@@ -1,11 +1,5 @@
 print("🌊seaborgiumV2 has loaded")
 local SLOC24 = False
-
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local Seaborgium_Icon = Instance.new("Frame")
 local Background = Instance.new("ImageButton")
 local icon = Instance.new("ImageLabel")
@@ -1212,7 +1206,7 @@ UICorner_48.Parent = BGTheme
 
 -- Scripts:
 
-local function NGSAGXO_fake_script() -- icon.LocalScript 
+local function JSQVUQW_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local frame = script.Parent.Parent.icon
@@ -1268,8 +1262,8 @@ local function NGSAGXO_fake_script() -- icon.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Extra4Seaborg"))()
 	end)
 end
-coroutine.wrap(NGSAGXO_fake_script)()
-local function PKVONN_fake_script() -- section.LocalScript 
+coroutine.wrap(JSQVUQW_fake_script)()
+local function IBKECJ_fake_script() -- section.LocalScript 
 	local script = Instance.new('LocalScript', section)
 
 	local sesc = script.Parent.Parent.mainsecotin
@@ -1320,8 +1314,8 @@ local function PKVONN_fake_script() -- section.LocalScript
 	end)
 	
 end
-coroutine.wrap(PKVONN_fake_script)()
-local function WPTMG_fake_script() -- codebox.LocalScript 
+coroutine.wrap(IBKECJ_fake_script)()
+local function AYLD_fake_script() -- codebox.LocalScript 
 	local script = Instance.new('LocalScript', codebox)
 
 	local ran = math.random(0, 10)
@@ -1335,8 +1329,8 @@ local function WPTMG_fake_script() -- codebox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(WPTMG_fake_script)()
-local function CFFF_fake_script() -- Execute.LocalScript 
+coroutine.wrap(AYLD_fake_script)()
+local function AYOLSJL_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local cod_e = script.Parent.Parent.codeditorsw.codebox
@@ -1355,8 +1349,8 @@ local function CFFF_fake_script() -- Execute.LocalScript
 		script.Parent.Parent.CClear.Text = "Clear Code"
 	end)
 end
-coroutine.wrap(CFFF_fake_script)()
-local function KMBDSEK_fake_script() -- runiy.LocalScript 
+coroutine.wrap(AYOLSJL_fake_script)()
+local function TMHL_fake_script() -- runiy.LocalScript 
 	local script = Instance.new('LocalScript', runiy)
 
 	local ran = false
@@ -1374,8 +1368,8 @@ local function KMBDSEK_fake_script() -- runiy.LocalScript
 		
 	end)
 end
-coroutine.wrap(KMBDSEK_fake_script)()
-local function FAAJUG_fake_script() -- runc4bh.LocalScript 
+coroutine.wrap(TMHL_fake_script)()
+local function YFNNXP_fake_script() -- runc4bh.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh)
 
 	local ran = false
@@ -1393,8 +1387,8 @@ local function FAAJUG_fake_script() -- runc4bh.LocalScript
 	
 	end)
 end
-coroutine.wrap(FAAJUG_fake_script)()
-local function NUYSTN_fake_script() -- runc4bh_2.LocalScript 
+coroutine.wrap(YFNNXP_fake_script)()
+local function FYXFHC_fake_script() -- runc4bh_2.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh_2)
 
 	local ran = false
@@ -1416,16 +1410,16 @@ local function NUYSTN_fake_script() -- runc4bh_2.LocalScript
 	end)
 	
 end
-coroutine.wrap(NUYSTN_fake_script)()
-local function VJLSND_fake_script() -- mscripts.LocalScript 
+coroutine.wrap(FYXFHC_fake_script)()
+local function OZYBDI_fake_script() -- mscripts.LocalScript 
 	local script = Instance.new('LocalScript', mscripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
 	end)
 end
-coroutine.wrap(VJLSND_fake_script)()
-local function ZYGV_fake_script() -- UICorner_19.LocalScript 
+coroutine.wrap(OZYBDI_fake_script)()
+local function QWCUEK_fake_script() -- UICorner_19.LocalScript 
 	local script = Instance.new('LocalScript', UICorner_19)
 
 	local Players = game:GetService("Players")
@@ -1444,8 +1438,8 @@ local function ZYGV_fake_script() -- UICorner_19.LocalScript
 	
 	Players.PlayerAdded:Connect(onPlayerAdded)
 end
-coroutine.wrap(ZYGV_fake_script)()
-local function ZDAUSA_fake_script() -- use.LocalScript 
+coroutine.wrap(QWCUEK_fake_script)()
+local function EWPMWJQ_fake_script() -- use.LocalScript 
 	local script = Instance.new('LocalScript', use)
 
 	local player = game.Players.LocalPlayer
@@ -1461,8 +1455,8 @@ local function ZDAUSA_fake_script() -- use.LocalScript
 	
 	
 end
-coroutine.wrap(ZDAUSA_fake_script)()
-local function BDMKJ_fake_script() -- title.LocalScript 
+coroutine.wrap(EWPMWJQ_fake_script)()
+local function LQTI_fake_script() -- title.LocalScript 
 	local script = Instance.new('LocalScript', title)
 
 	local sf = script.Parent.swearwords.bg.ScrollingFrame
@@ -1550,8 +1544,8 @@ local function BDMKJ_fake_script() -- title.LocalScript
 	end)
 	
 end
-coroutine.wrap(BDMKJ_fake_script)()
-local function LXLOH_fake_script() -- Mods4Game.morebase 
+coroutine.wrap(LQTI_fake_script)()
+local function XYBPK_fake_script() -- Mods4Game.morebase 
 	local script = Instance.new('LocalScript', Mods4Game)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1603,8 +1597,8 @@ local function LXLOH_fake_script() -- Mods4Game.morebase
 		wait(3)
 	end
 end
-coroutine.wrap(LXLOH_fake_script)()
-local function ZWGTQHK_fake_script() -- BanUser.BAN PLAYER 
+coroutine.wrap(XYBPK_fake_script)()
+local function DFPBSJR_fake_script() -- BanUser.BAN PLAYER 
 	local script = Instance.new('LocalScript', BanUser)
 
 	local banning = false
@@ -1721,8 +1715,8 @@ local function ZWGTQHK_fake_script() -- BanUser.BAN PLAYER
 	
 	
 end
-coroutine.wrap(ZWGTQHK_fake_script)()
-local function RYBUBR_fake_script() -- m4gbans.ban4you. 
+coroutine.wrap(DFPBSJR_fake_script)()
+local function MJZLOUS_fake_script() -- m4gbans.ban4you. 
 	local script = Instance.new('LocalScript', m4gbans)
 
 	local btext = "Current Ban Method: Remote"
@@ -1762,19 +1756,14 @@ local function RYBUBR_fake_script() -- m4gbans.ban4you.
 	end)
 	
 end
-coroutine.wrap(RYBUBR_fake_script)()
-local function QHPPLMO_fake_script() -- Frame.Draggable_yeah 
+coroutine.wrap(MJZLOUS_fake_script)()
+local function DFPRGQ_fake_script() -- Frame.Draggable_yeah 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent.Background.ImageTransparency = 1
 	script.Parent.Parent.icon.ImageTransparency = 1
 	script.Parent.Active = true
 	script.Parent.Draggable = true
-	if script.Parent["ro18 or ro24"] == 18 then
-		script.Parent.Parent.Parent.Parent.Seaborgium_Icon.Parent = game.CoreGui.TopBarApp.TopBarFrame.RightFrame
-	else
-		script.Parent.Parent.Parent.Parent.Seaborgium_Icon.Parent = game.CoreGui.TopBarApp.MenuIconHolder
-	end
 	
 	if game.GameId == 4774335835 then
 		game.SoundService.buzzer.Volume = 1
@@ -1836,4 +1825,4 @@ local function QHPPLMO_fake_script() -- Frame.Draggable_yeah
 	end
 	
 end
-coroutine.wrap(QHPPLMO_fake_script)()
+coroutine.wrap(DFPRGQ_fake_script)()
