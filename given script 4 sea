@@ -10,7 +10,6 @@ if cir then
 		end
 		cir.Transparency = 0.7
 	else
-		print(cir.Color)
 		local banauras = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAS")
 		local banaural = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL")
 		banauras:Destroy()
