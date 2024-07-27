@@ -1,7 +1,7 @@
 local cir = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL")
 
 if cir then
-	if cir.Color == Color3.new(255, 0, 0) then
+	if cir.Color == Color3.new(1, 0, 0) then
 		cir.BrickColor = BrickColor.new("Dark green")
 		local banauras = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAS")
 		if banauras then
