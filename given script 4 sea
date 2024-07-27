@@ -1,20 +1,24 @@
 local cir = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL")
 
-if cir then
-	if _G.ANtiban == true then
+
+if _G.ANtiban == true then
+	if cir then
 		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.BrickColor = BrickColor.new("Dark green")
 		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.BrickColor = BrickColor.new("Dark green")
-		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.Transparency = 0.5
-		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.Transparency = 0.5
+		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.Transparency = 0.7
+		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.Transparency = 0.7
 		_G.ANtiban = false
-	else
+	end
+else
+	if cir then
 		_G.ANtiban = true
 		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.BrickColor = BrickColor.new("Really red")
 		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.BrickColor = BrickColor.new("Really red")
 		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.Transparency = 0.95
 		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.Transparency = 0.95
 	end
-else
+end
+
 	local part = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
 	local parts = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
 
