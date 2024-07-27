@@ -1,40 +1,49 @@
-local part = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
-local parts = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
+if game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL") == true then
+	if _G.ANtiban == true then
+		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.BrickColor = BrickColor.new("Dark green")
+		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.BrickColor = BrickColor.new("Dark green")
+	else
+		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.BrickColor = BrickColor.new("Really red")
+		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.BrickColor = BrickColor.new("Really red")
+	end
+else
+	local part = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
+	local parts = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
 
-part.Name = "BANAURAL"
-parts.Name = "BANAURAS"
+	part.Name = "BANAURAL"
+	parts.Name = "BANAURAS"
 
-local weld = Instance.new("Weld", game.Workspace[game.Players.LocalPlayer.Name].BANAURAL)
-local welds = Instance.new("Weld", game.Workspace[game.Players.LocalPlayer.Name].BANAURAS)
+	local weld = Instance.new("Weld", game.Workspace[game.Players.LocalPlayer.Name].BANAURAL)
+	local welds = Instance.new("Weld", game.Workspace[game.Players.LocalPlayer.Name].BANAURAS)
 
-part.CFrame =  game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
-part.Anchored = false
-part.CanCollide = false
-part.Transparency = 0.95
-part.Shape = "Ball"
-part.Size = Vector3.new(83, 83, 83)
-part.BrickColor = BrickColor.new("Really red")
-part.Material = Enum.Material.ForceField
-part.Massless = true
-part.CastShadow = false
+	part.CFrame =  game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
+	part.Anchored = false
+	part.CanCollide = false
+	part.Transparency = 0.95
+	part.Shape = "Ball"
+	part.Size = Vector3.new(83, 83, 83)
+	part.BrickColor = BrickColor.new("Really red")
+	part.Material = Enum.Material.ForceField
+	part.Massless = true
+	part.CastShadow = false
 
-parts.CFrame =  game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
-parts.Anchored = false
-parts.CanCollide = false
-parts.Transparency = 0.95
-parts.Shape = "Ball"
-parts.Size = Vector3.new(37, 37, 37)
-parts.BrickColor = BrickColor.new("Really red")
-parts.Material = Enum.Material.ForceField
-parts.Massless = true
-parts.CastShadow = false
+	parts.CFrame =  game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
+	parts.Anchored = false
+	parts.CanCollide = false
+	parts.Transparency = 0.95
+	parts.Shape = "Ball"
+	parts.Size = Vector3.new(37, 37, 37)
+	parts.BrickColor = BrickColor.new("Really red")
+	parts.Material = Enum.Material.ForceField
+	parts.Massless = true
+	parts.CastShadow = false
 
-weld.Part0 =  game.Workspace[game.Players.LocalPlayer.Name].Head
-weld.Part1 = part
+	weld.Part0 =  game.Workspace[game.Players.LocalPlayer.Name].Head
+	weld.Part1 = part
 
-welds.Part0 =  game.Workspace[game.Players.LocalPlayer.Name].Head
-welds.Part1 = parts
-----
+	welds.Part0 =  game.Workspace[game.Players.LocalPlayer.Name].Head
+	welds.Part1 = parts
+	----
 
 
 
@@ -70,7 +79,6 @@ welds.Part1 = parts
 		end
 
 		if #verynearbyPlayersWithBanhammer > 0 then
-			print("Nearby players with BanHammer equipped: " .. table.concat(verynearbyPlayersWithBanhammer, ", "))
 			return true, verynearbyPlayersWithBanhammer
 		else
 			return false, verynearbyPlayersWithBanhammer
@@ -100,7 +108,6 @@ welds.Part1 = parts
 		end
 
 		if #kindaNearbyPlayersWithBanhammer > 0 then
-			print("Nearby players with BanHammer equipped: " .. table.concat(kindaNearbyPlayersWithBanhammer, ", "))
 			return true, kindaNearbyPlayersWithBanhammer
 		else
 			return false, kindaNearbyPlayersWithBanhammer
@@ -128,9 +135,8 @@ welds.Part1 = parts
 				end
 			end
 		end
-
+		
 		if #nearbyPlayersWithBanhammer > 0 then
-			print("Nearby players with BanHammer equipped: " .. table.concat(nearbyPlayersWithBanhammer, ", "))
 			return true, nearbyPlayersWithBanhammer
 		else
 			return false, nearbyPlayersWithBanhammer
@@ -147,4 +153,5 @@ welds.Part1 = parts
 		end
 	end
 	df()
+end
 
