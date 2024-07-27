@@ -1,6 +1,11 @@
 print("🌊seaborgiumV2 has loaded")
 local SLOC24 = False
 
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local Seaborgium_Icon = Instance.new("Frame")
 local Background = Instance.new("ImageButton")
 local icon = Instance.new("ImageLabel")
@@ -129,7 +134,7 @@ local UICorner_48 = Instance.new("UICorner")
 --Properties:
 
 Seaborgium_Icon.Name = "Seaborgium_Icon"
-Seaborgium_Icon.Parent = game.CoreGui.TopBarApp.TopBarFrame.RightFrame
+Seaborgium_Icon.Parent = game.Workspace
 Seaborgium_Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Seaborgium_Icon.BackgroundTransparency = 1.000
 Seaborgium_Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -179,7 +184,6 @@ Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(-11.4689999, 0, 1.40600002, 0)
 Frame.Size = UDim2.new(0, 429, 0, 204)
-Frame.Visible = false
 
 section.Name = "section"
 section.Parent = Frame
@@ -516,6 +520,7 @@ sfmsg.BackgroundTransparency = 1.000
 sfmsg.BorderColor3 = Color3.fromRGB(0, 0, 0)
 sfmsg.BorderSizePixel = 0
 sfmsg.Size = UDim2.new(0, 186, 0, 145)
+sfmsg.CanvasPosition = Vector2.new(0, 300)
 sfmsg.CanvasSize = UDim2.new(0, 0, 3, 0)
 sfmsg.ScrollBarThickness = 8
 
@@ -582,13 +587,12 @@ UICorner_15.Parent = runc4bh
 
 Crasher.Name = "Crasher"
 Crasher.Parent = sfmsg
-Crasher.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Crasher.BackgroundColor3 = Color3.fromRGB(194, 194, 194)
+Crasher.BackgroundTransparency = 0.300
 Crasher.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Crasher.BorderSizePixel = 0
 Crasher.Position = UDim2.new(0.160999998, 0, 0.660000026, 0)
 Crasher.Size = UDim2.new(0, 126, 0, 100)
-Crasher.Image = "http://www.roblox.com/asset/?id=17639586322"
-Crasher.ImageTransparency = 0.030
 
 UICorner_16.CornerRadius = UDim.new(0.150000006, 0)
 UICorner_16.Parent = Crasher
@@ -616,16 +620,13 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.428571433, 0, 0.44770661, 0)
-TextLabel.Rotation = -13.000
-TextLabel.Size = UDim2.new(0, 72, 0, 28)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Server Crasher"
-TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.Position = UDim2.new(0.0634920672, 0, 0.109999999, 0)
+TextLabel.Size = UDim2.new(0, 113, 0, 77)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "?"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14.000
-TextLabel.TextStrokeColor3 = Color3.fromRGB(38, 0, 0)
-TextLabel.TextStrokeTransparency = 0.000
 TextLabel.TextWrapped = true
 
 UICorner_18.Parent = mscrip
@@ -1211,7 +1212,7 @@ UICorner_48.Parent = BGTheme
 
 -- Scripts:
 
-local function ZIMU_fake_script() -- icon.LocalScript 
+local function NGSAGXO_fake_script() -- icon.LocalScript 
 	local script = Instance.new('LocalScript', icon)
 
 	local frame = script.Parent.Parent.icon
@@ -1267,8 +1268,8 @@ local function ZIMU_fake_script() -- icon.LocalScript
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/Extra4Seaborg"))()
 	end)
 end
-coroutine.wrap(ZIMU_fake_script)()
-local function ANDPAC_fake_script() -- section.LocalScript 
+coroutine.wrap(NGSAGXO_fake_script)()
+local function PKVONN_fake_script() -- section.LocalScript 
 	local script = Instance.new('LocalScript', section)
 
 	local sesc = script.Parent.Parent.mainsecotin
@@ -1319,8 +1320,8 @@ local function ANDPAC_fake_script() -- section.LocalScript
 	end)
 	
 end
-coroutine.wrap(ANDPAC_fake_script)()
-local function FKRU_fake_script() -- codebox.LocalScript 
+coroutine.wrap(PKVONN_fake_script)()
+local function WPTMG_fake_script() -- codebox.LocalScript 
 	local script = Instance.new('LocalScript', codebox)
 
 	local ran = math.random(0, 10)
@@ -1334,8 +1335,8 @@ local function FKRU_fake_script() -- codebox.LocalScript
 		ptext.PlaceholderText = "   Seaborgium | made by Alex54. & HighskyY8K"
 	end
 end
-coroutine.wrap(FKRU_fake_script)()
-local function EVWF_fake_script() -- Execute.LocalScript 
+coroutine.wrap(WPTMG_fake_script)()
+local function CFFF_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local cod_e = script.Parent.Parent.codeditorsw.codebox
@@ -1354,8 +1355,8 @@ local function EVWF_fake_script() -- Execute.LocalScript
 		script.Parent.Parent.CClear.Text = "Clear Code"
 	end)
 end
-coroutine.wrap(EVWF_fake_script)()
-local function DNIPCP_fake_script() -- runiy.LocalScript 
+coroutine.wrap(CFFF_fake_script)()
+local function KMBDSEK_fake_script() -- runiy.LocalScript 
 	local script = Instance.new('LocalScript', runiy)
 
 	local ran = false
@@ -1373,8 +1374,8 @@ local function DNIPCP_fake_script() -- runiy.LocalScript
 		
 	end)
 end
-coroutine.wrap(DNIPCP_fake_script)()
-local function ZKCPW_fake_script() -- runc4bh.LocalScript 
+coroutine.wrap(KMBDSEK_fake_script)()
+local function FAAJUG_fake_script() -- runc4bh.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh)
 
 	local ran = false
@@ -1392,37 +1393,39 @@ local function ZKCPW_fake_script() -- runc4bh.LocalScript
 	
 	end)
 end
-coroutine.wrap(ZKCPW_fake_script)()
-local function YTDNG_fake_script() -- runc4bh_2.LocalScript 
+coroutine.wrap(FAAJUG_fake_script)()
+local function NUYSTN_fake_script() -- runc4bh_2.LocalScript 
 	local script = Instance.new('LocalScript', runc4bh_2)
 
 	local ran = false
+	_G.ANtiban = false
 	
 	script.Parent.MouseButton1Click:Connect(function()
 		if ran == false then
-			ran = true
 			script.Parent.Text = "Executed"
+			if _G.ANtiban == false then
+				_G.ANtiban = true
+			else
+				_G.ANtiban = false
+			end
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/given%20script%204%20sea'))()
-		else
-			_G.ANtiban = false
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/highskyY8K/roblox-scripts/main/given%20script%204%20sea'))()
-			script.Parent.Text = "Already Executed"
 			wait(1)
-			script.Parent.Text = "Executed"
+			script.Parent.Text = "Execute"
 		end
 	
 	end)
+	
 end
-coroutine.wrap(YTDNG_fake_script)()
-local function PVLSTVC_fake_script() -- mscripts.LocalScript 
+coroutine.wrap(NUYSTN_fake_script)()
+local function VJLSND_fake_script() -- mscripts.LocalScript 
 	local script = Instance.new('LocalScript', mscripts)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.mscrip.Visible = not script.Parent.mscrip.Visible
 	end)
 end
-coroutine.wrap(PVLSTVC_fake_script)()
-local function VHEU_fake_script() -- UICorner_19.LocalScript 
+coroutine.wrap(VJLSND_fake_script)()
+local function ZYGV_fake_script() -- UICorner_19.LocalScript 
 	local script = Instance.new('LocalScript', UICorner_19)
 
 	local Players = game:GetService("Players")
@@ -1441,8 +1444,8 @@ local function VHEU_fake_script() -- UICorner_19.LocalScript
 	
 	Players.PlayerAdded:Connect(onPlayerAdded)
 end
-coroutine.wrap(VHEU_fake_script)()
-local function PQNSEOV_fake_script() -- use.LocalScript 
+coroutine.wrap(ZYGV_fake_script)()
+local function ZDAUSA_fake_script() -- use.LocalScript 
 	local script = Instance.new('LocalScript', use)
 
 	local player = game.Players.LocalPlayer
@@ -1458,8 +1461,8 @@ local function PQNSEOV_fake_script() -- use.LocalScript
 	
 	
 end
-coroutine.wrap(PQNSEOV_fake_script)()
-local function SCCPJN_fake_script() -- title.LocalScript 
+coroutine.wrap(ZDAUSA_fake_script)()
+local function BDMKJ_fake_script() -- title.LocalScript 
 	local script = Instance.new('LocalScript', title)
 
 	local sf = script.Parent.swearwords.bg.ScrollingFrame
@@ -1547,8 +1550,8 @@ local function SCCPJN_fake_script() -- title.LocalScript
 	end)
 	
 end
-coroutine.wrap(SCCPJN_fake_script)()
-local function UKUE_fake_script() -- Mods4Game.morebase 
+coroutine.wrap(BDMKJ_fake_script)()
+local function LXLOH_fake_script() -- Mods4Game.morebase 
 	local script = Instance.new('LocalScript', Mods4Game)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1600,8 +1603,8 @@ local function UKUE_fake_script() -- Mods4Game.morebase
 		wait(3)
 	end
 end
-coroutine.wrap(UKUE_fake_script)()
-local function WLEUUSQ_fake_script() -- BanUser.BAN PLAYER 
+coroutine.wrap(LXLOH_fake_script)()
+local function ZWGTQHK_fake_script() -- BanUser.BAN PLAYER 
 	local script = Instance.new('LocalScript', BanUser)
 
 	local banning = false
@@ -1718,8 +1721,8 @@ local function WLEUUSQ_fake_script() -- BanUser.BAN PLAYER
 	
 	
 end
-coroutine.wrap(WLEUUSQ_fake_script)()
-local function KKIXHAY_fake_script() -- m4gbans.ban4you. 
+coroutine.wrap(ZWGTQHK_fake_script)()
+local function RYBUBR_fake_script() -- m4gbans.ban4you. 
 	local script = Instance.new('LocalScript', m4gbans)
 
 	local btext = "Current Ban Method: Remote"
@@ -1759,14 +1762,19 @@ local function KKIXHAY_fake_script() -- m4gbans.ban4you.
 	end)
 	
 end
-coroutine.wrap(KKIXHAY_fake_script)()
-local function RTFWN_fake_script() -- Frame.Draggable_yeah 
+coroutine.wrap(RYBUBR_fake_script)()
+local function QHPPLMO_fake_script() -- Frame.Draggable_yeah 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent.Background.ImageTransparency = 1
 	script.Parent.Parent.icon.ImageTransparency = 1
 	script.Parent.Active = true
 	script.Parent.Draggable = true
+	if script.Parent["ro18 or ro24"] == 18 then
+		script.Parent.Parent.Parent.Parent.Seaborgium_Icon.Parent = game.CoreGui.TopBarApp.TopBarFrame.RightFrame
+	else
+		script.Parent.Parent.Parent.Parent.Seaborgium_Icon.Parent = game.CoreGui.TopBarApp.MenuIconHolder
+	end
 	
 	if game.GameId == 4774335835 then
 		game.SoundService.buzzer.Volume = 1
@@ -1828,4 +1836,4 @@ local function RTFWN_fake_script() -- Frame.Draggable_yeah
 	end
 	
 end
-coroutine.wrap(RTFWN_fake_script)()
+coroutine.wrap(QHPPLMO_fake_script)()
