@@ -9,12 +9,6 @@ if cir then
 			banauras.Transparency = 0.7
 		end
 		cir.Transparency = 0.7
-	else
-		cir:Destroy()
-		local banauras = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAS")
-		if banauras then
-			banauras:Destroy()
-		end
 	end
 else
 	local part = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
