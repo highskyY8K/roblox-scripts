@@ -1,4 +1,6 @@
-if game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL") == true then
+local cir = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL")
+
+if cir then
 	if _G.ANtiban == true then
 		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.BrickColor = BrickColor.new("Dark green")
 		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.BrickColor = BrickColor.new("Dark green")
