@@ -9,9 +9,7 @@ if cir then
 			banauras.Transparency = 0.7
 		end
 		cir.Transparency = 0.7
-		_G.ANtiban = false
 	else
-		_G.ANtiban = true
 		cir:Destroy()
 		local banauras = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAS")
 		if banauras then
