@@ -1,16 +1,22 @@
 local cir = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL")
 
 if cir then
-	if game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.Color == Color3.new(1, 0, 0) then
-		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.BrickColor = BrickColor.new("Dark green")
-		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.BrickColor = BrickColor.new("Dark green")
-		game.Workspace[game.Players.LocalPlayer.Name].BANAURAL.Transparency = 0.7
-		game.Workspace[game.Players.LocalPlayer.Name].BANAURAS.Transparency = 0.7
+	if cir.Color == Color3.new(1, 0, 0) then
+		cir.BrickColor = BrickColor.new("Dark green")
+		local banauras = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAS")
+		if banauras then
+			banauras.BrickColor = BrickColor.new("Dark green")
+			banauras.Transparency = 0.7
+		end
+		cir.Transparency = 0.7
 		_G.ANtiban = false
 	else
 		_G.ANtiban = true
 		cir:Destroy()
-		cir.Partent.BANAURAS:Destroy()
+		local banauras = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAS")
+		if banauras then
+			banauras:Destroy()
+		end
 	end
 else
 	local part = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
