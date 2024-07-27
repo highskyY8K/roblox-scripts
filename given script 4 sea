@@ -1,170 +1,157 @@
-local cir = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL")
+local player = game.Players.LocalPlayer
+local playerName = player.Name
+local playerWorkspace = game.Workspace:FindFirstChild(playerName)
+local cir = playerWorkspace and playerWorkspace:FindFirstChild("BANAURAL")
 
 if cir then
-	if cir.Color == Color3.new(1, 0, 0) then
-		cir.BrickColor = BrickColor.new("Dark green")
-		local banauras = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAS")
-		if banauras then
-			banauras.BrickColor = BrickColor.new("Dark green")
-			banauras.Transparency = 0.7
-		end
-		cir.Transparency = 0.7
-		_G.ANtiban = false
-	else
-		_G.ANtiban = true
-		cir:Destroy()
-		local banauras = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAS")
-		if banauras then
-			banauras:Destroy()
-		end
-	end
+    if cir.Color == Color3.new(1, 0, 0) then
+        cir.BrickColor = BrickColor.new("Dark green")
+        local banauras = playerWorkspace:FindFirstChild("BANAURAS")
+        if banauras then
+            banauras.BrickColor = BrickColor.new("Dark green")
+            banauras.Transparency = 0.7
+        end
+        cir.Transparency = 0.7
+        _G.ANtiban = false
+    else
+        _G.ANtiban = true
+        cir:Destroy()
+        local banauras = playerWorkspace:FindFirstChild("BANAURAS")
+        if banauras then
+            banauras:Destroy()
+        end
+    end
 else
-	local part = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
-	local parts = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
+    local part = Instance.new("Part")
+    part.Name = "BANAURAL"
+    part.CFrame = playerWorkspace.HumanoidRootPart.CFrame
+    part.Anchored = false
+    part.CanCollide = false
+    part.Transparency = 0.95
+    part.Shape = Enum.PartType.Ball
+    part.Size = Vector3.new(83, 83, 83)
+    part.BrickColor = BrickColor.new("Really red")
+    part.Material = Enum.Material.ForceField
+    part.Massless = true
+    part.CastShadow = false
+    part.Parent = playerWorkspace
 
-	part.Name = "BANAURAL"
-	parts.Name = "BANAURAS"
+    local parts = Instance.new("Part")
+    parts.Name = "BANAURAS"
+    parts.CFrame = playerWorkspace.HumanoidRootPart.CFrame
+    parts.Anchored = false
+    parts.CanCollide = false
+    parts.Transparency = 0.95
+    parts.Shape = Enum.PartType.Ball
+    parts.Size = Vector3.new(37, 37, 37)
+    parts.BrickColor = BrickColor.new("Really red")
+    parts.Material = Enum.Material.ForceField
+    parts.Massless = true
+    parts.CastShadow = false
+    parts.Parent = playerWorkspace
 
-	local weld = Instance.new("Weld", game.Workspace[game.Players.LocalPlayer.Name].BANAURAL)
-	local welds = Instance.new("Weld", game.Workspace[game.Players.LocalPlayer.Name].BANAURAS)
+    local weld = Instance.new("Weld", part)
+    weld.Part0 = playerWorkspace.Head
+    weld.Part1 = part
 
-	part.CFrame =  game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
-	part.Anchored = false
-	part.CanCollide = false
-	part.Transparency = 0.95
-	part.Shape = "Ball"
-	part.Size = Vector3.new(83, 83, 83)
-	part.BrickColor = BrickColor.new("Really red")
-	part.Material = Enum.Material.ForceField
-	part.Massless = true
-	part.CastShadow = false
+    local welds = Instance.new("Weld", parts)
+    welds.Part0 = playerWorkspace.Head
+    welds.Part1 = parts
 
-	parts.CFrame =  game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.CFrame
-	parts.Anchored = false
-	parts.CanCollide = false
-	parts.Transparency = 0.95
-	parts.Shape = "Ball"
-	parts.Size = Vector3.new(37, 37, 37)
-	parts.BrickColor = BrickColor.new("Really red")
-	parts.Material = Enum.Material.ForceField
-	parts.Massless = true
-	parts.CastShadow = false
+    -- Proximity checks functions
+    local NThold = 20
+    local NMBD = 15
+    local distanceThreshold = 45
+    local moveBackDistance = 8
 
-	weld.Part0 =  game.Workspace[game.Players.LocalPlayer.Name].Head
-	weld.Part1 = part
+    local function VNBHammer()
+        local verynearbyPlayersWithBanhammer = {}
+        if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local playerPosition = player.Character.HumanoidRootPart.Position
+            for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
+                if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                    local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
+                    local distance = (playerPosition - otherPosition).Magnitude
+                    if distance <= NThold then
+                        local backpack = otherPlayer:FindFirstChild("Backpack")
+                        if backpack and backpack:FindFirstChild("BanHammer") then
+                            table.insert(verynearbyPlayersWithBanhammer, otherPlayer.Name)
+                            wait()
+                            local moveDirection = (playerPosition - otherPosition).unit
+                            player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD
+                        end
+                    end
+                end
+            end
+        end
+        if #verynearbyPlayersWithBanhammer > 0 then
+            return true, verynearbyPlayersWithBanhammer
+        else
+            return false, verynearbyPlayersWithBanhammer
+        end
+    end
 
-	welds.Part0 =  game.Workspace[game.Players.LocalPlayer.Name].Head
-	welds.Part1 = parts
-	----
+    local function KNBHammer()
+        local kindaNearbyPlayersWithBanhammer = {}
+        if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local playerPosition = player.Character.HumanoidRootPart.Position
+            for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
+                if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                    local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
+                    local distance = (playerPosition - otherPosition).Magnitude
+                    if distance <= distanceThreshold then
+                        local character = otherPlayer.Character
+                        if character:FindFirstChild("BanHammer") then
+                            table.insert(kindaNearbyPlayersWithBanhammer, otherPlayer.Name)
+                            wait()
+                            local moveDirection = (playerPosition - otherPosition).unit
+                            player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD * 1.5
+                        end
+                    end
+                end
+            end
+        end
+        if #kindaNearbyPlayersWithBanhammer > 0 then
+            return true, kindaNearbyPlayersWithBanhammer
+        else
+            return false, kindaNearbyPlayersWithBanhammer
+        end
+    end
 
+    local function NBHammer()
+        local nearbyPlayersWithBanhammer = {}
+        if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+            local playerPosition = player.Character.HumanoidRootPart.Position
+            for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
+                if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
+                    local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
+                    local distance = (playerPosition - otherPosition).Magnitude
+                    if distance <= distanceThreshold then
+                        local character = otherPlayer.Character
+                        if character:FindFirstChild("BanHammer") then
+                            table.insert(nearbyPlayersWithBanhammer, otherPlayer.Name)
+                            wait()
+                            local moveDirection = (playerPosition - otherPosition).unit
+                            player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * moveBackDistance
+                        end
+                    end
+                end
+            end
+        end
+        if #nearbyPlayersWithBanhammer > 0 then
+            return true, nearbyPlayersWithBanhammer
+        else
+            return false, nearbyPlayersWithBanhammer
+        end
+    end
 
-
-	local player = game.Players.LocalPlayer
-	--
-	local NThold = 20
-	local NMBD = 15
-
-	local distanceThreshold = 45
-	local moveBackDistance = 8
-
-
-	local function VNBHammer()
-		local verynearbyPlayersWithBanhammer = {}
-
-		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-			local playerPosition = player.Character.HumanoidRootPart.Position
-			for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
-				if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
-					local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
-					local distance = (playerPosition - otherPosition).Magnitude
-					if distance <= NThold then
-						local backpack = otherPlayer:FindFirstChild("Backpack")
-						if backpack and backpack:FindFirstChild("BanHammer") then
-							table.insert(verynearbyPlayersWithBanhammer, otherPlayer.Name)
-							wait()
-							local moveDirection = (playerPosition - otherPosition).unit
-							player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD
-						end
-					end
-				end
-			end
-		end
-
-		if #verynearbyPlayersWithBanhammer > 0 then
-			return true, verynearbyPlayersWithBanhammer
-		else
-			return false, verynearbyPlayersWithBanhammer
-		end
-	end
-
-	local function KNBHammer()
-		local kindaNearbyPlayersWithBanhammer = {}
-
-		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-			local playerPosition = player.Character.HumanoidRootPart.Position
-			for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
-				if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
-					local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
-					local distance = (playerPosition - otherPosition).Magnitude
-					if distance <= distanceThreshold then
-						local character = otherPlayer.Character
-						if character:FindFirstChild("BanHammer") then
-							table.insert(kindaNearbyPlayersWithBanhammer, otherPlayer.Name)
-							wait()
-							local moveDirection = (playerPosition - otherPosition).unit
-							player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD * 1.5
-						end
-					end
-				end
-			end
-		end
-
-		if #kindaNearbyPlayersWithBanhammer > 0 then
-			return true, kindaNearbyPlayersWithBanhammer
-		else
-			return false, kindaNearbyPlayersWithBanhammer
-		end
-	end
-
-	local function NBHammer()
-		local nearbyPlayersWithBanhammer = {}
-
-		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-			local playerPosition = player.Character.HumanoidRootPart.Position
-			for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
-				if otherPlayer ~= player and otherPlayer.Character and otherPlayer.Character:FindFirstChild("HumanoidRootPart") then
-					local otherPosition = otherPlayer.Character.HumanoidRootPart.Position
-					local distance = (playerPosition - otherPosition).Magnitude
-					if distance <= distanceThreshold then
-						local character = otherPlayer.Character
-						if character:FindFirstChild("BanHammer") then
-							table.insert(nearbyPlayersWithBanhammer, otherPlayer.Name)
-							wait()
-							local moveDirection = (playerPosition - otherPosition).unit
-							player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * moveBackDistance
-						end
-					end
-				end
-			end
-		end
-		
-		if #nearbyPlayersWithBanhammer > 0 then
-			return true, nearbyPlayersWithBanhammer
-		else
-			return false, nearbyPlayersWithBanhammer
-		end
-	end
-
-
-	function df()
-		while _G.ANtiban == true do
-			VNBHammer()
-			NBHammer()
-			KNBHammer()
-			wait()
-		end
-	end
-	df()
-
-
+    function df()
+        while _G.ANtiban == true do
+            VNBHammer()
+            NBHammer()
+            KNBHammer()
+            wait()
+        end
+    end
+    df()
 end
