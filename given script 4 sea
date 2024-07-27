@@ -37,15 +37,7 @@ welds.Part1 = parts
 ----
 
 
-if _G.ANtiban == nil then
-	_G.ANtiban = false
-end
 
-
-if _G.ANtiban == true then
-	_G.ANtiban = false
-else
-	_G.ANtiban = true
 	local player = game.Players.LocalPlayer
 	--
 	local NThold = 20
@@ -155,4 +147,4 @@ else
 		end
 	end
 	df()
-end
+
