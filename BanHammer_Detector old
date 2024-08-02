@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.46"
+local BHDVersion = "V3.47"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
