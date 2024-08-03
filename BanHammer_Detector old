@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.461"
+local BHDVersion = "V3.465"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -110,8 +110,10 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 			--
 			if disabled == false then
+
+				
 				for i, v in ipairs(Excluded) do
-					if player.UserId == Excluded then
+					if player.UserId == v then
 						warn(player.DisplayName, " joined, but he/she is excluded")
 					else
 						local args = {
@@ -122,7 +124,8 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 					end
 				end
-				
+
+
 				--ds
 				if player.UserId == 193611165 then
 					local args = {
