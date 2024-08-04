@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.465"
+local BHDVersion = "V3.466"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -115,7 +115,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				for i, v in ipairs(Excluded) do
 					if player.UserId == v then
 						warn(player.DisplayName, " joined, but he/she is excluded")
-					else
+					elseif not player.UserId == v then
 						local args = {
 							[1] = player.DisplayName.. " has a ban hammer",
 							[2] = "All"
