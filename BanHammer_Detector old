@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.467"
+local BHDVersion = "V3.477"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -251,7 +251,15 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				[2] = "All"
 			}
 
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))			
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+		elseif TRandomNumber == 225 then
+
+			local args = {
+				[1] = "This bot is sadly getting discontinued on the 1st of september :(, Enjoy the bot while you can!.",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
 		elseif TRandomNumber == 500 or TRandomNumber == 499 then
 			local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
 
