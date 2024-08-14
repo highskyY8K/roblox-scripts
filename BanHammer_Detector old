@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.477"
+local BHDVersion = "V3.478"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -259,7 +259,61 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				[2] = "All"
 			}
 
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+		elseif TRandomNumber == 400 then
+
+			local args = {
+				[1] = "RIP LOCALPLAYER🕊️",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+		elseif TRandomNumber == 402 then
+
+			local args = {
+				[1] = "FLY HIGH LOCAL AS YOU ONCE DID. 🕊️",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+
+		elseif TRandomNumber == 404 then
+
+			local args = {
+				[1] = "/w SouleyXxV Guess what?",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			wait(5)
+			local args = {
+				[1] = "/w SouleyXxV Guess what",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			wait(2)
+			local args = {
+				[1] = "/w SouleyXxV you won...",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			wait(math.random(100, 240))
+			local args = {
+				[1] = "/w SouleyXxV this war ain't over... Round 2 coming soon.",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+		elseif TRandomNumber == 425 then
+
+			local args = {
+				[1] = "/w SouleyXxV We'll.. Meet Again.. Dont know where, Don't know when!.. But I know WE'LL meet again some Sunny Day!...",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
 		elseif TRandomNumber == 500 or TRandomNumber == 499 then
 			local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
 
