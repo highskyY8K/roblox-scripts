@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.478"
+local BHDVersion = "V3.479"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -263,15 +263,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		elseif TRandomNumber == 400 then
 
 			local args = {
-				[1] = "RIP LOCALPLAYER🕊️",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 402 then
-
-			local args = {
-				[1] = "FLY HIGH LOCAL AS YOU ONCE DID. 🕊️",
+				[1] = "rip LocalPlayer",
 				[2] = "All"
 			}
 
