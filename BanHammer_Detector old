@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.479"
+local BHDVersion = "V3.48"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -12,7 +12,7 @@ local run = game:GetService("RunService")
 local nemic = pservice.LocalPlayer
 local pname = nemic.DisplayName
 --
-local Excluded = {352696111, 1723886004, 2267758128, 125747873, 3144537944, 1814115279, 2005929656, 530722979, 4689130381, 1163297242, 2452010494, 4857538535, 1636279912, 2380715789, 1401031522}
+local Excluded = {352696111, 1723886004, 2267758128, 125747873, 3144537944, 1814115279, 2005929656, 530722979, 4689130381, 1163297242, 2452010494, 4857538535, 1636279912, 2380715789, 1401031522, 1962691258}
 local disabled = false
 local dedmsg = false
 local followedplayer = "❌"
