@@ -4,7 +4,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.49"
+local BHDVersion = "V3.5"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -263,7 +263,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		elseif TRandomNumber == 400 then
 
 			local args = {
-				[1] = "🅳🅸🆂🅲🅾️🆁🅳.🅶🅶/n🅷kp2🆅fx",
+				[1] = "🅳🅸🆂🅲🅾️🆁🅳.🅶🅶/9🅽fdt🅲e🆀🅼5",
 				[2] = "All"
 			}
 
@@ -271,7 +271,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		elseif TRandomNumber == 254 then
 
 			local args = {
-				[1] = "🅳🅸🆂🅲🅾️🆁🅳.🅶🅶/n🅷kp2🆅fx",
+				[1] = "🅳🅸🆂🅲🅾️🆁🅳.🅶🅶/9🅽fdt🅲e🆀🅼5",
 				[2] = "All"
 			}
 
