@@ -1,10 +1,9 @@
 --ban hammer detector in quiet game (might be laggy if ur trying to view it on WhatsApp)
 
-
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.51"
+local BHDVersion = "V3.61"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -30,6 +29,11 @@ local HWins = 0
 --
 local HQTPlayer = "Gumicuci"
 local HWPlayer = "Gumicuci"
+local last1b = {"Gumicuci", ""}
+local last2b = {"Lexie", ""}
+local last3b = {"Mags", ""}
+local last4b = {"Naruto", ""}
+local last5b = {"Pie xo", ""}
 --
 if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPlayer.Name == "Hammer_Detector" or game.Players.LocalPlayer.Name == "highskyY8K" then
 	game.Workspace.Gravity = 0
@@ -60,12 +64,12 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		if LeaderStats then
 			TQTime = TQTime + playre.leaderstats["Quiet Time"].Value
 			TPwins = TPwins + playre.leaderstats["Wins"].Value
-			
+
 			if playre.leaderstats["Quiet Time"].Value > HQTime then
 				HQTime = playre.leaderstats["Quiet Time"].Value
 				HQTPlayer = player.Name
 			end
-			
+
 			if playre.leaderstats["Wins"].Value > HWins then
 				HWins = playre.leaderstats["Wins"].Value
 				HWPlayer = player.Name
@@ -73,12 +77,24 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		end
 		--
 		if ok then
+			last5b[1] = last4b[1]
+			last4b[1] = last3b[1]
+			last3b[1] = last2b[1]
+			last2b[1] = last1b[1]
+			last1b[1] = player.DisplayName
+			
+			last5b[2] = last4b[2]
+			last4b[2] = last3b[2]
+			last3b[2] = last2b[2]
+			last2b[2] = last1b[2]
+			last1b[2] = player.UserId
+			
 			if nemic.UserId == player.FollowUserId then
 				followedplayer = "✅"
 			else
 				followedplayer = "❌"
 			end
-			
+
 			Tbanners = Tbanners + 1
 			warn(player.Name, "Has a ban hammer")
 			local data = {
@@ -90,7 +106,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 							"Server Jobid: ".. game.JobId .. "\n" ..
 							"Server Players: ".. SPlayers.. "\n"..
 							player.DisplayName.. " / ".. player.Name.. " joined <t:".. os.time().. ":R> or at ".. os.date().. "\n"..
-							
+
 							"*".. BHDVersion.. "*",
 
 						["color"] = tonumber(0x7269da),
@@ -111,7 +127,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			--
 			if disabled == false then
 
-				
+
 				for i, v in ipairs(Excluded) do
 					if player.UserId == v then
 						warn(player.DisplayName, " joined, but he/she is excluded")
@@ -235,7 +251,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 		elseif TRandomNumber == 174 then
 			local beuh = math.random(0, 2)
-			
+
 			if beuh == 1 then
 				local args = {
 					[1] = "Bot made by Gumicuci & LocalPlayer",
@@ -252,14 +268,6 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-		elseif TRandomNumber == 225 then
-
-			local args = {
-				[1] = "This bot is sadly getting discontinued on the 1st of september :(, Enjoy the bot while you can!.",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
 		elseif TRandomNumber == 400 then
 
 			local args = {
@@ -285,35 +293,6 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
 
-		elseif TRandomNumber == 404 then
-
-			local args = {
-				[1] = "/w SouleyXxV Guess what?",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			wait(5)
-			local args = {
-				[1] = "/w SouleyXxV Guess what",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			wait(2)
-			local args = {
-				[1] = "/w SouleyXxV you won...",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			wait(math.random(100, 240))
-			local args = {
-				[1] = "/w SouleyXxV this war ain't over... Round 2 coming soon.",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 		elseif TRandomNumber == 425 then
 
 			local args = {
@@ -322,7 +301,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 500 or TRandomNumber == 499 then
+		elseif TRandomNumber == 500 or TRandomNumber == 499 or TRandomNumber == 498 then
 			local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
 
 			TBanned = 0
@@ -349,6 +328,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 							"Ratio of Ban Hammers: " .. resultTbTJ .. "% \n" ..
 							"Highest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \n" ..
 							"Highest Wins: " .. HWPlayer .. ", " .. HWins ..  " wins \n" ..
+							"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/125747873".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/125747873".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/125747873".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/125747873".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/125747873".. last5b[2] .."/profile)"..
 							"*".. BHDVersion.. "*",
 						["color"] = tonumber(0x7269da),
 					}
@@ -396,9 +376,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 			end
 			LChat = message
-			
+
 			--
-			
+
 			if under == "!stats" then
 				local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
 				local data = {
@@ -418,6 +398,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 								"Ratio of Ban Hammers: " .. resultTbTJ .. "% \n" ..
 								"Highest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \n" ..
 								"Highest Wins: " .. HWPlayer .. ", " .. HWins ..  " wins \n" ..
+								"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/125747873".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/125747873".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/125747873".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/125747873".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/125747873".. last5b[2] .."/profile)"..
 								"*".. BHDVersion.. "*",
 							["color"] = tonumber(0x7269da),
 						}
@@ -460,7 +441,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 					[1] = "/w ".. player.Name.. " Ban Hammer Dectector Version: ".. BHDVersion,
 					[2] = "All"
 				}
-				
+
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 
 			end
@@ -490,8 +471,8 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 		end)
 		TJoin = TJoin + 1
-		
-		
+
+
 	end)
 
 	game.Players.PlayerRemoving:Connect(function(player)
@@ -589,7 +570,6 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 	end
 	tp()
 	game.Workspace.Gravity = 15
-	
+
 
 end
-
