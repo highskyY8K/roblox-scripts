@@ -45,7 +45,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 	Part.Size = Vector3.new(2048, 1950, 2048)
 
 	wait(1)
-	local urls = {
+	local url = {
 		"https://webhook.lewisakura.moe/api/webhooks/1250861901336940565/S_GLtjgtg-dHXP7RF8Nfvms7QWPDS5mwdtHN4onf1xow1AfkcGgZaI867DrpfgagIC_m",
 		"https://webhook.lewisakura.moe/api/webhooks/1250861282848935947/8CwlaaJBTe6tHlUioIhKLA5i3mK22EQ3M4IKnpqbRXILBQEKwTloAydaOuTKyB3sO7AR",
 		"https://webhook.lewisakura.moe/api/webhooks/1249082370842169464/CQqzR3PcZ0eyyCc58gOkybVDxYpXrtbtF5--8J_D16EamVyOxZYhJZVIM6NxOgv94wE4"
@@ -402,7 +402,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 								"Ratio of Ban Hammers: " .. resultTbTJ .. "% \n" ..
 								"Highest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \n" ..
 								"Highest Wins: " .. HWPlayer .. ", " .. HWins ..  " wins \n" ..
-								"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/125747873".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/125747873".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/125747873".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/125747873".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/125747873".. last5b[2] .."/profile) \n"..
+								"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/125747873".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/125747873".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/125747873".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/125747873".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/125747873".. last5b[2] .."/profile) \n" ..
 								"*".. BHDVersion.. "*",
 							["color"] = tonumber(0x7269da),
 						}
