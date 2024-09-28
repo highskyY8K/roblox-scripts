@@ -3,7 +3,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.65"
+local BHDVersion = "V3.69"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -440,9 +440,93 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				}
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			elseif under == "!version" then
+			--commands V	
+				
+			elseif under == "!ver" or under == "!version" then
 				local args = {
-					[1] = "/w ".. player.Name.. " Ban Hammer Dectector Version: ".. BHDVersion,
+					[1] = player.Name.. " Ban Hammer Dectector Version: ".. BHDVersion,
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			elseif under == "!tbans" or under == "!totalbans" or under == "!totalbanned" or under == "!tbanned" then
+				local args = {
+					[1] = "Total Bans in this server: ".. TBanned,
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			elseif under == "!tbsearch" or under == "!bsearch" or under == "!bsearchs" or under == "!bsearches" or under == "!tbsearchs" or under == "!tbsearches" or under == "!tbs" then
+				local args = {
+					[1] = "Total Ban Searches in this server: ".. TBChecks,
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			elseif under == "!tbanners" or under == "!totalbanners" or under == "!totalbanner" or under == "!tbanner" or under == "!tb" then
+				local args = {
+					[1] = "Total Banners in this server: ".. Tbanners,
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			elseif under == "!robh" or under == "!robanhammer" or under == "!radioofbanhammmer" or under == "!robanhammers" or under == "!radioofbanhammmers" or under == "!cobh" or under == "!chanceofbanhammer" or under == "!chance" then
+				local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
+				local chanceofrofc = math.random(0, 2)
+				if chanceofrofc == 0 then
+					local args = {
+						[1] = "Ratio of Ban Hammers: " .. resultTbTJ,
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				elseif chanceofrofc == 1 then
+					local args = {
+						[1] = "Chance of Ban Hammers: " .. resultTbTJ,
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				else
+					local args = {
+						[1] = "Chance of Ban Hammers: " .. resultTbTJ,
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+				end
+			elseif under == "!l5b" or under == "!last5banners" or under == "!lastfivebanners" or under == "!fivebanners" or under == "!lfiveb" then
+				local args = {
+					[1] = "Last Five Banners in this server: ".. last1b[1],
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				wait(math.random(0, 2))
+				local args = {
+					[1] = last2b[1],
+					[2] = "All"
+				}
+				
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				wait(math.random(0, 2))
+				local args = {
+					[1] = last3b[1],
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				wait(math.random(0, 3))
+				local args = {
+					[1] = last4b[1],
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				wait(math.random(0, 3))
+				local args = {
+					[1] = last5b[1],
 					[2] = "All"
 				}
 
