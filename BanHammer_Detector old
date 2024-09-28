@@ -3,7 +3,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.71"
+local BHDVersion = "V3.75"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -27,12 +27,13 @@ local TQTime = 0
 local HQTime = 0
 local HWins = 0
 --
+local updatedate = "28/9/24"
 local HQTPlayer = "Gumicuci"
 local HWPlayer = "Gumicuci"
 local last1b = {"Gumicuci", ""}
 local last2b = {"Lexie", ""}
-local last3b = {"Mags", ""}
-local last4b = {"Naruto", ""}
+local last3b = {"Vaporeon 💖🥰", ""}
+local last4b = {"HighskyY8K", ""}
 local last5b = {"Pie xo", ""}
 --
 if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPlayer.Name == "Hammer_Detector" or game.Players.LocalPlayer.Name == "highskyY8K" then
@@ -110,7 +111,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 							"Server Jobid: ".. game.JobId .. "\n" ..
 							"Server Players: ".. SPlayers.. "\n"..
 							player.DisplayName.. " / ".. player.Name.. " joined <t:".. os.time().. ":R> or at ".. os.date().. "\n"..
-							followedplayer.. "\n".. 
+							followedplayer.. 
 							"*".. BHDVersion.. "*",
 
 						["color"] = tonumber(0x7269da),
@@ -296,6 +297,14 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+		elseif TRandomNumber == 451 then
+
+			local args = {
+				[1] = "Bot Last Updated: ".. updatedate,
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
 
 		elseif TRandomNumber == 425 then
 
@@ -305,7 +314,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 500 or TRandomNumber == 499 or TRandomNumber == 498 then
+		elseif TRandomNumber == 500 or TRandomNumber == 499 or TRandomNumber == 498 or TRandomNumber == 497 or TRandomNumber == 496 or TRandomNumber == 495 then
 			local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
 
 			TBanned = 0
@@ -332,9 +341,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 							"Ratio of Ban Hammers: " .. resultTbTJ .. "% \n" ..
 							"Highest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \n" ..
 							"Highest Wins: " .. HWPlayer .. ", " .. HWins ..  " wins \n" ..
-							"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/125747873".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/125747873".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/125747873".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/125747873".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/125747873".. last5b[2] .."/profile) \n"..
+							"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/".. last5b[2] .."/profile) \n"..
 							"*".. BHDVersion.. "*",
-						["color"] = tonumber(0x7269da),
+						["color"] = tonumber(0x354ab2),
 					}
 				}
 			}
@@ -402,9 +411,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 								"Ratio of Ban Hammers: " .. resultTbTJ .. "% \n" ..
 								"Highest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \n" ..
 								"Highest Wins: " .. HWPlayer .. ", " .. HWins ..  " wins \n" ..
-								"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/125747873".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/125747873".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/125747873".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/125747873".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/125747873".. last5b[2] .."/profile) \n" ..
+								"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/".. last5b[2] .."/profile) \n" ..
 								"*".. BHDVersion.. "*",
-							["color"] = tonumber(0x7269da),
+							["color"] = tonumber(0x354ab2),
 						}
 					}
 				}
@@ -441,6 +450,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 			--commands V	
+			--commands V
 				
 			elseif under == "!ver" or under == "!version" then
 				local args = {
@@ -539,6 +549,13 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				}
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+			elseif under == "!lu" or under == "!up" or under == "!update" or under == "!lupdate" or under == "!updated" or under == "!lupdated" or under == "!lastupdated" then
+				local args = {
+					[1] = "Last Bot Update : ".. updatedate,
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 
 			end
 
@@ -593,62 +610,6 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			elseif player.UserId == 5227824572 then
 				disabled = false
 			end
-		end
-	end)
-
-	run.Heartbeat:Connect(function()
-		if not nemic:IsDescendantOf(pservice) then
-			local errormsg = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ErrorPrompt
-			if _G.Disconnected == false then
-				_G.Disconnected = true
-				local sound = Instance.new("Sound", game.SoundService)
-				sound.Volume = 5
-				sound.SoundId = "rbxassetid://5797578819"
-				sound:Play()
-				wait(10)
-				sound:Destroy()
-			else
-				if dedmsg == false then
-					dedmsg = true
-					local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
-					local reason = errormsg.MessageArea.ErrorFrame.ErrorMessage.Text
-					local data = {
-						["content"] = "",
-						["embeds"] = {
-							{
-								["title"] = "**Server Stats**",
-								["description"] = "Total Bot Uptime: " .. os.clock() .. "\n" ..
-									"Total Chats: " .. TChats .. "\n" ..
-									"Total Players Banned: " .. TBanned .. "\n" ..
-									"Total Players BSearched: " .. TBChecks .. "\n" ..
-									"Total Ban Hammers: " .. Tbanners .. "\n" ..
-									"Total Joins: " .. TJoin .. "\n" ..
-									"Total Player Wins: " .. TPwins .. "\n" ..
-									"Total Quiet Time: " .. TQTime .. "\n" ..
-									"-- \n" ..
-									"Ratio of Ban Hammers: " .. resultTbTJ .. "% \n" ..
-									"Highest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \n" ..
-									"Highest Wins: " .. HWPlayer .. ", " .. HWins ..  " wins \n" ..
-									"*".. BHDVersion.. "*",
-								["color"] = tonumber(0x7269da),
-							}
-						}
-					}
-
-					local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-					local headers = {
-						["content-type"] = "application/json"
-					}
-					request = http_request or request or HttpPost or syn.request
-					local abcdef = {Url = url[math.random(1, 3)], Body = newdata, Method = "POST", Headers = headers}
-					request(abcdef)
-
-					dedmsg = true
-				end
-
-			end
-
 		end
 	end)
 
