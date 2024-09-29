@@ -3,7 +3,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.8"
+local BHDVersion = "V3.81"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -480,6 +480,13 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 
 					end
+				end
+				if bcounts == 0 then
+					local args = {
+						[1] = "No one has a ban hammer here.",
+						[2] = "All"
+					}
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 				end
 				
 			elseif under == "!ver" or under == "!version" then
