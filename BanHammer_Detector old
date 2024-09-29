@@ -3,7 +3,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.81"
+local BHDVersion = "V3.82"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -51,7 +51,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		"https://webhook.lewisakura.moe/api/webhooks/1250861282848935947/8CwlaaJBTe6tHlUioIhKLA5i3mK22EQ3M4IKnpqbRXILBQEKwTloAydaOuTKyB3sO7AR",
 		"https://webhook.lewisakura.moe/api/webhooks/1249082370842169464/CQqzR3PcZ0eyyCc58gOkybVDxYpXrtbtF5--8J_D16EamVyOxZYhJZVIM6NxOgv94wE4"
 	}	
-	
+
 	game.Players.PlayerAdded:Connect(function(player)
 		followedplayer = ""
 		SPlayers = 0
@@ -89,13 +89,13 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			last3b[1] = last2b[1]
 			last2b[1] = last1b[1]
 			last1b[1] = player.DisplayName
-			
+
 			last5b[2] = last4b[2]
 			last4b[2] = last3b[2]
 			last3b[2] = last2b[2]
 			last2b[2] = last1b[2]
 			last1b[2] = player.UserId
-			
+
 			if nemic.UserId == player.FollowUserId then
 				followedplayer = "Joined the bot = ✅"
 			end
@@ -458,9 +458,29 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				}
 
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			--commands V	
-			--commands V
-			elseif under == "!ban" or under == "!banners" or under == "!b"then
+				--commands V	
+				--commands V
+			elseif under == "!help" or under == "!cmds" or under == "!cmd" or under == "!command" or under == "!commands" then
+				local allcmds4thisbot = {"!cmds", "!b", "!version", "!tb", "!totalbans", "!tbsearch", "!chance", "!up", "!l5b"}
+				local args = {
+					[1] = "Some Commands: ",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+				for i, v in ipairs(allcmds4thisbot) do
+					local args = {
+						[1] = v,
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+					wait(math.random(0, 1))
+				end
+				
+				
+			elseif under == "!ban" or under == "!banners" or under == "!b" then
 				local args = {
 					[1] = "Players with a Ban Hammer in this server: ",
 					[2] = "All"
@@ -478,8 +498,9 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 							[2] = "All"
 						}
 						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
+						wait(math.random(0, 1))
 					end
+					
 				end
 				if bcounts == 0 then
 					local args = {
@@ -488,7 +509,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 					}
 					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 				end
-				
+
 			elseif under == "!ver" or under == "!version" then
 				local args = {
 					[1] = "Ban Hammer Dectector Version: ".. BHDVersion,
@@ -512,7 +533,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 			elseif under == "!tbanners" or under == "!totalbanners" or under == "!totalbanner" or under == "!tbanner" or under == "!tb" then
 				local args = {
-					[1] = "Total Banners in this server: ".. Tbanners,
+					[1] = "Total Banners in this server ever: ".. Tbanners,
 					[2] = "All"
 				}
 
@@ -563,7 +584,7 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 					[1] = last2b[1],
 					[2] = "All"
 				}
-				
+
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 				wait(math.random(0, 2))
 				local args = {
