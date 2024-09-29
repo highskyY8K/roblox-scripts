@@ -3,7 +3,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.75"
+local BHDVersion = "V3.8"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -11,7 +11,7 @@ local run = game:GetService("RunService")
 local nemic = pservice.LocalPlayer
 local pname = nemic.DisplayName
 --
-local Excluded = {352696111, 5816809572, 1723886004, 2267758128, 125747873, 3144537944, 1814115279, 2005929656, 530722979, 4689130381, 1163297242, 2452010494, 4857538535, 1636279912, 2380715789, 1401031522, 1962691258}
+local Excluded = {352696111, 1814115279, 5816809572, 1723886004, 2267758128, 125747873, 3144537944, 1814115279, 2005929656, 530722979, 4689130381, 1163297242, 2452010494, 4857538535, 1636279912, 2380715789, 1401031522, 1962691258}
 local disabled = false
 local dedmsg = false
 local followedplayer = "❌"
@@ -193,6 +193,15 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
 					wait(1)
 					disabled = true
+				elseif player.UserId == 4170326055 then
+					local args = {
+						[1] = player.DisplayName.. " has a ban hammer",
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
+					wait(1)
+					disabled = true
 				else
 					local args = {
 						[1] = player.DisplayName.. " has a ban hammer",
@@ -309,12 +318,12 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		elseif TRandomNumber == 425 then
 
 			local args = {
-				[1] = "/w SouleyXxV We'll.. Meet Again.. Dont know where, Don't know when!.. But I know WE'LL meet again some Sunny Day!...",
+				[1] = "/w SouleyXxV We've.. Met Again.. You dont know where, You don't know when!.. But I know WE'VE met again. some Sunny Day!...",
 				[2] = "All"
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 500 or TRandomNumber == 499 or TRandomNumber == 498 or TRandomNumber == 497 or TRandomNumber == 496 or TRandomNumber == 495 then
+		elseif TRandomNumber == 500 or TRandomNumber == 499 or TRandomNumber == 498 or TRandomNumber == 497 then
 			local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
 
 			TBanned = 0
@@ -451,6 +460,27 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 			--commands V	
 			--commands V
+			elseif under == "!ban" or under == "!banners" or under == "!b"then
+				local args = {
+					[1] = "Players with a Ban Hammer in this server: ",
+					[2] = "All"
+				}
+
+				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+				local bcounts = 0
+				for _, w in pairs(pservice:GetChildren()) do
+					local bakpak = w.Backpack:FindFirstChild("BanHammer") 
+					if bakpak then
+						bcounts = bcounts + 1
+						local args = {
+							[1] = w.DisplayName,
+							[2] = "All"
+						}
+						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+					end
+				end
 				
 			elseif under == "!ver" or under == "!version" then
 				local args = {
@@ -605,9 +635,15 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 		if disabled == true then
 			if player.UserId == 193611165 then
 				disabled = false
+			elseif player.UserId == 2270603755 then
+				disabled = false
+			elseif player.UserId == 1487385614 then
+				disabled = false
 			elseif player.UserId == 3868670748 then			
 				disabled = false
 			elseif player.UserId == 5227824572 then
+				disabled = false
+			elseif player.UserId == 4170326055 then
 				disabled = false
 			end
 		end
