@@ -3,7 +3,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.843"
+local BHDVersion = "V3.854"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -433,6 +433,29 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 						declinemsg(player.DisplayName)
 					elseif under == "!tbanners" or under == "!totalbanners" or under == "!totalbanner" or under == "!tbanner" or under == "!tb" then
 						declinemsg(player.DisplayName)
+					elseif under == "!help" or under == "!cmds" or under == "!cmd" or under == "!command" or under == "!commands" then
+						declinemsg(player.DisplayName)
+					elseif under == "!ver" or under == "!version" then
+						local args = {
+							[1] = "Ban Hammer Dectector Version: ".. BHDVersion,
+							[2] = "All"
+						}
+
+						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+
+					elseif under == "!tbans" or under == "!totalbans" or under == "!totalbanned" or under == "!tbanned" then
+						declinemsg(player.DisplayName)
+					elseif under == "!tbsearch" or under == "!bsearch" or under == "!bsearchs" or under == "!bsearches" or under == "!tbsearchs" or under == "!tbsearches" or under == "!tbs" then
+						declinemsg(player.DisplayName)
+					elseif under == "!robh" or under == "!robanhammer" or under == "!radioofbanhammmer" or under == "!robanhammers" or under == "!radioofbanhammmers" or under == "!cobh" or under == "!chanceofbanhammer" or under == "!chance" then
+						declinemsg(player.DisplayName)
+					elseif under == "!lu" or under == "!up" or under == "!update" or under == "!lupdate" or under == "!updated" or under == "!lupdated" or under == "!lastupdated" then
+						local args = {
+							[1] = "Last Bot Update : ".. updatedate,
+							[2] = "All"
+						}
+
+						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
 					end
 					break -- Exit the loop as the player is found in the blacklist
 				end
