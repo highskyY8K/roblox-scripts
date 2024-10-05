@@ -3,7 +3,7 @@
 _G.HIDE = true
 _G.Disconnected = false
 --
-local BHDVersion = "V3.854"
+local BHDVersion = "V3.855"
 local TPSpeed = ""
 --
 local pservice = game:GetService("Players")
@@ -28,7 +28,7 @@ local TQTime = 0
 local HQTime = 0
 local HWins = 0
 --
-local updatedate = "31/9/24"
+local updatedate = "5/10/24"
 local HQTPlayer = "Gumicuci"
 local HWPlayer = "Gumicuci"
 local last1b = {"Gumicuci", ""}
@@ -307,6 +307,31 @@ if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPl
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+		elseif TRandomNumber == 453 then
+
+			local args = {
+				[1] = "d̾i̾s̾c̾o̾r̾d̾.̾c̾o̾m̾/̾invite/y̾N̾j̾g̾J̾a̾N̾E̾",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+		elseif TRandomNumber == 454 then
+
+			local args = {
+				[1] = "d̾i̾s̾c̾o̾r̾d̾.̾c̾o̾m̾/̾invite/y̾N̾j̾g̾J̾a̾N̾E̾",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+		elseif TRandomNumber == 455 then
+
+			local args = {
+				[1] = "d̾i̾s̾c̾o̾r̾d̾.̾c̾o̾m̾/̾invite/y̾N̾j̾g̾J̾a̾N̾E̾",
+				[2] = "All"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
+
 		elseif TRandomNumber == 451 then
 
 			local args = {
