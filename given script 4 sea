@@ -14,7 +14,7 @@ if cir then
 		local banaural = game.Workspace[game.Players.LocalPlayer.Name]:FindFirstChild("BANAURAL")
 		banauras:Destroy()
 		banaural:Destroy()
-		
+
 		local part = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
 		local parts = Instance.new("Part", game.Workspace[game.Players.LocalPlayer.Name])
 
@@ -40,7 +40,7 @@ if cir then
 		parts.CanCollide = false
 		parts.Transparency = 0.95
 		parts.Shape = "Ball"
-		parts.Size = Vector3.new(41, 41, 41)
+		parts.Size = Vector3.new(47, 47, 47)
 		parts.BrickColor = BrickColor.new("Really red")
 		parts.Material = Enum.Material.ForceField
 		parts.Massless = true
@@ -57,7 +57,7 @@ if cir then
 
 		local player = game.Players.LocalPlayer
 		--
-		local NThold = 23
+		local NThold = 25
 		local NMBD = 15
 
 		local distanceThreshold = 45
@@ -78,8 +78,13 @@ if cir then
 							if backpack and backpack:FindFirstChild("BanHammer") then
 								table.insert(verynearbyPlayersWithBanhammer, otherPlayer.Name)
 								wait()
-								local moveDirection = (playerPosition - otherPosition).unit
-								player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD
+								local moveDirection = (playerPosition - otherPosition).unit -- you need to add thing so if the player is the localplayer's friend then the range is lowered
+								if otherPlayer.Name:IsFriendsWith(player.UserId) then
+									player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD
+								else
+									player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + moveDirection * NMBD
+								end
+
 							end
 						end
 					end
@@ -207,7 +212,7 @@ else
 
 	local player = game.Players.LocalPlayer
 	--
-	local NThold = 23
+	local NThold = 25
 	local NMBD = 15
 
 	local distanceThreshold = 45
@@ -293,7 +298,7 @@ else
 				end
 			end
 		end
-		
+
 		if #nearbyPlayersWithBanhammer > 0 then
 			return true, nearbyPlayersWithBanhammer
 		else
