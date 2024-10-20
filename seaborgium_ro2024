@@ -1725,7 +1725,7 @@ local function NCZGIZ_fake_script() -- runc4bh.LocalScript
 		if ran == false then
 			ran = true
 			script.Parent.Text = "Executed"
-			loadstring(game:HttpGet("https://pastebin.com/raw/zU1GnU88", true))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/refs/heads/random/c4bhorsmthid", true))()
 		else
 			script.Parent.Text = "Already Executed"
 			wait(1)
