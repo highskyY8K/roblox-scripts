@@ -1,0 +1,76 @@
+local noise = true
+local tooll = "BanHammer"
+
+game.Players.PlayerAdded:Connect(function(player)
+	wait(4)
+	local ko = player.Backpack
+	local ok = ko:FindFirstChild(tooll)
+
+	if ok then
+		if noise == true then
+			local n = {"147825691", "147825691"}
+			local m = math.random(1,2)
+			local w = Instance.new("Sound")
+			local cp = game:GetService("ContentProvider")
+			w.Parent = workspace
+			w.SoundId = "http://www.roblox.com/asset/?id="..n[m]
+			w.Volume = 0.25
+			w.Pitch = 1
+			cp:PreloadAsync({w})
+			print("⚠️ ", player.Name,  "/", player.DisplayName, " has a Ban Hammer ⚠️")
+			local StarterGui = game:GetService("StarterGui")
+			local bindable = Instance.new("BindableFunction")
+			function bindable.OnInvoke(response)
+				if response == "Yes" then
+					w:Stop()
+					local args = {
+						[1] = player.DisplayName.. " has a ban hammer!",
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				else
+					w:Stop()
+				end
+			end
+			
+
+			StarterGui:SetCore("SendNotification", {
+				Title = "⚠️ Warning ⚠️",
+				Text = player.Name.. " / ".. player.DisplayName.. " has a Ban Hammer beware, would you want to tell everyone?",
+				Duration = 30,
+				Callback = bindable,
+				Button1 = "Yes",
+				Button2 = "No"
+			})
+
+			w:Play()
+		else
+			print("⚠️ ", player.Name,  "/", player.DisplayName, " has a Ban Hammer ⚠️")
+			local StarterGui = game:GetService("StarterGui")
+			local bindable = Instance.new("BindableFunction")
+			function bindable.OnInvoke(response)
+				if response == "Yes" then
+					local args = {
+						[1] = player.DisplayName.. " has a ban hammer!",
+						[2] = "All"
+					}
+
+					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
+				end
+			end
+
+			StarterGui:SetCore("SendNotification", {
+				Title = "⚠️ Warning ⚠️",
+				Text = player.Name.. " / ".. player.DisplayName.. " has a Ban Hammer beware, would you want to tell everyone?",
+				Duration = 30,
+				Callback = bindable,
+				Button1 = "Yes",
+				Button2 = "No"
+			})
+
+
+		end
+
+	end
+end)
