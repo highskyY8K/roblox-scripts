@@ -106,7 +106,7 @@ do
 	
 	
 	local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
-		Title = "Teleports",
+		Title = "Teleport to player",
 		Values = playerNames,
 
 		Multi = false,
