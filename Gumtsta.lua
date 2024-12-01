@@ -3,11 +3,11 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V0.4",
+	Title = "Gumstra V0.71",
 	SubTitle = "by highskyY8K",
 	TabWidth = 150,
 	Size = UDim2.fromOffset(580, 360),
-	Acrylic = false, -- if true it breaks the weapons making it unusable
+	Acrylic = false, -- if true it breaks the ranged weapons making it unusable
 	Theme = "Dark",
 	MinimizeKey = Enum.KeyCode.LeftControl 
 })
@@ -28,7 +28,7 @@ do
 	})
 	---main V
 	Tabs.Main:AddParagraph({
-		Title = "warning",
+		Title = "Warning",
 		Content = "Please use these scripts in this tab with caution.\nYou can get banned easily IF u are caught!"
 	})
 	
@@ -129,9 +129,92 @@ do
 	
 	Dropdown:SetValue(Players.LocalPlayer.DisplayName)
 	
+	Tabs.Main:AddSection("Murder")
+	
+	local Toggle = Tabs.Main:AddToggle("whitelistfriends", {Title = "White List Friends", Default = false })
+
+	Toggle:OnChanged(function(Value)
+		_G.whitelistfriends = Value
+	end)
+
+	Options.whitelistfriends:SetValue(false)
+	
+	local Dropdownkillall = Tabs.Main:AddDropdown("Killallmode", {
+		Title = "Kill All Method",
+		Values = {"None", "RPG", "Bomb", "Sword"},
+
+		Multi = false,
+		Default = 1,
+	})
+	
+	Dropdownkillall:OnChanged(function(Value)
+		_G.KAGmode = Value
+	end)
+	
+	Dropdownkillall:SetValue("None")
+	
+	local Toggle = Tabs.Main:AddToggle("killall", {Title = "Kill All", Default = false })
+	local projectilesFolder = game.Workspace:WaitForChild("Projectiles"):WaitForChild("Active")
+	local playerFolder = projectilesFolder:WaitForChild(Players.LocalPlayer.Name)
 	
 	
+	Options.killall:SetValue(false)
 	
+	Toggle:OnChanged(function(Value)
+		playerFolder.ChildAdded:Connect(function(part)
+			if Value == true then
+				if _G.KAGmode == "Bomb" then
+					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.. "'s Bomb" then
+						part.CFrame = CFrame.new(1000, 25, 0)
+						part.Anchored = true
+						wait(2)
+						local startTime = tick()
+						while tick() - startTime < 3 do
+							for _, player in pairs(Players:GetPlayers()) do
+								if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+									if _G.whitelistfriends == true then
+										local isFriend = Players.LocalPlayer:IsFriendsWith(player.UserId)
+										if not isFriend then
+											player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, 0)
+										end
+									else
+										player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, 0)
+									end
+								end
+							end
+							task.wait()
+						end
+						wait()
+					end
+				elseif _G.KAGmode == "RPG" then
+					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.. "'s Rocket" then
+						part.Anchored = false
+						local startTime = tick()
+						while tick() - startTime < 1 do
+							for _, player in pairs(Players:GetPlayers()) do
+								if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+									if _G.whitelistfriends == true then
+										local isFriend = Players.LocalPlayer:IsFriendsWith(player.UserId)
+										if not isFriend then
+											player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, -1)
+											part.Rotation = Vector3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))
+											part.CFrame = CFrame.new(1000, 25, 0)
+										end
+									else
+										player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, -1)
+										part.Rotation = Vector3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))
+										part.CFrame = CFrame.new(1000, 25, 0)
+									end
+								end
+							end
+							task.wait()
+						end
+						wait()
+					end
+				end
+			end
+		end)	
+	end)
 	
 	
 	
@@ -373,7 +456,6 @@ do
 	Tabs.Settings:AddSection("Other")
 	
 	local Toggle = Tabs.Settings:AddToggle("de", {Title = "Detect exploiters", Default = false })
-
 	Toggle:OnChanged(function()
 		if Options.de.Value == true then
 			local function de()
@@ -382,19 +464,28 @@ do
 					for _, player in ipairs(Players:GetPlayers()) do
 						local character = player.Character
 						if character then
+							local repsoncesXD = {player.DisplayName.. " is exploiting and luckly your script is better then his!! :)", player.DisplayName.. " is exploiting 😪", player.DisplayName.. " is 'hacking', bro is NOT him XD", player.DisplayName.. " is exploiting, blud is using IY's fly LMAO"}
 							local humanoid = character:FindFirstChildOfClass("Humanoid")
 							if humanoid then
-								if humanoid:GetState() == Enum.HumanoidStateType.Swimming or humanoid:GetState() == Enum.HumanoidStateType.Flying then
+								_G.DEoldknstats = game.Players[player.name].leaderstats.Knockouts.Value
+								wait(0.5)
+								if humanoid:GetState() == Enum.HumanoidStateType.Swimming or humanoid:GetState() == Enum.HumanoidStateType.Flying or humanoid:GetState() == Enum.HumanoidStateType.PlatformStanding then
 									Fluent:Notify({
 										Title = "Exploiter Detected",
-										Content = "",
-										SubContent = player.DisplayName.. " is exploiting and luckly your script is better then his!! :)",
-										Duration = 12
+										Content = "Reason = Flying",
+										SubContent = repsoncesXD[math.random(1, 4)],
+										Duration = 12 - math.random(1, 11)
+									})
+								elseif game.Players[player.name].leaderstats.Knockouts.Value - _G.DEoldknstats >= 3 then
+									Fluent:Notify({
+										Title = "Exploiter Detected",
+										Content = "Reason = Kill all :O",
+										SubContent = repsoncesXD[math.random(1, 4)],
+										Duration = 12 - math.random(1, 11)
 									})
 								end
 							end
-						end
-						wait(1 / math.random(2, 10))
+						end 
 					end
 				end
 			end
@@ -410,25 +501,13 @@ end
 
 
 
-
--- Addons:
--- SaveManager (Allows you to have a configuration system)
--- InterfaceManager (Allows you to have a interface managment system)
-
--- Hand the library over to our managers
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 
--- Ignore keys that are used by ThemeManager.
--- (we dont want configs to save themes, do we?)
 SaveManager:IgnoreThemeSettings()
 
--- You can add indexes of elements the save manager should ignore
 SaveManager:SetIgnoreIndexes({})
 
--- use case for doing it this way:
--- a script hub could have themes in a global folder
--- and game configs in a separate folder per game
 InterfaceManager:SetFolder("FluentScriptHub")
 SaveManager:SetFolder("FluentScriptHub/specific-game")
 
@@ -439,6 +518,4 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 
--- You can use the SaveManager:LoadAutoloadConfig() to load a config
--- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
