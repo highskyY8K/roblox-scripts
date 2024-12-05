@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V1.1",
+	Title = "Gumstra V1.21",
 	SubTitle = "by highskyY8K",
 	TabWidth = 150,
 	Size = UDim2.fromOffset(580, 360),
@@ -31,9 +31,9 @@ do
 		Title = "Warning",
 		Content = "Please use these scripts in this tab with caution.\nYou can get banned easily IF u are caught!"
 	})
-	
+
 	Tabs.Main:AddSection("Teleports")
-	
+
 	local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
 		Title = "Teleports",
 		Values = {
@@ -52,7 +52,7 @@ do
 
 	Dropdown:OnChanged(function(Value)
 		local plHRP = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
-		
+
 		if plHRP then
 			if Value == "Yellow bottom floor" then
 				plHRP.CFrame = CFrame.new(151, 22, 7) --
@@ -99,12 +99,12 @@ do
 			end	
 		end
 	end)
-	
+
 	--tp to player 
 	local Players = game:GetService("Players")
 	local playerNames = {}
-	
-	
+
+
 	local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
 		Title = "Teleport to player",
 		Values = playerNames,
@@ -116,9 +116,9 @@ do
 	Dropdown:OnChanged(function(Value)
 		for _, player in ipairs(Players:GetPlayers()) do 
 			table.insert(playerNames, player.DisplayName)
-			
+
 		end
-		
+
 		for _, GetplrName in pairs(Players:GetPlayers()) do
 			if GetplrName.DisplayName == Value then
 				local plHRP = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
@@ -126,11 +126,11 @@ do
 			end
 		end
 	end)
-	
+
 	Dropdown:SetValue(Players.LocalPlayer.DisplayName)
-	
+
 	Tabs.Main:AddSection("Murder")
-	
+
 	local Toggle = Tabs.Main:AddToggle("whitelistfriends", {Title = "White List Friends", Default = false })
 
 	Toggle:OnChanged(function(Value)
@@ -138,7 +138,7 @@ do
 	end)
 
 	Options.whitelistfriends:SetValue(false)
-	
+
 	local Dropdownkillall = Tabs.Main:AddDropdown("Killallmode", {
 		Title = "Kill All Method",
 		Values = {"None", "RPG", "Bomb"},
@@ -146,20 +146,20 @@ do
 		Multi = false,
 		Default = 1,
 	})
-	
+
 	Dropdownkillall:OnChanged(function(Value)
 		_G.KAGmode = Value
 	end)
-	
+
 	Dropdownkillall:SetValue("None")
-	
+
 	local Toggle = Tabs.Main:AddToggle("killall", {Title = "Kill All", Default = false })
 	local projectilesFolder = game.Workspace:WaitForChild("Projectiles"):WaitForChild("Active")
 	local playerFolder = projectilesFolder:WaitForChild(Players.LocalPlayer.Name)
-	
-	
+
+
 	Options.killall:SetValue(false)
-	
+
 	Toggle:OnChanged(function(Value)
 		playerFolder.ChildAdded:Connect(function(part)
 			if Options.killall.Value == true then
@@ -215,11 +215,11 @@ do
 			end
 		end)	
 	end)
-	
+
 	Tabs.Main:AddSection("Protection")
-	
+
 	local Toggle = Tabs.Main:AddToggle("ff", {Title = "Force-Field", Default = false })
-	
+
 	Options.ff:SetValue(false)
 
 	Toggle:OnChanged(function(Value)
@@ -249,12 +249,10 @@ do
 										if isNegativeY and isNegativeZ then 
 											for i = 1, math.random(2, 5) do
 												sword.GripPos = Vector3.new(-distance + math.random(150, 350) / 100, -1.2 + math.random(0, 60) / 100, math.random(-425, 400) / 100)
-												task.wait(0.01)
 											end	
 										else
 											for i = 1, math.random(2, 5) do
 												sword.GripPos = Vector3.new(distance - 2, 1.2 + math.random(0, 60) / 100, math.random(-425, 425) / 100)
-												task.wait(0.01)
 											end		
 										end
 									else 
@@ -300,7 +298,7 @@ do
 				end
 			end
 		end
-		
+
 		local function ff()
 			while Options.ff.Value == true do
 				checkProximity()
@@ -310,15 +308,15 @@ do
 		ff()
 
 	end)
-	
-	
 
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 	---Player V
 	Tabs.Player:AddSection("User Modifications")
 
@@ -358,6 +356,38 @@ do
 
 	Slider:SetValue(50)
 
+	Tabs.Player:AddButton({
+		Title = "Hide Avatar (NOT FE)",
+		Description = "Hides your avatar so no one can see it if your making a video.",
+		Callback = function()
+			for _, v in pairs(Players.LocalPlayer.Character:GetChildren()) do
+				if v:IsA("Pants") then
+					v.PantsTemplate = "rbxassetid://0"
+				elseif v:IsA("Accessory") then
+					v:Destroy()
+				elseif v:IsA("Shirt") then
+					v.ShirtTemplate = "rbxassetid://0"
+				end
+			end
+		end
+	})
+
+	local Toggle = Tabs.Player:AddToggle("HPNfriends", {Title = "Hide Your Friend's Displayname", Default = false })
+
+	Toggle:OnChanged(function(Value)
+		for _, player in pairs(Players:GetPlayers()) do
+			if player.Character and player.Character:FindFirstChild("Humanoid") then
+				if Players.LocalPlayer:IsFriendsWith(player.UserId) then
+					if Options.HPNfriends.Value == true then
+						player.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+					else
+						player.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Viewer
+					end
+				end
+			end
+		end
+	end)
+
 	Tabs.Player:AddSection("External scripts")
 
 	Tabs.Player:AddButton({
@@ -367,9 +397,9 @@ do
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 		end
 	})
-	
+
 	Tabs.Player:AddSection("Other")
-	
+
 	local Slider = Tabs.Player:AddSlider("VoidLP", {
 		Title = "Launch Power",
 		Description = "Anti-Void Launch Power",
@@ -383,7 +413,7 @@ do
 	})
 
 	Slider:SetValue(100)
-	
+
 	local Toggle = Tabs.Player:AddToggle("Antivoid", {Title = "Anti-Void", Default = false })
 
 	Toggle:OnChanged(function()
@@ -409,9 +439,9 @@ do
 	end)
 
 	Options.Antivoid:SetValue(false)
-	
+
 	Tabs.Player:AddSection(" ")
-	
+
 	local Slider = Tabs.Player:AddSlider("instakillpower", {
 		Title = "insta-kill Strength",
 		Description = "Sets the power of insta-kill.",
@@ -425,7 +455,7 @@ do
 	})
 
 	Slider:SetValue(1)
-	
+
 	local Toggle = Tabs.Player:AddToggle("instakillsword", {Title = "Insta-Kill Sword", Default = false })
 
 	Toggle:OnChanged(function()
@@ -433,16 +463,16 @@ do
 			while Options.instakillsword.Value == true do
 				local character = game.Players.LocalPlayer.Character
 				local sword = character:FindFirstChild("Sword")
-				
+
 				if sword then 
 					if math.random(0, 1) == 1 then
 						sword.GripPos = Vector3.new(0.0001 * math.random(1, 1 + _G.IKpower), 0.0001 * math.random(1, 1 + _G.IKpower), -1.5 * "1.000" .. math.random(0, _G.IKpower))
 					else
 						sword.GripPos = Vector3.new(0.0002 * math.random(1, 1 + _G.IKpower), 0.0002 * math.random(1, 1 + _G.IKpower), -1.5 * "1.000" .. math.random(0, _G.IKpower))
 					end
-					
+
 				end
-				
+
 				task.wait()
 			end
 		end
@@ -452,7 +482,7 @@ do
 
 	Options.instakillsword:SetValue(false)
 	---Settings V
-	
+
 	Tabs.Settings:AddSection("World")
 
 	local Toggle = Tabs.Settings:AddToggle("daynight", {Title = "Day / Night", Default = false })
@@ -496,7 +526,7 @@ do
 	})
 
 	Tabs.Settings:AddSection("projectiles")
-	
+
 	local Slider = Tabs.Settings:AddSlider("prosize", {
 		Title = "Projectile size",
 		Description = "Increases Your projectile's size by a set amount!",
@@ -507,7 +537,7 @@ do
 		Callback = function(Value)
 			local projectilesFolder = game.Workspace:WaitForChild("Projectiles"):WaitForChild("Active")
 			local playerFolder = projectilesFolder:WaitForChild(game.Players.LocalPlayer.Name)
-			
+
 			playerFolder.ChildAdded:Connect(function()
 				for _, v in pairs(playerFolder:GetChildren()) do
 					if string.find(v.Name, "Pellet") then
@@ -538,9 +568,9 @@ do
 	})
 
 	Slider:SetValue(1)
-	
+
 	Tabs.Settings:AddSection("Other")
-	
+
 	local Toggle = Tabs.Settings:AddToggle("de", {Title = "Detect exploiters V0.4", Default = false })
 	_G.SaidAdmin = ""
 	Toggle:OnChanged(function()
@@ -582,7 +612,7 @@ do
 	end)
 
 	Options.de:SetValue(false)
-	
+
 	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.31", Default = false })
 	Toggle:OnChanged(function()
 		if Options.da.Value == true then
@@ -641,11 +671,6 @@ do
 	Options.da:SetValue(false)
 end
 
---[[
-for _, playername in pairs(game.Players:GetChildren()) do
-	playername.NameDisplayDistance = 0
-end
-]]
 
 
 
