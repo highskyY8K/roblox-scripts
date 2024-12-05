@@ -3,7 +3,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V0.71",
+	Title = "Gumstra V1.1",
 	SubTitle = "by highskyY8K",
 	TabWidth = 150,
 	Size = UDim2.fromOffset(580, 360),
@@ -141,7 +141,7 @@ do
 	
 	local Dropdownkillall = Tabs.Main:AddDropdown("Killallmode", {
 		Title = "Kill All Method",
-		Values = {"None", "RPG", "Bomb", "Sword"},
+		Values = {"None", "RPG", "Bomb"},
 
 		Multi = false,
 		Default = 1,
@@ -162,7 +162,7 @@ do
 	
 	Toggle:OnChanged(function(Value)
 		playerFolder.ChildAdded:Connect(function(part)
-			if Value == true then
+			if Options.killall.Value == true then
 				if _G.KAGmode == "Bomb" then
 					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.. "'s Bomb" then
 						part.CFrame = CFrame.new(1000, 25, 0)
@@ -216,17 +216,103 @@ do
 		end)	
 	end)
 	
+	Tabs.Main:AddSection("Protection")
+	
+	local Toggle = Tabs.Main:AddToggle("ff", {Title = "Force-Field", Default = false })
+	
+	Options.ff:SetValue(false)
+
+	Toggle:OnChanged(function(Value)
+		local function checkProximity()
+			for _, player in pairs(Players:GetPlayers()) do
+				local LocalPlayer = Players.LocalPlayer
+				local Character = game.Workspace:WaitForChild(LocalPlayer.Name)
+				if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+					local distance = (player.Character.HumanoidRootPart.Position - Character:WaitForChild("HumanoidRootPart").Position).magnitude
+					if distance <= math.random(11, 13) and player.Team ~= LocalPlayer.Team then
+						if player.Character.Humanoid.Health > 0 then
+							local headPosition = player.Character.Head.Position
+							local rootPosition = Character.HumanoidRootPart.Position
+							local lookVector = (headPosition - rootPosition).unit
+							lookVector = Vector3.new(lookVector.X, 0, lookVector.Z).unit
+							--
+							if _G.whitelistfriends == true then
+								if not LocalPlayer:IsFriendsWith(player.UserId) then
+									local sword = Character:FindFirstChild("Sword")
+									if sword then
+										sword.Handle.Transparency = 1
+										Character.HumanoidRootPart.CFrame = CFrame.new(rootPosition, rootPosition + lookVector)
+
+										local rotationX, rotationY, rotationZ = sword.Grip.Rotation:ToOrientation()
+										local isNegativeX, isNegativeY, isNegativeZ = rotationX < 0, rotationY < 0, rotationZ < 0
+
+										if isNegativeY and isNegativeZ then 
+											for i = 1, math.random(2, 5) do
+												sword.GripPos = Vector3.new(-distance + math.random(150, 350) / 100, -1.2 + math.random(0, 60) / 100, math.random(-425, 400) / 100)
+												task.wait(0.01)
+											end	
+										else
+											for i = 1, math.random(2, 5) do
+												sword.GripPos = Vector3.new(distance - 2, 1.2 + math.random(0, 60) / 100, math.random(-425, 425) / 100)
+												task.wait(0.01)
+											end		
+										end
+									else 
+										sword = LocalPlayer.Backpack:FindFirstChild("Sword")
+										sword.GripPos = Vector3.new(1000, 0, 0)
+										sword.Parent = Players.LocalPlayer.Character
+									end
+								end
+							else
+								local sword = Character:FindFirstChild("Sword")
+								if sword then
+									sword.Handle.Transparency = 0--hide
+									Character.HumanoidRootPart.CFrame = CFrame.new(rootPosition, rootPosition + lookVector)
+
+									local rotationX, rotationY, rotationZ = sword.Grip.Rotation:ToOrientation()
+									local isNegativeX, isNegativeY, isNegativeZ = rotationX < 0, rotationY < 0, rotationZ < 0
+
+									if isNegativeY and isNegativeZ then 
+										for i = 1, math.random(2, 5) do
+											sword.GripPos = Vector3.new(-distance + math.random(150, 350) / 100, -1.3 + math.random(0, 40) / 100, math.random(-350, 350) / 100)
+										end	
+									else
+										for i = 1, math.random(2, 5) do
+											sword.GripPos = Vector3.new(distance - 2, 1.3 + math.random(0, 40) / 100, math.random(-350, 350) / 100)
+										end		
+									end
+								else 
+									sword = LocalPlayer.Backpack:FindFirstChild("Sword")
+									sword.GripPos = Vector3.new(1000, 0, 0)
+									sword.Parent = Players.LocalPlayer.Character
+								end
+							end
+						else
+							local swordd = Character:FindFirstChild("Sword")
+							if swordd then
+								swordd = LocalPlayer.Character:FindFirstChild("Sword")
+								swordd.Handle.Transparency = 0
+								swordd.Parent = Players.LocalPlayer.Backpack
+								Players.LocalPlayer.Backpack.Sword.GripPos = Vector3.new(0, 0, -1.5)
+							end
+						end
+					end
+				end
+			end
+		end
+		
+		local function ff()
+			while Options.ff.Value == true do
+				checkProximity()
+				wait(0.01)
+			end
+		end
+		ff()
+
+	end)
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
@@ -455,7 +541,8 @@ do
 	
 	Tabs.Settings:AddSection("Other")
 	
-	local Toggle = Tabs.Settings:AddToggle("de", {Title = "Detect exploiters", Default = false })
+	local Toggle = Tabs.Settings:AddToggle("de", {Title = "Detect exploiters V0.4", Default = false })
+	_G.SaidAdmin = ""
 	Toggle:OnChanged(function()
 		if Options.de.Value == true then
 			local function de()
@@ -464,19 +551,20 @@ do
 					for _, player in ipairs(Players:GetPlayers()) do
 						local character = player.Character
 						if character then
-							local repsoncesXD = {player.DisplayName.. " is exploiting and luckly your script is better then his!! :)", player.DisplayName.. " is exploiting 😪", player.DisplayName.. " is 'hacking', bro is NOT him XD", player.DisplayName.. " is exploiting, blud is using IY's fly LMAO"}
+							local repsoncesXD = {player.DisplayName.. " is exploiting and luckly your script is better then his!! :)", player.DisplayName.. " is exploiting 😪", player.DisplayName.. " is 'hacking', bro is NOT him XD", player.DisplayName.. " is exploiting, blud is using IY LMAO"}
 							local humanoid = character:FindFirstChildOfClass("Humanoid")
 							if humanoid then
 								_G.DEoldknstats = game.Players[player.name].leaderstats.Knockouts.Value
-								wait(0.5)
-								if humanoid:GetState() == Enum.HumanoidStateType.Swimming or humanoid:GetState() == Enum.HumanoidStateType.Flying or humanoid:GetState() == Enum.HumanoidStateType.PlatformStanding then
+								_G.DEoldcoords = character.HumanoidRootPart.Position
+								wait(0.25)
+								if humanoid:GetState() == Enum.HumanoidStateType.Swimming or humanoid:GetState() == Enum.HumanoidStateType.Flying or humanoid:GetState() == Enum.HumanoidStateType.PlatformStanding then-- 2p
 									Fluent:Notify({
 										Title = "Exploiter Detected",
 										Content = "Reason = Flying",
 										SubContent = repsoncesXD[math.random(1, 4)],
 										Duration = 12 - math.random(1, 11)
 									})
-								elseif game.Players[player.name].leaderstats.Knockouts.Value - _G.DEoldknstats >= 3 then
+								elseif game.Players[player.name].leaderstats.Knockouts.Value - _G.DEoldknstats >= 3 then-- 2p
 									Fluent:Notify({
 										Title = "Exploiter Detected",
 										Content = "Reason = Kill all :O",
@@ -495,9 +583,69 @@ do
 
 	Options.de:SetValue(false)
 	
+	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.31", Default = false })
+	Toggle:OnChanged(function()
+		if Options.da.Value == true then
+			local function da()
+				while Options.da.Value == true do
+					local Players = game:GetService("Players")
+					for _, player in ipairs(Players:GetPlayers()) do
+						local character = player.Character
+						if character then
+							local knownadminslist = {"maya_png", "DanteLike", "fimnik", "whojenny2", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety"}
+							local repsoncesXD = {player.DisplayName.. " is an admin., PLEASE use your scripts CAREFULLY!!", player.DisplayName.. " is an admin., They might be here for you.", player.DisplayName.. " is an admin., PLEASE use your scripts CAREFULLY!!"}
+							local humanoid = character:FindFirstChildOfClass("Humanoid")
+							if humanoid then
+								wait(0.25)
+								if table.find(knownadminslist, player.name) then --1p
+									if _G.SaidAdmin ~= player.Name then
+										_G.SaidAdmin = player.Name
+										Fluent:Notify({
+											Title = "Admin Detected.",
+											Content = "Reason = Known Admin.",
+											SubContent = repsoncesXD[math.random(1, 3)],
+											Duration = 12 - math.random(1, 11)
+										})
+									end
+								else
+									local noSpawnPoints = true
+									if game.Players[player.name].Team == "Spectators" then -- 2p
+										for _, AllSpires in pairs(game.Workspace.Doomspires:GetChildren()) do
+											for _, v in pairs(AllSpires.Spawnpoints:GetChildren()) do
+												noSpawnPoints = false
+												break
+											end
+											if not noSpawnPoints then 
+												break 
+											end
+										end
+										if noSpawnPoints == true then
+											Fluent:Notify({
+												Title = "Admin Detected.",
+												Content = "Reason = Switching Teams.",
+												SubContent = repsoncesXD[math.random(1, 3)],
+												Duration = 12 - math.random(1, 11)
+											})
+										end
+									end
+								end
+							end
+						end 
+					end
+				end
+			end
+			da()
+		end
+	end)
+
+	Options.da:SetValue(false)
 end
 
-
+--[[
+for _, playername in pairs(game.Players:GetChildren()) do
+	playername.NameDisplayDistance = 0
+end
+]]
 
 
 
