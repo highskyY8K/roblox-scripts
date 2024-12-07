@@ -429,7 +429,7 @@ do
 		if Options.invisfly.Value == true then
 			local pastposhrp = Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 100000000000, 0)
-			wait(0.1)
+			wait(0.05 * math.random(2, 8))
 			local Head = Players.LocalPlayer.Character:WaitForChild("Head")
 			Head.Anchored = true
 
