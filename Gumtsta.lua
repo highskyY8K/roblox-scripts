@@ -427,13 +427,16 @@ do
 		local CFloop
 
 		if Options.invisfly.Value == true then
+			local pastposhrp = Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 100000000000, 0)
+			wait(0.1)
 			local Head = Players.LocalPlayer.Character:WaitForChild("Head")
 			Head.Anchored = true
 
 			if CFloop then 
 				CFloop:Disconnect()
 			end
-
+			
 			CFloop = RunService.Heartbeat:Connect(function(deltaTime)
 				if Options.invisfly.Value == true then
 					local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
@@ -448,7 +451,7 @@ do
 					Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
 				end
 			end)
-			print("New CFloop connected")
+			Head.CFrame = pastposhrp
 		else
 			if CFloop then
 				CFloop:Disconnect()
