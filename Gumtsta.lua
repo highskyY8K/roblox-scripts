@@ -6,7 +6,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V1.42",
+	Title = "Gumstra V1.49",
 	SubTitle = "by highskyY8K",
 	TabWidth = 130,
 	Size = UDim2.fromOffset(580, 360),
@@ -445,8 +445,6 @@ do
 			
 			CFloop = RunService.Heartbeat:Connect(function(deltaTime)
 				if Options.invisfly.Value == true then
-					Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Sit = true
-					
 					local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
 					local headCFrame = Head.CFrame
 					local cameraCFrame = workspace.CurrentCamera.CFrame
@@ -665,8 +663,8 @@ do
 								if bru then
 									_G.DEoldcoords = bru.Position
 								end
-								wait(0.25)
 								]]
+								wait(0.25)
 								if player.Name ~= Players.LocalPlayer.Name then
 									if humanoid:GetState() == Enum.HumanoidStateType.Swimming or humanoid:GetState() == Enum.HumanoidStateType.Flying or humanoid:GetState() == Enum.HumanoidStateType.PlatformStanding then-- 2p
 										Fluent:Notify({
