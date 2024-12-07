@@ -466,7 +466,6 @@ do
 			if Head then
 				Head.Anchored = false
 			end
-			Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Sit = false
 		end
 		
 
