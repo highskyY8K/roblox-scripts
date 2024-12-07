@@ -420,7 +420,13 @@ do
 
 
 	Toggle:OnChanged(function(Value)
+		--[[
 		Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:Connect(function()
+			Options.invisfly:SetValue(false)
+		end)
+		]]
+		
+		Players.LocalPlayer.CharacterAdded:Connect(function()
 			Options.invisfly:SetValue(false)
 		end)
 
@@ -439,6 +445,8 @@ do
 			
 			CFloop = RunService.Heartbeat:Connect(function(deltaTime)
 				if Options.invisfly.Value == true then
+					Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Sit = true
+					
 					local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
 					local headCFrame = Head.CFrame
 					local cameraCFrame = workspace.CurrentCamera.CFrame
@@ -460,8 +468,9 @@ do
 			if Head then
 				Head.Anchored = false
 			end
+			Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Sit = false
 		end
-
+		
 
 
 	end)
@@ -651,25 +660,29 @@ do
 							local humanoid = character:FindFirstChildOfClass("Humanoid")
 							if humanoid then
 								_G.DEoldknstats = game.Players[player.name].leaderstats.Knockouts.Value
+								--[[
 								local bru = character:FindFirstChild("HumanoidRootPart")
 								if bru then
 									_G.DEoldcoords = bru.Position
 								end
 								wait(0.25)
-								if humanoid:GetState() == Enum.HumanoidStateType.Swimming or humanoid:GetState() == Enum.HumanoidStateType.Flying or humanoid:GetState() == Enum.HumanoidStateType.PlatformStanding then-- 2p
-									Fluent:Notify({
-										Title = "Exploiter Detected",
-										Content = "Reason = Flying",
-										SubContent = repsoncesXD[math.random(1, 4)],
-										Duration = 12 - math.random(1, 11)
-									})
-								elseif game.Players[player.name].leaderstats.Knockouts.Value - _G.DEoldknstats >= 3 then-- 2p
-									Fluent:Notify({
-										Title = "Exploiter Detected",
-										Content = "Reason = Kill all :O",
-										SubContent = repsoncesXD[math.random(1, 4)],
-										Duration = 12 - math.random(1, 11)
-									})
+								]]
+								if player.Name ~= Players.LocalPlayer.Name then
+									if humanoid:GetState() == Enum.HumanoidStateType.Swimming or humanoid:GetState() == Enum.HumanoidStateType.Flying or humanoid:GetState() == Enum.HumanoidStateType.PlatformStanding then-- 2p
+										Fluent:Notify({
+											Title = "Exploiter Detected",
+											Content = "Reason = Flying",
+											SubContent = repsoncesXD[math.random(1, 4)],
+											Duration = 12 - math.random(1, 11)
+										})
+									elseif game.Players[player.name].leaderstats.Knockouts.Value - _G.DEoldknstats >= 3 then-- 2p
+										Fluent:Notify({
+											Title = "Exploiter Detected",
+											Content = "Reason = Kill all :O",
+											SubContent = repsoncesXD[math.random(1, 4)],
+											Duration = 12 - math.random(1, 11)
+										})
+									end
 								end
 							end
 						end 
