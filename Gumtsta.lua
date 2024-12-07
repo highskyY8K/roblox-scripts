@@ -424,40 +424,43 @@ do
 			Options.invisfly:SetValue(false)
 		end)
 
-
 		local CFloop
 
-		if Value == true then
+		if Options.invisfly.Value == true then
 			local Head = Players.LocalPlayer.Character:WaitForChild("Head")
 			Head.Anchored = true
 
 			if CFloop then 
-				CFloop:Disconnect() 
+				CFloop:Disconnect()
 			end
 
 			CFloop = RunService.Heartbeat:Connect(function(deltaTime)
-				local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
-				local headCFrame = Head.CFrame
-				local cameraCFrame = workspace.CurrentCamera.CFrame
-				local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
-				cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
-				local cameraPosition = cameraCFrame.Position
-				local headPosition = headCFrame.Position
+				if Options.invisfly.Value == true then
+					local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
+					local headCFrame = Head.CFrame
+					local cameraCFrame = workspace.CurrentCamera.CFrame
+					local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
+					cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
+					local cameraPosition = cameraCFrame.Position
+					local headPosition = headCFrame.Position
 
-				local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
-				Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
+					local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
+					Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
+				end
 			end)
-
+			print("New CFloop connected")
 		else
 			if CFloop then
 				CFloop:Disconnect()
 			end
-			local Head = Players.LocalPlayer.Character:WaitForChild("Head")
-			Head.Anchored = false
-			if CFloop then
-				CFloop:Disconnect()
+			local Head = Players.LocalPlayer.Character:FindFirstChild("Head")
+			if Head then
+				Head.Anchored = false
 			end
 		end
+
+
+
 	end)
 
 	local Slider = Tabs.Player:AddSlider("VoidLP", {
