@@ -6,7 +6,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V1.56",
+	Title = "Gumstra V1.6",
 	SubTitle = "by highskyY8K",
 	TabWidth = 130,
 	Size = UDim2.fromOffset(580, 360),
@@ -458,10 +458,10 @@ do
 				end
 			end
 
+			game:GetService("RunService").RenderStepped:Connect(UpdateBox)
+
 			player.CharacterRemoving:Connect(function()
-				if Options.esp.Value then
-					Box.Visible = false
-				end
+				Box.Visible = false
 			end)
 
 			UpdateBox()
