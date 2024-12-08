@@ -6,7 +6,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V1.49",
+	Title = "Gumstra V1.54",
 	SubTitle = "by highskyY8K",
 	TabWidth = 130,
 	Size = UDim2.fromOffset(580, 360),
@@ -400,6 +400,84 @@ do
 		end
 	})
 
+	Tabs.Player:AddSection("ESP")
+
+	local Slider = Tabs.Player:AddSlider("espsize", {
+		Title = "Esp Size",
+		Description = "Changes the size of esp's box",
+		Default = 2.5,
+		Min = 0.5,
+		Max = 5,
+		Rounding = 1,
+		Callback = function(Value)
+			_G.espsize = Value
+		end
+	})
+
+	Slider:SetValue(2.5)
+	
+	local Toggle = Tabs.Player:AddToggle("esp", {Title = "Esp", Default = false })
+
+	Toggle:OnChanged(function(Value)
+		local function BrightenColor(color)
+			return Color3.new(
+				math.min(color.R * 1.3, 1),
+				math.min(color.G * 1.3, 1),
+				math.min(color.B * 1.3, 1)
+			)
+		end
+
+		local function CreateBox(player)
+			local Box = Drawing.new("Square")
+			Box.Visible = false
+			Box.Transparency = 1
+
+			game:GetService("RunService").RenderStepped:Connect(function()
+				if Options.esp.Value then
+					Box.Thickness = _G.espsize
+					local character = player.Character
+					if character and character:FindFirstChild("HumanoidRootPart") then
+						local rootPart = character:FindFirstChild("HumanoidRootPart")
+						local position, onScreen = workspace.CurrentCamera:WorldToViewportPoint(rootPart.Position)
+
+						Box.Color = BrightenColor(player.TeamColor.Color)
+
+						if onScreen then
+							Box.Size = Vector2.new(2000 / position.Z, 4000 / position.Z)
+							Box.Position = Vector2.new(position.X - Box.Size.X / 2, position.Y - Box.Size.Y / 2)
+							Box.Visible = true
+						else
+							Box.Visible = false
+						end
+					else
+						Box.Visible = false
+					end
+				else
+					Box.Visible = false
+				end
+			end)
+
+			Players.LocalPlayer.CharacterRemoving:Connect(function()
+				Box.Visible = false
+			end)
+		end
+
+		Players.PlayerAdded:Connect(function(player)
+			if player ~= Players.LocalPlayer then
+				CreateBox(player)
+			end
+		end)
+
+		for _, player in pairs(Players:GetPlayers()) do
+			if player ~= Players.LocalPlayer then
+				CreateBox(player)
+			end
+		end
+
+	end)
+	
+	
+
 	Tabs.Player:AddSection("Other")
 
 	local Slider = Tabs.Player:AddSlider("Invisflyspeed", {
@@ -420,12 +498,6 @@ do
 
 
 	Toggle:OnChanged(function(Value)
-		--[[
-		Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Died:Connect(function()
-			Options.invisfly:SetValue(false)
-		end)
-		]]
-		
 		Players.LocalPlayer.CharacterAdded:Connect(function()
 			Options.invisfly:SetValue(false)
 		end)
