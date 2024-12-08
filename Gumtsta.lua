@@ -6,7 +6,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V1.55",
+	Title = "Gumstra V1.56",
 	SubTitle = "by highskyY8K",
 	TabWidth = 130,
 	Size = UDim2.fromOffset(580, 360),
@@ -399,6 +399,7 @@ do
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 		end
 	})
+	
 
 	Tabs.Player:AddSection("ESP")
 
@@ -418,7 +419,7 @@ do
 	
 	local Toggle = Tabs.Player:AddToggle("esp", {Title = "Esp", Default = false })
 
-	Toggle:OnChanged(function(Value)
+	Toggle:OnChanged(function(Value) --TODO CHANGE THE LOOP TO A WHILE LOOP LIKE THE OTHERS EXAMPLE WHILE TRUE DO WAIT(0.03) SO ON, this lags the game DONT UPDATE WITHOUT THIS
 		local function BrightenColor(color)
 			return Color3.new(
 				math.min(color.R * 1.3, 1),
@@ -432,8 +433,7 @@ do
 			Box.Visible = false
 			Box.Transparency = 1
 
-			game:GetService("RunService").RenderStepped:Connect(function()
-				wait(0.03)
+			local function UpdateBox()
 				if Options.esp.Value then
 					Box.Thickness = _G.espsize
 					local character = player.Character
@@ -456,16 +456,23 @@ do
 				else
 					Box.Visible = false
 				end
+			end
+
+			player.CharacterRemoving:Connect(function()
+				if Options.esp.Value then
+					Box.Visible = false
+				end
 			end)
 
-			Players.LocalPlayer.CharacterRemoving:Connect(function()
-				Box.Visible = false
-			end)
+			UpdateBox()
+
 		end
 
 		Players.PlayerAdded:Connect(function(player)
-			if player ~= Players.LocalPlayer then
-				CreateBox(player)
+			if Options.esp.Value then
+				if player ~= Players.LocalPlayer then
+					CreateBox(player)
+				end
 			end
 		end)
 
@@ -474,7 +481,6 @@ do
 				CreateBox(player)
 			end
 		end
-
 	end)
 	
 	
@@ -500,7 +506,9 @@ do
 
 	Toggle:OnChanged(function(Value)
 		Players.LocalPlayer.CharacterAdded:Connect(function()
-			Options.invisfly:SetValue(false)
+			if Options.invisfly.Value then
+				Options.invisfly:SetValue(false)
+			end
 		end)
 
 		local CFloop
@@ -517,6 +525,7 @@ do
 			end
 			
 			CFloop = RunService.Heartbeat:Connect(function(deltaTime)
+				print("running")
 				if Options.invisfly.Value == true then
 					local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
 					local headCFrame = Head.CFrame
