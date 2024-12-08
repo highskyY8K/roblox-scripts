@@ -1,12 +1,15 @@
-local RunService = game:GetService("RunService")
+--services
 local Players = game:GetService("Players")
-
+local RunService = game:GetService("RunService")
+--loadstrings
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+--arrays
+local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety"}
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V1.6",
+	Title = "Gumstra V1.605",
 	SubTitle = "by highskyY8K",
 	TabWidth = 130,
 	Size = UDim2.fromOffset(580, 360),
@@ -419,7 +422,7 @@ do
 	
 	local Toggle = Tabs.Player:AddToggle("esp", {Title = "Esp", Default = false })
 
-	Toggle:OnChanged(function(Value) --TODO CHANGE THE LOOP TO A WHILE LOOP LIKE THE OTHERS EXAMPLE WHILE TRUE DO WAIT(0.03) SO ON, this lags the game DONT UPDATE WITHOUT THIS
+	Toggle:OnChanged(function(Value)
 		local function BrightenColor(color)
 			return Color3.new(
 				math.min(color.R * 1.3, 1),
@@ -429,43 +432,74 @@ do
 		end
 
 		local function CreateBox(player)
-			local Box = Drawing.new("Square")
-			Box.Visible = false
-			Box.Transparency = 1
+			local function BrightenColor(color)
+				return Color3.new(
+					math.min(color.R * 1.3, 1),
+					math.min(color.G * 1.3, 1),
+					math.min(color.B * 1.3, 1)
+				)
+			end
 
-			local function UpdateBox()
-				if Options.esp.Value then
-					Box.Thickness = _G.espsize
-					local character = player.Character
-					if character and character:FindFirstChild("HumanoidRootPart") then
-						local rootPart = character:FindFirstChild("HumanoidRootPart")
-						local position, onScreen = workspace.CurrentCamera:WorldToViewportPoint(rootPart.Position)
+			local function CreateBox(player)
+				local Box = Drawing.new("Square")
+				Box.Visible = false
+				Box.Transparency = 1
 
-						Box.Color = BrightenColor(player.TeamColor.Color)
+				local function UpdateBox()
+					if Options.esp.Value then
+						Box.Thickness = _G.espsize
+						local character = player.Character
+						if character and character:FindFirstChild("HumanoidRootPart") then
+							local rootPart = character:FindFirstChild("HumanoidRootPart")
+							local position, onScreen = workspace.CurrentCamera:WorldToViewportPoint(rootPart.Position)
 
-						if onScreen then
-							Box.Size = Vector2.new(2000 / position.Z, 4000 / position.Z)
-							Box.Position = Vector2.new(position.X - Box.Size.X / 2, position.Y - Box.Size.Y / 2)
-							Box.Visible = true
+							if player:IsInGroup(13116289) then
+								local hue = (tick() * 2) % 5 / 5
+								Box.Color = Color3.fromHSV(hue, 1, 1)
+							elseif table.find(knownadminslist, player.Name) then
+								Box.Color = Color3.fromRGB(0, 0, 0)						
+							else
+								Box.Color = BrightenColor(player.TeamColor.Color)
+							end
+
+							if onScreen then
+								Box.Size = Vector2.new(2000 / position.Z, 4000 / position.Z)
+								Box.Position = Vector2.new(position.X - Box.Size.X / 2, position.Y - Box.Size.Y / 2)
+								Box.Visible = true
+							else
+								Box.Visible = false
+							end
 						else
 							Box.Visible = false
 						end
 					else
 						Box.Visible = false
 					end
-				else
-					Box.Visible = false
 				end
+
+				game:GetService("RunService").RenderStepped:Connect(UpdateBox)
+
+				player.CharacterRemoving:Connect(function()
+					Box.Visible = false
+				end)
+
+				UpdateBox()
+
 			end
 
-			game:GetService("RunService").RenderStepped:Connect(UpdateBox)
-
-			player.CharacterRemoving:Connect(function()
-				Box.Visible = false
+			Players.PlayerAdded:Connect(function(player)
+				if Options.esp.Value then
+					if player ~= Players.LocalPlayer then
+						CreateBox(player)
+					end
+				end
 			end)
 
-			UpdateBox()
-
+			for _, player in pairs(Players:GetPlayers()) do
+				if player ~= Players.LocalPlayer then
+					CreateBox(player)
+				end
+			end
 		end
 
 		Players.PlayerAdded:Connect(function(player)
@@ -525,7 +559,6 @@ do
 			end
 			
 			CFloop = RunService.Heartbeat:Connect(function(deltaTime)
-				print("running")
 				if Options.invisfly.Value == true then
 					local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
 					local headCFrame = Head.CFrame
@@ -783,7 +816,6 @@ do
 					for _, player in ipairs(Players:GetPlayers()) do
 						local character = player.Character
 						if character then
-							local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety"}
 							local repsoncesXD = {player.DisplayName.. " is an admin., PLEASE use your scripts CAREFULLY!!", player.DisplayName.. " is an admin., They might be here for you.", player.DisplayName.. " is an admin., PLEASE use your scripts CAREFULLY!!"}
 							local humanoid = character:FindFirstChildOfClass("Humanoid")
 							if humanoid then
