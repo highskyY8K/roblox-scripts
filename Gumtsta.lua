@@ -6,7 +6,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-	Title = "Gumstra V1.54",
+	Title = "Gumstra V1.55",
 	SubTitle = "by highskyY8K",
 	TabWidth = 130,
 	Size = UDim2.fromOffset(580, 360),
@@ -433,6 +433,7 @@ do
 			Box.Transparency = 1
 
 			game:GetService("RunService").RenderStepped:Connect(function()
+				wait(0.03)
 				if Options.esp.Value then
 					Box.Thickness = _G.espsize
 					local character = player.Character
