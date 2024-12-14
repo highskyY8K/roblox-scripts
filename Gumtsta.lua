@@ -1,1 +1,925 @@
-local v0=game:GetService("Players");local v1=game:GetService("RunService");local v2=game:GetService("UserInputService");local v3=loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))();local v4=loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))();local v5=loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))();local v6="Gumstra V1.612";local v7={"maya_png","DanteLike","fimnik","MishaHahaLol","s8nIV","cowlover4499","gamertomsuper","Audaciety"};local function v8(v12) local v13=v0.LocalPlayer:FindFirstChildOfClass("Backpack");local v14=v0.LocalPlayer.Character;local v15=v13:FindFirstChild(v12);if v15 then wait(0.25 -0 );v15.GripPos=Vector3.new(5 + 70 ,266 + 484 ,75);v15.Parent=v14;wait(885.1 -(261 + 624) );local v62=v14:FindFirstChild(v12);if (v12=="Rocket") then v62.GripPos=Vector3.new(0.579 -0 , -(1080.596 -(1020 + 60)),0.074);elseif (v12=="Bomb") then v62.GripPos=Vector3.new(1423 -(630 + 793) , -0.07000014930963516,0 -0 );end end end local v9=v3:CreateWindow({Title=v6,SubTitle="by highskyY8K",TabWidth=615 -485 ,Size=UDim2.fromOffset(580,142 + 218 ),Acrylic=false,Theme="Dark",MinimizeKey=Enum.KeyCode.LeftControl});local v10={Main=v9:AddTab({Title="Main",Icon="locate"}),Player=v9:AddTab({Title="Player",Icon="user"}),Settings=v9:AddTab({Title="Settings",Icon="settings"})};local v11=v3.Options;do v3:Notify({Title="WARNING",SubContent="If you use this script or any other you can get banned depending on what you use, USE CAREFULLY!!",Duration=(34 -24) + math.random(1747 -(760 + 987) ,20) });v10.Main:AddParagraph({Title="Warning",Content="Please use these scripts in this tab with caution.\nYou can get banned easily IF u are caught!"});v10.Main:AddSection("Teleports");local v16=v10.Main:AddDropdown("Dropdown",{Title="Teleports",Values={"Yellow bottom floor","Yellow top floor","Yellow Bridge","Yellow Hut","Red bottom floor","Red top floor","Red Bridge","Red Hut","Blue bottom floor","Blue top floor","Blue Bridge","Blue Hut","Green bottom floor","Green top floor","Green Bridge","Green Hut","Spectator:PWNAGE","Spectator:Minigames","Spectator:Frenzy","Spectator:CrossRoads","Spectator:LeaderBoard","None"},Multi=false,Default=1});v16:SetValue("None");v16:OnChanged(function(v24) local v25=game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart");if v25 then if (v24=="Yellow bottom floor") then v25.CFrame=CFrame.new(332 -181 ,36 -(9 + 5) ,383 -(85 + 291) );elseif (v24=="Yellow top floor") then v25.CFrame=CFrame.new(132,1382 -(243 + 1022) , -1);elseif (v24=="Yellow Bridge") then v25.CFrame=CFrame.new(357 -263 ,109 + 22 ,"-0");elseif (v24=="Yellow Hut") then v25.CFrame=CFrame.new(130,1309 -(1123 + 57) ,0 + 0 );elseif (v24=="Red bottom floor") then v25.CFrame=CFrame.new( -150,276 -(163 + 91) , -(1936 -(1869 + 61)));elseif (v24=="Red top floor") then v25.CFrame=CFrame.new( -131,33 + 84 ,"-0");elseif (v24=="Red Bridge") then v25.CFrame=CFrame.new( -(330 -236),200 -69 ,0);elseif (v24=="Red Hut") then v25.CFrame=CFrame.new( -130,18 + 111 ,1 -0 );elseif (v24=="Blue bottom floor") then v25.CFrame=CFrame.new( -6,21 + 1 ,152);elseif (v24=="Blue top floor") then v25.CFrame=CFrame.new( -(1475 -(1329 + 145)),117,1102 -(140 + 831) );elseif (v24=="Blue Bridge") then v25.CFrame=CFrame.new(1850 -(1409 + 441) ,849 -(15 + 703) ,44 + 51 );elseif (v24=="Blue Hut") then v25.CFrame=CFrame.new(1,129,132);elseif (v24=="Green bottom floor") then v25.CFrame=CFrame.new(444 -(262 + 176) ,22, -(1872 -(345 + 1376)));elseif (v24=="Green top floor") then v25.CFrame=CFrame.new( -(689 -(198 + 490)),516 -399 , -(314 -183));elseif (v24=="Green Bridge") then v25.CFrame=CFrame.new("-0",1337 -(696 + 510) , -(196 -102));elseif (v24=="Green Hut") then v25.CFrame=CFrame.new( -(1263 -(1091 + 171)),129, -(22 + 109));elseif (v24=="Spectator:PWNAGE") then v25.CFrame=CFrame.new( -32,2364 -1613 ,105 -73 );elseif (v24=="Spectator:Minigames") then v25.CFrame=CFrame.new( -(406 -(123 + 251)),751, -(159 -127));elseif (v24=="Spectator:Frenzy") then v25.CFrame=CFrame.new(730 -(208 + 490) ,64 + 687 , -(15 + 17));elseif (v24=="Spectator:CrossRoads") then v25.CFrame=CFrame.new(868 -(660 + 176) ,751,32);elseif (v24=="Spectator:LeaderBoard") then v25.CFrame=CFrame.new( -39,87 + 632 ,202 -(14 + 188) );end end end);local v17={};local v16=v10.Main:AddDropdown("Dropdown",{Title="Teleport to player",Values=v17,Multi=false,Default=676 -(534 + 141) });v16:OnChanged(function(v26) for v63,v64 in ipairs(v0:GetPlayers()) do table.insert(v17,v64.DisplayName);end for v65,v66 in pairs(v0:GetPlayers()) do if (v66.DisplayName==v26) then local v106=0 + 0 ;local v107;while true do if (v106==0) then v107=game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart");v107.CFrame=v66.Character:WaitForChild("HumanoidRootPart").CFrame;break;end end end end end);v16:SetValue(v0.LocalPlayer.DisplayName);v10.Main:AddSection("Murder");local v18=v10.Main:AddToggle("whitelistfriends",{Title="White List Friends",Default=false});v18:OnChanged(function(v27) _G.whitelistfriends=v27;end);v11.whitelistfriends:SetValue(false);local v19=v10.Main:AddDropdown("Killallmode",{Title="Kill All Method",Values={"None","RPG","Bomb"},Multi=false,Default=1 -0 });v19:OnChanged(function(v28) if (v28=="RPG") then _G.KAGmode="Rocket";else _G.KAGmode=v28;end end);v19:SetValue("None");local v18=v10.Main:AddToggle("killall",{Title="Kill All",Default=false});local v20=game.Workspace:WaitForChild("Projectiles"):WaitForChild("Active");local v21=v20:WaitForChild(v0.LocalPlayer.Name);v11.killall:SetValue(false);v18:OnChanged(function(v29) v21.ChildAdded:Connect(function(v67) if (v11.killall.Value==true) then if (_G.KAGmode=="Bomb") then if (v67:IsA("Part") and (v67.Name==(v0.LocalPlayer.Name   .. "'s Bomb"))) then local v139=0;local v140;while true do if (v139==(0 -0)) then v67.CFrame=CFrame.new(537 + 463 ,16 + 9 ,396 -(115 + 281) );v67.Anchored=true;v139=2 -1 ;end if (v139==(2 + 0)) then while (tick() -v140)<3  do local v194=0 -0 ;while true do if (v194==(0 -0)) then for v228,v229 in pairs(v0:GetPlayers()) do if ((v229~=v0.LocalPlayer) and v229.Character and v229.Character:FindFirstChild("HumanoidRootPart")) then if (_G.whitelistfriends==true) then local v264=867 -(550 + 317) ;local v265;while true do if (v264==(0 -0)) then v265=v0.LocalPlayer:IsFriendsWith(v229.UserId);if  not v265 then v229.Character.HumanoidRootPart.CFrame=CFrame.new(1000,25,0);end break;end end else v229.Character.HumanoidRootPart.CFrame=CFrame.new(1405 -405 ,25,0 -0 );end end end task.wait();break;end end end wait();break;end if (v139==1) then wait(287 -(134 + 151) );v140=tick();v139=1667 -(970 + 695) ;end end end elseif (_G.KAGmode=="Rocket") then if (v67:IsA("Part") and (v67.Name==(v0.LocalPlayer.Name   .. "'s Rocket"))) then local v169=0 -0 ;local v170;while true do if (v169==(1990 -(582 + 1408))) then v67.Anchored=false;v170=tick();v169=1;end if (1==v169) then while (tick() -v170)<(3 -2)  do for v223,v224 in pairs(v0:GetPlayers()) do if ((v224~=v0.LocalPlayer) and v224.Character and v224.Character:FindFirstChild("HumanoidRootPart")) then if (_G.whitelistfriends==true) then local v251=v0.LocalPlayer:IsFriendsWith(v224.UserId);if  not v251 then v224.Character.HumanoidRootPart.CFrame=CFrame.new(1258 -258 ,94 -69 , -(1825 -(1195 + 629)));v67.Rotation=Vector3.new(math.random(0 -0 ,360),math.random(0,360),math.random(241 -(187 + 54) ,1140 -(162 + 618) ));v67.CFrame=CFrame.new(701 + 299 ,25,0 + 0 );end else local v252=0 -0 ;while true do if (v252==(1 -0)) then v67.CFrame=CFrame.new(79 + 921 ,25,1636 -(1373 + 263) );break;end if (v252==(1000 -(451 + 549))) then v224.Character.HumanoidRootPart.CFrame=CFrame.new(316 + 684 ,25, -(1 -0));v67.Rotation=Vector3.new(math.random(0,360),math.random(0 -0 ,1744 -(746 + 638) ),math.random(0 + 0 ,546 -186 ));v252=342 -(218 + 123) ;end end end end end task.wait();end wait();break;end end end end end end);end);v10.Main:AddSection("Protection");local v18=v10.Main:AddToggle("ff",{Title="Force-Field",Default=false});v11.ff:SetValue(false);v18:OnChanged(function(v30) local function v31() for v79,v80 in pairs(v0:GetPlayers()) do local v81=v0.LocalPlayer;local v82=game.Workspace:WaitForChild(v81.Name);if ((v80~=v81) and v80.Character and v80.Character:FindFirstChild("HumanoidRootPart")) then local v110=(v80.Character.HumanoidRootPart.Position-v82:WaitForChild("HumanoidRootPart").Position).magnitude;if ((v110<=11) and (v80.Team~=v81.Team)) then if (v80.Character.Humanoid.Health>0) then local v151=1581 -(1535 + 46) ;local v152;local v153;local v154;while true do if (v151==1) then v154=(v152-v153).unit;v154=Vector3.new(v154.X,0 + 0 ,v154.Z).unit;v151=2;end if (v151==2) then if (_G.whitelistfriends==true) then if  not v81:IsFriendsWith(v80.UserId) then local v230=v82:FindFirstChild("Sword");if v230 then v230.Handle.Transparency=1;v82.HumanoidRootPart.CFrame=CFrame.new(v153,v153 + v154 );local v239,v240,v241=v230.Grip.Rotation:ToOrientation();local v242,v243,v244=v239<0 ,v240<(0 + 0) ,v241<(560 -(306 + 254)) ;if (v243 and v244) then for v272=1 + 0 ,math.random(2,5) do v230.GripPos=Vector3.new( -v110 + (math.random(294 -144 ,1817 -(899 + 568) )/100) , -1.3 + (math.random(0 + 0 ,96 -56 )/100) ,math.random( -350,953 -(268 + 335) )/(390 -(60 + 230)) );end else for v274=573 -(426 + 146) ,math.random(1 + 1 ,1461 -(282 + 1174) ) do v230.GripPos=Vector3.new(v110-2 ,1.3 + (math.random(811 -(569 + 242) ,40)/(288 -188)) ,math.random( -(21 + 329),1374 -(706 + 318) )/(1351 -(721 + 530)) );end end else v230=v81.Backpack:FindFirstChild("Sword");v230.GripPos=Vector3.new(2271 -(945 + 326) ,0 -0 ,0 + 0 );v230.Parent=v0.LocalPlayer.Character;end end else local v216=0;local v217;while true do if (v216==(700 -(271 + 429))) then v217=v82:FindFirstChild("Sword");if v217 then v217.Handle.Transparency=1;v82.HumanoidRootPart.CFrame=CFrame.new(v153,v153 + v154 );local v255,v256,v257=v217.Grip.Rotation:ToOrientation();local v258,v259,v260=v255<0 ,v256<0 ,v257<(0 + 0) ;if (v259 and v260) then for v279=1501 -(1408 + 92) ,math.random(2,1091 -(461 + 625) ) do v217.GripPos=Vector3.new( -v110 + (math.random(150,1638 -(993 + 295) )/(6 + 94)) , -1.3 + (math.random(0,1211 -(418 + 753) )/100) ,math.random( -(134 + 216),37 + 313 )/(30 + 70) );end else for v281=1 + 0 ,math.random(531 -(406 + 123) ,1774 -(1749 + 20) ) do v217.GripPos=Vector3.new(v110-(1 + 1) ,1.3 + (math.random(1322 -(1249 + 73) ,15 + 25 )/100) ,math.random( -(1495 -(466 + 679)),841 -491 )/100 );end end else v217=v81.Backpack:FindFirstChild("Sword");v217.GripPos=Vector3.new(2860 -1860 ,1900 -(106 + 1794) ,0 + 0 );v217.Parent=v0.LocalPlayer.Character;end break;end end end break;end if (v151==(0 + 0)) then v152=v80.Character.Head.Position;v153=v82.HumanoidRootPart.Position;v151=2 -1 ;end end else local v155=0 -0 ;local v156;while true do if (v155==(114 -(4 + 110))) then v156=v82:FindFirstChild("Sword");if v156 then v156=v81.Character:FindFirstChild("Sword");v156.Handle.Transparency=584 -(57 + 527) ;v156.Parent=v0.LocalPlayer.Backpack;v0.LocalPlayer.Backpack.Sword.GripPos=Vector3.new(1427 -(41 + 1386) ,103 -(17 + 86) , -(1.5 + 0));end break;end end end end end end end local function v32() while v11.ff.Value==true  do v31();wait(0.01);end end v32();end);v10.Player:AddSection("User Modifications");local v22=v10.Player:AddSlider("Slider",{Title="Speed",Description="Increases your walk speed",Default=35 -19 ,Min=28 -18 ,Max=math.random(226 -(122 + 44) ,172 -72 ),Rounding=0.1 -0 ,Callback=function(v33) local v34=0 + 0 ;local v35;while true do if (v34==(0 + 0)) then v35=game.Players.LocalPlayer.Character:WaitForChild("Humanoid");if v35 then v35.WalkSpeed=v33;end break;end end end});v22:SetValue(32 -16 );local v22=v10.Player:AddSlider("Slider",{Title="Jump Power",Description="Increases your jump power",Default=115 -(30 + 35) ,Min=21 + 9 ,Max=math.random(100,1607 -(1043 + 214) ),Rounding=0.1 -0 ,Callback=function(v36) local v37=1212 -(323 + 889) ;local v38;while true do if (v37==(0 -0)) then v38=game.Players.LocalPlayer.Character:WaitForChild("Humanoid");if v38 then v38.JumpPower=v36;end break;end end end});v22:SetValue(630 -(361 + 219) );v10.Player:AddButton({Title="Hide Avatar (NOT FE)",Description="Hides your avatar so no one can see it if your making a video.",Callback=function() for v68,v69 in pairs(v0.LocalPlayer.Character:GetChildren()) do if v69:IsA("Pants") then v69.PantsTemplate="rbxassetid://0";elseif v69:IsA("Accessory") then v69:Destroy();elseif v69:IsA("Shirt") then v69.ShirtTemplate="rbxassetid://0";end end end});local v18=v10.Player:AddToggle("HPNfriends",{Title="Hide Your Friend's Displayname",Default=false});v18:OnChanged(function(v39) for v70,v71 in pairs(v0:GetPlayers()) do if (v71.Character and v71.Character:FindFirstChild("Humanoid")) then if v0.LocalPlayer:IsFriendsWith(v71.UserId) then if (v11.HPNfriends.Value==true) then v71.Character.Humanoid.DisplayDistanceType=Enum.HumanoidDisplayDistanceType.None;else v71.Character.Humanoid.DisplayDistanceType=Enum.HumanoidDisplayDistanceType.Viewer;end end end end end);v10.Player:AddSection("External scripts");v10.Player:AddButton({Title="IY",Description="Execute Infinite yield",Callback=function() loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();end});v10.Player:AddSection("ESP");local v22=v10.Player:AddSlider("espsize",{Title="Esp Size",Description="Changes the size of esp's box",Default=2.5,Min=0.5,Max=325 -(53 + 267) ,Rounding=1 + 0 ,Callback=function(v40) _G.espsize=v40;end});v22:SetValue(2.5);local v18=v10.Player:AddToggle("esp",{Title="Esp",Default=false});v18:OnChanged(function(v41) local function v42(v72) return Color3.new(math.min(v72.R * (414.3 -(15 + 398)) ,1),math.min(v72.G * (983.3 -(18 + 964)) ,3 -2 ),math.min(v72.B * 1.3 ,1 + 0 ));end local function v43(v73) local function v74(v83) return Color3.new(math.min(v83.R * (1.3 + 0) ,851 -(20 + 830) ),math.min(v83.G * 1.3 ,1 + 0 ),math.min(v83.B * 1.3 ,1));end local function v75(v84) local v85=Drawing.new("Square");v85.Visible=false;v85.Transparency=127 -(116 + 10) ;local function v88() wait();if v11.esp.Value then local v116=0 + 0 ;local v117;while true do if (v116==(738 -(542 + 196))) then v85.Thickness=_G.espsize;v117=v84.Character;v116=1 -0 ;end if (v116==(1 + 0)) then if (v117 and v117:FindFirstChild("HumanoidRootPart")) then local v184=v117:FindFirstChild("HumanoidRootPart");local v185,v186=workspace.CurrentCamera:WorldToViewportPoint(v184.Position);if v84:IsInGroup(13116289) then local v210=0 + 0 ;local v211;while true do if (v210==(0 + 0)) then v211=((tick() * (4 -2))%(12 -7))/(1556 -(1126 + 425)) ;v85.Color=Color3.fromHSV(v211,406 -(118 + 287) ,3 -2 );break;end end elseif table.find(v7,v84.Name) then v85.Color=Color3.fromRGB(1121 -(118 + 1003) ,0 -0 ,0);else v85.Color=v74(v84.TeamColor.Color);end if v186 then local v212=377 -(142 + 235) ;while true do if (v212==0) then v85.Size=Vector2.new(2000/v185.Z ,(18146 -14146)/v185.Z );v85.Position=Vector2.new(v185.X-(v85.Size.X/(1 + 1)) ,v185.Y-(v85.Size.Y/2) );v212=1;end if ((978 -(553 + 424))==v212) then v85.Visible=true;break;end end else v85.Visible=false;end else v85.Visible=false;end break;end end else v85.Visible=false;end end game:GetService("RunService").RenderStepped:Connect(v88);v84.CharacterRemoving:Connect(function() if v11.esp.Value then v85.Visible=false;end end);v88();end v0.PlayerAdded:Connect(function(v89) if v11.esp.Value then if (v89~=v0.LocalPlayer) then v75(v89);end end end);for v90,v91 in pairs(v0:GetPlayers()) do if (v91~=v0.LocalPlayer) then v75(v91);end end end v0.PlayerAdded:Connect(function(v76) if v11.esp.Value then if (v76~=v0.LocalPlayer) then v43(v76);end end end);for v77,v78 in pairs(v0:GetPlayers()) do if (v78~=v0.LocalPlayer) then v43(v78);end end end);v10.Player:AddSection("Other");local v22=v10.Player:AddSlider("Invisflyspeed",{Title="Invis-Fly",Description="Changes the speed of invis fly!",Default=94 -44 ,Min=31 + 4 ,Max=275,Rounding=0.1 + 0 ,Callback=function(v44) _G.invisspeed=v44;end});v22:SetValue(50);local v18=v10.Player:AddToggle("invisfly",{Title="Invis-Fly",Default=false});v18:OnChanged(function(v45) v0.LocalPlayer.CharacterAdded:Connect(function() if v11.invisfly.Value then v11.invisfly:SetValue(false);end end);local v46;if (v11.invisfly.Value==true) then local v92=0 + 0 ;local v93;local v94;while true do if (v92==(0 + 0)) then v93=v0.LocalPlayer.Character.HumanoidRootPart.CFrame;game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=CFrame.new(0,100000000000 -0 ,0 -0 );v92=1;end if (v92==(6 -3)) then v46=v1.Heartbeat:Connect(function(v138) if (v11.invisfly.Value==true) then local v159=0 + 0 ;local v160;local v161;local v162;local v163;local v164;local v165;local v166;while true do if ((9 -7)==v159) then v162=v162 * CFrame.new( -v163.X, -v163.Y, -v163.Z + (754 -(239 + 514)) ) ;v164=v162.Position;v159=2 + 1 ;end if (v159==0) then v160=v0.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * _G.invisspeed * v138 ;v161=v94.CFrame;v159=1330 -(797 + 532) ;end if (v159==(1 + 0)) then v162=workspace.CurrentCamera.CFrame;v163=v161:ToObjectSpace(v162).Position;v159=1 + 1 ;end if ((9 -5)==v159) then v94.CFrame=CFrame.new(v165) * (v162-v164) * CFrame.new(v166) ;break;end if (3==v159) then v165=v161.Position;v166=CFrame.new(v164,Vector3.new(v165.X,v164.Y,v165.Z)):VectorToObjectSpace(v160);v159=4;end end end end);v94.CFrame=v93;break;end if (v92==(1204 -(373 + 829))) then v94.Anchored=true;if v46 then v46:Disconnect();end v92=734 -(476 + 255) ;end if (v92==1) then wait((1130.05 -(369 + 761)) * math.random(2,5 + 3 ) );v94=v0.LocalPlayer.Character:WaitForChild("Head");v92=2 -0 ;end end else local v95=0 -0 ;local v96;while true do if (v95==0) then if v46 then v46:Disconnect();end v96=v0.LocalPlayer.Character:FindFirstChild("Head");v95=239 -(64 + 174) ;end if (v95==1) then if v96 then v96.Anchored=false;end break;end end end end);local v22=v10.Player:AddSlider("VoidLP",{Title="Launch Power",Description="Anti-Void Launch Power",Default=15 + 85 ,Min=(37 -12) + math.random( -5,356 -(144 + 192) ) ,Max=516 -(42 + 174) ,Rounding=0.1 + 0 ,Callback=function(v47) _G.AVpower=v47;end});v22:SetValue(83 + 17 );local v18=v10.Player:AddToggle("Antivoid",{Title="Anti-Void",Default=false});v18:OnChanged(function() local function v48() while v11.Antivoid.Value==true  do local v97=0 + 0 ;local v98;while true do if (v97==1) then wait();break;end if (v97==0) then v98=game.Players.LocalPlayer.Character;if (v98 and v98:FindFirstChild("HumanoidRootPart")) then if (v98.HumanoidRootPart.Position.Y<= -20) then local v171=Instance.new("BodyVelocity");v171.Velocity=Vector3.new(1504 -(363 + 1141) ,_G.AVpower,0);v171.MaxForce=Vector3.new(1580 -(1183 + 397) ,3044344 -2044344 ,0);v171.Parent=v98.HumanoidRootPart;game:GetService("Debris"):AddItem(v171,0.5 + 0 );end end v97=1 + 0 ;end end end wait();end v48();end);v11.Antivoid:SetValue(false);v10.Player:AddSection(" ");local v22=v10.Player:AddSlider("instakillpower",{Title="insta-kill Strength",Description="Sets the power of insta-kill.",Default=0,Min=1976 -(1913 + 62) ,Max=63 + 37 ,Rounding=0.1 -0 ,Callback=function(v49) _G.IKpower=v49;end});v22:SetValue(1934 -(565 + 1368) );local v18=v10.Player:AddToggle("instakillsword",{Title="Insta-Kill Sword",Default=false});v18:OnChanged(function() local v50=0 -0 ;local v51;while true do if (v50==(1662 -(1477 + 184))) then v51();break;end if (v50==(0 -0)) then v51=nil;function v51() while v11.instakillsword.Value==true  do local v125=game.Players.LocalPlayer.Character;local v126=v125:FindFirstChild("Sword");if v126 then if (math.random(0 + 0 ,857 -(564 + 292) )==(1 -0)) then v126.GripPos=Vector3.new(0.0001 * math.random(2 -1 ,(305 -(244 + 60)) + _G.IKpower ) ,0.0001 * math.random(1 + 0 ,1 + _G.IKpower ) ,( -(477.5 -(41 + 435)) * "1.000")   .. math.random(1001 -(938 + 63) ,_G.IKpower) );else v126.GripPos=Vector3.new(0.0002 * math.random(1 + 0 ,1 + _G.IKpower ) ,(1125.0002 -(936 + 189)) * math.random(1,1 + 0 + _G.IKpower ) ,( -(1614.5 -(1565 + 48)) * "1.000")   .. math.random(0,_G.IKpower) );end end task.wait();end end v50=1;end end end);v11.instakillsword:SetValue(false);v10.Settings:AddSection("World");local v18=v10.Settings:AddToggle("daynight",{Title="Day / Night",Default=false});v18:OnChanged(function() if (v11.daynight.Value==false) then game.Lighting.ClockTime=8 + 4 ;else game.Lighting.ClockTime=0;end end);v11.daynight:SetValue(false);local v23=v10.Settings:AddSlider("Slider",{Title="Gravity",Description="Change the world's Gravity",Default=196.2,Min=1138 -(782 + 356) ,Max=math.random(667 -(176 + 91) ,750),Rounding=0 -0 ,Callback=function(v52) workspace.Gravity=v52;end});v23:OnChanged(function(v54) workspace.Gravity=v54;end);v23:SetValue(196.2);v10.Settings:AddButton({Title="Fix Gravity",Description="Sets it back to the default, 196.2",Callback=function() game.Workspace.Gravity=288.2 -92 ;v23:SetValue(1288.2 -(975 + 117) );end});v10.Settings:AddSection("projectiles");local v22=v10.Settings:AddSlider("prosize",{Title="Projectile size",Description="Increases Your projectile's size by a set amount!",Default=1,Min=1875.5 -(157 + 1718) ,Max=3 + 0 ,Rounding=3 -2 ,Callback=function(v57) local v58=game.Workspace:WaitForChild("Projectiles"):WaitForChild("Active");local v59=v58:WaitForChild(game.Players.LocalPlayer.Name);v59.ChildAdded:Connect(function() for v101,v102 in pairs(v59:GetChildren()) do if string.find(v102.Name,"Pellet") then if (v102.ClassName=="Part") then for v147=3 -2 ,math.random(1020 -(697 + 321) ,10) do local v148=0 -0 ;local v149;while true do if (v148==(0 -0)) then v149=(2 -1) * v11.prosize.Value ;v102.Size=Vector3.new(v149,v149,v149);break;end end end end elseif string.find(v102.Name,"Paintball") then if (v102.ClassName=="Part") then for v178=1 + 0 ,math.random(3 -1 ,10) do local v179=0;local v180;while true do if (v179==(0 -0)) then v180=1 * v11.prosize.Value ;v102.Size=Vector3.new(v180,v180,v180);break;end end end end elseif string.find(v102.Name,"Superball") then if (v102.ClassName=="Part") then for v205=1,math.random(2,1237 -(322 + 905) ) do local v206=0;local v207;while true do if (v206==(611 -(602 + 9))) then v207=(1191 -(449 + 740)) * v11.prosize.Value ;v102.Size=Vector3.new(v207,v207,v207);break;end end end end end end end);end});v22:SetValue(873 -(826 + 46) );v10.Settings:AddSection("Other");local v18=v10.Settings:AddToggle("de",{Title="Detect exploiters V0.42",Default=false});_G.SaidAdmin="";v18:OnChanged(function() if (v11.de.Value==true) then local function v103() while v11.de.Value==true  do local v111=game:GetService("Players");for v127,v128 in ipairs(v111:GetPlayers()) do local v129=0;local v130;while true do if (v129==(947 -(245 + 702))) then v130=v128.Character;if v130 then local v189=0 -0 ;local v190;local v191;while true do if (v189==(1 + 0)) then if v191 then _G.DEoldknstats=game.Players[v128.name].leaderstats.Knockouts.Value;wait(0.25);if (v128.Name~=v111.LocalPlayer.Name) then if ((v191:GetState()==Enum.HumanoidStateType.Swimming) or (v191:GetState()==Enum.HumanoidStateType.Flying) or (v191:GetState()==Enum.HumanoidStateType.PlatformStanding)) then v3:Notify({Title="Exploiter Detected",Content="Reason = Flying",SubContent=v190[math.random(1899 -(260 + 1638) ,4)],Duration=12 -math.random(441 -(382 + 58) ,11) });elseif ((game.Players[v128.name].leaderstats.Knockouts.Value-_G.DEoldknstats)>=(9 -6)) then v3:Notify({Title="Exploiter Detected",Content="Reason = Kill all :O",SubContent=v190[math.random(1,4 + 0 )],Duration=(24 -12) -math.random(1,32 -21 ) });end end end break;end if (v189==(1205 -(902 + 303))) then v190={v128.DisplayName   .. " is exploiting and luckly your script is better then his!! :)" ,v128.DisplayName   .. " is exploiting 😪" ,v128.DisplayName   .. " is 'hacking', bro is NOT him XD" ,v128.DisplayName   .. " is exploiting, blud is using IY LMAO" };v191=v130:FindFirstChildOfClass("Humanoid");v189=1 + 0 ;end end end break;end end end end end v103();end end);v11.de:SetValue(false);local v18=v10.Settings:AddToggle("da",{Title="Detect admins V0.31",Default=false});v18:OnChanged(function() if (v11.da.Value==true) then local function v104() while v11.da.Value==true  do local v112=game:GetService("Players");for v131,v132 in ipairs(v112:GetPlayers()) do local v133=1690 -(1121 + 569) ;local v134;while true do if (v133==(214 -(22 + 192))) then v134=v132.Character;if v134 then local v192={v132.DisplayName   .. " is an admin., PLEASE use your scripts CAREFULLY!!" ,v132.DisplayName   .. " is an admin., They might be here for you." ,v132.DisplayName   .. " is an admin., PLEASE use your scripts CAREFULLY!!" };local v193=v134:FindFirstChildOfClass("Humanoid");if v193 then local v215=0;while true do if (v215==(0 -0)) then wait(0.1 -0 );if table.find(v7,v132.name) then if (_G.SaidAdmin~=v132.Name) then local v267=765 -(468 + 297) ;while true do if (v267==(562 -(334 + 228))) then _G.SaidAdmin=v132.Name;v3:Notify({Title="Admin Detected.",Content="Reason = Known Admin.",SubContent=v192[math.random(1,3)],Duration=(40 -28) -math.random(1,25 -14 ) });break;end end end else local v248=0 -0 ;local v249;while true do if (0==v248) then v249=true;if (game.Players[v132.name].Team=="Spectators") then for v285,v286 in pairs(game.Workspace.Doomspires:GetChildren()) do for v289,v290 in pairs(v286.Spawnpoints:GetChildren()) do v249=false;break;end if  not v249 then break;end end if (v249==true) then v3:Notify({Title="Admin Detected.",Content="Reason = Switching Teams.",SubContent=v192[math.random(1,1 + 2 )],Duration=(248 -(141 + 95)) -math.random(1 + 0 ,28 -17 ) });end end break;end end end break;end end end end break;end end end end end v104();end end);v11.da:SetValue(false);v10.Settings:AddSection("Options");local v18=v10.Settings:AddToggle("aetool",{Title="Auto Equip Tool On Spawn (Kill All)",Default=false});v18:OnChanged(function() if (v11.aetool.Value==true) then game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function() if (v11.aetool.Value==true) then v8(_G.KAGmode);end end);end end);end v4:SetLibrary(v3);v5:SetLibrary(v3);v4:IgnoreThemeSettings();v4:SetIgnoreIndexes({});v5:SetFolder("FluentScriptHub");v4:SetFolder("FluentScriptHub/specific-game");v5:BuildInterfaceSection(v10.Settings);v4:BuildConfigSection(v10.Settings);v9:SelectTab(2 -1 );v4:LoadAutoloadConfig();
+--services
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Uis = game:GetService("UserInputService")
+--loadstrings
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+--random ass variables
+local titlename = "Gumstra V1.6131"
+--arrays
+local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety"}
+--Functions
+local function EquipTool(tool)
+	local backpack = Players.LocalPlayer:FindFirstChildOfClass("Backpack")
+	local character = Players.LocalPlayer.Character
+	local toolfound = backpack:FindFirstChild(tool)
+	
+	if toolfound then
+		wait(0.35) 
+		toolfound.GripPos = Vector3.new(75, 750, 75) 
+		toolfound.Parent = character
+		wait(0.1) 
+		local toolfoundc = character:FindFirstChild(tool) 
+		if tool == "Rocket" then 
+			toolfoundc.GripPos = Vector3.new(0.579, -0.596, 0.074) 
+		elseif tool == "Bomb" then 
+			toolfoundc.GripPos = Vector3.new(0, -0.07000014930963516, 0) 
+		end
+	end
+end
+--Gumstra
+local Window = Fluent:CreateWindow({
+	Title = titlename,
+	SubTitle = "by highskyY8K",
+	TabWidth = 130,
+	Size = UDim2.fromOffset(580, 360),
+	Acrylic = false, -- if true it breaks the ranged weapons making it unusable
+	Theme = "Dark",
+	MinimizeKey = Enum.KeyCode.LeftControl 
+})
+
+
+local Tabs = {
+	Main = Window:AddTab({ Title = "Main", Icon = "locate" }),
+	Player = Window:AddTab({ Title = "Player", Icon = "user" }),
+	Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
+}
+
+local Options = Fluent.Options
+
+do
+	Fluent:Notify({
+		Title = "WARNING",
+		SubContent = "If you use this script or any other you can get banned depending on what you use, USE CAREFULLY!!",
+		Duration = 10 + math.random(0, 20)
+	})
+	---main V
+	Tabs.Main:AddParagraph({
+		Title = "Warning",
+		Content = "Please use these scripts in this tab with caution.\nYou can get banned easily IF u are caught!"
+	})
+
+	Tabs.Main:AddSection("Teleports")
+
+	local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+		Title = "Teleports",
+		Values = {
+			"Yellow bottom floor", "Yellow top floor", "Yellow Bridge", "Yellow Hut",
+			"Red bottom floor", "Red top floor", "Red Bridge", "Red Hut",
+			"Blue bottom floor", "Blue top floor", "Blue Bridge", "Blue Hut",
+			"Green bottom floor", "Green top floor", "Green Bridge", "Green Hut",
+			"Spectator:PWNAGE", "Spectator:Minigames", "Spectator:Frenzy", "Spectator:CrossRoads", "Spectator:LeaderBoard", "None"
+		},
+
+		Multi = false,
+		Default = 1,
+	})
+
+	Dropdown:SetValue("None")
+
+	Dropdown:OnChanged(function(Value)
+		local plHRP = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+
+		if plHRP then
+			if Value == "Yellow bottom floor" then
+				plHRP.CFrame = CFrame.new(151, 22, 7) --
+			elseif Value == "Yellow top floor" then
+				plHRP.CFrame = CFrame.new(132, 117, -1) --
+			elseif Value == "Yellow Bridge" then
+				plHRP.CFrame = CFrame.new(94, 131, -0) --	
+			elseif Value == "Yellow Hut" then
+				plHRP.CFrame = CFrame.new(130, 129, 0) --
+			elseif Value == "Red bottom floor" then
+				plHRP.CFrame = CFrame.new(-150, 22, -6) --
+			elseif Value == "Red top floor" then
+				plHRP.CFrame = CFrame.new(-131, 117, -0)
+			elseif Value == "Red Bridge" then
+				plHRP.CFrame = CFrame.new(-94, 131, 0)
+			elseif Value == "Red Hut" then
+				plHRP.CFrame = CFrame.new(-130, 129, 1)
+			elseif Value == "Blue bottom floor" then
+				plHRP.CFrame = CFrame.new(-6, 22, 152)
+			elseif Value == "Blue top floor" then
+				plHRP.CFrame = CFrame.new(-1, 117, 131)
+			elseif Value == "Blue Bridge" then
+				plHRP.CFrame = CFrame.new(0, 131, 95)
+			elseif Value == "Blue Hut" then
+				plHRP.CFrame = CFrame.new(1, 129, 132)
+			elseif Value == "Green bottom floor" then
+				plHRP.CFrame = CFrame.new(6, 22, -151)
+			elseif Value == "Green top floor" then
+				plHRP.CFrame = CFrame.new(-1, 117, -131)	
+			elseif Value == "Green Bridge" then
+				plHRP.CFrame = CFrame.new(-0, 131, -94)
+			elseif Value == "Green Hut" then
+				plHRP.CFrame = CFrame.new(-1, 129, -131)
+			elseif Value == "Spectator:PWNAGE" then
+				plHRP.CFrame = CFrame.new(-32, 751, 32)
+			elseif Value == "Spectator:Minigames" then
+				plHRP.CFrame = CFrame.new(-32, 751, -32)
+			elseif Value == "Spectator:Frenzy" then
+				plHRP.CFrame = CFrame.new(32, 751, -32)
+			elseif Value == "Spectator:CrossRoads" then
+				plHRP.CFrame = CFrame.new(32, 751, 32)
+			elseif Value == "Spectator:LeaderBoard" then
+				plHRP.CFrame = CFrame.new(-39, 719, 0)
+			end	
+		end
+	end)
+
+	--tp to player 
+	local playerNames = {}
+
+
+	local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+		Title = "Teleport to player",
+		Values = playerNames,
+
+		Multi = false,
+		Default = 1,
+	})
+
+	Dropdown:OnChanged(function(Value)
+		for _, player in ipairs(Players:GetPlayers()) do 
+			table.insert(playerNames, player.DisplayName)
+
+		end
+
+		for _, GetplrName in pairs(Players:GetPlayers()) do
+			if GetplrName.DisplayName == Value then
+				local plHRP = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+				plHRP.CFrame = GetplrName.Character:WaitForChild("HumanoidRootPart").CFrame
+			end
+		end
+	end)
+
+	Dropdown:SetValue(Players.LocalPlayer.DisplayName)
+
+	Tabs.Main:AddSection("Murder")
+
+	local Toggle = Tabs.Main:AddToggle("whitelistfriends", {Title = "White List Friends", Default = false })
+
+	Toggle:OnChanged(function(Value)
+		_G.whitelistfriends = Value
+	end)
+
+	Options.whitelistfriends:SetValue(false)
+
+	local Dropdownkillall = Tabs.Main:AddDropdown("Killallmode", {
+		Title = "Kill All Method",
+		Values = {"None", "RPG", "Bomb"},
+
+		Multi = false,
+		Default = 1,
+	})
+
+	Dropdownkillall:OnChanged(function(Value)
+		if Value == "RPG" then
+			_G.KAGmode = "Rocket"
+		else
+			_G.KAGmode = Value
+		end
+	end)
+
+	Dropdownkillall:SetValue("None")
+
+	local Toggle = Tabs.Main:AddToggle("killall", {Title = "Kill All", Default = false })
+	local projectilesFolder = game.Workspace:WaitForChild("Projectiles"):WaitForChild("Active")
+	local playerFolder = projectilesFolder:WaitForChild(Players.LocalPlayer.Name)
+
+
+	Options.killall:SetValue(false)
+
+	Toggle:OnChanged(function(Value)
+		playerFolder.ChildAdded:Connect(function(part)
+			if Options.killall.Value == true then
+				if _G.KAGmode == "Bomb" then
+					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.. "'s Bomb" then
+						part.CFrame = CFrame.new(1000, 25, 0)
+						part.Anchored = true
+						wait(2)
+						local startTime = tick()
+						while tick() - startTime < 3 do
+							for _, player in pairs(Players:GetPlayers()) do
+								if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+									if _G.whitelistfriends == true then
+										local isFriend = Players.LocalPlayer:IsFriendsWith(player.UserId)
+										if not isFriend then
+											player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, 0)
+										end
+									else
+										player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, 0)
+									end
+								end
+							end
+							task.wait()
+						end
+						wait()
+					end
+				elseif _G.KAGmode == "Rocket" then
+					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.. "'s Rocket" then
+						part.Anchored = false
+						local startTime = tick()
+						while tick() - startTime < 1 do
+							for _, player in pairs(Players:GetPlayers()) do
+								if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+									if _G.whitelistfriends == true then
+										local isFriend = Players.LocalPlayer:IsFriendsWith(player.UserId)
+										if not isFriend then
+											player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, -1)
+											part.Rotation = Vector3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))
+											part.CFrame = CFrame.new(1000, 25, 0)
+										end
+									else
+										player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, -1)
+										part.Rotation = Vector3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))
+										part.CFrame = CFrame.new(1000, 25, 0)
+									end
+								end
+							end
+							task.wait()
+						end
+						wait()
+					end
+				end
+			end
+		end)	
+	end)
+
+	Tabs.Main:AddSection("Protection")
+
+	local Toggle = Tabs.Main:AddToggle("ff", {Title = "Force-Field", Default = false })
+
+	Options.ff:SetValue(false)
+
+	Toggle:OnChanged(function(Value)
+		local function checkProximity()
+			for _, player in pairs(Players:GetPlayers()) do
+				local LocalPlayer = Players.LocalPlayer
+				local Character = game.Workspace:WaitForChild(LocalPlayer.Name)
+				if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+					local distance = (player.Character.HumanoidRootPart.Position - Character:WaitForChild("HumanoidRootPart").Position).magnitude
+					if distance <= 11 and player.Team ~= LocalPlayer.Team then
+						if player.Character.Humanoid.Health > 0 then
+							local headPosition = player.Character.Head.Position
+							local rootPosition = Character.HumanoidRootPart.Position
+							local lookVector = (headPosition - rootPosition).unit
+							lookVector = Vector3.new(lookVector.X, 0, lookVector.Z).unit
+							--
+							if _G.whitelistfriends == true then
+								if not LocalPlayer:IsFriendsWith(player.UserId) then
+									local sword = Character:FindFirstChild("Sword")
+									if sword then
+										sword.Handle.Transparency = 1
+										Character.HumanoidRootPart.CFrame = CFrame.new(rootPosition, rootPosition + lookVector)
+
+										local rotationX, rotationY, rotationZ = sword.Grip.Rotation:ToOrientation()
+										local isNegativeX, isNegativeY, isNegativeZ = rotationX < 0, rotationY < 0, rotationZ < 0
+
+										if isNegativeY and isNegativeZ then 
+											for i = 1, math.random(2, 5) do
+												sword.GripPos = Vector3.new(-distance + math.random(150, 350) / 100, -1.3 + math.random(0, 40) / 100, math.random(-350, 350) / 100)
+											end	
+										else
+											for i = 1, math.random(2, 5) do
+												sword.GripPos = Vector3.new(distance - 2, 1.3 + math.random(0, 40) / 100, math.random(-350, 350) / 100)
+											end		
+										end
+									else 
+										sword = LocalPlayer.Backpack:FindFirstChild("Sword")
+										sword.GripPos = Vector3.new(1000, 0, 0)
+										sword.Parent = Players.LocalPlayer.Character
+									end
+								end
+							else
+								local sword = Character:FindFirstChild("Sword")
+								if sword then
+									sword.Handle.Transparency = 1
+									Character.HumanoidRootPart.CFrame = CFrame.new(rootPosition, rootPosition + lookVector)
+
+									local rotationX, rotationY, rotationZ = sword.Grip.Rotation:ToOrientation()
+									local isNegativeX, isNegativeY, isNegativeZ = rotationX < 0, rotationY < 0, rotationZ < 0
+
+									if isNegativeY and isNegativeZ then 
+										for i = 1, math.random(2, 5) do
+											sword.GripPos = Vector3.new(-distance + math.random(150, 350) / 100, -1.3 + math.random(0, 40) / 100, math.random(-350, 350) / 100)
+										end	
+									else
+										for i = 1, math.random(2, 5) do
+											sword.GripPos = Vector3.new(distance - 2, 1.3 + math.random(0, 40) / 100, math.random(-350, 350) / 100)
+										end		
+									end
+								else 
+									sword = LocalPlayer.Backpack:FindFirstChild("Sword")
+									sword.GripPos = Vector3.new(1000, 0, 0)
+									sword.Parent = Players.LocalPlayer.Character
+								end
+							end
+						else
+							local swordd = Character:FindFirstChild("Sword")
+							if swordd then
+								swordd = LocalPlayer.Character:FindFirstChild("Sword")
+								swordd.Handle.Transparency = 0
+								swordd.Parent = Players.LocalPlayer.Backpack
+								Players.LocalPlayer.Backpack.Sword.GripPos = Vector3.new(0, 0, -1.5)
+							end
+						end
+					end
+				end
+			end
+		end
+
+		local function ff()
+			while Options.ff.Value == true do
+				checkProximity()
+				wait(0.01)
+			end
+		end
+		ff()
+
+	end)
+
+	local Slider = Tabs.Main:AddSlider("instakillpower", {
+		Title = "insta-kill Strength",
+		Description = "Sets the power of insta-kill.",
+		Default = 0,
+		Min = 1,
+		Max = 100,
+		Rounding = 0.1,
+		Callback = function(Value)
+			_G.IKpower = Value
+		end
+	})
+
+	Slider:SetValue(1)
+
+	local Toggle = Tabs.Main:AddToggle("instakillsword", {Title = "Insta-Kill Sword", Default = false })
+
+	Toggle:OnChanged(function()
+		local function runAV()
+			while Options.instakillsword.Value == true do
+				local sword = game.Players.LocalPlayer.Character:FindFirstChild("Sword")
+
+				if sword then 
+					if math.random(0, 1) == 1 then
+						sword.GripPos = Vector3.new(0.0001 * math.random(1, 1 + _G.IKpower), 0.0001 * math.random(1, 1 + _G.IKpower), -1.5 * "1.000" .. math.random(0, _G.IKpower))
+					else
+						sword.GripPos = Vector3.new(0.0002 * math.random(1, 1 + _G.IKpower), 0.0002 * math.random(1, 1 + _G.IKpower), -1.5 * "1.000" .. math.random(0, _G.IKpower))
+					end
+
+				end
+
+				task.wait()
+			end
+		end
+		runAV()
+	end)
+
+
+	Options.instakillsword:SetValue(false)
+
+
+
+
+	---Player V
+	Tabs.Player:AddSection("User Modifications")
+
+	local Slider = Tabs.Player:AddSlider("Slider", {
+		Title = "Speed",
+		Description = "Increases your walk speed",
+		Default = 16,
+		Min = 10,
+		Max = math.random(60, 100),
+		Rounding = 0.1,
+		Callback = function(Value)
+			local plHDe = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+
+			if plHDe then
+				plHDe.WalkSpeed = Value
+			end
+		end
+	})
+
+	Slider:SetValue(16)
+
+	local Slider = Tabs.Player:AddSlider("Slider", {
+		Title = "Jump Power",
+		Description = "Increases your jump power",
+		Default = 50,
+		Min = 30,
+		Max = math.random(100, 350),
+		Rounding = 0.1,
+		Callback = function(Value)
+			local plHDe = game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+
+			if plHDe then
+				plHDe.JumpPower = Value
+			end
+		end
+	})
+
+	Slider:SetValue(50)
+
+	Tabs.Player:AddButton({
+		Title = "Hide Avatar (NOT FE)",
+		Description = "Hides your avatar so no one can see it if your making a video.",
+		Callback = function()
+			for _, v in pairs(Players.LocalPlayer.Character:GetChildren()) do
+				if v:IsA("Pants") then
+					v.PantsTemplate = "rbxassetid://0"
+				elseif v:IsA("Accessory") then
+					v:Destroy()
+				elseif v:IsA("Shirt") then
+					v.ShirtTemplate = "rbxassetid://0"
+				end
+			end
+		end
+	})
+
+	local Toggle = Tabs.Player:AddToggle("HPNfriends", {Title = "Hide Your Friend's Displayname", Default = false })
+
+	Toggle:OnChanged(function(Value)
+		for _, player in pairs(Players:GetPlayers()) do
+			if player.Character and player.Character:FindFirstChild("Humanoid") then
+				if Players.LocalPlayer:IsFriendsWith(player.UserId) then
+					if Options.HPNfriends.Value == true then
+						player.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+					else
+						player.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Viewer
+					end
+				end
+			end
+		end
+	end)
+
+	Tabs.Player:AddSection("External scripts")
+
+	Tabs.Player:AddButton({
+		Title = "IY",
+		Description = "Execute Infinite yield",
+		Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+		end
+	})
+	
+
+	Tabs.Player:AddSection("ESP")
+
+	local Slider = Tabs.Player:AddSlider("espsize", {
+		Title = "Esp Size",
+		Description = "Changes the size of esp's box",
+		Default = 2.5,
+		Min = 0.5,
+		Max = 5,
+		Rounding = 1,
+		Callback = function(Value)
+			_G.espsize = Value
+		end
+	})
+
+	Slider:SetValue(2.5)
+	
+	local Toggle = Tabs.Player:AddToggle("esp", {Title = "Esp", Default = false })
+
+	Toggle:OnChanged(function(Value)
+		local function BrightenColor(color)
+			return Color3.new(
+				math.min(color.R * 1.3, 1),
+				math.min(color.G * 1.3, 1),
+				math.min(color.B * 1.3, 1)
+			)
+		end
+
+		local function CreateBox(player)
+			local function BrightenColor(color)
+				return Color3.new(
+					math.min(color.R * 1.3, 1),
+					math.min(color.G * 1.3, 1),
+					math.min(color.B * 1.3, 1)
+				)
+			end
+
+			local function CreateBox(player)
+				local Box = Drawing.new("Square")
+				Box.Visible = false
+				Box.Transparency = 1
+
+				local function UpdateBox()
+					wait()
+					if Options.esp.Value then
+						Box.Thickness = _G.espsize
+						local character = player.Character
+						if character and character:FindFirstChild("HumanoidRootPart") then
+							local rootPart = character:FindFirstChild("HumanoidRootPart")
+							local position, onScreen = workspace.CurrentCamera:WorldToViewportPoint(rootPart.Position)
+
+							if player:IsInGroup(13116289) then
+								local hue = (tick() * 2) % 5 / 5
+								Box.Color = Color3.fromHSV(hue, 1, 1)
+							elseif table.find(knownadminslist, player.Name) then
+								Box.Color = Color3.fromRGB(0, 0, 0)						
+							else
+								Box.Color = BrightenColor(player.TeamColor.Color)
+							end
+
+							if onScreen then
+								Box.Size = Vector2.new(2000 / position.Z, 4000 / position.Z)
+								Box.Position = Vector2.new(position.X - Box.Size.X / 2, position.Y - Box.Size.Y / 2)
+								Box.Visible = true
+							else
+								Box.Visible = false
+							end
+						else
+							Box.Visible = false
+						end
+					else
+						Box.Visible = false
+					end
+				end
+
+				game:GetService("RunService").RenderStepped:Connect(UpdateBox)
+
+				player.CharacterRemoving:Connect(function()
+					if Options.esp.Value then
+						Box.Visible = false
+					end
+				end)
+
+				UpdateBox()
+
+			end
+
+			Players.PlayerAdded:Connect(function(player)
+				if Options.esp.Value then
+					if player ~= Players.LocalPlayer then
+						CreateBox(player)
+					end
+				end
+			end)
+
+			for _, player in pairs(Players:GetPlayers()) do
+				if player ~= Players.LocalPlayer then
+					CreateBox(player)
+				end
+			end
+		end
+
+		Players.PlayerAdded:Connect(function(player)
+			if Options.esp.Value then
+				if player ~= Players.LocalPlayer then
+					CreateBox(player)
+				end
+			end
+		end)
+
+		for _, player in pairs(Players:GetPlayers()) do
+			if player ~= Players.LocalPlayer then
+				CreateBox(player)
+			end
+		end
+	end)
+	
+	
+
+	Tabs.Player:AddSection("Other")
+
+	local Slider = Tabs.Player:AddSlider("Invisflyspeed", {
+		Title = "Invis-Fly",
+		Description = "Changes the speed of invis fly!",
+		Default = 50,
+		Min = 35,
+		Max = 275,
+		Rounding = 0.1,
+		Callback = function(Value)
+			_G.invisspeed = Value
+		end
+	})
+
+	Slider:SetValue(50)
+
+	local Toggle = Tabs.Player:AddToggle("invisfly", {Title = "Invis-Fly", Default = false })
+
+
+	Toggle:OnChanged(function(Value)
+		Players.LocalPlayer.CharacterAdded:Connect(function()
+			if Options.invisfly.Value then
+				Options.invisfly:SetValue(false)
+			end
+		end)
+
+		local CFloop
+
+		if Options.invisfly.Value == true then
+			local pastposhrp = Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 100000000000, 0)
+			wait(0.05 * math.random(2, 8))
+			local Head = Players.LocalPlayer.Character:WaitForChild("Head")
+			Head.Anchored = true
+
+			if CFloop then 
+				CFloop:Disconnect()
+			end
+			
+			CFloop = RunService.Heartbeat:Connect(function(deltaTime)
+				if Options.invisfly.Value == true then
+					local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
+					local headCFrame = Head.CFrame
+					local cameraCFrame = workspace.CurrentCamera.CFrame
+					local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
+					cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
+					local cameraPosition = cameraCFrame.Position
+					local headPosition = headCFrame.Position
+
+					local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
+					Head.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
+				end
+			end)
+			Head.CFrame = pastposhrp
+		else
+			if CFloop then
+				CFloop:Disconnect()
+			end
+			local Head = Players.LocalPlayer.Character:FindFirstChild("Head")
+			if Head then
+				Head.Anchored = false
+			end
+		end
+		
+
+
+	end)
+
+	local Slider = Tabs.Player:AddSlider("VoidLP", {
+		Title = "Launch Power",
+		Description = "Anti-Void Launch Power",
+		Default = 100,
+		Min = 25 + math.random(-5, 20),
+		Max = 300,
+		Rounding = 0.1,
+		Callback = function(Value)
+			_G.AVpower = Value
+		end
+	})
+
+	Slider:SetValue(100)
+
+	local Toggle = Tabs.Player:AddToggle("Antivoid", {Title = "Anti-Void", Default = false })
+
+	Toggle:OnChanged(function()
+		local function runAV()
+			while Options.Antivoid.Value == true do
+				local character = game.Players.LocalPlayer.Character
+
+				if character and character:FindFirstChild("HumanoidRootPart") then
+					if character.HumanoidRootPart.Position.Y <= -20 then
+						local bodyVelocity = Instance.new("BodyVelocity")
+						bodyVelocity.Velocity = Vector3.new(0, _G.AVpower, 0)
+						bodyVelocity.MaxForce = Vector3.new(0, 1000000, 0)
+						bodyVelocity.Parent = character.HumanoidRootPart
+
+						game:GetService("Debris"):AddItem(bodyVelocity, 0.5)
+					end
+				end
+				wait()
+			end
+			wait()
+		end
+		runAV()
+	end)
+
+	Options.Antivoid:SetValue(false)
+
+	Tabs.Player:AddSection(" ")
+
+	---Settings V
+
+	Tabs.Settings:AddSection("World")
+
+	local Toggle = Tabs.Settings:AddToggle("daynight", {Title = "Day / Night", Default = false })
+
+	Toggle:OnChanged(function()
+		if Options.daynight.Value == false then
+			game.Lighting.ClockTime = 12
+		else
+			game.Lighting.ClockTime = 0
+		end
+	end)
+
+	Options.daynight:SetValue(false)
+
+
+	local grav = Tabs.Settings:AddSlider("Slider", {
+		Title = "Gravity",
+		Description = "Change the world's Gravity",
+		Default = 196.2,
+		Min = 0,
+		Max = math.random(400, 750),
+		Rounding = 0,
+		Callback = function(Value)
+			workspace.Gravity = Value
+		end
+	})
+
+	grav:OnChanged(function(Value)
+		workspace.Gravity = Value
+	end)
+
+	grav:SetValue(196.2)
+
+	Tabs.Settings:AddButton({
+		Title = "Fix Gravity",
+		Description = "Sets it back to the default, 196.2",
+		Callback = function()
+			game.Workspace.Gravity = 196.2
+			grav:SetValue(196.2)
+		end
+	})
+
+	Tabs.Settings:AddSection("projectiles")
+
+	local Slider = Tabs.Settings:AddSlider("prosize", {
+		Title = "Projectile size",
+		Description = "Increases Your projectile's size by a set amount!",
+		Default = 1,
+		Min = 0.5,
+		Max = 3,
+		Rounding = 1,
+		Callback = function(Value)
+			local projectilesFolder = game.Workspace:WaitForChild("Projectiles"):WaitForChild("Active")
+			local playerFolder = projectilesFolder:WaitForChild(game.Players.LocalPlayer.Name)
+
+			playerFolder.ChildAdded:Connect(function()
+				for _, v in pairs(playerFolder:GetChildren()) do
+					if string.find(v.Name, "Pellet") then
+						if v.ClassName == "Part" then
+							for i = 1, math.random(2, 10) do
+								local changedsize = 1 * Options.prosize.Value
+								v.Size = Vector3.new(changedsize, changedsize, changedsize)
+							end
+						end
+					elseif string.find(v.Name, "Paintball") then
+						if v.ClassName == "Part" then
+							for i = 1, math.random(2, 10) do
+								local changedsize = 1 * Options.prosize.Value
+								v.Size = Vector3.new(changedsize, changedsize, changedsize)
+							end
+						end
+					elseif string.find(v.Name, "Superball") then
+						if v.ClassName == "Part" then
+							for i = 1, math.random(2, 10) do
+								local changedsize = 2 * Options.prosize.Value
+								v.Size = Vector3.new(changedsize, changedsize, changedsize)
+							end
+						end
+					end
+				end
+			end)
+		end
+	})
+
+	Slider:SetValue(1)
+
+	Tabs.Settings:AddSection("Other")
+
+	local Toggle = Tabs.Settings:AddToggle("de", {Title = "Detect exploiters V0.42", Default = false })
+	_G.SaidAdmin = ""
+	Toggle:OnChanged(function()
+		if Options.de.Value == true then
+			local function de()
+				while Options.de.Value == true do
+					local Players = game:GetService("Players")
+					for _, player in ipairs(Players:GetPlayers()) do
+						local character = player.Character
+						if character then
+							local repsoncesXD = {player.DisplayName.. " is exploiting and luckly your script is better then his!! :)", player.DisplayName.. " is exploiting 😪", player.DisplayName.. " is 'hacking', bro is NOT him XD", player.DisplayName.. " is exploiting, blud is using IY LMAO"}
+							local humanoid = character:FindFirstChildOfClass("Humanoid")
+							if humanoid then
+								_G.DEoldknstats = game.Players[player.name].leaderstats.Knockouts.Value
+								--[[
+								local bru = character:FindFirstChild("HumanoidRootPart")
+								if bru then
+									_G.DEoldcoords = bru.Position
+								end
+								]]
+								wait(0.25)
+								if player.Name ~= Players.LocalPlayer.Name then
+									if humanoid:GetState() == Enum.HumanoidStateType.Swimming or humanoid:GetState() == Enum.HumanoidStateType.Flying or humanoid:GetState() == Enum.HumanoidStateType.PlatformStanding then-- 2p
+										Fluent:Notify({
+											Title = "Exploiter Detected",
+											Content = "Reason = Flying",
+											SubContent = repsoncesXD[math.random(1, 4)],
+											Duration = 12 - math.random(1, 11)
+										})
+									elseif game.Players[player.name].leaderstats.Knockouts.Value - _G.DEoldknstats >= 3 then-- 2p
+										Fluent:Notify({
+											Title = "Exploiter Detected",
+											Content = "Reason = Kill all :O",
+											SubContent = repsoncesXD[math.random(1, 4)],
+											Duration = 12 - math.random(1, 11)
+										})
+									end
+								end
+							end
+						end 
+					end
+				end
+			end
+			de()
+		end
+	end)
+
+	Options.de:SetValue(false)
+
+	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.32", Default = false })
+	Toggle:OnChanged(function()
+		if Options.da.Value == true then
+			local function da()
+				while Options.da.Value == true do
+					local Players = game:GetService("Players")
+					for _, player in ipairs(Players:GetPlayers()) do
+						local character = player.Character
+						if character then
+							local repsoncesXD = {player.DisplayName.. " is an admin., PLEASE use your scripts CAREFULLY!!", player.DisplayName.. " is an admin., They might be here for you.", player.DisplayName.. " is an admin., PLEASE use your scripts CAREFULLY!!"}
+							local humanoid = character:FindFirstChildOfClass("Humanoid")
+							if humanoid then
+								wait(0.06)
+								if table.find(knownadminslist, player.name) then --1p
+									if _G.SaidAdmin ~= player.Name then
+										_G.SaidAdmin = player.Name
+										Fluent:Notify({
+											Title = "Admin Detected.",
+											Content = "Reason = Known Admin.",
+											SubContent = repsoncesXD[math.random(1, 3)],
+											Duration = 12 - math.random(1, 11)
+										})
+									end
+								else
+									local noSpawnPoints = true
+									if game.Players[player.name].Team == "Spectators" then -- 2p
+										for _, AllSpires in pairs(game.Workspace.Doomspires:GetChildren()) do
+											for _, v in pairs(AllSpires.Spawnpoints:GetChildren()) do
+												noSpawnPoints = false
+												break
+											end
+											if not noSpawnPoints then 
+												break 
+											end
+										end
+										if noSpawnPoints == true then
+											Fluent:Notify({
+												Title = "Admin Detected.",
+												Content = "Reason = Switching Teams.",
+												SubContent = repsoncesXD[math.random(1, 3)],
+												Duration = 12 - math.random(1, 11)
+											})
+										end
+									end
+								end
+							end
+						end 
+					end
+				end
+			end
+			da()
+		end
+	end)
+
+	Options.da:SetValue(false)
+	
+	Tabs.Settings:AddSection("Options")
+	
+	local Toggle = Tabs.Settings:AddToggle("aetool", {Title = "Auto Equip Tool On Spawn (Kill All)", Default = false })
+	Toggle:OnChanged(function()
+		if Options.aetool.Value == true then
+			game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+				if Options.aetool.Value == true then
+					EquipTool(_G.KAGmode)
+				end
+			end)
+		end
+	end)
+end
+
+
+
+
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+SaveManager:IgnoreThemeSettings()
+
+SaveManager:SetIgnoreIndexes({})
+
+InterfaceManager:SetFolder("FluentScriptHub")
+SaveManager:SetFolder("FluentScriptHub/specific-game")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+
+Window:SelectTab(1)
+
+
+SaveManager:LoadAutoloadConfig()
