@@ -7,9 +7,9 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
-local titlename = "Gumstra V1.6131"
+local titlename = "Gumstra V1.614"
 --arrays
-local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety"}
+local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
 --Functions
 local function EquipTool(tool)
 	local backpack = Players.LocalPlayer:FindFirstChildOfClass("Backpack")
@@ -228,12 +228,12 @@ do
 									if _G.whitelistfriends == true then
 										local isFriend = Players.LocalPlayer:IsFriendsWith(player.UserId)
 										if not isFriend then
-											player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, -1)
+											player.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(1000, 25, -1)
 											part.Rotation = Vector3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))
 											part.CFrame = CFrame.new(1000, 25, 0)
 										end
 									else
-										player.Character.HumanoidRootPart.CFrame = CFrame.new(1000, 25, -1)
+										player.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(1000, 25, -1)
 										part.Rotation = Vector3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))
 										part.CFrame = CFrame.new(1000, 25, 0)
 									end
@@ -493,79 +493,54 @@ do
 		end
 
 		local function CreateBox(player)
-			local function BrightenColor(color)
-				return Color3.new(
-					math.min(color.R * 1.3, 1),
-					math.min(color.G * 1.3, 1),
-					math.min(color.B * 1.3, 1)
-				)
-			end
+			local Box = Drawing.new("Square")
+			Box.Visible = false
+			Box.Transparency = 1
+			
+			local function UpdateBox()
+				wait()
+				if Options.esp.Value then
+					Box.Thickness = _G.espsize
+					local character = player.Character
+					if character and character:FindFirstChild("HumanoidRootPart") then
+						local rootPart = character:FindFirstChild("HumanoidRootPart")
+						local position, onScreen = workspace.CurrentCamera:WorldToViewportPoint(rootPart.Position)
 
-			local function CreateBox(player)
-				local Box = Drawing.new("Square")
-				Box.Visible = false
-				Box.Transparency = 1
+						if player:IsInGroup(13116289) then
+							local hue = (tick() * 2) % 5 / 5
+							Box.Color = Color3.fromHSV(hue, 1, 1)
+						elseif table.find(knownadminslist, player.Name) then
+							Box.Color = Color3.fromRGB(0, 0, 0)						
+						else
+							Box.Color = BrightenColor(player.TeamColor.Color)
+						end
 
-				local function UpdateBox()
-					wait()
-					if Options.esp.Value then
-						Box.Thickness = _G.espsize
-						local character = player.Character
-						if character and character:FindFirstChild("HumanoidRootPart") then
-							local rootPart = character:FindFirstChild("HumanoidRootPart")
-							local position, onScreen = workspace.CurrentCamera:WorldToViewportPoint(rootPart.Position)
-
-							if player:IsInGroup(13116289) then
-								local hue = (tick() * 2) % 5 / 5
-								Box.Color = Color3.fromHSV(hue, 1, 1)
-							elseif table.find(knownadminslist, player.Name) then
-								Box.Color = Color3.fromRGB(0, 0, 0)						
-							else
-								Box.Color = BrightenColor(player.TeamColor.Color)
-							end
-
-							if onScreen then
-								Box.Size = Vector2.new(2000 / position.Z, 4000 / position.Z)
-								Box.Position = Vector2.new(position.X - Box.Size.X / 2, position.Y - Box.Size.Y / 2)
-								Box.Visible = true
-							else
-								Box.Visible = false
-							end
+						if onScreen then
+							Box.Size = Vector2.new(2000 / position.Z, 4000 / position.Z)
+							Box.Position = Vector2.new(position.X - Box.Size.X / 2, position.Y - Box.Size.Y / 2)
+							Box.Visible = true
 						else
 							Box.Visible = false
 						end
 					else
 						Box.Visible = false
 					end
+				else
+					Box.Visible = false
 				end
-
-				game:GetService("RunService").RenderStepped:Connect(UpdateBox)
-
-				player.CharacterRemoving:Connect(function()
-					if Options.esp.Value then
-						Box.Visible = false
-					end
-				end)
-
-				UpdateBox()
-
 			end
 
-			Players.PlayerAdded:Connect(function(player)
+			game:GetService("RunService").RenderStepped:Connect(UpdateBox)
+
+			player.CharacterRemoving:Connect(function()
 				if Options.esp.Value then
-					if player ~= Players.LocalPlayer then
-						CreateBox(player)
-					end
+					Box.Visible = false
 				end
 			end)
 
-			for _, player in pairs(Players:GetPlayers()) do
-				if player ~= Players.LocalPlayer then
-					CreateBox(player)
-				end
-			end
-		end
+			UpdateBox()
 
+		end
 		Players.PlayerAdded:Connect(function(player)
 			if Options.esp.Value then
 				if player ~= Players.LocalPlayer then
