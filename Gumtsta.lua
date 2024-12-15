@@ -7,7 +7,8 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
-local titlename = "Gumstra V1.614"
+local loaded = false
+local titlename = "Gumstra V1.62"
 --arrays
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
 --Functions
@@ -130,10 +131,10 @@ do
 	end)
 
 	--tp to player 
-	local playerNames = {}
+	local playerNames = {"W", "E"}
 
 
-	local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
+	local Dropdown = Tabs.Main:AddDropdown("tpplayer", {
 		Title = "Teleport to player",
 		Values = playerNames,
 
@@ -142,17 +143,35 @@ do
 	})
 
 	Dropdown:OnChanged(function(Value)
-		for _, player in ipairs(Players:GetPlayers()) do 
+		table.clear(playerNames)
+		for _, player in ipairs(Players:GetPlayers()) do
 			table.insert(playerNames, player.DisplayName)
-
 		end
+		Options.tpplayer.Values = playerNames
 
-		for _, GetplrName in pairs(Players:GetPlayers()) do
+		Players.PlayerAdded:Connect(function(player)
+			table.insert(playerNames, player.DisplayName)
+			Options.tpplayer.Values = playerNames
+		end)
+
+		Players.PlayerRemoving:Connect(function(player)
+			for i, name in ipairs(playerNames) do
+				if name == player.DisplayName then
+					table.remove(playerNames, i)
+				end
+			end
+			Options.tpplayer.Values = playerNames
+		end)
+
+		for _, GetplrName in ipairs(Players:GetPlayers()) do
 			if GetplrName.DisplayName == Value then
 				local plHRP = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 				plHRP.CFrame = GetplrName.Character:WaitForChild("HumanoidRootPart").CFrame
 			end
 		end
+
+		Options.tpplayer.Values = playerNames
+
 	end)
 
 	Dropdown:SetValue(Players.LocalPlayer.DisplayName)
@@ -246,6 +265,56 @@ do
 				end
 			end
 		end)	
+	end)
+
+	_G.OldnameTA = "w"
+	_G.NewnameTA = ""	
+
+	local Input = Tabs.Main:AddInput("arabpeople", {
+		Title = "Terrorist Attack",
+		Default = "",
+		Placeholder = "Target",
+		Numeric = false, -- Only allows numbers
+		Finished = true, -- Only calls callback when you press enter
+		callback = function(Value)
+			Fluent:Notify({
+				Title = "Terrorist Attack",
+				SubContent = "Place the bomb and wait 4 seconds.. they'll explode killing them and anyone around them.",
+				Duration = 5
+			}) 
+		end
+	})
+	
+	local TAcheckedoff = false
+	
+	Input:OnChanged(function()
+		TAcheckedoff = false
+		if _G.NewnameTA ~= _G.OldnameTA then
+			playerFolder.ChildAdded:Connect(function(part)
+				if TAcheckedoff == false then
+					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.."'s Bomb" then
+						local displayName = Input.Value
+						for _, player in pairs(Players:GetChildren()) do
+							if player.DisplayName:lower() == displayName:lower() then
+								displayName = player.Name
+							end
+						end
+
+						local humanoidRootPart = Players[displayName].Character:WaitForChild("HumanoidRootPart")
+						wait(3) 
+						local startTime = tick()
+						while tick() - startTime < 1 do
+							part.Transparency = 1
+							part.CFrame = humanoidRootPart.CFrame * CFrame.new(0, -1, 0)
+							part.CanCollide = false
+							task.wait()
+						end
+					end
+					TAcheckedoff = true
+				end
+			end)
+			_G.OldnameTA = _G.NewnameTA
+		end
 	end)
 
 	Tabs.Main:AddSection("Protection")
@@ -879,7 +948,7 @@ end
 
 
 
-
+loaded = true
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 
