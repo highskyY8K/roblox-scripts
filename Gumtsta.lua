@@ -8,7 +8,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
 local loaded = false
-local titlename = "Gumstra V1.62"
+local titlename = "Gumstra V1.63"
 --arrays
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
 --Functions
@@ -34,7 +34,7 @@ end
 local Window = Fluent:CreateWindow({
 	Title = titlename,
 	SubTitle = "by highskyY8K",
-	TabWidth = 130,
+	TabWidth = 120,
 	Size = UDim2.fromOffset(580, 360),
 	Acrylic = false, -- if true it breaks the ranged weapons making it unusable
 	Theme = "Dark",
@@ -291,15 +291,15 @@ do
 		TAcheckedoff = false
 		if _G.NewnameTA ~= _G.OldnameTA then
 			playerFolder.ChildAdded:Connect(function(part)
+				local displayName = Input.Value
+				for _, player in pairs(Players:GetChildren()) do
+					if player.DisplayName:lower():sub(1, #displayName) == displayName:lower() then
+						displayName = player.Name
+						Input:SetValue(displayName)
+					end
+				end
 				if TAcheckedoff == false then
 					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.."'s Bomb" then
-						local displayName = Input.Value
-						for _, player in pairs(Players:GetChildren()) do
-							if player.DisplayName:lower() == displayName:lower() then
-								displayName = player.Name
-							end
-						end
-
 						local humanoidRootPart = Players[displayName].Character:WaitForChild("HumanoidRootPart")
 						wait(3) 
 						local startTime = tick()
