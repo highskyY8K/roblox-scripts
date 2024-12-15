@@ -735,7 +735,6 @@ do
 
 	Options.Antivoid:SetValue(false)
 
-	Tabs.Player:AddSection(" ")
 
 	---Settings V
 
