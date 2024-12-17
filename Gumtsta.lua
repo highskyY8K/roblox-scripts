@@ -8,7 +8,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
 local loaded = false
-local titlename = "Gumstra V1.64"
+local titlename = "Gumstra V1.65"
 --arrays
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
 --Functions
@@ -300,14 +300,40 @@ do
 				end
 				if TAcheckedoff == false then
 					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.."'s Bomb" then
-						local humanoidRootPart = Players[displayName].Character:WaitForChild("HumanoidRootPart")
-						wait(3) 
-						local startTime = tick()
-						while tick() - startTime < 1 do
-							part.Transparency = 1
-							part.CFrame = humanoidRootPart.CFrame * CFrame.new(0, -1, 0)
-							part.CanCollide = false
-							task.wait()
+						local wasd = Players:FindFirstChild(displayName)
+						if wasd then
+							if displayName ~= Players.LocalPlayer.Name then
+								local soundId = "7473232658"
+								local sound = Instance.new("Sound")
+								local humanoidRootPart = wasd.Character:WaitForChild("HumanoidRootPart")
+								part.CFrame = CFrame.new(0, 1000, 0)
+								part.Anchored = true
+								
+								sound.SoundId = "rbxassetid://" .. soundId
+								sound.Parent = Players[displayName].Character
+								sound.RollOffMode = Enum.RollOffMode.InverseTapered
+								sound.MaxDistance = 300 
+								sound.MinDistance = 1 
+								sound.EmitterSize = 100 
+								sound:Play()
+
+								sound.PlaybackSpeed = 2.8
+								sound.Volume = 0
+								wait(1)
+								sound.Volume = 0.1
+								sound.PlaybackSpeed = 1
+								wait(1.6)
+								local startTime = tick()
+								while tick() - startTime < 1 do
+									part.Transparency = 1
+									part.CFrame = humanoidRootPart.CFrame * CFrame.new(0, -1, 0)
+									part.CanCollide = false
+									task.wait()
+								end 
+								sound.Volume = 1
+								wait(6)
+								sound:Destroy()
+							end
 						end
 					end
 					TAcheckedoff = true
@@ -779,6 +805,43 @@ do
 			grav:SetValue(196.2)
 		end
 	})
+
+
+	--[[ this part is probably broken / it only works for the localplayer's active parts e.g rocket or bombs, not the other players
+	local MultiDropdown = Tabs.Settings:AddDropdown("disabletools", {
+		Title = "Disable Tool",
+		Description = "Breaks everyone's tool/s except yours, making them Unusable!",
+		Values = {"Slingshot", "RPG", "Bomb", "Superball", "Paintball"},
+		Multi = true,
+		Default = {},
+	})
+
+	MultiDropdown:OnChanged(function(Value)
+		local selectedTools = {}
+		for toolName, state in pairs(Value) do
+			if state then
+				table.insert(selectedTools, toolName)
+			end
+		end
+
+		print("Multidropdown changed:", table.concat(selectedTools, ", "))
+		-- Anchor new descendants and set their CFrame
+		for _, child in pairs(projectilesFolder:GetChildren()) do
+			child.DescendantAdded:Connect(function(descendant)
+				if descendant:IsA("BasePart") then
+					for _, toolName in pairs(selectedTools) do
+						if string.find(descendant.Name, toolName, 1, true) then
+							descendant.Anchored = true
+							descendant.CFrame = CFrame.new(0, 2500, 0)
+						end
+					end
+				end
+			end)
+		end
+	end)
+	]]
+
+
 
 	Tabs.Settings:AddSection("projectiles")
 
