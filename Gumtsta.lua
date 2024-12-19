@@ -1,6 +1,7 @@
 --services
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
 local Uis = game:GetService("UserInputService")
 --loadstrings
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
@@ -8,7 +9,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
 local loaded = false
-local titlename = "Gumstra V1.65"
+local titlename = "Gumstra V1.661"
+local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
 --Functions
@@ -886,6 +888,43 @@ do
 	})
 
 	Slider:SetValue(1)
+	
+	local Keybind = Tabs.Settings:AddKeybind("Bmove", {
+		Title = "Bomb-Move",
+		Mode = "Hold",
+		Default = "LeftControl",
+	})
+
+	task.spawn(function()
+		while true do
+			wait()
+
+			local state = Keybind:GetState()
+			local part = playerFolder:FindFirstChild(Players.LocalPlayer.Name .. "'s Bomb")
+			
+			if state then
+				if part and part:IsA("Part") then
+					local tweenInfo = TweenInfo.new( 
+						0.1,  
+						Enum.EasingStyle.Linear, 
+						Enum.EasingDirection.Out
+					)
+					
+					local tween = TweenService:Create(part, tweenInfo, { CFrame = mouse.Hit * CFrame.new(0, 2, 0) }) 
+					tween:Play()
+					part.Anchored = true
+				end
+			else
+				if part and part:IsA("Part") then
+					part.Anchored = false
+				end
+			end
+			
+			if Fluent.Unloaded then break end
+		end
+	end)
+
+	Keybind:SetValue("LeftControl", "Hold")
 
 	Tabs.Settings:AddSection("Other")
 
