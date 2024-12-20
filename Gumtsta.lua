@@ -9,6 +9,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
 local loaded = false
+local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
 local titlename = "Gumstra V1.69"
 local mouse = Players.LocalPlayer:GetMouse()
@@ -41,9 +42,11 @@ local mobilecheck = table.find({
 }, Uis:GetPlatform())
 
 if mobilecheck then
-	Winsize = UDim2.fromOffset(380, 160)
+	Winsize = UDim2.fromOffset(360, 260)
+	Tabsize = 100
 else
 	Winsize = UDim2.fromOffset(580, 360)
+	Tabsize = 120
 end
 
 --Gumstra
