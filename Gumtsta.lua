@@ -11,7 +11,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.683"
+local titlename = "Gumstra V1.684"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
@@ -42,7 +42,7 @@ local mobilecheck = table.find({
 }, Uis:GetPlatform())
 
 if mobilecheck then
-	Winsize = UDim2.fromOffset(420, 260)
+	Winsize = UDim2.fromOffset(420, 280)
 	Tabsize = 90
 else
 	Winsize = UDim2.fromOffset(580, 360)
