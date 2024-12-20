@@ -9,7 +9,7 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
 local loaded = false
-local titlename = "Gumstra V1.661"
+local titlename = "Gumstra V1.68"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
@@ -901,7 +901,7 @@ do
 
 			local state = Keybind:GetState()
 			local part = playerFolder:FindFirstChild(Players.LocalPlayer.Name .. "'s Bomb")
-			
+	
 			if state then
 				if part and part:IsA("Part") then
 					local tweenInfo = TweenInfo.new( 
@@ -913,6 +913,10 @@ do
 					local tween = TweenService:Create(part, tweenInfo, { CFrame = mouse.Hit * CFrame.new(0, 2, 0) }) 
 					tween:Play()
 					part.Anchored = true
+					--[[
+						part.Rotation = Vector3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))
+					]]
+					
 				end
 			else
 				if part and part:IsA("Part") then
@@ -977,7 +981,7 @@ do
 
 	Options.de:SetValue(false)
 
-	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.32", Default = false })
+	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.4", Default = false })
 	Toggle:OnChanged(function()
 		if Options.da.Value == true then
 			local function da()
@@ -1001,24 +1005,25 @@ do
 										})
 									end
 								else
-									local noSpawnPoints = true
+									local nospawn = false
 									if game.Players[player.name].Team == "Spectators" then -- 2p
 										for _, AllSpires in pairs(game.Workspace.Doomspires:GetChildren()) do
-											for _, v in pairs(AllSpires.Spawnpoints:GetChildren()) do
-												noSpawnPoints = false
-												break
-											end
-											if not noSpawnPoints then 
-												break 
+											for _, v in pairs(AllSpires:GetChildren()) do
+												if v:FindFirstChild("Spawnpoints") then
+													nospawn = true
+												end
 											end
 										end
-										if noSpawnPoints == true then
-											Fluent:Notify({
-												Title = "Admin Detected.",
-												Content = "Reason = Switching Teams.",
-												SubContent = repsoncesXD[math.random(1, 3)],
-												Duration = 12 - math.random(1, 11)
-											})
+										if nospawn == false then
+											if _G.SaidAdmin ~= player.Name then
+												_G.SaidAdmin = player.Name
+												Fluent:Notify({
+													Title = "Admin Detected.",
+													Content = "Reason = Switching Teams.",
+													SubContent = repsoncesXD[math.random(1, 3)],
+													Duration = 12 - math.random(1, 11)
+												})
+											end
 										end
 									end
 								end
@@ -1045,6 +1050,31 @@ do
 			end)
 		end
 	end)
+	
+	Tabs.Settings:AddButton({
+		Title = "Disable Bomb",
+		Description = "Disable your placed bomb",
+		Callback = function()
+			for _, v in pairs(playerFolder:GetChildren()) do
+				if string.find(v.Name, "Bomb") or v.Name == "deactivebomb" then
+					if v:IsA("Folder") then
+						v.BlownUpClient.Value = true
+						v.Name = "Folder"
+					elseif v:IsA("Part") then
+						v.Transparency = 0.1
+					end
+					
+					if v.Name == "deactivebomb" then
+						v.CFrame = CFrame.new(0, -1000, 0) 
+						wait(0.5) 
+						v:Destroy()
+					else
+						v.Name = "deactivebomb"
+					end
+				end
+			end
+		end
+	})
 end
 
 
