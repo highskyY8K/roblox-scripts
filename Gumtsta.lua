@@ -9,7 +9,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
 local loaded = false
-local titlename = "Gumstra V1.68"
+local Winsize = UDim2.fromOffset(580, 360)
+local titlename = "Gumstra V1.69"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
@@ -32,12 +33,25 @@ local function EquipTool(tool)
 		end
 	end
 end
+--Mobile Check
+
+local mobilecheck = table.find({
+	Enum.Platform.IOS, 
+	Enum.Platform.Android
+}, Uis:GetPlatform())
+
+if mobilecheck then
+	Winsize = UDim2.fromOffset(380, 160)
+else
+	Winsize = UDim2.fromOffset(580, 360)
+end
+
 --Gumstra
 local Window = Fluent:CreateWindow({
 	Title = titlename,
 	SubTitle = "by highskyY8K",
 	TabWidth = 120,
-	Size = UDim2.fromOffset(580, 360),
+	Size = Winsize,
 	Acrylic = false, -- if true it breaks the ranged weapons making it unusable
 	Theme = "Dark",
 	MinimizeKey = Enum.KeyCode.LeftControl 
