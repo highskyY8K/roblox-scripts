@@ -1,4 +1,5 @@
 --services
+local sgui = game:GetService("StarterGui")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
@@ -11,7 +12,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.685"
+local titlename = "Gumstra V1.6851"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local toollist = {"Sword", "Slingshot", "Rocket", "Bomb", "Superball", "PaintballGun"}
@@ -61,7 +62,7 @@ end
 Fluent:Notify({
 	Title = "Loading...",
 	SubContent = "Script is currently loading, Please wait a few seconds!",
-	Duration = 10 + math.random(0, 20)
+	Duration = 10
 })
 --Gumstra
 local Window = Fluent:CreateWindow({
