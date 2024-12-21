@@ -11,9 +11,10 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.684"
+local titlename = "Gumstra V1.685"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
+local toollist = {"Sword", "Slingshot", "Rocket", "Bomb", "Superball", "PaintballGun"}
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
 --Functions
 local function EquipTool(tool)
@@ -34,21 +35,34 @@ local function EquipTool(tool)
 		end
 	end
 end
---Mobile Check
 
+local function GetEquipTools(tool)
+	for i = 1, #toollist do
+		if toollist[i] == tool then
+			return Players.LocalPlayer.Character:FindFirstChild(tool)
+		end
+	end
+	return nil
+end
+--Mobile Check
 local mobilecheck = table.find({
 	Enum.Platform.IOS, 
 	Enum.Platform.Android
 }, Uis:GetPlatform())
 
 if mobilecheck then
-	Winsize = UDim2.fromOffset(420, 280)
+	Winsize = UDim2.fromOffset(420, 280) -- yea yea the settings ain't perfect, atleast it fits on the screen xD
 	Tabsize = 90
 else
 	Winsize = UDim2.fromOffset(580, 360)
 	Tabsize = 120
 end
-
+--random
+Fluent:Notify({
+	Title = "Loading...",
+	SubContent = "Script is currently loading, Please wait a few seconds!",
+	Duration = 10 + math.random(0, 20)
+})
 --Gumstra
 local Window = Fluent:CreateWindow({
 	Title = titlename,
@@ -369,6 +383,8 @@ do
 	Options.ff:SetValue(false)
 
 	Toggle:OnChanged(function(Value)
+		local lasttool = ""
+		
 		local function checkProximity()
 			for _, player in pairs(Players:GetPlayers()) do
 				local LocalPlayer = Players.LocalPlayer
