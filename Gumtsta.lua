@@ -12,7 +12,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.6851"
+local titlename = "Gumstra V1.686"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local toollist = {"Sword", "Slingshot", "Rocket", "Bomb", "Superball", "PaintballGun"}
