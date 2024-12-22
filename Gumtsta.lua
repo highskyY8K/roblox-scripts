@@ -54,6 +54,7 @@ local mobilecheck = table.find({
 if mobilecheck then
 	Winsize = UDim2.fromOffset(420, 280) -- yea yea the settings ain't perfect, atleast it fits on the screen xD
 	Tabsize = 90
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Gumicuci/roblox-scripts/refs/heads/main/mobile%20drag.lua"))()
 else
 	Winsize = UDim2.fromOffset(580, 360)
 	Tabsize = 120
