@@ -12,7 +12,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.686"
+local titlename = "Gumstra V1.687"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local toollist = {"Sword", "Slingshot", "Rocket", "Bomb", "Superball", "PaintballGun"}
@@ -64,6 +64,13 @@ Fluent:Notify({
 	SubContent = "Script is currently loading, Please wait a few seconds!",
 	Duration = 10
 })
+if Players.LocalPlayer.AccountAge > math.random(150, 366) then
+	Fluent:Notify({
+		Title = "Really.",
+		SubContent = "If i was you i'd use an alt account for exploiting :/",
+		Duration = 5
+	})
+end
 --Gumstra
 local Window = Fluent:CreateWindow({
 	Title = titlename,
