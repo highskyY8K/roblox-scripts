@@ -9,14 +9,15 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
+local updatedgv = "909" 
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.687"
+local titlename = "Gumstra V1.689"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local toollist = {"Sword", "Slingshot", "Rocket", "Bomb", "Superball", "PaintballGun"}
-local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated"}
+local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated", "shibqz"}
 --Functions
 local function EquipTool(tool)
 	local backpack = Players.LocalPlayer:FindFirstChildOfClass("Backpack")
@@ -258,13 +259,15 @@ do
 			if Options.killall.Value == true then
 				if _G.KAGmode == "Bomb" then
 					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.. "'s Bomb" then
-						part.CFrame = CFrame.new(1000, 25, 0)
 						part.Anchored = true
+						part.CFrame = CFrame.new(1000, 25, 0)
 						wait(2)
 						local startTime = tick()
 						while tick() - startTime < 3 do
 							for _, player in pairs(Players:GetPlayers()) do
 								if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+									part.Anchored = true
+									part.CFrame = CFrame.new(1000, 25, 0)
 									if _G.whitelistfriends == true then
 										local isFriend = Players.LocalPlayer:IsFriendsWith(player.UserId)
 										if not isFriend then
