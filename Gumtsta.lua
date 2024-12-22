@@ -1026,7 +1026,7 @@ do
 
 	Options.de:SetValue(false)
 
-	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.4", Default = false })
+	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.45", Default = false })
 	Toggle:OnChanged(function()
 		if Options.da.Value == true then
 			local function da()
