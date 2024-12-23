@@ -9,34 +9,60 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
-local updatedgv = "909" 
+local updatedgv = "934" 
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.689"
+local titlename = "Gumstra V1.69"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
+local wlistedplayers = {""}
 local toollist = {"Sword", "Slingshot", "Rocket", "Bomb", "Superball", "PaintballGun"}
 local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated", "shibqz"}
 --Functions
-local function EquipTool(tool)
+local function EquipTool(tool, grip, override, Unequip)
 	local backpack = Players.LocalPlayer:FindFirstChildOfClass("Backpack")
 	local character = Players.LocalPlayer.Character
 	local toolfound = backpack:FindFirstChild(tool)
-	
+
 	if toolfound then
-		wait(0.35) 
-		toolfound.GripPos = Vector3.new(75, 750, 75) 
-		toolfound.Parent = character
-		wait(0.1) 
-		local toolfoundc = character:FindFirstChild(tool) 
-		if tool == "Rocket" then 
-			toolfoundc.GripPos = Vector3.new(0.579, -0.596, 0.074) 
-		elseif tool == "Bomb" then 
-			toolfoundc.GripPos = Vector3.new(0, -0.07000014930963516, 0) 
+		if override == true then
+			wait(0.35) 
+			toolfound.GripPos = Vector3.new(75, 750, 75) 
+			toolfound.Parent = character
+			wait(0.1) 
+			local toolfoundc = character:FindFirstChild(tool) 
+			if tool == "Rocket" then 
+				toolfoundc.GripPos = Vector3.new(-0.578999996, -0.596000016, 0.074000001, -0.000692009926, 0.00872156397, 0.999961734, -0.0214206018, 0.999732375, -0.00873438641, -0.999770284, -0.0214258246, -0.000504970551) 
+			elseif tool == "Bomb" then 
+				toolfoundc.GripPos = Vector3.new(6.40836242e-06, -0.0700001493, -6.40829876e-06, 1, 0, 0, 0, 0, -1, 0, 1, 0) 
+			end
+		else
+			
+			if tool == "Rocket" then
+				toolfound.GripPos = Vector3.new(grip.x, grip.y, grip.z)
+				print(grip)
+			elseif tool == "Bomb" then
+				toolfound.GripPos = Vector3.new(grip.x, grip.y, grip.z)
+				print(grip)
+			end
+			
+			
+			toolfound.Parent = character
 		end
 	end
+	
+	if Unequip == true then
+		local toolchar = character:FindFirstChild(tool)
+		if tool == "Rocket" then 
+			toolchar.GripPos = Vector3.new(-0.579, -0.596, 0.074) 
+		elseif tool == "Bomb" then 
+			toolchar.GripPos = Vector3.new(0, -0.07000014930963516, 0) 
+		end
+		toolchar.Parent = backpack
+	end
 end
+
 
 local function GetEquipTools(tool)
 	for i = 1, #toollist do
@@ -73,6 +99,7 @@ if Players.LocalPlayer.AccountAge > math.random(150, 366) then
 		Duration = 5
 	})
 end
+print("\n\nGumstra is updated for Game Version V" .. updatedgv .. ",\nCurrent Game Version: V" .. game.PlaceVersion .. "\n")
 --Gumstra
 local Window = Fluent:CreateWindow({
 	Title = titlename,
@@ -314,20 +341,15 @@ do
 
 	_G.OldnameTA = "w"
 	_G.NewnameTA = ""	
-
+	
+	--TODO CHANGE THIS WHOLE THING V HERE TO A BUTTON THAT MAKES A NEW GUI AND IT SHOWS THE NAME OF THE PLAYER YOU WANT TO ATTACK, I HAVE NO FUCKING IDEA WHY IT LOADS GUMSTRA AGAIN?
+	--[[
 	local Input = Tabs.Main:AddInput("arabpeople", {
 		Title = "Terrorist Attack",
 		Default = "",
 		Placeholder = "Target",
 		Numeric = false, -- Only allows numbers
-		Finished = true, -- Only calls callback when you press enter
-		callback = function(Value)
-			Fluent:Notify({
-				Title = "Terrorist Attack",
-				SubContent = "Place the bomb and wait 4 seconds.. they'll explode killing them and anyone around them.",
-				Duration = 5
-			}) 
-		end
+		Finished = false, -- Only calls callback when you press enter
 	})
 	
 	local TAcheckedoff = false
@@ -336,37 +358,22 @@ do
 		TAcheckedoff = false
 		if _G.NewnameTA ~= _G.OldnameTA then
 			playerFolder.ChildAdded:Connect(function(part)
-				local displayName = Input.Value
-				for _, player in pairs(Players:GetChildren()) do
-					if player.DisplayName:lower():sub(1, #displayName) == displayName:lower() then
-						displayName = player.Name
-						Input:SetValue(displayName)
-					end
-				end
 				if TAcheckedoff == false then
+					local displayName = Input.Value
+					for _, player in pairs(Players:GetChildren()) do
+						if player.DisplayName:lower():sub(1, #displayName) == displayName:lower() then
+							displayName = player.Name
+							Input:SetValue(displayName)
+						end
+					end
 					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.."'s Bomb" then
 						local wasd = Players:FindFirstChild(displayName)
 						if wasd then
 							if displayName ~= Players.LocalPlayer.Name then
-								local soundId = "7473232658"
-								local sound = Instance.new("Sound")
 								local humanoidRootPart = wasd.Character:WaitForChild("HumanoidRootPart")
 								part.CFrame = CFrame.new(0, 1000, 0)
 								part.Anchored = true
 								
-								sound.SoundId = "rbxassetid://" .. soundId
-								sound.Parent = Players[displayName].Character
-								sound.RollOffMode = Enum.RollOffMode.InverseTapered
-								sound.MaxDistance = 300 
-								sound.MinDistance = 1 
-								sound.EmitterSize = 100 
-								sound:Play()
-
-								sound.PlaybackSpeed = 2.8
-								sound.Volume = 0
-								wait(1)
-								sound.Volume = 0.1
-								sound.PlaybackSpeed = 1
 								wait(1.6)
 								local startTime = tick()
 								while tick() - startTime < 1 do
@@ -375,9 +382,6 @@ do
 									part.CanCollide = false
 									task.wait()
 								end 
-								sound.Volume = 1
-								wait(6)
-								sound:Destroy()
 							end
 						end
 					end
@@ -387,7 +391,8 @@ do
 			_G.OldnameTA = _G.NewnameTA
 		end
 	end)
-
+	]]
+	
 	Tabs.Main:AddSection("Protection")
 
 	local Toggle = Tabs.Main:AddToggle("ff", {Title = "Force-Field", Default = false })
@@ -974,6 +979,44 @@ do
 	end)
 
 	Keybind:SetValue("LeftControl", "Hold")
+	
+	_G.JaGhwopen = true
+	Tabs.Settings:AddButton({
+		Title = "Click-Explode",
+		Description = "Click anywhere and it will explode!, cooldown of 7 seconds.",
+		Callback = function()
+			if Players.LocalPlayer.Backpack:FindFirstChild("Rocket") then
+				EquipTool("Rocket", Vector3.new(1000, 250, 0), false, false)
+				_G.JaGhwopen = true
+				playerFolder.ChildAdded:Connect(function(rocket)
+					if rocket:IsA("Part") and rocket.Name == Players.LocalPlayer.Name.."'s Rocket" then
+						if Players.LocalPlayer.Character:FindFirstChild("Rocket").GripPos ~= Vector3.new(-0.578999996, -0.596000016, 0.074000001, -0.000692009926, 0.00872156397, 0.999961734, -0.0214206018, 0.999732375, -0.00873438641, -0.999770284, -0.0214258246, -0.000504970551) then
+							rocket.CFrame = mouse.Hit
+							for io = 1, 10 do
+								wait()
+								rocket.Rotation = Vector3.new(math.random(0, 1080), math.random(0, 1080), math.random(0, 1080))
+							end 
+						end
+					end
+				end)
+				
+				--[[ --insta ranged weapon travel :D cant believe i accidentally made this lol
+				playerFolder.ChildAdded:Connect(function(rocket)
+					if rocket:IsA("Part") then
+						for io = 1, 25 do
+							wait()
+							rocket.CFrame = mouse.Hit
+							rocket.Rotation = Vector3.new(math.random(0, 1080), math.random(0, 1080), math.random(0, 1080))
+						end
+					end
+				end)
+				]]
+			else
+				EquipTool("Rocket", Vector3.new(0, 0, 0), false, true)
+				_G.JaGhwopen = false
+			end
+		end
+	})
 
 	Tabs.Settings:AddSection("Other")
 
@@ -1090,7 +1133,7 @@ do
 		if Options.aetool.Value == true then
 			game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
 				if Options.aetool.Value == true then
-					EquipTool(_G.KAGmode)
+					EquipTool(_G.KAGmode, "", true)
 				end
 			end)
 		end
