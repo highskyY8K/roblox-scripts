@@ -13,7 +13,7 @@ local updatedgv = "934"
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.692"
+local titlename = "Gumstra V1.6921"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local wlistedplayers = {""}
@@ -890,7 +890,6 @@ do
 			end
 		end
 
-		print("Multidropdown changed:", table.concat(selectedTools, ", "))
 		-- Anchor new descendants and set their CFrame
 		for _, child in pairs(projectilesFolder:GetChildren()) do
 			child.DescendantAdded:Connect(function(descendant)
@@ -1063,7 +1062,7 @@ do
 							wait(0.05 * math.random(2, 8))
 							workspace.Gravity = 0
 						end
-						
+						v.Name = "flyinbomb!"
 						local CFloop 
 						CFloop = RunService.Heartbeat:Connect(function(deltaTime)
 							if Options.becomeabomb.Value == true then
