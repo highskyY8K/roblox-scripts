@@ -70,6 +70,14 @@ local function Anchor(Part)
 	Part.Anchored = true
 end
 
+local function RoundEnded()
+	if Players.LocalPlayer.PlayerGui.Message.Frame.TextLabel.Text == "Game over!" then
+		return true
+	else
+		return false
+	end
+end
+
 local function GetEquipTools(tool)
 	for i = 1, #toollist do
 		if toollist[i] == tool then
@@ -741,7 +749,7 @@ do
 
 		if Options.invisfly.Value == true then
 			local pastposhrp = Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 100000000000, 0)
+			Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 100000000000, 0)
 			wait(0.05 * math.random(2, 8))
 			local Head = Players.LocalPlayer.Character:WaitForChild("Head")
 			Head.Anchored = true
@@ -837,7 +845,7 @@ do
 	Options.daynight:SetValue(false)
 
 
-	local grav = Tabs.Settings:AddSlider("Slider", {
+	local grav = Tabs.Settings:AddSlider("gravity", {
 		Title = "Gravity",
 		Description = "Change the world's Gravity",
 		Default = 196.2,
@@ -1049,26 +1057,40 @@ do
 					if v:IsA("Folder") then
 						v.BlownUpClient.Value = true
 						v.Name = "Folder"
-					elseif v:IsA("Part") then
+					elseif v:IsA("Part") and v.Name == Players.LocalPlayer.Name.."'s Bomb" then
+						if Options.becomeabomb.Value == true then
+							Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 10000000000, 0)
+							wait(0.05 * math.random(2, 8))
+							workspace.Gravity = 0
+						end
+						
 						local CFloop 
 						CFloop = RunService.Heartbeat:Connect(function(deltaTime)
 							if Options.becomeabomb.Value == true then
-								Anchor(v)
-								if Players.LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed ~= 0 then
-									Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
-								end
-								workspace.Camera.CameraSubject = v
-								local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
-								local headCFrame = v.CFrame
-								local cameraCFrame = workspace.Camera.CFrame
-								local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
-								cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
-								local cameraPosition = cameraCFrame.Position
-								local headPosition = headCFrame.Position
+								if RoundEnded() == true then
+									Options.becomeabomb:SetValue(false)
+								else
+									Anchor(v)
+									if Players.LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed ~= 0 then
+										Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+									end
+									workspace.Camera.CameraSubject = v
+									local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
+									local headCFrame = v.CFrame
+									local cameraCFrame = workspace.Camera.CFrame
+									local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
+									cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
+									local cameraPosition = cameraCFrame.Position
+									local headPosition = headCFrame.Position
 
-								local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
-								v.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
+									local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
+									v.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)	
+								end
 							else
+								workspace.Gravity = Options.gravity.Value
+								Players.LocalPlayer.Character.Humanoid.Health = -1
+								v.CFrame = CFrame.new(0, 10000000000, 0)
+								wait(1)
 								v.Anchored = false
 								v:Destroy()
 								workspace.Camera.CameraSubject = Players.LocalPlayer.Character
