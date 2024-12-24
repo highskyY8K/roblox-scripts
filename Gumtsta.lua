@@ -13,12 +13,12 @@ local updatedgv = "934"
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.691"
+local titlename = "Gumstra V1.692"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local wlistedplayers = {""}
 local toollist = {"Sword", "Slingshot", "Rocket", "Bomb", "Superball", "PaintballGun"}
-local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated", "shibqz"}
+local knownadminslist = {"maya_png", "DanteLike", "fimnik", "MishaHahaLol", "s8nIV", "cowlover4499", "gamertomsuper", "Audaciety", "ThatLuxray35", "gatlated", "shibqz", "ElijahPepe"}
 local knownreportslist = {"lemurbeanthegreat", "siisixuccuuc", "Doe_JohnRBLX"}
 --Functions
 local function EquipTool(tool, grip, override, Unequip)
@@ -64,6 +64,11 @@ local function EquipTool(tool, grip, override, Unequip)
 	end
 end
 
+local function Anchor(Part)
+	Part.Velocity = Vector3.new(0, 0, 0) 
+	Part.RotVelocity = Vector3.new(0, 0, 0)
+	Part.Anchored = true
+end
 
 local function GetEquipTools(tool)
 	for i = 1, #toollist do
@@ -287,14 +292,14 @@ do
 			if Options.killall.Value == true then
 				if _G.KAGmode == "Bomb" then
 					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.. "'s Bomb" then
-						part.Anchored = true
+						Anchor(part)
 						part.CFrame = CFrame.new(1000, 25, 0)
 						wait(2)
 						local startTime = tick()
 						while tick() - startTime < 3 do
 							for _, player in pairs(Players:GetPlayers()) do
 								if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-									part.Anchored = true
+									Anchor(part)
 									part.CFrame = CFrame.new(1000, 25, 0)
 									if _G.whitelistfriends == true then
 										local isFriend = Players.LocalPlayer:IsFriendsWith(player.UserId)
@@ -373,7 +378,7 @@ do
 							if displayName ~= Players.LocalPlayer.Name then
 								local humanoidRootPart = wasd.Character:WaitForChild("HumanoidRootPart")
 								part.CFrame = CFrame.new(0, 1000, 0)
-								part.Anchored = true
+								part.Anchored = true -- use anchor() aka the function
 								
 								wait(1.6)
 								local startTime = tick()
@@ -963,7 +968,7 @@ do
 					
 					local tween = TweenService:Create(part, tweenInfo, { CFrame = mouse.Hit * CFrame.new(0, 2, 0) }) 
 					tween:Play()
-					part.Anchored = true
+					Anchor(part)
 					--[[
 						part.Rotation = Vector3.new(math.random(0, 360), math.random(0, 360), math.random(0, 360))
 					]]
@@ -1001,7 +1006,7 @@ do
 					end
 				end)
 				
-				--[[ --insta ranged weapon travel :D cant believe i accidentally made this lol
+				--[[ --insta ranged weapon travel :D cant believe i accidentally made this lol, this can be used for aimbot :3
 				playerFolder.ChildAdded:Connect(function(rocket)
 					if rocket:IsA("Part") then
 						for io = 1, 25 do
@@ -1018,6 +1023,66 @@ do
 			end
 		end
 	})
+
+	local grav = Tabs.Settings:AddSlider("Slider", {
+		Title = "Bomb-fly Speed",
+		Description = "Changes the speed of bomb-fly",
+		Default = 75,
+		Min = 0,
+		Max = 150,
+		Rounding = 0.1,
+		Callback = function(Value)
+			_G.invisspeed = Value
+		end
+	})
+
+	grav:OnChanged(function(Value)
+		_G.invisspeed = Value
+	end)
+
+	local Toggle = Tabs.Settings:AddToggle("becomeabomb", {Title = "Bomb-Fly", Default = false })
+	
+	Toggle:OnChanged(function()
+		if Options.becomeabomb.Value == true then
+			for _, v in pairs(playerFolder:GetChildren()) do
+				if string.find(v.Name, "Bomb") then
+					if v:IsA("Folder") then
+						v.BlownUpClient.Value = true
+						v.Name = "Folder"
+					elseif v:IsA("Part") then
+						local CFloop 
+						CFloop = RunService.Heartbeat:Connect(function(deltaTime)
+							if Options.becomeabomb.Value == true then
+								Anchor(v)
+								if Players.LocalPlayer.Character:FindFirstChild("Humanoid").WalkSpeed ~= 0 then
+									Players.LocalPlayer.Character.Humanoid.WalkSpeed = 0
+								end
+								workspace.Camera.CameraSubject = v
+								local moveDirection = Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").MoveDirection * (_G.invisspeed * deltaTime)
+								local headCFrame = v.CFrame
+								local cameraCFrame = workspace.Camera.CFrame
+								local cameraOffset = headCFrame:ToObjectSpace(cameraCFrame).Position
+								cameraCFrame = cameraCFrame * CFrame.new(-cameraOffset.X, -cameraOffset.Y, -cameraOffset.Z + 1)
+								local cameraPosition = cameraCFrame.Position
+								local headPosition = headCFrame.Position
+
+								local objectSpaceVelocity = CFrame.new(cameraPosition, Vector3.new(headPosition.X, cameraPosition.Y, headPosition.Z)):VectorToObjectSpace(moveDirection)
+								v.CFrame = CFrame.new(headPosition) * (cameraCFrame - cameraPosition) * CFrame.new(objectSpaceVelocity)
+							else
+								v.Anchored = false
+								v:Destroy()
+								workspace.Camera.CameraSubject = Players.LocalPlayer.Character
+								Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+								CFloop:Disconnect()
+							end
+						end)
+					end
+				end
+			end
+
+		end
+	end)
+
 
 	Tabs.Settings:AddSection("Other")
 
