@@ -13,7 +13,7 @@ local updatedgv = "934"
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.6921"
+local titlename = "Gumstra V1.6923"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local wlistedplayers = {""}
@@ -76,6 +76,27 @@ local function RoundEnded()
 	else
 		return false
 	end
+end
+
+local function GetAliveSpires()
+	local spires = {red = false, blue = false, green = false, yellow = false, amount = 0}
+	for _, spire in pairs(workspace.Doomspires:GetChildren()) do
+		if spire:IsA("Model") then
+			if spire:FindFirstChild("Spawnpoints") then
+				if spire.Name == "RED" then
+					spires.red = true
+				elseif spire.Name == "BLUE" then
+					spires.blue = true
+				elseif spire.Name == "GREEN" then
+					spires.green = true
+				elseif spire.Name == "YELLOW" then
+					spires.yellow = true
+				end
+			end
+		end
+	end
+	spires.amount = (spires.red and 1 or 0) + (spires.blue and 1 or 0) + (spires.green and 1 or 0) + (spires.yellow and 1 or 0)
+	return spires
 end
 
 local function GetEquipTools(tool)
@@ -301,7 +322,6 @@ do
 				if _G.KAGmode == "Bomb" then
 					if part:IsA("Part") and part.Name == Players.LocalPlayer.Name.. "'s Bomb" then
 						Anchor(part)
-						part.CFrame = CFrame.new(1000, 25, 0)
 						wait(2)
 						local startTime = tick()
 						while tick() - startTime < 3 do
@@ -1156,7 +1176,7 @@ do
 
 	Options.de:SetValue(false)
 
-	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.45", Default = false })
+	local Toggle = Tabs.Settings:AddToggle("da", {Title = "Detect admins V0.5", Default = false })
 	Toggle:OnChanged(function()
 		if Options.da.Value == true then
 			local function da()
@@ -1180,16 +1200,8 @@ do
 										})
 									end
 								else
-									local nospawn = false
 									if game.Players[player.name].Team == "Spectators" then -- 2p
-										for _, AllSpires in pairs(game.Workspace.Doomspires:GetChildren()) do
-											for _, v in pairs(AllSpires:GetChildren()) do
-												if v:FindFirstChild("Spawnpoints") then
-													nospawn = true
-												end
-											end
-										end
-										if nospawn == false then
+										if GetAliveSpires().amount == 4 then
 											if _G.SaidAdmin ~= player.Name then
 												_G.SaidAdmin = player.Name
 												Fluent:Notify({
