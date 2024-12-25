@@ -9,11 +9,11 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
-local updatedgv = "934" 
+local updatedgv = 934
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.6923"
+local titlename = "Gumstra V1.6924"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local wlistedplayers = {""}
@@ -135,6 +135,9 @@ if Players.LocalPlayer.AccountAge > math.random(150, 366) then
 	})
 end
 print("\n\nGumstra is updated for Game Version V" .. updatedgv .. ",\nCurrent Game Version: V" .. game.PlaceVersion .. "\n")
+if game.PlaceVersion ~= updatedgv then 
+	print("Gumstra is not currently upto date.. Everything probably still works but still, Please wait for an update to come!") 
+end
 --Gumstra
 local Window = Fluent:CreateWindow({
 	Title = titlename,
