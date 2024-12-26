@@ -9,11 +9,11 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
-local updatedgv = 978
+local updatedgv = 979
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.6926"
+local titlename = "Gumstra V1.693"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local wlistedplayers = {""}
@@ -134,9 +134,12 @@ if Players.LocalPlayer.AccountAge > math.random(150, 366) then
 		Duration = 5
 	})
 end
+--Version check
 print("\n\nGumstra is updated for Game Version V" .. updatedgv .. ",\nCurrent Game Version: V" .. game.PlaceVersion .. "\n")
-if game.PlaceVersion ~= updatedgv then 
-	print("Gumstra is not currently upto date.. Everything probably still works but still, Please wait for an update to come!") 
+if game.PlaceVersion ~= updatedgv and (game.PlaceVersion - updatedgv) >= 0 then 
+	print("Gumstra is not currently up to date.. Everything probably still works but still, Please wait for an update to come!") 
+elseif game.PlaceVersion ~= updatedgv and (game.PlaceVersion - updatedgv) <= 0 then
+	print("This Doomspire server is not currently up to date.. Everything will still work as intended in Gumstra.") 
 end
 --Gumstra
 local Window = Fluent:CreateWindow({
@@ -564,7 +567,76 @@ do
 
 	Options.instakillsword:SetValue(false)
 
+	Tabs.Main:AddSection("Auto farm")
 
+	local Dropdown = Tabs.Main:AddDropdown("af", {
+		Title = "Auto Farm",
+		Values = {"None", "CandyCane", "Gingerbread", "Presents (WIP)", "Knockouts (WIP)", "Wins (WIP)"},
+		Multi = false,
+		Default = 1,
+	})
+
+	Dropdown:SetValue("None")
+
+	_G.DRjirg = false
+	Dropdown:OnChanged(function(Value)
+		if loaded == true then
+			if _G.DRjirg == false then
+				_G.DRjirg = true
+				Fluent:Notify({
+					Title = "How to use.",
+					SubContent = "Place a BOMB down and it will auto farm for you, it is HIGHLY recommended to use an auto clicker",
+					Duration = 7
+				})
+			end
+		end
+		
+		if Options.af.Value == "CandyCane" then
+			playerFolder.ChildAdded:Connect(function(bomb)
+				for _, v in pairs(workspace.RoundEventModels:GetChildren()) do
+					if v.Name == Options.af.Value then
+						local para = v:FindFirstChild("Parachute")
+						
+						if bomb:IsA("Part") and bomb.Name == Players.LocalPlayer.Name.. "'s Bomb" then
+							if not para and v.Destroyed.Value == false then
+								Anchor(bomb)
+								bomb.Color = Color3.fromRGB(17, 255, 0)
+								bomb.Transparency = 0.9
+								wait(2)
+								local startTime = tick()
+								while tick() - startTime < 3 do
+									bomb.CFrame = v.PrimaryPart.CFrame
+									wait()
+								end
+							end
+						end
+					end
+				end
+			end)
+		elseif Options.af.Value == "Gingerbread" then
+			playerFolder.ChildAdded:Connect(function(bomb)
+				if bomb:IsA("Part") and bomb.Name == Players.LocalPlayer.Name.. "'s Bomb" then
+					for _, v in pairs(workspace.RoundEventModels:GetChildren()) do
+						if v.Name == Options.af.Value then
+							local para = v:FindFirstChild("Parachute")
+							
+							if not para and v.Destroyed.Value == false then
+								Anchor(bomb)
+								bomb.Color = Color3.fromRGB(17, 255, 0)
+								bomb.Transparency = 0.9
+								wait(2)
+								local startTime = tick()
+								while tick() - startTime < 3 do
+									bomb.CFrame = v.PrimaryPart.CFrame
+									wait()
+								end
+							end
+						end
+					end
+				end
+			end)
+		end
+	end)
 
 
 	---Player V
