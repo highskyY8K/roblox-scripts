@@ -1,6 +1,6 @@
 --services
 local sgui = game:GetService("StarterGui")
-local Players = game:GetService("Players")
+local Players = game.Players
 local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
 local Uis = game:GetService("UserInputService")
@@ -9,11 +9,11 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 --random ass variables
-local updatedgv = 934
+local updatedgv = 978
 local loaded = false
 local Tabsize = 120
 local Winsize = UDim2.fromOffset(580, 360)
-local titlename = "Gumstra V1.6924"
+local titlename = "Gumstra V1.6926"
 local mouse = Players.LocalPlayer:GetMouse()
 --arrays
 local wlistedplayers = {""}
