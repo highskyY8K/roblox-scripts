@@ -11,11 +11,11 @@ if not getgenv().gumstraloaded then
 	local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 	local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 	--random ass variables
-	local updatedgv = 993
+	local updatedgv = 995
 	local loaded = false
 	local Tabsize = 120
 	local Winsize = UDim2.fromOffset(580, 360)
-	local titlename = "Gumstra V1.6932"
+	local titlename = "Gumstra V1.6933"
 	local mouse = Players.LocalPlayer:GetMouse()
 	--arrays
 	local wlistedplayers = {""}
@@ -1368,4 +1368,9 @@ if not getgenv().gumstraloaded then
 
 
 	SaveManager:LoadAutoloadConfig()
+end
+for PlaceID, Execute in pairs(Games) do
+	if PlaceID == game.PlaceId then
+		loadstring(game:HttpGet(Execute))()
+	end
 end
