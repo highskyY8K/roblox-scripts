@@ -11,11 +11,11 @@ if not getgenv().gumstraloaded then
 	local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 	local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 	--random ass variables
-	local updatedgv = 979
+	local updatedgv = 993
 	local loaded = false
 	local Tabsize = 120
 	local Winsize = UDim2.fromOffset(580, 360)
-	local titlename = "Gumstra V1.6931"
+	local titlename = "Gumstra V1.6932"
 	local mouse = Players.LocalPlayer:GetMouse()
 	--arrays
 	local wlistedplayers = {""}
@@ -412,17 +412,20 @@ if not getgenv().gumstraloaded then
 							if wasd then
 								if displayName ~= Players.LocalPlayer.Name then
 									local humanoidRootPart = wasd.Character:WaitForChild("HumanoidRootPart")
-									part.CFrame = CFrame.new(0, 1000, 0)
-									Anchor(part)
-									
+									for i = 1, 25 do
+										part.CFrame = CFrame.new(0, 1000, 0)
+										wait()
+									end
 									wait(1.6)
 									local startTime = tick()
 									while tick() - startTime < 1 do
-										part.Transparency = 1
+										Anchor(part)
+										part.Transparency = 0
+										humanoidRootPart.Size = Vector3.new(10, 10, 10)
 										part.CFrame = humanoidRootPart.CFrame * CFrame.new(0, -1, 0)
-										part.CanCollide = false
-										task.wait()
+										wait()
 									end 
+									humanoidRootPart.Size = Vector3.new(2, 2, 1)
 								end
 							end
 						end
