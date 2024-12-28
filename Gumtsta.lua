@@ -11,11 +11,11 @@ if not getgenv().gumstraloaded then
 	local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 	local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 	--random ass variables
-	local updatedgv = 995
+	local updatedgv = 1013
 	local loaded = false
 	local Tabsize = 120
 	local Winsize = UDim2.fromOffset(580, 360)
-	local titlename = "Gumstra V1.6933"
+	local titlename = "Gumstra V1.6934"
 	local mouse = Players.LocalPlayer:GetMouse()
 	--arrays
 	local wlistedplayers = {""}
@@ -108,6 +108,13 @@ if not getgenv().gumstraloaded then
 			end
 		end
 		return nil
+	end
+	local function HideBomb(bomb)
+		for o = 1, 25 do
+			bomb.CFrame = CFrame.new(0, 1000, 0)
+			Anchor(bomb)
+			wait()
+		end
 	end
 	--Mobile Check
 	local mobilecheck = table.find({
@@ -597,21 +604,56 @@ if not getgenv().gumstraloaded then
 			
 			if Options.af.Value == "CandyCane" then
 				playerFolder.ChildAdded:Connect(function(bomb)
-					for _, v in pairs(workspace.RoundEventModels:GetChildren()) do
-						if v.Name == Options.af.Value then
-							local para = v:FindFirstChild("Parachute")
-							
-							if bomb:IsA("Part") and bomb.Name == Players.LocalPlayer.Name.. "'s Bomb" then
-								if not para and v.Destroyed.Value == false then
-									Anchor(bomb)
-									bomb.Color = Color3.fromRGB(17, 255, 0)
-									bomb.Transparency = 0.9
-									wait(2)
-									local startTime = tick()
-									while tick() - startTime < 3 do
-										bomb.CFrame = v.PrimaryPart.CFrame
-										wait()
+					if Options.af.Value == "CandyCane" then
+						if bomb:IsA("Part") and bomb.Name == Players.LocalPlayer.Name.. "'s Bomb" then
+							local total = 0
+							for _, v in pairs(workspace.RoundEventModels:GetChildren()) do
+								total = total + 1
+								if v.Name == Options.af.Value then
+									local para = v:FindFirstChild("Parachute")
+
+									if not para and v:FindFirstChild("Destroyed") then
+										Anchor(bomb)
+										bomb.Color = Color3.fromRGB(17, 255, 0)
+										bomb.Transparency = 0.9
+										wait(2)
+										if not para and v:FindFirstChild("Destroyed") then
+											local startTime = tick()
+											while tick() - startTime < 3 do
+												local prim = v:FindFirstChild("Primary")
+												if prim then
+													bomb.CFrame = CFrame.new(prim.Position.X, prim.Position.Y, prim.Position.Z)
+												else
+													for o = 1, 25 do
+														bomb.CFrame = CFrame.new(0, 1000, 0)
+														Anchor(bomb)
+														wait()
+													end
+												end
+												wait()
+											end
+										else
+											for o = 1, 25 do
+												bomb.CFrame = CFrame.new(0, 1000, 0)
+												Anchor(bomb)
+												wait()
+											end
+										end
+									else
+										for o = 1, 25 do
+											bomb.CFrame = CFrame.new(0, 1000, 0)
+											Anchor(bomb)
+											wait()
+										end
 									end
+								end
+							end
+
+							if not workspace.RoundEventModels:FindFirstChild("CandyCane") then
+								for o = 1, 25 do
+									bomb.CFrame = CFrame.new(0, 1000, 0)
+									Anchor(bomb)
+									wait()
 								end
 							end
 						end
@@ -619,26 +661,41 @@ if not getgenv().gumstraloaded then
 				end)
 			elseif Options.af.Value == "Gingerbread" then
 				playerFolder.ChildAdded:Connect(function(bomb)
-					if bomb:IsA("Part") and bomb.Name == Players.LocalPlayer.Name.. "'s Bomb" then
-						
-						
-						for _, v in pairs(workspace.RoundEventModels:GetChildren()) do
-							if v.Name == Options.af.Value then
-								local para = v:FindFirstChild("Parachute")
-								
-								if not para and v.Destroyed.Value == false then
-									Anchor(bomb)
-									bomb.Color = Color3.fromRGB(17, 255, 0)
-									bomb.Transparency = 0.9
-									wait(2)
-									if not para and v.Destroyed.Value == false then
-										local startTime = tick()
-										while tick() - startTime < 3 do
-											bomb.CFrame = v.PrimaryPart.CFrame
-											wait()
+					if Options.af.Value == "Gingerbread" then
+						if bomb:IsA("Part") and bomb.Name == Players.LocalPlayer.Name.. "'s Bomb" then
+							local total = 0
+							for _, v in pairs(workspace.RoundEventModels:GetChildren()) do
+								total = total + 1
+								if v.Name == Options.af.Value then
+									local para = v:FindFirstChild("Parachute")
+
+									if not para and v:FindFirstChild("Destroyed") then
+										Anchor(bomb)
+										bomb.Color = Color3.fromRGB(17, 255, 0)
+										bomb.Transparency = 0.9
+										wait(2)
+										if not para and v:FindFirstChild("Destroyed") then
+											local startTime = tick()
+											while tick() - startTime < 3 do
+												local prim = v:FindFirstChild("Primary")
+												if prim then
+													bomb.CFrame = CFrame.new(prim.Position.X, prim.Position.Y, prim.Position.Z)
+												else
+													HideBomb(bomb)
+												end
+												wait()
+											end
+										else
+											HideBomb(bomb)
 										end
+									else
+										HideBomb(bomb)
 									end
 								end
+							end
+
+							if not workspace.RoundEventModels:FindFirstChild("Gingerbread") then
+								HideBomb(bomb)
 							end
 						end
 					end
@@ -1364,13 +1421,5 @@ if not getgenv().gumstraloaded then
 	SaveManager:BuildConfigSection(Tabs.Settings)
 
 
-	Window:SelectTab(1)
-
-
 	SaveManager:LoadAutoloadConfig()
-end
-for PlaceID, Execute in pairs(Games) do
-	if PlaceID == game.PlaceId then
-		loadstring(game:HttpGet(Execute))()
-	end
 end
