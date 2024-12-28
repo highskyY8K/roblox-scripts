@@ -15,7 +15,7 @@ if not getgenv().gumstraloaded then
 	local loaded = false
 	local Tabsize = 120
 	local Winsize = UDim2.fromOffset(580, 360)
-	local titlename = "Gumstra V1.6934"
+	local titlename = "Gumstra V1.6936"
 	local mouse = Players.LocalPlayer:GetMouse()
 	--arrays
 	local wlistedplayers = {""}
@@ -170,7 +170,8 @@ if not getgenv().gumstraloaded then
 
 	local Options = Fluent.Options
 
-	do
+	do	
+		Window:SelectTab(1)
 		Fluent:Notify({
 			Title = "WARNING",
 			SubContent = "If you use this script or any other you can get banned depending on what you use, USE CAREFULLY!!",
@@ -582,7 +583,7 @@ if not getgenv().gumstraloaded then
 
 		local Dropdown = Tabs.Main:AddDropdown("af", {
 			Title = "Auto Farm",
-			Values = {"None", "CandyCane", "Gingerbread", "Presents (WIP)", "SnowMan (WIP)", "Knockouts (WIP)", "Wins (WIP)"},
+			Values = {"None", "CandyCane", "Gingerbread", "Presents", "Snowmen", "Knockouts (WIP)", "Wins (WIP)"},
 			Multi = false,
 			Default = 1,
 		})
@@ -695,6 +696,102 @@ if not getgenv().gumstraloaded then
 							end
 
 							if not workspace.RoundEventModels:FindFirstChild("Gingerbread") then
+								HideBomb(bomb)
+							end
+						end
+					end
+				end)
+			elseif Options.af.Value == "Presents" then
+				playerFolder.ChildAdded:Connect(function(bomb)
+					if Options.af.Value == "Presents" then
+						if bomb:IsA("Part") and bomb.Name == Players.LocalPlayer.Name.. "'s Bomb" then
+							local istherepresents = false
+							for _, spire in pairs(workspace.Doomspires:GetChildren()) do
+								if game.Players.LocalPlayer.Team.Name ~= spire.Name and spire.Name ~= "Holder" then
+									local www = spire:FindFirstChild("Decorations")
+									if www then
+										local presentfound = www:FindFirstChild("Presents")
+										if presentfound then
+											for _, ps in pairs(presentfound:GetChildren()) do
+												if ps:FindFirstChild("Box") then
+													local bru = ps:FindFirstChild("Destroyed")
+													if bru.Value == false then
+														Anchor(bomb)
+														bomb.Color = Color3.fromRGB(17, 255, 0)
+														bomb.Transparency = 0.9
+														wait(2)
+														if bru.Value == false then
+															local startTime = tick()
+															while tick() - startTime < 3 do
+																local prim = ps:FindFirstChild("Ribbon")
+																if prim then
+																	bomb.CFrame = CFrame.new(prim.Position.X, prim.Position.Y, prim.Position.Z)
+																else
+																	HideBomb(bomb)
+																end
+																wait()
+															end
+														else
+															HideBomb(bomb)
+														end
+													else
+														HideBomb(bomb)
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+							if not istherepresents then
+								HideBomb(bomb)
+							end
+						end
+					end
+				end)
+			elseif Options.af.Value == "Snowmen" then
+				playerFolder.ChildAdded:Connect(function(bomb)
+					if Options.af.Value == "Snowmen" then
+						if bomb:IsA("Part") and bomb.Name == Players.LocalPlayer.Name.. "'s Bomb" then
+							local istherepresents = false
+							for _, spire in pairs(workspace.Doomspires:GetChildren()) do
+								if game.Players.LocalPlayer.Team.Name ~= spire.Name and spire.Name ~= "Holder" then
+									local www = spire:FindFirstChild("Decorations")
+									if www then
+										local presentfound = www:FindFirstChild("Snowmen")
+										if presentfound then
+											for _, ps in pairs(presentfound:GetChildren()) do
+												if ps:FindFirstChild("SnowHead") then
+													local bru = ps:FindFirstChild("Destroyed")
+													if bru.Value == false then
+														Anchor(bomb)
+														bomb.Color = Color3.fromRGB(17, 255, 0)
+														bomb.Transparency = 0.9
+														wait(2)
+														if bru.Value == false then
+															local startTime = tick()
+															while tick() - startTime < 3 do
+																local prim = ps:FindFirstChild("SnowHead")
+																if prim then
+																	bomb.CFrame = CFrame.new(prim.Position.X, prim.Position.Y, prim.Position.Z)
+																else
+																	HideBomb(bomb)
+																end
+																wait()
+															end
+														else
+															HideBomb(bomb)
+														end
+													else
+														HideBomb(bomb)
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+							if not istherepresents then
 								HideBomb(bomb)
 							end
 						end
