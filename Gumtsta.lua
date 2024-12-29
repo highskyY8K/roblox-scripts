@@ -132,6 +132,13 @@ if not getgenv().gumstraloaded then
 	end
 	--random
 	Fluent:Notify({
+		Title = "Happy Birthday to me!",
+		SubContent = "highskyY8K :)",
+		Duration = 10
+	})
+	
+	
+	Fluent:Notify({
 		Title = "Loading...",
 		SubContent = "Script is currently loading, Please wait a few seconds!",
 		Duration = 10
