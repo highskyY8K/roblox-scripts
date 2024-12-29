@@ -855,7 +855,37 @@ if not getgenv().gumstraloaded then
 				end
 			end
 		})
+		
+		local Toggle = Tabs.Player:AddToggle("seethrowavatar", {Title = "Transparent Character", Default = false })
 
+		Toggle:OnChanged(function(Value)
+			local function df(ya)
+				for _, item in pairs(Players.LocalPlayer.Character:GetChildren()) do
+					if item:IsA("BasePart") and item.Name ~= "HumanoidRootPart" then
+						item.Transparency = ya
+					elseif item:IsA("Accessory") then
+						local handle = item:FindFirstChild("Handle")
+						if handle then
+							handle.Transparency = ya
+						end
+					end
+				end
+			end
+			
+			if Options.seethrowavatar.Value == false then
+				df(0)
+			else
+				df("0.".. math.random(6, 8))
+			end
+			
+			Players.LocalPlayer.CharacterAdded:Connect(function()
+				if Options.seethrowavatar.Value == true then
+					wait(1)
+					df("0.".. math.random(6, 8))
+				end
+			end)
+		end)
+		
 		local Toggle = Tabs.Player:AddToggle("HPNfriends", {Title = "Hide Your Friend's Displayname", Default = false })
 
 		Toggle:OnChanged(function(Value)
