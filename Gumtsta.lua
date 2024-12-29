@@ -11,11 +11,11 @@ if not getgenv().gumstraloaded then
 	local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 	local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 	--random ass variables
-	local updatedgv = 1013
+	local updatedgv = 1030
 	local loaded = false
 	local Tabsize = 120
 	local Winsize = UDim2.fromOffset(580, 360)
-	local titlename = "Gumstra V1.6936"
+	local titlename = "Gumstra V1.6937"
 	local mouse = Players.LocalPlayer:GetMouse()
 	--arrays
 	local wlistedplayers = {""}
@@ -1470,6 +1470,17 @@ if not getgenv().gumstraloaded then
 				game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
 					if Options.aetool.Value == true then
 						EquipTool(_G.KAGmode, "", true)
+					end
+				end)
+			end
+		end)
+		
+		local Toggle = Tabs.Settings:AddToggle("aetoolaf", {Title = "Auto Equip Tool On Spawn (Auto Farm)", Default = false })
+		Toggle:OnChanged(function()
+			if Options.aetoolaf.Value == true then
+				game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+					if Options.aetoolaf.Value == true then
+						EquipTool("Bomb", "", true)
 					end
 				end)
 			end
