@@ -11,7 +11,7 @@ if not getgenv().gumstraloaded then
 	local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 	local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 	--random ass variables
-	local updatedgv = 1030
+	local updatedgv = 1032
 	local loaded = false
 	local Tabsize = 120
 	local Winsize = UDim2.fromOffset(580, 360)
@@ -131,13 +131,6 @@ if not getgenv().gumstraloaded then
 		Tabsize = 120
 	end
 	--random
-	Fluent:Notify({
-		Title = "Happy Birthday to me!",
-		SubContent = "highskyY8K :)",
-		Duration = 10
-	})
-	
-	
 	Fluent:Notify({
 		Title = "Loading...",
 		SubContent = "Script is currently loading, Please wait a few seconds!",
