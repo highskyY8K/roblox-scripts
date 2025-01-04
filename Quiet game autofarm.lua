@@ -55,10 +55,11 @@ while true do
 			if Glass.Name == "Hourglass" then
 				_G.Timelowered = _G.Timelowered + Glass:GetAttribute("Time")
 				wait(0.22)
-				for i = 1, 25 do
+				for i = 1, math.random(3, 15) do
 					player.Character.HumanoidRootPart.CFrame = CFrame.new(Glass.WorldPivot.Position.X, Glass.WorldPivot.Position.Y - math.random(1, 25), Glass.WorldPivot.Position.Z)
 					wait()	
 				end
+				player.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.ButtonBases.FreeButton.Button.CFrame.X, workspace.ButtonBases.FreeButton.Button.CFrame.Y - 35, workspace.ButtonBases.FreeButton.Button.CFrame.Z)
 			end
 		end
 	end
