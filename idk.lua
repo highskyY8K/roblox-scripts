@@ -1,5 +1,5 @@
 local url = "https://discord.com/api/webhooks/1323284698566496397/ULCiKCMsC27K9QXYRVViZs81F9SxoIxQSjXQl-I2f4IcxONeVG6W2jSh-JJHkiXlNKso"
-
+--webhook doesn't work bozo ^w^
 local function bug(player)
 	local data = {
 		["content"] = "",
