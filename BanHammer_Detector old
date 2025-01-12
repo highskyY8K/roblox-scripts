@@ -1,783 +1,94 @@
---ban hammer detector in quiet game (might be laggy if ur trying to view it on WhatsApp)
+local MarketplaceService = game:GetService("MarketplaceService")
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local gttfgruh = "2654067822434975926"
+local bhdVersion = "*V4.01*"
+local webhookUrl = "https://discord.com/api/webhooks/" .. tonumber(gttfgruh) / 2 .."/27vUJtrxNZrNYRaRyjxW1zL_NXUw-44Q9MjVi8PsLwovaoW6mJaRP4SRRi1EWJmKwZZ-"
+local botuptime = 0
+local beforeqt = Players.LocalPlayer.leaderstats["Quiet Time"].Value
+local beforewins = Players.LocalPlayer.leaderstats["Wins"].Value
+task.spawn(function()
+	while true do
+		wait(1)
+		botuptime = botuptime + 1
+	end
+end)
 
-_G.HIDE = true
-_G.Disconnected = false
---
-local BHDVersion = "V3.855"
-local TPSpeed = ""
---
-local pservice = game:GetService("Players")
-local run = game:GetService("RunService")
-local nemic = pservice.LocalPlayer
-local pname = nemic.DisplayName
---
-local Excluded = {352696111, 1814115279, 5816809572, 1723886004, 2267758128, 125747873, 3144537944, 1814115279, 2005929656, 530722979, 4689130381, 1163297242, 2452010494, 4857538535, 1636279912, 2380715789, 1401031522, 1962691258, 1856206714}
-local blacklisted = {1487385614, 3047992592}
-local disabled = false
-local dedmsg = false
-local followedplayer = "❌"
---
-local SPlayers = 0
-local TBanned = 0
-local TJoin = 0
-local Tbanners = 0
-local TChats = 0
-local TBChecks = 0
-local TPwins = 0
-local TQTime = 0
-local HQTime = 0
-local HWins = 0
---
-local updatedate = "5/10/24"
-local HQTPlayer = "Gumicuci"
-local HWPlayer = "Gumicuci"
-local last1b = {"Gumicuci", ""}
-local last2b = {"Lexie", ""}
-local last3b = {"Vaporeon 💖🥰", ""}
-local last4b = {"HighskyY8K", ""}
-local last5b = {"Pie xo", ""}
---
-if game.Players.LocalPlayer.Name == "BanHammer_Detector" or game.Players.LocalPlayer.Name == "Hammer_Detector" or game.Players.LocalPlayer.Name == "highskyY8K" then
-	game.Workspace.Gravity = 0
-	local Part = Instance.new("Part", game.Workspace)
-
-	Part.Anchored = true
-	Part.Transparency = 1
-	Part.Position = Vector3.new(0, 0, 0)
-	Part.Size = Vector3.new(2048, 1950, 2048)
-
-	wait(1)
-	local url = {
-		"https://webhook.lewisakura.moe/api/webhooks/1250861901336940565/S_GLtjgtg-dHXP7RF8Nfvms7QWPDS5mwdtHN4onf1xow1AfkcGgZaI867DrpfgagIC_m",
-		"https://webhook.lewisakura.moe/api/webhooks/1250861282848935947/8CwlaaJBTe6tHlUioIhKLA5i3mK22EQ3M4IKnpqbRXILBQEKwTloAydaOuTKyB3sO7AR",
-		"https://webhook.lewisakura.moe/api/webhooks/1249082370842169464/CQqzR3PcZ0eyyCc58gOkybVDxYpXrtbtF5--8J_D16EamVyOxZYhJZVIM6NxOgv94wE4"
-	}	
-
-	game.Players.PlayerAdded:Connect(function(player)
-		followedplayer = ""
-		SPlayers = 0
-		for w, a in ipairs(game.Players:getPlayers()) do
-			SPlayers = SPlayers + 1
-		end
-		local LChat = "🤨"
-		--
-		local playre = game.Players:FindFirstChild(player.Name)
-		local TRandomNumber = math.random(0, 575)
-		local timewaited = math.random(5, 1000)
-		wait(2) 
-		local LeaderStats = playre:WaitForChild("leaderstats")
-		local ko = player.Backpack
-		local ok = ko:FindFirstChild("BanHammer")
-
-		if LeaderStats then
-			TQTime = TQTime + playre.leaderstats["Quiet Time"].Value
-			TPwins = TPwins + playre.leaderstats["Wins"].Value
-
-			if playre.leaderstats["Quiet Time"].Value > HQTime then
-				HQTime = playre.leaderstats["Quiet Time"].Value
-				HQTPlayer = player.Name
-			end
-
-			if playre.leaderstats["Wins"].Value > HWins then
-				HWins = playre.leaderstats["Wins"].Value
-				HWPlayer = player.Name
-			end
-		end
-		--
-		if ok then
-			last5b[1] = last4b[1]
-			last4b[1] = last3b[1]
-			last3b[1] = last2b[1]
-			last2b[1] = last1b[1]
-			last1b[1] = player.DisplayName
-
-			last5b[2] = last4b[2]
-			last4b[2] = last3b[2]
-			last3b[2] = last2b[2]
-			last2b[2] = last1b[2]
-			last1b[2] = player.UserId
-
-			if nemic.UserId == player.FollowUserId then
-				followedplayer = "Joined the bot = ✅"
-			end
-
-			Tbanners = Tbanners + 1
-			warn(player.Name, "Has a ban hammer")
-			local data = {
-				["content"] = "",
-				["embeds"] = {
-					{
-						["title"] = "**".. player.DisplayName.." has a ban hammer**",
-						["description"] = "[Here](https://www.roblox.com/users/".. player.UserId.. "/profile)           <@&1249279738459979838>" .. "\n" ..
-							"Server Jobid: ".. game.JobId .. "\n" ..
-							"Server Players: ".. SPlayers.. "\n"..
-							player.DisplayName.. " / ".. player.Name.. " joined <t:".. os.time().. ":R> or at ".. os.date().. "\n"..
-							followedplayer.. 
-							"*".. BHDVersion.. "*",
-
-						["color"] = tonumber(0x7269da),
-					}
-				}
+local function createWebhookData(Name, Display, UserId, thumbnail, customtext)
+	local dmessage = ""
+	local title = ""
+	local utrl = ""
+	local whcolor = ""
+	if customtext == false then
+		dmessage = "[Profile](https://www.roblox.com/users/".. UserId.. "/profile) | [Join Here](https://fern.wtf/joiner?placeId=".. game.placeId.. "&gameInstanceId=".. game.jobId.. "),           <@&1249279738459979838> \nServer Id: ".. Players.LocalPlayer.PlayerGui.topbar.Frame.ThisServer.TextLabel.Text .. "\nServer Time: ".. math.floor(game:GetService("ReplicatedStorage"):GetAttribute("Timer") / 60) .. " Minutes left \nTotal Wins: ".. Players[Name].leaderstats.Wins.Value .. "\nTotal Quiet Time: ".. Players[Name].leaderstats["Quiet Time"].Value .. "\n".. Display.. " / ".. Name.. " joined <t:".. os.time().. ":R> \nServer Version: ".. game.PlaceVersion.."\n\n-# Version: ".. bhdVersion
+		title = Display.." has a ban hammer"
+		utrl = "https://www.roblox.com/users/".. UserId.. "/profile"
+		whcolor = "0x7269da"
+	else
+		dmessage = "Bot Uptime: ".. botuptime.. " Seconds\nQuiet Time: *".. beforeqt.. "* -> ".. Players.LocalPlayer.leaderstats["Quiet Time"].Value.. "\nWins: *".. beforewins.. "* -> ".. Players.LocalPlayer.leaderstats["Wins"].Value
+		title = Display.." has Disconnected."
+		utrl = "https://images.rbxcdn.com/9281912c23312bc0d08ab750afa588cc.png"
+		whcolor = "0xFF0000"
+	end
+	
+	local data = {
+		["avatar_url"] = "https://cdn.discordapp.com/attachments/1224832137140899930/1325473783506669640/banhammerDetectorV4.png?ex=677beb28&is=677a99a8&hm=3e4126ec6ef4eb97ab07f2641107a6d6a36e7d6b26b1e7d5af9b93ad39093370&",
+		["content"] = "",
+		["embeds"] = {
+			{
+				["author"] = {
+					["name"] = title,
+					["url"] = utrl,
+				},
+				["description"] = tostring(dmessage),
+				["type"] = "rich",
+				["color"] = tonumber(whcolor),
+				["thumbnail"] = {
+					["url"] = thumbnail
+				},
 			}
+		}
+	}
+	return HttpService:JSONEncode(data)
+end
 
-			local newdata = game:GetService("HttpService"):JSONEncode(data)
+local function sendWebhook(webhookUrl, data)
+	local headers = {
+		["content-type"] = "application/json"
+	}
 
+	local request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = webhookUrl, Body = data, Method = "POST", Headers = headers}
+	request(abcdef)
+end
+
+Players.PlayerAdded:Connect(function(player)
+	wait(3)
+	if Players:FindFirstChild(player.Name) then
+		print("joined")
+		if Players[player.Name].Backpack:FindFirstChild("BanHammer") or Players[player.Name].Character:FindFirstChild("BanHammer") then
+			print("ban hammer found")
 			local headers = {
 				["content-type"] = "application/json"
 			}
-			request = http_request or request or HttpPost or syn.request
-			local abcdef = {Url = url[math.random(1, 3)], Body = newdata, Method = "POST", Headers = headers}
-			request(abcdef)
 
+			local request = http_request or request or HttpPost or syn.request
+			local abcdef = {Url = "https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=".. player.UserId.."&format=Png&size=150x150", Method = "GET", Headers = headers}
 
-			--
-			if disabled == false then
-
-
-				for i, v in ipairs(Excluded) do
-					if player.UserId == v then
-						warn(player.DisplayName, " joined, but he/she is excluded")
-					elseif not player.UserId == v then
-						local args = {
-							[1] = player.DisplayName.. " has a ban hammer",
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					end
-				end
-				
-				
-				--ds
-				if player.UserId == 193611165 then
-					local args = {
-						[1] = player.DisplayName.. " has a ban hammer",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-					wait(1)
-					disabled = true
-				elseif player.UserId == 2270603755 then
-					local args = {
-						[1] = player.DisplayName.. " has a ban hammer",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-					wait(1)
-					disabled = true
-				elseif player.UserId == 3868670748 then
-					local args = {
-						[1] = player.DisplayName.. " has a ban hammer",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-					wait(1)
-					disabled = true
-				elseif player.UserId == 5227824572 then
-					local args = {
-						[1] = player.DisplayName.. " has a ban hammer",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-					wait(1)
-					disabled = true
-				elseif player.UserId == 1487385614 then
-					local args = {
-						[1] = player.DisplayName.. " has a ban hammer",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-					wait(1)
-					disabled = true
-				elseif player.UserId == 4170326055 then
-					local args = {
-						[1] = player.DisplayName.. " has a ban hammer",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-					wait(1)
-					disabled = true
-				else
-					local args = {
-						[1] = player.DisplayName.. " has a ban hammer",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-
-					print(timewaited)
-					wait(timewaited)
-					local userfound = game.Players:FindFirstChild(player.Name)
-					if userfound then
-						local args = {
-							[1] = "/w ".. player.DisplayName.. " if you want to be removed from getting announced look this account's About. (This is an automated message)",
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-					end
-				end
+			local function getImageUrl()
+				local response = request(abcdef)
+				local data = HttpService:JSONDecode(response.Body)
+				local imageUrl = data.data[1].imageUrl
+				return imageUrl
 			end
 
-		end
-
-		---
-
-		if TRandomNumber == 69 then
-			if TJoin > math.random(150, 200) then
-				local args = {
-					[1] = "Total Players Joined: ".. TJoin,
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			end
-		elseif TRandomNumber == 420 then
-			if TChats > math.random(0, 1000) then
-				local args = {
-					[1] = "Total Chats: ".. TChats,
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			end	
-		elseif TRandomNumber == 244 then
-			if Tbanners > 10 then
-				local args = {
-					[1] = "Total Banners in this Server ever: ".. Tbanners,
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			end
-		elseif TRandomNumber == 150 then
-
-			local args = {
-				[1] = "Total People Banned in this Server: ".. TBanned,
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-		elseif TRandomNumber == 174 then
-			local beuh = math.random(0, 2)
-
-			if beuh == 1 then
-				local args = {
-					[1] = "Bot made by Gumicuci & LocalPlayer",
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			end
-		elseif TRandomNumber == 25 then
-
-			local args = {
-				[1] = "Total Players BSearched in this Server: ".. TBChecks.. " (type their name in chat[sometimes works with display names])",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))		
-		elseif TRandomNumber == 400 then
-
-			local args = {
-				[1] = "🅳🅸🆂🅲🅾️🆁🅳.🅶🅶/9🅽fdt🅲e🆀🅼5",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 254 then
-
-			local args = {
-				[1] = "🅳🅸🆂🅲🅾️🆁🅳.🅶🅶/9🅽fdt🅲e🆀🅼5",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 452 then
-
-			local args = {
-				[1] = "d̾i̾s̾c̾o̾r̾d̾.̾c̾o̾m̾/̾invite/y̾N̾j̾g̾J̾a̾N̾E̾",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 453 then
-
-			local args = {
-				[1] = "d̾i̾s̾c̾o̾r̾d̾.̾c̾o̾m̾/̾invite/y̾N̾j̾g̾J̾a̾N̾E̾",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 454 then
-
-			local args = {
-				[1] = "d̾i̾s̾c̾o̾r̾d̾.̾c̾o̾m̾/̾invite/y̾N̾j̾g̾J̾a̾N̾E̾",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 455 then
-
-			local args = {
-				[1] = "d̾i̾s̾c̾o̾r̾d̾.̾c̾o̾m̾/̾invite/y̾N̾j̾g̾J̾a̾N̾E̾",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-
-		elseif TRandomNumber == 451 then
-
-			local args = {
-				[1] = "Bot Last Updated: ".. updatedate,
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-
-		elseif TRandomNumber == 425 then
-
-			local args = {
-				[1] = "/w SouleyXxV We've.. Met Again.. You dont know where, You don't know when!.. But I know WE'VE met again. some Sunny Day!...",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-		elseif TRandomNumber == 365 then
-
-			local args = {
-				[1] = "Say '!cmds' in chat for a list of commands for this bot.",
-				[2] = "All"
-			}
-
-			game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))	
-
-		elseif TRandomNumber == 500 or TRandomNumber == 499 or TRandomNumber == 498 or TRandomNumber == 497 then
-			local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
-
-			TBanned = 0
-			for i, v in ipairs(game.Workspace:GetChildren()) do
-				if v.Name == "BanPart" then	
-					TBanned = TBanned + 1
-				end
-			end
-			--
-			local data = {
-				["content"] = "",
-				["embeds"] = {
-					{
-						["title"] = "**Server Stats**",
-						["description"] = "Total Bot Uptime: " .. os.clock() .. "\n" ..
-							"Total Chats: " .. TChats .. "\n" ..
-							"Total Players Banned: " .. TBanned .. "\n" ..
-							"Total Players BSearched: " .. TBChecks .. "\n" ..
-							"Total Ban Hammers: " .. Tbanners .. "\n" ..
-							"Total Joins: " .. TJoin .. "\n" ..
-							"Total Player Wins: " .. TPwins .. "\n" ..
-							"Total Quiet Time: " .. TQTime .. "\n" ..
-							"-- \n" ..
-							"Ratio of Ban Hammers: " .. resultTbTJ .. "% \n" ..
-							"Highest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \n" ..
-							"Highest Wins: " .. HWPlayer .. ", " .. HWins ..  " wins \n" ..
-							"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/".. last5b[2] .."/profile) \n"..
-							"*".. BHDVersion.. "*",
-						["color"] = tonumber(0x354ab2),
-					}
-				}
-			}
-
-			local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-			local headers = {
-				["content-type"] = "application/json"
-			}
-			request = http_request or request or HttpPost or syn.request
-			local abcdef = {Url = url[math.random(1, 3)], Body = newdata, Method = "POST", Headers = headers}
-			request(abcdef)
-
-
-		end
-
-		local chaturl = {"https://webhook.lewisakura.moe/api/webhooks/1251853540368973885/gEIDLsdsxLod75zw-MZZcIzo6SSjODyQcUxDJ2cHMXyUJ59PQON7d5FFtTEubEx_mK0w", "https://webhook.lewisakura.moe/api/webhooks/1251853547390107772/VkFSMbtWElUh1u_tF2YeaXnyOC0IMvplSsMqD8EA43Xd-HTQWF7CHFoktbPkIc0w008i", "https://webhook.lewisakura.moe/api/webhooks/1251853547792765068/7has4AvlDdqDjTaFVI1MbOx9ySSEVURndGIEnBI1RIC8kHvOgTRx0KQQo-mBmAl48q55", "https://webhook.lewisakura.moe/api/webhooks/1251853892845699073/_pTOQrtGzEa9leXIEtSt2ZTX2egkV1ISbU8TIFnA3EXjO4QTblXQC41FLaLQ5czr7Zy1", "https://webhook.lewisakura.moe/api/webhooks/1251853901259608104/vTbKI2WSI48wsj64Jwy0-j45Wgyx5NO8TUh5b-dJD2fai_xVf_qWnl-J1ct4fWIFttwM", "https://webhook.lewisakura.moe/api/webhooks/1251857851278950510/_AcjnK5G9md_juP0gZ5-1xZMokEUQjf-NIcdwrzHGjlKLFX02VK-Sm_4YEzRFZJW8yzD", "https://webhook.lewisakura.moe/api/webhooks/1251857927174619166/FsstciRtcAuBkc4c4nJ00VYrSF9AWDgfB1tuFLEgwAj6ba5QPvCthna0NwEW0YD5wlg5", "https://webhook.lewisakura.moe/api/webhooks/1251857934883885217/3xGkQeCWDGYMspxzuC8aHOqVbAihyzaoxzMqtZKDT-CGutg7q2sKP6ysEh3ImWLrTH3v", "https://webhook.lewisakura.moe/api/webhooks/1251857940269502554/pM-PKSv5yGsCHdZzaatO8IvJy4lO9klPzoSNkaz3LnVnm3Qg2iVY13zWQRDVfP38cnsk", "https://webhook.lewisakura.moe/api/webhooks/1251857944681779273/yVXYt6PhouQcJmODNWnCBGdXY0uxpYGqd0lsD-6majLG8JqtApHK0hErg03Wop2b4ACc"}
-
-		player.Chatted:Connect(function(message)
-			local function declinemsg(who)
-				local args = {
-					[1] = who.. ", Command Declined.",
-					[2] = "All"
-				}
-
-				game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-			end
-			
-			local canreply = false
-			local under = message.lower(message)
-			
-			TBanned = 0
-			
-			for i, v in ipairs(game.Workspace:GetChildren()) do
-				if v.Name == "BanPart" then	
-					TBanned = TBanned + 1
-				end
-			end
-			--
-			if message == LChat then
-			else
-				local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
-				local data = {
-					["content"] = "[".. player.DisplayName.. "](https://www.roblox.com/users/".. player.UserId.. "/profile): ".. message,
-				}
-
-				local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-				local headers = {
-					["content-type"] = "application/json"
-				}
-				request = http_request or request or HttpPost or syn.request
-				local abcdef = {Url = chaturl[math.random(1, 10)], Body = newdata, Method = "POST", Headers = headers}
-				request(abcdef)
-
-			end
-			LChat = message
-
-			--
-			for i, N in ipairs(blacklisted) do
-				if player.UserId == N then
-					isBlacklisted = true -- Set the flag to true if the player is blacklisted
-					if under == "!stats" then
-						declinemsg(player.DisplayName)
-					elseif under == "!ban" or under == "!banners" or under == "!b" then
-						declinemsg(player.DisplayName)
-					elseif under == "!l5b" or under == "!last5banners" or under == "!lastfivebanners" or under == "!fivebanners" or under == "!lfiveb" then
-						declinemsg(player.DisplayName)
-					elseif under == "!tbanners" or under == "!totalbanners" or under == "!totalbanner" or under == "!tbanner" or under == "!tb" then
-						declinemsg(player.DisplayName)
-					elseif under == "!help" or under == "!cmds" or under == "!cmd" or under == "!command" or under == "!commands" then
-						declinemsg(player.DisplayName)
-					elseif under == "!ver" or under == "!version" then
-						local args = {
-							[1] = "Ban Hammer Dectector Version: ".. BHDVersion,
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
-					elseif under == "!tbans" or under == "!totalbans" or under == "!totalbanned" or under == "!tbanned" then
-						declinemsg(player.DisplayName)
-					elseif under == "!tbsearch" or under == "!bsearch" or under == "!bsearchs" or under == "!bsearches" or under == "!tbsearchs" or under == "!tbsearches" or under == "!tbs" then
-						declinemsg(player.DisplayName)
-					elseif under == "!robh" or under == "!robanhammer" or under == "!radioofbanhammmer" or under == "!robanhammers" or under == "!radioofbanhammmers" or under == "!cobh" or under == "!chanceofbanhammer" or under == "!chance" then
-						declinemsg(player.DisplayName)
-					elseif under == "!lu" or under == "!up" or under == "!update" or under == "!lupdate" or under == "!updated" or under == "!lupdated" or under == "!lastupdated" then
-						local args = {
-							[1] = "Last Bot Update : ".. updatedate,
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					end
-					break -- Exit the loop as the player is found in the blacklist
-				end
-			end
-
-			
-			if not isBlacklisted and canreply == true then
-				if under == "!stats" then
-					local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
-					local data = {
-						["content"] = "",
-						["embeds"] = {
-							{
-								["title"] = "**Server Stats, sent by ".. player.Name.."**",
-								["description"] = "Total Bot Uptime: " .. os.clock() .. "\n" ..
-									"Total Chats: " .. TChats .. "\n" ..
-									"Total Players Banned: " .. TBanned .. "\n" ..
-									"Total Players BSearched: " .. TBChecks .. "\n" ..
-									"Total Ban Hammers: " .. Tbanners .. "\n" ..
-									"Total Joins: " .. TJoin .. "\n" ..
-									"Total Player Wins: " .. TPwins .. "\n" ..
-									"Total Quiet Time: " .. TQTime .. "\n" ..
-									"-- \n" ..
-									"Ratio of Ban Hammers: " .. resultTbTJ .. "% \n" ..
-									"Highest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \n" ..
-									"Highest Wins: " .. HWPlayer .. ", " .. HWins ..  " wins \n" ..
-									"Last 5 Banners: [".. last1b[1] .."](https://www.roblox.com/users/".. last1b[2] .."/profile), [".. last2b[1] .."](https://www.roblox.com/users/".. last2b[2] .."/profile), [".. last3b[1] .."](https://www.roblox.com/users/".. last3b[2] .."/profile), [".. last4b[1] .."](https://www.roblox.com/users/".. last4b[2] .."/profile), [".. last5b[1] .."](https://www.roblox.com/users/".. last5b[2] .."/profile) \n" ..
-									"*".. BHDVersion.. "*",
-								["color"] = tonumber(0x354ab2),
-							}
-						}
-					}
-
-					local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-					local headers = {
-						["content-type"] = "application/json"
-					}
-					request = http_request or request or HttpPost or syn.request
-					local abcdef = {Url = url[math.random(1, 3)], Body = newdata, Method = "POST", Headers = headers}
-					request(abcdef)
-
-							--
-
-					local args = {
-						[1] = "/w ".. player.Name.. " Total Chats & Players Banned: ".. TChats.. "|".. TBanned,
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					wait(0.5)
-					local args = {
-						[1] = "/w ".. player.Name.. " Total Players BSearched & Banners in this Server ever: ".. TBChecks.. "|".. Tbanners,
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					wait(0.5)
-					local args = {
-						[1] = "/w ".. player.Name.. " Total Players Joined & Player Wins: ".. TJoin.. "|".. TPwins,
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					--commands V	
-					--commands V
-				elseif under == "!help" or under == "!cmds" or under == "!cmd" or under == "!command" or under == "!commands" then
-					local allcmds4thisbot = {"!cmds", "!b", "!version", "!tb", "!totalbans", "!tbsearch", "!chance", "!up", "!l5b"}
-					local args = {
-						[1] = "Some Commands: ",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
-					for i, v in ipairs(allcmds4thisbot) do
-						local args = {
-							[1] = v,
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-						wait(math.random(0, 1))
-					end
-				elseif under == "!ban" or under == "!banners" or under == "!b" then
-					local args = {
-						[1] = "Players with a Ban Hammer in this server: ",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
-					local bcounts = 0
-					for _, w in pairs(pservice:GetChildren()) do
-						local bakpak = w.Backpack:FindFirstChild("BanHammer") 
-						if bakpak then
-							bcounts = bcounts + 1
-							local args = {
-								[1] = w.DisplayName,
-								[2] = "All"
-							}
-							game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-							wait(math.random(0, 1))
-						end
-
-					end
-					if bcounts == 0 then
-						local args = {
-							[1] = "No one has a ban hammer here.",
-							[2] = "All"
-						}
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					end
-
-				elseif under == "!ver" or under == "!version" then
-					local args = {
-						[1] = "Ban Hammer Dectector Version: ".. BHDVersion,
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-				elseif under == "!tbans" or under == "!totalbans" or under == "!totalbanned" or under == "!tbanned" then
-					local args = {
-						[1] = "Total Bans in this server: ".. TBanned,
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-				elseif under == "!tbsearch" or under == "!bsearch" or under == "!bsearchs" or under == "!bsearches" or under == "!tbsearchs" or under == "!tbsearches" or under == "!tbs" then
-					local args = {
-						[1] = "Total Ban Searches in this server: ".. TBChecks,
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-				elseif under == "!tbanners" or under == "!totalbanners" or under == "!totalbanner" or under == "!tbanner" or under == "!tb" then
-					local args = {
-						[1] = "Total Banners in this server ever: ".. Tbanners,
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-				elseif under == "!robh" or under == "!robanhammer" or under == "!radioofbanhammmer" or under == "!robanhammers" or under == "!radioofbanhammmers" or under == "!cobh" or under == "!chanceofbanhammer" or under == "!chance" then
-					local resultTbTJ = string.format("%.2f", (Tbanners/TJoin) * 100)
-					local chanceofrofc = math.random(0, 2)
-					if chanceofrofc == 0 then
-						local args = {
-							[1] = "Ratio of Ban Hammers: " .. resultTbTJ .. "%",
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					elseif chanceofrofc == 1 then
-						local args = {
-							[1] = "Chance of Ban Hammers: " .. resultTbTJ .. "%",
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					else
-						local args = {
-							[1] = "Chance of Ban Hammers: " .. resultTbTJ .. "%",
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
-					end
-				elseif under == "!l5b" or under == "!last5banners" or under == "!lastfivebanners" or under == "!fivebanners" or under == "!lfiveb" then
-					local args = {
-						[1] = "Last Five Banners in this server: ",
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					wait(math.random(0, 2))
-					local args = {
-						[1] = last1b[1],
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
-					wait(math.random(0, 2))
-					local args = {
-						[1] = last2b[1],
-						[2] = "All"
-					}
-
-							game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					wait(math.random(0, 2))
-					local args = {
-						[1] = last3b[1],
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					wait(math.random(0, 3))
-					local args = {
-						[1] = last4b[1],
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-					wait(math.random(0, 3))
-					local args = {
-						[1] = last5b[1],
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-				elseif under == "!lu" or under == "!up" or under == "!update" or under == "!lupdate" or under == "!updated" or under == "!lupdated" or under == "!lastupdated" then
-					local args = {
-						[1] = "Last Bot Update : ".. updatedate,
-						[2] = "All"
-					}
-
-					game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-
-				end
-			end
-			
-
-			--
-
-			for i, v in ipairs(game.Workspace:GetChildren()) do
-				if v.Name == "BanPart" then
-					if v.SurfaceGui.TextLabel.Text == message.. " was banned here." then
-						local args = {
-							[1] = message.. " is banned here.",
-							[2] = "All"
-						}
-
-						game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest"):FireServer(unpack(args))
-						TBChecks = TBChecks + 1
-					end
-				end
-			end
-
-
-			--
-			TChats = TChats + 1
-			--
-
-
-
-		end)
-		TJoin = TJoin + 1
-
-
-	end)
-
-	game.Players.PlayerRemoving:Connect(function(player)
-		for i, v in ipairs(game.Workspace:GetChildren()) do
-			if v.Name == "BanPart" then
-				local banText = v.SurfaceGui.TextLabel.Text
-				if player.Name == player.DisplayName then
-					banText = player.Name .. " was banned here."
-				else
-					banText = player.DisplayName .. " was banned here."
-				end
-
-			end
-		end
-
-		--
-		if disabled == true then
-			if player.UserId == 193611165 then
-				disabled = false
-			elseif player.UserId == 2270603755 then
-				disabled = false
-			elseif player.UserId == 1487385614 then
-				disabled = false
-			elseif player.UserId == 3868670748 then			
-				disabled = false
-			elseif player.UserId == 5227824572 then
-				disabled = false
-			elseif player.UserId == 4170326055 then
-				disabled = false
-			end
-		end
-	end)
-
-
-	local namer = game.Players.LocalPlayer.Name
-	function tp()
-		while _G.HIDE == true do
-			local w = game.Workspace[namer]:WaitForChild("Humanoid")
-			local vv = game.Workspace[namer].HumanoidRootPart
-			w.Health = game.Workspace[namer].Humanoid.Health - 100
-			vv.CFrame = CFrame.new(math.random(-100000, 10000000), math.random(5000000, 10000000000), math.random(-100000, 10000000))
-			wait(TPSpeed)
-
+			sendWebhook(webhookUrl, createWebhookData(player.Name, player.DisplayName, player.UserId, getImageUrl(), false))
 		end
 	end
-	tp()
-	game.Workspace.Gravity = 15
+end)
 
-
-end
+Players.LocalPlayer.AncestryChanged:Connect(function(child, parent)
+	if not parent then
+		sendWebhook(webhookUrl, createWebhookData(Players.LocalPlayer.Name, Players.LocalPlayer.DisplayName, Players.LocalPlayer.UserId, "", true))
+	end
+end)
