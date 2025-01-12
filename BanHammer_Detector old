@@ -1,9 +1,9 @@
 local MarketplaceService = game:GetService("MarketplaceService")
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
-local gttfgruh = "2654067822434975926"
 local bhdVersion = "*V4.01*"
-local webhookUrl = "https://discord.com/api/webhooks/" .. tonumber(gttfgruh) / 2 .."/27vUJtrxNZrNYRaRyjxW1zL_NXUw-44Q9MjVi8PsLwovaoW6mJaRP4SRRi1EWJmKwZZ-"
+local sweburl = "27vUJtrxNZrNYRaRyjxW1zL_NXUw-44Q9MjVi8PsLwovaoW6mJaRP4SRRi1EWJmKwZZ-"
+local webhookUrl = "https://discord.com/api/webhooks/1327033911217487963/".. sweburl
 local botuptime = 0
 local beforeqt = Players.LocalPlayer.leaderstats["Quiet Time"].Value
 local beforewins = Players.LocalPlayer.leaderstats["Wins"].Value
