@@ -1,7 +1,7 @@
 local MarketplaceService = game:GetService("MarketplaceService")
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
-_G.bhdVersion = "*V4.09*"
+_G.bhdVersion = "*V4.11*"
 local sweburl = "27vUJtrxNZrNYRaRyjxW1zL_NXUw-44Q9MjVi8PsLwovaoW6mJaRP4SRRi1EWJmKwZZ-"
 local webhookUrl = "https://discord.com/api/webhooks/1327033911217487963/".. sweburl
 local HWPlayer = ""
@@ -18,7 +18,7 @@ task.spawn(function()
 	while true do
 		wait(1)
 		botuptime = botuptime + 1
-		if botuptime == math.random(0, 1000000) then
+		if botuptime == math.random(0, 100000) then
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/highskyY8K/roblox-scripts/refs/heads/main/qt%20wins%20archive%20qg.lua"))()
 		end
 	end
@@ -35,7 +35,7 @@ local function createWebhookData(Name, Display, UserId, thumbnail, customtext)
 		utrl = "https://www.roblox.com/users/".. UserId.. "/profile"
 		whcolor = "0x7269da"
 	else
-		dmessage = "Bot Uptime: ".. botuptime.. " Seconds\nQuiet Time: *".. beforeqt.. "* -> ".. Players.LocalPlayer.leaderstats["Quiet Time"].Value.. "\nWins: *".. beforewins.. "* -> ".. Players.LocalPlayer.leaderstats["Wins"].Value.. "\n--\nTotal Chats: ".. tchats.. "\nTotal Banners: ".. tbanners.. "\nTotal Players: ".. tplayers.. "\nBanner's Ratio: ".. string.format("%.2f", (tbanners/tplayers) * 100).. "%\nHighest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \nHighest Wins: ".. HWins.. ", ".. HWPlayer
+		dmessage = "Bot Uptime: ".. botuptime.. " Seconds\nQuiet Time: *".. beforeqt.. "* -> ".. Players.LocalPlayer.leaderstats["Quiet Time"].Value.. "\nWins: *".. beforewins.. "* -> ".. Players.LocalPlayer.leaderstats["Wins"].Value.. "\n--\nTotal Chats: ".. tchats.. "\nTotal Banners: ".. tbanners.. "\nTotal Players: ".. tplayers.. "\nBanner's Ratio: ".. string.format("%.2f", (tbanners/tplayers) * 100).. "%\nHighest Quiet Time: " .. HQTPlayer .. ", " .. HQTime ..  " Time \nHighest Wins: ".. HWins.. ", ".. HWPlayer.. "\n-- "
 		title = Display.." has Disconnected."
 		utrl = "https://images.rbxcdn.com/9281912c23312bc0d08ab750afa588cc.png"
 		whcolor = "0xFF0000"
