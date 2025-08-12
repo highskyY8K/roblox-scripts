@@ -1,12 +1,12 @@
 local TextChatService=game:GetService("TextChatService")
-local Bc={"t","e","m","v"}
+local Bc={"/t ","/e ","/m ","/v "}
 
 local function DisplaySystemMessage(Message)
 	game.TextChatService.TextChannels.RBXSystem:DisplaySystemMessage(Message)
 end
 local function UDChat(Message)
 	for _,v in ipairs(Bc)do
-		if string.sub(Message,1,3)==Bc then
+		if string.sub(Message,1,3)==v then
 			return true
 		end
 	end
