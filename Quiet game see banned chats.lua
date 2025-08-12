@@ -1,14 +1,12 @@
 local TextChatService=game:GetService("TextChatService")
-local Bc = {"t","e","m","v"}
+local Bc={"t","e","m","v"}
 
 local function DisplaySystemMessage(Message)
 	game.TextChatService.TextChannels.RBXSystem:DisplaySystemMessage(Message)
 end
-local Bc = {"t","e","m","v"}
-
 local function UDChat(Message)
-	for _,v in ipairs(Bc) do
-		if string.sub(Message,1,3) == Bc then
+	for _,v in ipairs(Bc)do
+		if string.sub(Message,1,3)==Bc then
 			return true
 		end
 	end
@@ -16,15 +14,15 @@ local function UDChat(Message)
 end
 
 for _,Player in pairs(game.Players:GetPlayers()) do
-	local colour = 255 - ((#Player.Name) * 2)
+	local colour=255-((#Player.Name)*2)
 	if Player.Name~=game.Players.LocalPlayer.Name then
 		Player.Chatted:Connect(function(Message)
 			if Player:GetAttribute("Banned")==true then
-				DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
+				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 			else
-				if UDChat(Message) then
+				if UDChat(Message)then
 					Message = string.sub(Message,4,#Message)
-					DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
+					DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 				end
 			end	
 		end)
@@ -32,14 +30,14 @@ for _,Player in pairs(game.Players:GetPlayers()) do
 end
 
 game.Players.PlayerAdded:Connect(function(Player)
-	local colour = 255 - ((#Player.Name) * 2)
+	local colour=255-((#Player.Name)*2)
 	Player.Chatted:Connect(function(Message)
 		if Player:GetAttribute("Banned")==true then
-			DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
+			DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 		else
-			if UDChat(Message,1,3) then
+			if UDChat(Message)then
 				Message = string.sub(Message,4,#Message)
-				DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
+				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 			end
 		end	
 	end)
