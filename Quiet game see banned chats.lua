@@ -11,6 +11,7 @@ for _,Player in pairs(game.Players:GetPlayers()) do
 				DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
 			else
 				if string.sub(Message,1,3)=="/t "then
+					Message = string.sub(Message,4,#Message)
 					DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
 				end
 			end	
@@ -25,6 +26,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 			DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
 		else
 			if string.sub(Message,1,3)=="/t "then
+				Message = string.sub(Message,4,#Message)
 				DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
 			end
 		end	
