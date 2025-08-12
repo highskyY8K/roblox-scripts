@@ -20,7 +20,7 @@ for _,Player in pairs(game.Players:GetPlayers()) do
 			if Player:GetAttribute("Banned")==true then
 				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 			else
-				if UDChat(Message)then
+				if UDChat(Message)==true then
 					Message = string.sub(Message,4,#Message)
 					DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 				end
@@ -35,7 +35,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 		if Player:GetAttribute("Banned")==true then
 			DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 		else
-			if UDChat(Message)then
+			if UDChat(Message)==true then
 				Message = string.sub(Message,4,#Message)
 				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 			end
