@@ -1,11 +1,18 @@
 local TextChatService=game:GetService("TextChatService")
-local Bc = "e"or"t"or"m"or"v"
+local Bc = {"t","e","m","v"}
 
 local function DisplaySystemMessage(Message)
 	game.TextChatService.TextChannels.RBXSystem:DisplaySystemMessage(Message)
 end
-local function Sub(String,s,e)
-	return string.sub(String,s,e)
+local Bc = {"t","e","m","v"}
+
+local function UDChat(Message)
+	for _,v in ipairs(Bc) do
+		if string.sub(Message,1,3) == Bc then
+			return true
+		end
+	end
+	return false
 end
 
 for _,Player in pairs(game.Players:GetPlayers()) do
@@ -15,7 +22,7 @@ for _,Player in pairs(game.Players:GetPlayers()) do
 			if Player:GetAttribute("Banned")==true then
 				DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
 			else
-				if Sub(Message,1,3)==Bc then
+				if UDChat(Message) then
 					Message = string.sub(Message,4,#Message)
 					DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
 				end
@@ -30,7 +37,7 @@ game.Players.PlayerAdded:Connect(function(Player)
 		if Player:GetAttribute("Banned")==true then
 			DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
 		else
-			if Sub(Message,1,3)==Bc then
+			if UDChat(Message,1,3) then
 				Message = string.sub(Message,4,#Message)
 				DisplaySystemMessage("<font color='rgb(0," .. colour .. "," .. colour .. ")'>"..Player.DisplayName..": </font>"..Message)
 			end
