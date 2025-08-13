@@ -1,5 +1,5 @@
 local TextChatService=game:GetService("TextChatService")
-local Bc={"/t ","/e ","/m ","/v "}
+local Bc={"/t ","/m ","/v "}
 
 local function DisplaySystemMessage(Message)
 	game.TextChatService.TextChannels.RBXSystem:DisplaySystemMessage(Message)
@@ -13,15 +13,16 @@ local function UDChat(Message)
 	return false
 end
 
-for _,Player in pairs(game.Players:GetPlayers()) do
-	local colour=255-((#Player.Name)*2)
+for _,Player in pairs(game.Players:GetPlayers())do
 	if Player.Name~=game.Players.LocalPlayer.Name then
+		local colour=255-((#Player.Name)*2)
 		Player.Chatted:Connect(function(Message)
 			if Player:GetAttribute("Banned")==true then
 				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 			else
 				if UDChat(Message)==true then
-					Message = string.sub(Message,4,#Message)
+					colour-=10
+					Message=string.sub(Message,4,#Message)
 					DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 				end
 			end	
@@ -30,13 +31,14 @@ for _,Player in pairs(game.Players:GetPlayers()) do
 end
 
 game.Players.PlayerAdded:Connect(function(Player)
-	local colour=255-((#Player.Name)*2)
 	Player.Chatted:Connect(function(Message)
+		local colour=255-((#Player.Name)*2)
 		if Player:GetAttribute("Banned")==true then
 			DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 		else
 			if UDChat(Message)==true then
-				Message = string.sub(Message,4,#Message)
+				colour-=10
+				Message=string.sub(Message,4,#Message)
 				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 			end
 		end	
