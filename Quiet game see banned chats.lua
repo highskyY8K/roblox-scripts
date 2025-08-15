@@ -32,6 +32,7 @@ end
 
 game.Players.PlayerAdded:Connect(function(Player)
 	Player.Chatted:Connect(function(Message)
+		if Player.Character.Parent==nil then return end
 		local colour=255-((#Player.Name)*2)
 		if Player:GetAttribute("Banned")==true then
 			DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
