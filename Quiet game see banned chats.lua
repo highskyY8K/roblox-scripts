@@ -15,8 +15,8 @@ end
 
 for _,Player in pairs(game.Players:GetPlayers())do
 	if Player.Name~=game.Players.LocalPlayer.Name then
-		local colour=255-((#Player.Name)*2)
 		Player.Chatted:Connect(function(Message)
+			local colour=255-((#Player.Name)*2)
 			if Player:GetAttribute("Banned")==true then
 				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 			else
@@ -26,6 +26,15 @@ for _,Player in pairs(game.Players:GetPlayers())do
 					DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 				end
 			end	
+		end)
+	else 
+		Player.Chatted:Connect(function(Message)
+			local colour=255-((#Player.Name)*2)
+			if UDChat(Message)==true then
+				colour-=10
+				Message=string.sub(Message,4,#Message)
+				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
+			end
 		end)
 	end
 end
