@@ -31,7 +31,6 @@ for _,Player in pairs(game.Players:GetPlayers())do
 		Player.Chatted:Connect(function(Message)
 			local colour=255-((#Player.Name)*2)
 			if UDChat(Message)==true then
-				colour-=10
 				Message=string.sub(Message,4,#Message)
 				DisplaySystemMessage("<font color='rgb(0,"..colour..","..colour..")'>"..Player.DisplayName..": </font>"..Message)
 			end
