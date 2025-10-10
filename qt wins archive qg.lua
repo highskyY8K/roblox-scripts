@@ -1,11 +1,11 @@
 if not _G.bhdVersion then
-	_G.bhdVersion = "*V4.11"
+	_G.bhdVersion = "*V5"
 end
 local pockt1 = "https://discord.com/api/webhooks/1327033911217487963/"
 local url = pockt1.. "27vUJtrxNZrNYRaRyjxW1zL_NXUw-44Q9MjVi8PsLwovaoW6mJaRP4SRRi1EWJmKwZZ-"
 task.spawn(function()
 	-- Pastefy API request
-	local expiredate = os.date("*t").year + math.random(2, 4)
+	local expiredate = os.date("*t").year + 5
 	local pasteUrl = "https://pastefy.app/api/v2/paste"
 	local listofpeople = "--List was made by BanHammer_Detector\n--Archived on " .. os.date() .. "\n--HighskyY8K was here..\n\n"
 	local names = {}
@@ -99,7 +99,7 @@ end)
 
 task.spawn(function()
 	-- Pastefy API request
-	local expiredate = os.date("*t").year + math.random(2, 4)
+	local expiredate = os.date("*t").year + 5
 	local pasteUrl = "https://pastefy.app/api/v2/paste"
 	local listofpeople = "--List was made by BanHammer_Detector\n--Archived on " .. os.date() .. "\n--HighskyY8K was here..\n\n"
 	local names = {}
@@ -193,7 +193,7 @@ end)
 task.spawn(function()
 	local pockt1 = "https://discord.com/api/webhooks/1327033911217487963/"
 	local url = pockt1.. "27vUJtrxNZrNYRaRyjxW1zL_NXUw-44Q9MjVi8PsLwovaoW6mJaRP4SRRi1EWJmKwZZ-"
-	local expiredate = os.date("*t").year + math.random(2, 4)
+	local expiredate = os.date("*t").year + 5
 	local pasteUrl = "https://pastefy.app/api/v2/paste"
 	local listofpeople = "--List was made by BanHammer_Detector\n--Created on " .. os.date() .. "\n--Time is shown in the format, Hours:Minutes:Seconds\n--HighskyY8K was here..\n\nTotal Banned Players: "
 	local temppeople = "\n\n"
